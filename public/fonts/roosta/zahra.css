@@ -1,0 +1,7 @@
+@font-face {
+	font-family: zahra;
+	font-style: normal;
+	font-weight: 100;
+	src: url('./ZahraRoosta.woff') format('woff'),   
+	url('./ZahraRoosta.woff2') format('woff2');		
+}
