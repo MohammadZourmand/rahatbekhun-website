@@ -91,3 +91,132 @@
 .roosta {
 	font-family: "roosta", serif !important;
 }
+
+.btnHoverToRight {
+outline: none;
+cursor: pointer;
+border: none;
+padding: 0.6rem 2rem;
+margin: 0;
+font-family: inherit;
+font-size: inherit;
+position: relative;
+display: inline-block;
+font-weight: 700;
+font-size: 17px;
+border-radius: 500px;
+border: 1px solid #ED078B;
+overflow: hidden;
+background: #ED078B;
+color: #ED078B;
+}
+
+.btnHoverToRight span {
+position: relative;
+z-index: 10;
+transition: color 0.4s;
+}
+
+.btnHoverToRight:hover span {
+color: #fff;
+}
+
+.btnHoverToRight::before,
+.btnHoverToRight::after {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 0;
+}
+
+.btnHoverToRight::before {
+content: "";
+background: #fff;
+width: 120%;
+left: -10%;
+transform: skew(30deg);
+transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.btnHoverToRight:hover::before {
+transform: translate3d(100%, 0, 0);
+}
+
+/*? Menu CheckBox Icon */
+
+.mobileMenuIcon input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+  }
+  
+  .mobileMenuIcon {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	font-size: 20px;
+	user-select: none;
+  }
+  
+  .checkmark {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 1.3em;
+	width: 1.3em;
+  }
+  
+  .checkmark span {
+	width: 32px;
+	height: 2px;
+	background-color: black;
+	position: absolute;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+  }
+  
+  .checkmark span:nth-child(1) {
+	top: 10%;
+  }
+  
+  .checkmark span:nth-child(2) {
+	top: 50%;
+  }
+  
+  .checkmark span:nth-child(3) {
+	top: 90%;
+  }
+  
+  .mobileMenuIcon input:checked + .checkmark span:nth-child(1) {
+	top: 50%;
+	transform: translateY(-50%) rotate(45deg);
+	-webkit-transform: translateY(-50%) rotate(45deg);
+	-moz-transform: translateY(-50%) rotate(45deg);
+	-ms-transform: translateY(-50%) rotate(45deg);
+	-o-transform: translateY(-50%) rotate(45deg);
+  }
+  
+  .mobileMenuIcon input:checked + .checkmark span:nth-child(2) {
+	top: 50%;
+	transform: translateY(-50%) rotate(-45deg);
+	-webkit-transform: translateY(-50%) rotate(-45deg);
+	-moz-transform: translateY(-50%) rotate(-45deg);
+	-ms-transform: translateY(-50%) rotate(-45deg);
+	-o-transform: translateY(-50%) rotate(-45deg);
+  }
+  
+  .mobileMenuIcon input:checked + .checkmark span:nth-child(3) {
+	transform: translateX(50px);
+	-webkit-transform: translateX(50px);
+	-moz-transform: translateX(50px);
+	-ms-transform: translateX(50px);
+	-o-transform: translateX(50px);
+	opacity: 0;
+  }
