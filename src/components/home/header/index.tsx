@@ -1,6 +1,6 @@
 
 
-const HomeHeader = () => {
+const HomeHeader : React.FC = () => {
 
     return (
         <header className="flex items-center justify-center bg-[url('/images/home/drawing-by-desk.jpg')] bg-center bg-no-repeat bg-cover relative w-full h-[45rem] ">

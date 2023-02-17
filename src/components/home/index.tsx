@@ -2,7 +2,7 @@ import Navbar from "../global/navbar";
 import HomeHeader from "./header";
 
 
-const Home = () => {
+const Home : React.FC = () => {
 
     return (
         <>
