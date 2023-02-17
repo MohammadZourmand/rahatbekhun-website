@@ -93,55 +93,61 @@
 }
 
 .btnHoverToRight {
-outline: none;
-cursor: pointer;
-border: none;
-padding: 0.6rem 2rem;
-margin: 0;
-font-family: inherit;
-font-size: inherit;
-position: relative;
-display: inline-block;
-font-weight: 700;
-font-size: 17px;
-border-radius: 500px;
-border: 1px solid #ED078B;
-overflow: hidden;
-background: #ED078B;
-color: #ED078B;
+	display: flex !important;
+	align-items: center;
+	outline: none;
+	cursor: pointer;
+	border: none;
+	padding: 1rem 2rem;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	position: relative;
+	display: inline-block;
+	font-weight: 700;
+	border-radius: 300px;
+	border: 1px solid #ED078B;
+	overflow: hidden;
+	background: #ED078B;
+	color: #fff;
+	transition: all .4s;
 }
 
 .btnHoverToRight span {
-position: relative;
-z-index: 10;
-transition: color 0.4s;
+	position: relative;
+	z-index: 10;
+	transition: color 0.4s;
 }
 
 .btnHoverToRight:hover span {
-color: #fff;
+	color: #ED078B;
+}
+
+.btnHoverToRight:hover {
+	background-color: #fff;
 }
 
 .btnHoverToRight::before,
 .btnHoverToRight::after {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
 }
 
 .btnHoverToRight::before {
-content: "";
-background: #fff;
-width: 120%;
-left: -10%;
-transform: skew(30deg);
-transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+	content: "";
+	background: #ED078B;
+	width: 120%;
+	left: -10%;
+	transform: skew(30deg);
+	transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 }
 
 .btnHoverToRight:hover::before {
-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
 }
 
 /*? Menu CheckBox Icon */

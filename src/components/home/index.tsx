@@ -1,5 +1,6 @@
 import Navbar from "../global/navbar";
 import HomeHeader from "./header";
+import Welcome from "./welcome";
 
 
 const Home : React.FC = () => {
@@ -8,6 +9,7 @@ const Home : React.FC = () => {
         <>
             <Navbar />
             <HomeHeader />
+            <Welcome />
         </>
     )
 }
