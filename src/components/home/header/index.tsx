@@ -1,5 +1,5 @@
-import PinkWave from "./waves/pinkWave";
-import WhiteWave from "./waves/whiteWave";
+import PinkWave from "../../global/waves/pinkWave";
+import WhiteWave from "../../global/waves/whiteWave";
 
 const HomeHeader : React.FC = () => {
 
