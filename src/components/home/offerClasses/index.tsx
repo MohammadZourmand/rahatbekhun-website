@@ -2,6 +2,7 @@ import WhiteWave from "@/components/global/waves/whiteWave";
 import Header from "@/components/global/elements/header";
 import Heading2 from "@/components/global/elements/headings/h2";
 import OfferSlider from "./slider";
+import PinkBtn from "@/components/global/elements/buttons/pink";
 
 
 const OfferClasses : React.FC = () => {
@@ -15,6 +16,7 @@ const OfferClasses : React.FC = () => {
                 paragraphText="جدیدترین و پربازدیدترین دوره هایی که تا به این لحظه در سایت راحت بخون تولید شده اند و مورد استقبال دانش آموزان و والدین قرار گرفته اند را در اینجا مشاهده کنید و آن ها را انتخاب کنید !"     
             />
             <OfferSlider />
+            <PinkBtn text="مشاهده همه دوره ها" cls="bgTransparent !mx-auto !mt-12 !mb-6"/>
         </article>
     )
 }

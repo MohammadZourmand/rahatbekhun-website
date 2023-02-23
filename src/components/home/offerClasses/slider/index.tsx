@@ -10,8 +10,6 @@ import { onAutoplayTimeLeft, OfferSliderAutoPlay } from "./autoplay";
 
 const OfferSlider : React.FC = () => {
 
-
-
     return (
         <Swiper
             modules={[Autoplay]}

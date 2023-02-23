@@ -113,6 +113,11 @@
 	transition: all .4s;
 }
 
+.btnHoverToRight.bgTransparent {
+	background: transparent;
+	color: #ED078B;
+}
+
 .btnHoverToRight span {
 	position: relative;
 	z-index: 10;
@@ -120,11 +125,15 @@
 }
 
 .btnHoverToRight:hover span {
-	color: #ED078B;
+	color: #fff;
 }
 
 .btnHoverToRight:hover {
 	background-color: #fff;
+}
+
+.btnHoverToRight.bgTransparent:hover {
+	background-color: #ED078B;
 }
 
 .btnHoverToRight::before,
@@ -144,6 +153,10 @@
 	left: -10%;
 	transform: skew(30deg);
 	transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.bgTransparent.btnHoverToRight::before {
+	background: transparent;
 }
 
 .btnHoverToRight:hover::before {
