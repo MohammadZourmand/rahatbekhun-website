@@ -124,8 +124,12 @@
 	transition: color 0.4s;
 }
 
-.btnHoverToRight:hover span {
+.bgTransparent.btnHoverToRight:hover span {
 	color: #fff;
+}
+
+.btnHoverToRight:hover span {
+	color: #ED078B;
 }
 
 .btnHoverToRight:hover {
@@ -261,8 +265,8 @@
 
 .autoplay-progress {
 	position: absolute;
-	right: .7rem;
-	bottom: .7rem;
+	right: .2rem;
+	bottom: .2rem;
 	z-index: 10;
 	width: 48px;
 	height: 48px;
