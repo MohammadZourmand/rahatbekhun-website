@@ -24,7 +24,13 @@ module.exports = {
           7 : '#007bff',
         },
         babyTransparent : {
-          2 : '#4cd3e31f'
+          1 : '#423F8D',
+          2 : '#4cd3e31f',
+          3 : '#38a4ff',
+          4 : '#f4e700',
+          5 : '#f44a40',
+          6 : '#ed078b4d',
+          7 : '#007bff'
         }
       }
     },

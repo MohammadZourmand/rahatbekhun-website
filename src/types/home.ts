@@ -7,3 +7,13 @@ export interface classOfferedSliderType {
     details : string,
     image : string
 }
+
+export interface teachersInfoType {
+    name : string,
+    details : string,
+    image : string,
+    telegramId ?: string,
+    githubId ?: string,
+    instagramId ?: string,
+    infoUrl ?: string
+}

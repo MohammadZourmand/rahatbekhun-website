@@ -2,6 +2,7 @@ import Navbar from "../global/navbar";
 import BigEvent from "./bigEvent";
 import HomeHeader from "./header";
 import OfferClasses from "./offerClasses";
+import Teachers from "./teachers";
 import Welcome from "./welcome";
 
 
@@ -14,6 +15,7 @@ const Home : React.FC = () => {
             <Welcome />
             <OfferClasses />
             <BigEvent />
+            <Teachers />
         </>
     )
 }

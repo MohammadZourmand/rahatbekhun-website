@@ -1,6 +1,5 @@
 import WhiteWave from "@/components/global/waves/whiteWave";
 import Header from "@/components/global/elements/header";
-import Heading2 from "@/components/global/elements/headings/h2";
 import OfferSlider from "./slider";
 import PinkBtn from "@/components/global/elements/buttons/pink";
 

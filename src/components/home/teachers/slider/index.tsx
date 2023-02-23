@@ -6,35 +6,37 @@ import Slide from "./slide";
 import { classOfferedDetails } from "./slidersDetails";
 import { classOfferedSliderType } from "@/types/home";
 import { Autoplay } from 'swiper';
-import { onAutoplayTimeLeft, OfferSliderAutoPlay } from "./autoplay";
 
-const OfferSlider : React.FC = () => {
+const TeachersSlider : React.FC = () => {
 
     return (
         <Swiper
-            id={"offerCoursesSlider"}
+            id="teachersSlider"
             modules={[Autoplay]}
             autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
             }}
-            onAutoplayTimeLeft={onAutoplayTimeLeft}
             loop={true}
             breakpoints={{
                 0: {
                     slidesPerView: 1,
                     spaceBetween: 20,
                 },
-                700: {
+                568: {
                     slidesPerView: 2,
                     spaceBetween: 40,
                 },
-                1024: {
+                700: {
                     slidesPerView: 3,
-                    spaceBetween: 20,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
                 },
             }}
-            className="h-[36rem] xl:mt-16 mt-2 xl:!mx-12 !mx-4"
+            className="h-[28rem] xl:mt-24 mt-2 xl:!mx-16 !mx-4"
             dir="rtl"
         >
             {
@@ -44,16 +46,12 @@ const OfferSlider : React.FC = () => {
                             name={item.name}
                             details={item.details}
                             image={item.image}
-                            sessions={item.sessions}
-                            ageCategory={item.ageCategory}
-                            price={item.price}
                         />
                     </SwiperSlide>
                 ))
             }
-            <OfferSliderAutoPlay />
         </Swiper>
     )
 }
 
-export default OfferSlider;
+export default TeachersSlider;
