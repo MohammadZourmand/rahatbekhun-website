@@ -1,7 +1,7 @@
 
-import { classOfferedSliderType } from "@/types/home";
+import { teachersInfoType } from "@/types/home";
 
-export const classOfferedDetails : classOfferedSliderType[] = [
+export const teachersDetails : teachersInfoType[] = [
     {
         name : "جیسون کلای",
         details : "مربی ورزش",

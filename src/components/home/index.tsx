@@ -1,4 +1,5 @@
 import Navbar from "../global/navbar";
+import Sentences from "./BigSentences";
 import BigEvent from "./bigEvent";
 import HomeHeader from "./header";
 import OfferClasses from "./offerClasses";
@@ -16,6 +17,7 @@ const Home : React.FC = () => {
             <OfferClasses />
             <BigEvent />
             <Teachers />
+            <Sentences />
         </>
     )
 }

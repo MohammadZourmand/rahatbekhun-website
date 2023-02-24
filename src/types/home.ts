@@ -17,3 +17,10 @@ export interface teachersInfoType {
     instagramId ?: string,
     infoUrl ?: string
 }
+
+export interface sentencesType {
+    name : string,
+    job : string,
+    sentence : string,
+    image : string,
+}

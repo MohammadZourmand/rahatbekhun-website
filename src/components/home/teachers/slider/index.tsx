@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // import required modules
 import Slide from "./slide";
-import { classOfferedDetails } from "./slidersDetails";
+import { teachersDetails } from "./slidersDetails";
 import { classOfferedSliderType } from "@/types/home";
 import { Autoplay } from 'swiper';
 
@@ -40,7 +40,7 @@ const TeachersSlider : React.FC = () => {
             dir="rtl"
         >
             {
-                classOfferedDetails.map((item : classOfferedSliderType) => (
+                teachersDetails.map((item : classOfferedSliderType) => (
                     <SwiperSlide>
                         <Slide
                             name={item.name}
