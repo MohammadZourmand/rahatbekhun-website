@@ -22,6 +22,7 @@ module.exports = {
           5 : '#f44a40',
           6 : '#ED078B',
           7 : '#007bff',
+          8 : '#4255A4',
         },
         babyTransparent : {
           1 : '#423F8D',

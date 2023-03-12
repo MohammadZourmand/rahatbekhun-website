@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 
 import CloseIcon from "./closeIcon";
-import WebsiteName from "../websiteName";
+import WebsiteName from "../../elements/boxes/websiteName";
 import Links from "./links";
 import UserBtns from "./userBtns";
 import NavImg from "./navImg";

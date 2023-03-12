@@ -4,7 +4,7 @@ import { IconMenu2 } from "@tabler/icons-react";
 
 import MobileNavbar from "./mobile";
 import ComputerNavbar from "./computer";
-import WebsiteName from "./websiteName";
+import WebsiteName from "../elements/boxes/websiteName";
 
 
 const Navbar : React.FC = () => {

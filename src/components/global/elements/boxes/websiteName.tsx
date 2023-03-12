@@ -1,9 +1,13 @@
 
+interface WebsiteNameProps {
+    cls ?: string
+}
 
-const WebsiteName : React.FC = () => {
-    
+const WebsiteName : React.FC<WebsiteNameProps> = ({
+    cls
+}) => {
     return (
-        <section>
+        <section className={cls}>
             <div className="sm:text-3xl text-[1.8rem] py-6">
                 <span className="roosta text-baby-1"> مدرسه </span>
                 <span className="roosta text-baby-6"> آنلاین </span>

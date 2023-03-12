@@ -1,3 +1,4 @@
+import Footer from "../global/footer";
 import Navbar from "../global/navbar";
 import Sentences from "./BigSentences";
 import BigEvent from "./bigEvent";
@@ -18,6 +19,7 @@ const Home : React.FC = () => {
             <BigEvent />
             <Teachers />
             <Sentences />
+            <Footer />
         </>
     )
 }
