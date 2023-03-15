@@ -12,7 +12,7 @@ const Home : React.FC = () => {
 
     return (
         <>
-            <Navbar />
+            <Navbar isFixed={false} />
             <HomeHeader />
             <Welcome />
             <OfferClasses />

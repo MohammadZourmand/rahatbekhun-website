@@ -24,8 +24,8 @@ const SentenceSlider : React.FC = () => {
             dir="rtl"
         >
             {
-                scientists.map((item : sentencesType) => (
-                    <SwiperSlide>
+                scientists.map((item : sentencesType, index : number) => (
+                    <SwiperSlide key={index}>
                         <Slide
                             name={item.name}
                             sentence={item.sentence}

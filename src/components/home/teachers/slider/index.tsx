@@ -40,8 +40,8 @@ const TeachersSlider : React.FC = () => {
             dir="rtl"
         >
             {
-                teachersDetails.map((item : classOfferedSliderType) => (
-                    <SwiperSlide>
+                teachersDetails.map((item : classOfferedSliderType, index : number) => (
+                    <SwiperSlide key={index}>
                         <Slide
                             name={item.name}
                             details={item.details}
