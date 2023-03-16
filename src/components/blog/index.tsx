@@ -1,6 +1,7 @@
 
 import PageHeader from "../global/elements/header/pageHeader";
 import Navbar from "./../global/navbar";
+import SearchBox from "./searchbox";
 
 const Blog : React.FC = () => {
 
@@ -12,6 +13,7 @@ const Blog : React.FC = () => {
                 mainText="وبلاگ"
                 page="blog"
             />
+            <SearchBox />
         </>      
     )
 }
