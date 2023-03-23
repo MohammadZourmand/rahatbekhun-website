@@ -26,7 +26,7 @@ const Input : React.FC<InputProps> = ({
 }) => {
 
     return (
-        <div className={`${cls} col-span-6 relative`}>
+        <div className={`${cls} relative flex flex-col`}>
             <Field
                 {...props}
                 name={name}
@@ -34,7 +34,7 @@ const Input : React.FC<InputProps> = ({
             />
             <ErrorMessage
                 component={component ?? "div"}
-                className={`${errorCls} absolute -bottom-8 right-12 text-slate-700 font-bold`}
+                className={`${errorCls} lg:absolute lg:-bottom-8 lg:right-12 right-6 lg:mt-0 mt-3 relative  text-slate-700 font-bold`}
                 name={name}
             />
         </div>

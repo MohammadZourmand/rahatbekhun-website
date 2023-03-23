@@ -22,8 +22,9 @@ const SearchBox : React.FC = () => {
     } 
 
     return (
-        <section className="mt-20 mb-96 mx-24 flex flex-col items-center justify-center">
+        <section className="mt-20 mb-96 sm:mx-24 mx-6 flex flex-col items-center justify-center">
             <SectionHeader
+                cls="sm:px-6 px-4"
                 smallText="داری دنبال چی میگردی ؟"
                 largeText="کافیه ۵ تا حرف اولش رو بگی بقیه اش با ما"
                 icon1={<IconFileSearch color="rgba(203,213,225,0.6)" className="absolute top-0 left-[24%] -z-[1] rotate-45 scale-[3]" stroke={2} />}
@@ -37,13 +38,14 @@ const SearchBox : React.FC = () => {
                 validate={validateHandler}
                 onSubmit={submitHandler}
             >
-                <Form className="w-full grid grid-cols-12 gap-4 py-10 px-24">
-                    <Input 
+                <Form className="w-full grid grid-cols-12 gap-4 py-10 md:px-24">
+                    <Input
+                        cls="lg:col-span-6 col-span-12"
                         name={"text"}
                         placeholder={"قسمتی از چیزی که دنبال آن هستید را وارد کنید !"}
                     />
-                    <SelectBox cls="col-span-4" />
-                    <GrayButton />
+                    <SelectBox cls="lg:col-span-4 sm:col-span-10 col-span-12" />
+                    <GrayButton cls="sm:col-span-2 col-span-5 py-3" />
                 </Form>
             </Formik>
         </section>
