@@ -1,7 +1,9 @@
+import GrayButton from "@/components/global/elements/form/button"
+import Input from "@/components/global/elements/form/input"
 import SelectBox from "@/components/global/elements/form/selectBox"
-import { Form, Formik, Field, ErrorMessage } from "formik"
-
-
+import SectionHeader from "@/components/global/elements/header/sectionHeader"
+import { IconFileSearch, IconSearch } from "@tabler/icons-react"
+import { Form, Formik } from "formik"
 
 const SearchBox : React.FC = () => {
 
@@ -20,8 +22,13 @@ const SearchBox : React.FC = () => {
     } 
 
     return (
-        <section className="mt-28 mb-96 mx-24 flex flex-col items-center justify-center">
-            <h2 className="text-center bg-baby-2 text-3xl py-6 px-14 text-white font-bold"> دنبال چی میگردی ؟</h2>
+        <section className="mt-20 mb-96 mx-24 flex flex-col items-center justify-center">
+            <SectionHeader
+                smallText="داری دنبال چی میگردی ؟"
+                largeText="کافیه ۵ تا حرف اولش رو بگی بقیه اش با ما"
+                icon1={<IconFileSearch color="rgba(203,213,225,0.6)" className="absolute top-0 left-[24%] -z-[1] rotate-45 scale-[3]" stroke={2} />}
+                icon2={<IconSearch color="rgba(203,213,225,0.5)" className="absolute top-0 right-[24%] -z-[1] rotate-[5deg] scale-[2]" stroke={2} />}
+            />
             <Formik
                 initialValues={{
                     text : "",
@@ -30,15 +37,13 @@ const SearchBox : React.FC = () => {
                 validate={validateHandler}
                 onSubmit={submitHandler}
             >
-                <Form className="bg-baby-2 w-full grid grid-cols-12 gap-4 py-10 px-24">
-                    <div className="col-span-6 bg-yellow-500 relative">
-                        <Field className={"h-full w-full outline-none px-6 py-5 text-[.9rem] font-light"} name={"text"} placeholder={"قسمتی از چیزی که دنبال آن هستید را وارد کنید !"} />
-                        <ErrorMessage component={"div"} className="absolute -bottom-8 right-12 text-white font-bold" name="text" />
-                    </div>
-
-                    <SelectBox cls="col-span-4 bg-red-700" />
-
-                    <button className="col-span-2 bg-slate-700 text-center text-xl text-white" type="submit"> تایید </button>
+                <Form className="w-full grid grid-cols-12 gap-4 py-10 px-24">
+                    <Input 
+                        name={"text"}
+                        placeholder={"قسمتی از چیزی که دنبال آن هستید را وارد کنید !"}
+                    />
+                    <SelectBox cls="col-span-4" />
+                    <GrayButton />
                 </Form>
             </Formik>
         </section>
