@@ -22,7 +22,7 @@ const SearchBox : React.FC = () => {
     } 
 
     return (
-        <section className="mt-20 mb-96 sm:mx-24 mx-6 flex flex-col items-center justify-center">
+        <section className="mt-20 mb-12 sm:mx-24 mx-6 flex flex-col items-center justify-center">
             <SectionHeader
                 cls="sm:px-6 px-4"
                 smallText="داری دنبال چی میگردی ؟"
