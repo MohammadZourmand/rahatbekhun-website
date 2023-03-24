@@ -7,10 +7,10 @@ import Slide from "./slide";
 import { SlidesInfo, SlidesInfoProps } from "./slidesInfo";
 
 interface SliderProps {
-
+    cls ?: string
 }
 
-const Slider : React.FC<SliderProps> = ({}) => {
+const Slider : React.FC<SliderProps> = ({cls}) => {
     
     return (
             <Swiper
@@ -32,7 +32,7 @@ const Slider : React.FC<SliderProps> = ({}) => {
                     },
                 }}
                 modules={[Navigation]}
-                className="h-40 !mx-20 !px-20 !mt-48 mb-48"
+                className={`h-40 sm:!mx-20 !mx-2 !px-20 mb-48 ${cls}`}
             >
             {
                 SlidesInfo.map((item : SlidesInfoProps) => {
