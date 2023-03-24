@@ -1,5 +1,5 @@
 
-import { SingleCartProps } from "./singleCart"
+import { SingleCartProps } from "../../../global/elements/boxes/singleCart"
 
 export const CartsInfo : SingleCartProps[] = [
     {
