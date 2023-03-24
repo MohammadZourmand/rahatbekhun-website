@@ -1,6 +1,7 @@
 
 import PageHeader from "../global/elements/header/pageHeader";
 import Navbar from "./../global/navbar";
+import ArticlesPart from "./articles";
 import SearchBox from "./searchbox";
 import SortSlider from "./sortSlider";
 
@@ -16,6 +17,7 @@ const Blog : React.FC = () => {
             />
             <SearchBox />
             <SortSlider />
+            <ArticlesPart />
         </>      
     )
 }
