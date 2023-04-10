@@ -6,6 +6,7 @@ interface SectionHeaderProps {
     icon2 : ReactNode
     smallText : string
     largeText : string
+    rightAlignment ?: boolean
 }
 
 const SectionHeader : React.FC<SectionHeaderProps> = ({
@@ -13,13 +14,14 @@ const SectionHeader : React.FC<SectionHeaderProps> = ({
     icon1,
     icon2,
     smallText,
-    largeText
+    largeText,
+    rightAlignment
 }) => {
 
     return (
-        <h2 className={`${cls} flex flex-col items-center space-y-3 relative text-center text-3xl py-6`}>
+        <h2 className={`${cls} ${rightAlignment ? "items-right " : "items-center"} flex flex-col space-y-3 relative text-center text-3xl py-6`}>
             <span className="font-semibold text-lg text-slate-500"> {smallText} </span>
-            <span className="font-bold text-center text-2xl text-slate-800"> {largeText} </span>
+            <span className={`${rightAlignment && "!text-right"} font-bold text-center text-2xl text-slate-800`}> {largeText} </span>
             {icon1}
             {icon2}
         </h2>

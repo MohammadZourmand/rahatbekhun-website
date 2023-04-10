@@ -32,7 +32,7 @@ const Slider : React.FC<SliderProps> = ({cls}) => {
                     },
                 }}
                 modules={[Navigation]}
-                className={`h-40 sm:!mx-20 !mx-2 !px-20 mb-48 ${cls}`}
+                className={`h-40 sm:!mx-20 !mx-2 !px-20 ${cls}`}
             >
             {
                 SlidesInfo.map((item : SlidesInfoProps) => {

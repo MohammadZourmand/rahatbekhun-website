@@ -33,6 +33,15 @@ module.exports = {
           6 : '#ed078b4d',
           7 : '#007bff'
         }
+      },
+      keyframes: {
+        scaleToScreen: {
+          '0%' : { transform : 'scale(1)' },
+          '100%' : { transform : 'scale(1.08)' }
+        }
+      },
+      animation : {
+        scaleToScreen : 'scaleToScreen 6s linear infinite'
       }
     },
   },

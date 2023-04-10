@@ -10,7 +10,7 @@ interface SortSliderProps {
 const SortSlider : React.FC<SortSliderProps> = ({}) => {
 
     return (
-        <section>
+        <section className="mb-28">
             <SectionHeader
                 cls="mt-24"
                 smallText="آیا دنبال موضوع خاصی هستی ؟"

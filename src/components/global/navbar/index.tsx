@@ -16,12 +16,12 @@ const Navbar : React.FC<NavbarProps> = ({isFixed}) => {
     
     return (
         <nav className={`
-            ${isFixed && "absolute top-4 z-50 w-full !shadow-none"}
+            ${isFixed && "absolute top-0 z-50 w-full !shadow-none"}
             shadow-md
         `}>
-            <div className={`${isFixed && "md:mx-16 mx-4 bg-white/30 !pl-0"} flex justify-between items-center sm:px-12 px-1`}>
+            <div className={`${isFixed && "md:mx-16 mx-4 !pl-0"} flex justify-between items-center sm:px-12 px-1`}>
                 {/* website Name & logo */}
-                <WebsiteName isFixed={isFixed} />
+                <WebsiteName isFixed={false} />
                 {/* website menus */}
                 <section>
                     <IconMenu2 className={`${isFixed && "scale-[2] p-[.3rem]"} ml-8 xl:hidden block cursor-pointer`} stroke={3} color="#2c3e50" onClick={() => setShowNavbar(true)}/>
