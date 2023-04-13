@@ -41,7 +41,7 @@ module.exports = {
         }
       },
       animation : {
-        scaleToScreen : 'scaleToScreen 6s linear infinite'
+        scaleToScreen : 'scaleToScreen 10s linear infinite'
       }
     },
   },

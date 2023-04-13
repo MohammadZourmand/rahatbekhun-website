@@ -22,7 +22,7 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({isFixed}) => {
             <Link href={"/profile"} className={`${linkStyle} group flex items-center justify-center border border-baby-6 bg-baby-6 rounded-full w-12 h-12 after:hidden`}>
                 <UserBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color="white" />
             </Link>
-            <Link href={"/profile"} className={`${linkStyle} group mx-0 flex items-center justify-center border border-baby-6 bg-baby-6 rounded-full w-12 h-12 after:hidden`}>
+            <Link href={"/profile"} className={`${linkStyle} group -mx-2 flex items-center justify-center border border-baby-6 bg-baby-6 rounded-full w-12 h-12 after:hidden`}>
                 <CartBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color="white" />
             </Link>
             <Link href={"/profile"} className={`${linkStyle} group flex items-center justify-center border border-baby-6 bg-baby-6 rounded-full w-12 h-12 after:hidden`}>

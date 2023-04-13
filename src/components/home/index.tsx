@@ -1,6 +1,6 @@
 import Footer from "../global/footer";
 import Navbar from "../global/navbar";
-import BigSlider from "../global/sliders/bigSlider";
+import BigSlider from "../global/sliders/homeSlider";
 import Sentences from "./BigSentences";
 import BigEvent from "./bigEvent";
 import OfferClasses from "./offerClasses";

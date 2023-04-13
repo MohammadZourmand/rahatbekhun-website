@@ -19,7 +19,7 @@ const BigSlider = () => {
         loop={true}
         className="bigSlider relative !h-[115vh] overflow-hidden"
         autoplay={{
-            delay : 5400,
+            delay : 8000,
             disableOnInteraction : false
         }}
       >
@@ -29,7 +29,7 @@ const BigSlider = () => {
 
 
               return (
-                <SwiperSlide>
+                <SwiperSlide className="overflow-hidden">
                   <Slide text={item.text} cls={item.cls} />
                 </SwiperSlide>
               )
