@@ -7,9 +7,9 @@ const Footer : React.FC = () => {
     
     return (
         <footer className="bg-baby-8 text-white">
-            <div className="grid grid-cols-12 gap-x-8 sm:px-12 sm:pt-12 sm:pb-6 pb-6">
+            <div data-aos="fade-up" data-aos-duration="3000" className="grid grid-cols-12 gap-x-8 sm:px-12 sm:pt-12 sm:pb-6 pb-6">
                 <div className="lg:col-span-5 col-span-12 flex flex-col sm:p-6 p-2">
-                    <WebsiteName cls="sm:block flex justify-center" />
+                    <WebsiteName isFixed cls="sm:block flex justify-center" />
                     <p className="text-white sm:text-right text-center leading-[2.5]"> ما در راحت بخون مفتخریم که در خدمت دانش آموزان بزرگ کشور بزرگ و پرشکوه ایران هستیم. دانش آموزانی که هر کدامشان قطعه کوچک پازل بزرگ آینده درخشان کشوری پیشرفته و به دور از هر سختی و جنگی خواهند بود اگر ما راه را به آنها نشان دهیم . </p>
                     <div className="flex sm:justify-start justify-center py-8">
                         <Link href="#" className="bg-baby-1 transition-all duration-500 hover:bg-baby-6 rounded-full p-2 ml-2">

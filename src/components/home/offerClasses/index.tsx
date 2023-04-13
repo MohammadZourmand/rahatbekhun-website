@@ -14,7 +14,9 @@ const OfferClasses : React.FC = () => {
                 headingText="کلاس های پیشنهادی"
                 paragraphText="جدیدترین و پربازدیدترین دوره هایی که تا به این لحظه در سایت راحت بخون تولید شده اند و مورد استقبال دانش آموزان و والدین قرار گرفته اند را در اینجا مشاهده کنید و آن ها را انتخاب کنید !"     
             />
-            <OfferSlider />
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <OfferSlider />
+            </div>
             <PinkBtn text="مشاهده همه دوره ها" cls="bgTransparent !mx-auto !mt-12 !mb-6"/>
         </article>
     )
