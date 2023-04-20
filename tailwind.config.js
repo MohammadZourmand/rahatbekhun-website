@@ -42,6 +42,11 @@ module.exports = {
       },
       animation : {
         scaleToScreen : 'scaleToScreen 10s linear infinite'
+      },
+      boxShadow : {
+        'all-sm' : '0 0 10px #e2e8f0',
+        'all-md' : '0 0 20px #e2e8f0',
+        'all-lg' : '0 0 30px #e2e8f0',
       }
     },
   },

@@ -1,22 +1,19 @@
 
 interface WebsiteNameProps {
     cls ?: string
-    isFixed : boolean
 }
 
 const WebsiteName : React.FC<WebsiteNameProps> = ({
     cls,
-    isFixed
 }) => {
     return (
-        <section className={cls}>
-            <div className={`${isFixed && "xl:!py-2 xl:!text-3xl !text-2xl sm:pr-0 pr-4"} sm:text-3xl text-[1.8rem] py-6`}>
-                <span className={`${isFixed && "!text-white"} roosta text-baby-1`}> مدرسه </span>
-                <span className={`${isFixed && "!text-white"} roosta text-baby-6`}> آنلاین </span>
-                <span className={`${isFixed && "!text-white"} roosta text-baby-4`}> راحت </span>
-                <span className={`${isFixed && "!text-white"} roosta text-baby-2`}> بخون </span>
+        <div className={`${cls} flex items-center sm:text-[2.5rem] text-[1.8rem]`}>
+            <img className="w-20 h-20" src="./images/webLogo.png" alt="rahat-bekhun-learn-easily-website" />
+            <div className="mr-2 space-x-1 space-x-reverse">
+                <span className={`nozha text-baby-1`}> راحت </span>
+                <span className={`nozha text-baby-2`}> بخون </span>
             </div>
-        </section>
+        </div>
     )
 }
 
