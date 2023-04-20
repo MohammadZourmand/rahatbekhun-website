@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 import { IconMenu2 } from "@tabler/icons-react";
 
@@ -19,15 +19,11 @@ const Navbar : React.FC<NavbarProps> = ({isFixed}) => {
             ${isFixed && "absolute top-0 z-50 w-full !shadow-none"}
             shadow-md
         `}>
-            <div className={`${isFixed && "xl:mx-16 lg:mx-6 md:mx-16 mx-4 !pl-0"} flex justify-between items-center sm:px-12 px-1`}>
+            <div className={`${isFixed && "xl:mx-16 lg:mx-6 md:mx-16 mx-4 !pl-0"} z-[9999] flex justify-between items-center sm:px-12 px-1`}>
                 {/* website Name & logo */}
                 <WebsiteName isFixed={false} />
                 {/* website menus */}
-                <section>
-                    <IconMenu2 className={`${isFixed && "scale-[2] p-[.3rem]"} ml-8 lg:hidden block cursor-pointer`} stroke={3} color="#2c3e50" onClick={() => setShowNavbar(true)}/>
-                    <MobileNavbar setShowNavbar={setShowNavbar} showNavbar={showNavbar} />
                     <ComputerNavbar isFixed={isFixed} />
-                </section>
             </div>
         </nav>
     )

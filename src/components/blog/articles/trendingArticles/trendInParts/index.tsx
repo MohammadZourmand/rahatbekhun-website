@@ -20,11 +20,11 @@ const TrendInParts : React.FC<TrendInPartsProps> = ({item}) => {
             />
             <main className="grid grid-cols-12 gap-5 mt-4 !h-8">
                 {
-                    item.items.map((article) => {
+                    item.items.map((article : any, index : number) => {
                         
                         return (
                             <SingleCart
-                                // cls={"!col-span-3"}
+                                key={index}
                                 head={article.head}
                                 para={article.para}
                                 date={article.date}

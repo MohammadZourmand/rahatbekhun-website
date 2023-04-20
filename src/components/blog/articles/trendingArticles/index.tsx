@@ -8,8 +8,8 @@ const TrendingArticles : React.FC<TrendingArticlesProps> = () => {
     return (
         <article className="relative flex flex-col">
             {
-                PartsInfo.map((item : PartsInfoProps) => (
-                    <TrendInParts item={item} />
+                PartsInfo.map((item : PartsInfoProps , index : number) => (
+                    <TrendInParts item={item} key={index}/>
                 ))
             }
         </article>

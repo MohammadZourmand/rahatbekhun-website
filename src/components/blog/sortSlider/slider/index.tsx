@@ -35,9 +35,9 @@ const Slider : React.FC<SliderProps> = ({cls}) => {
                 className={`h-40 sm:!mx-20 !mx-2 !px-20 ${cls}`}
             >
             {
-                SlidesInfo.map((item : SlidesInfoProps) => {
+                SlidesInfo.map((item : SlidesInfoProps, index : number) => {
                     return (
-                        <SwiperSlide>
+                        <SwiperSlide key={index}>
                             <Slide
                                 text={item.text}
                                 icon={item.icon}

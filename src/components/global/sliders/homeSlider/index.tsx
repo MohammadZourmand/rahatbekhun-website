@@ -25,11 +25,9 @@ const BigSlider = () => {
       >
         <Navbar isFixed={true} />
           {
-            HomeSliderInfo.map((item : HomeSliderInfoProps) => {
-
-
+            HomeSliderInfo.map((item : HomeSliderInfoProps, index : number) => {
               return (
-                <SwiperSlide className="overflow-hidden">
+                <SwiperSlide key={index} className="overflow-hidden">
                   <Slide text={item.text} cls={item.cls} />
                 </SwiperSlide>
               )
