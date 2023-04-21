@@ -38,10 +38,15 @@ module.exports = {
         scaleToScreen: {
           '0%' : { transform : 'scale(1)' },
           '100%' : { transform : 'scale(1.08)' }
-        }
+        },
+        fade : {
+          '0%' : { opacity : 0 },
+          '100%' : { opacity : 1 }
+        },
       },
       animation : {
-        scaleToScreen : 'scaleToScreen 10s linear infinite'
+        scaleToScreen : 'scaleToScreen 10s linear infinite',
+        fade : 'fade .2s linear'
       },
       boxShadow : {
         'all-sm' : '0 0 10px #e2e8f0',

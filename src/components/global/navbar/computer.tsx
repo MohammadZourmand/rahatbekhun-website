@@ -12,8 +12,13 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls}) => {
 
     return (
         <div className={`${cls} bg-gray-200 mx-40 lg:flex items-center rounded-b-lg justify-around px-32 hidden text-baby-1 text-[1.7rem]`}>
-            <Link href="/" className={linkStyle}> صفر تا صد </Link>
-            <Link href="/" className={linkStyle}> کلاس درس </Link>
+            <div className={linkStyle}>
+                صفر تا صد
+                <div className="">
+
+                </div>
+            </div>
+            <Link href="/" className={linkStyle}> ویدیوها </Link>
             <Link href="/" className={linkStyle}> کاربرگ </Link>
             <Link href="/" className={linkStyle}> بازی </Link>
             <Link href="/" className={linkStyle}> آزمون </Link>
