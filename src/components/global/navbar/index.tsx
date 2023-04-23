@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from "react";
+import {useState} from "react";
 
 import ComputerNavbar from "./computer";
 import WebsiteName from "../elements/boxes/websiteName";
