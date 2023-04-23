@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import SubMenu from "./subMenu";
-import { GradesBox } from "./subMenu/grades";
+import { ExamsSubMenuInfo, GamesSubMenuInfo, GradesBox, VideosSubMenuInfo } from "./subMenu/grades";
 
 interface ComputerNavbarProps {
     cls ?: string
@@ -24,23 +24,22 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls}) => {
                 mainInfo={"بررسی کامل مطالب به همراه بازی، آزمون و کاربرگ"} 
             />
             <SubMenu 
-                cls="-right-8" 
                 name="ویدیوها" 
                 mainLink="videos" 
                 searchLink="/" 
-                items={GradesBox}
+                items={VideosSubMenuInfo}
                 mainHead={"مشاهده تمامی ویدیوها"}
-                mainImg={"./images/home/searchTypes/online-learning.png"}
-                mainInfo={"آموزش های آسان برای آموزگاران و دانش آموزان"} 
+                mainImg={"./images/home/searchTypes/video.png"}
+                mainInfo={"آموزش های آسان برای آموزگاران و دانش آموزان"}
+                subCls="!col-span-6"
             />
             <SubMenu 
-                cls="-right-8" 
                 name="کاربرگ" 
                 mainLink="worksheets" 
                 searchLink="/" 
                 items={GradesBox}
                 mainHead={"مشاهده تمامی کاربرگ ها"}
-                mainImg={"./images/home/searchTypes/online-learning.png"}
+                mainImg={"./images/home/searchTypes/worksheet.png"}
                 mainInfo={"کاربرگ های مهارت محور و خلاقانه برای تکمیل یادگیری یا سنجش"} 
             />
             <SubMenu 
@@ -48,9 +47,9 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls}) => {
                 name="بازی" 
                 mainLink="games" 
                 searchLink="/" 
-                items={GradesBox}
+                items={GamesSubMenuInfo}
                 mainHead={"مشاهده تمامی بازی ها"}
-                mainImg={"./images/home/searchTypes/online-learning.png"}
+                mainImg={"./images/home/searchTypes/game.png"}
                 mainInfo={"یادگیری با بازی های فکری و آموزنده بدون خستگی"} 
             />
             <SubMenu 
@@ -58,10 +57,11 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls}) => {
                 name="آزمون" 
                 mainLink="exams" 
                 searchLink="/" 
-                items={GradesBox}
+                items={ExamsSubMenuInfo}
                 mainHead={"مشاهده تمامی آزمون ها"}
-                mainImg={"./images/home/searchTypes/online-learning.png"}
-                mainInfo={"آزمون های فردی، دونفره، گروهی و جشنواره ای برای تمامی پایه ها"} 
+                mainImg={"./images/home/searchTypes/exam.png"}
+                mainInfo={"آزمون های فردی، دونفره، گروهی و جشنواره ای برای تمامی پایه ها"}
+                subCls="col-span-6"
             />
             <Link href="/" className={linkStyle}> داستان </Link>
             <Link href="/blog" className={linkStyle}> بلاگ </Link>

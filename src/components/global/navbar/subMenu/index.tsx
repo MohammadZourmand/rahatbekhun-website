@@ -12,9 +12,10 @@ interface SubMenuProps {
     mainHead : string
     items : any[]
     cls ?: string
+    subCls ?: string
 }
 
-const SubMenu : React.FC<SubMenuProps> = ({name, mainLink, searchLink, mainImg, mainInfo, mainHead, items, cls}) => {
+const SubMenu : React.FC<SubMenuProps> = ({name, mainLink, searchLink, mainImg, mainInfo, mainHead, items, cls, subCls}) => {
 
     const linkStyle = `group after:content-[''] after:absolute after:transition-all after:duration-500 after:w-0 hover:after:w-full after:bottom-0 after:left-0 after:h-full after:border-b-[3.5px] after:border-b-baby-1 relative text-center nozha mx-4 py-4 px-1 transition`
 
@@ -22,12 +23,12 @@ const SubMenu : React.FC<SubMenuProps> = ({name, mainLink, searchLink, mainImg, 
     return (
         <div className={linkStyle}>
             {name}
-            <div className={`${cls} group-hover:grid hidden animate-fade grid-cols-12 w-[40vw] p-4 absolute top-[4.1rem] right-0 text-base bg-white shadow-all-md z-10 rounded-lg`}>
+            <div className={`${cls} group-hover:grid hidden animate-fade grid-cols-12 w-[42vw] p-4 absolute top-[4.6rem] border-[1rem] border-transparent -right-8 text-base bg-white shadow-all-md z-10 rounded-lg`}>
                 <div className="col-span-5 flex flex-col items-center justify-center">
                     <img src={mainImg} alt="0-to-100-course-rahat-bekhun" />
-                    <Link className="text-xl font-black mt-4" href={`${mainLink}`}> {mainHead} </Link>
+                    <Link className="text-xl font-black mt-4 text-center" href={`${mainLink}`}> {mainHead} </Link>
                     <p className="text-center mt-1">{mainInfo}</p>
-                    <Link href={`/${searchLink}`} className="flex items-center bg-baby-1 rounded-lg px-2 py-1 mt-3">
+                    <Link href={`/${searchLink}`} className="flex items-center hover:bg-indigo-900 transition-all bg-baby-1 rounded-lg px-2 py-1 mt-3">
                         <SearchBrokenIcon cls="w-5 h-5" color="white" />
                         <span className="text-white text-sm mr-2"> جستجوی پیشرفته </span>
                     </Link>
@@ -35,7 +36,7 @@ const SubMenu : React.FC<SubMenuProps> = ({name, mainLink, searchLink, mainImg, 
                 <div className="grid grid-cols-12 gap-2 col-span-7">
                     {
                         items.map((item : any) => (
-                            <SubMenuBox name={item?.grade} img={item?.img} />
+                            <SubMenuBox cls={subCls} name={item?.name} img={item?.img} />
                         ))
                     }
                 </div>
