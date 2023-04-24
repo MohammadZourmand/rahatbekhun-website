@@ -1,6 +1,6 @@
 import Footer from "../global/footer";
 import Navbar from "../global/navbar";
-import BigSlider from "../global/sliders/homeSlider";
+import Header from "./homeHeader";
 import Sentences from "./BigSentences";
 import BigEvent from "./bigEvent";
 import OfferClasses from "./offerClasses";
@@ -12,7 +12,7 @@ const Home : React.FC = () => {
 
     return (
         <>
-            <BigSlider />
+            <Header />
             <Welcome />
             <OfferClasses />
             <BigEvent />

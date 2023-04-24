@@ -8,7 +8,7 @@ import { AlarmBrokenIcon, CartBrokenIcon, SearchBrokenIcon, UserBrokenIcon } fro
 import Link from "next/link";
 
 interface NavbarProps {
-    cls : string
+    cls ?: string
 }
 
 const Navbar : React.FC<NavbarProps> = ({cls}) => {
@@ -72,7 +72,7 @@ const Navbar : React.FC<NavbarProps> = ({cls}) => {
         <nav className={`${cls} grid grid-cols-12 items-center`}>
             {/* shadow for window when the search form is focus ... */}
             <div onClick={() => setIsFocus(false)} className={`${isFocus ? "fixed" : "hidden"} animate-fade bg-gray-900/80 z-40 top-0 left-0 w-full h-full`}></div>
-            <div className={`relative col-span-12 grid grid-cols-12 gap-x-6 justify-between items-center sm:px-12 shadow-all-lg my-6 mx-32 mb-0 py-4 px-4 rounded-xl after:hidden`}>
+            <div className={`relative col-span-12 grid grid-cols-12 gap-x-6 justify-between mx-4 items-center sm:px-12 shadow-all-lg my-6 mb-0 py-4 px-4 rounded-xl after:hidden`}>
                 <WebsiteName cls="col-span-3" />
                 <form className="group col-span-6 grid grid-cols-12 relative z-50">
                     <input onFocus={() => setIsFocus(true)} placeholder="دنبال چی میگردی ؟" type="text" className="placeholder:text-sm bg-slate-200 pr-12 py-3 col-span-12 rounded-xl focus:outline-none" />

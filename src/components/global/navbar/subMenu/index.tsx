@@ -1,6 +1,5 @@
 import { SearchBrokenIcon } from "@/assets/icons"
 import Link from "next/link"
-import { GradesBox, GradesBoxProps } from "./grades"
 import SubMenuBox from "./subMenuBox"
 
 interface SubMenuProps {
@@ -35,8 +34,8 @@ const SubMenu : React.FC<SubMenuProps> = ({name, mainLink, searchLink, mainImg, 
                 </div>
                 <div className="grid grid-cols-12 gap-2 col-span-7">
                     {
-                        items.map((item : any) => (
-                            <SubMenuBox cls={subCls} name={item?.name} img={item?.img} />
+                        items.map((item : any, index : number) => (
+                            <SubMenuBox key={index} cls={subCls} name={item?.name} img={item?.img} />
                         ))
                     }
                 </div>

@@ -13,7 +13,7 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls}) => {
     const linkStyle = `group after:content-[''] after:absolute after:transition-all after:duration-500 after:w-0 hover:after:w-full after:bottom-0 after:left-0 after:h-full after:border-b-[3.5px] after:border-b-baby-1 relative text-center nozha mx-4 py-4 px-1 transition`
 
     return (
-        <div className={`${cls} bg-gray-200 mx-40 lg:flex items-center rounded-b-lg justify-around px-32 hidden text-baby-1 text-[1.7rem]`}>
+        <div className={`${cls} bg-gray-200 mx-16 lg:flex items-center rounded-b-lg justify-around px-32 hidden text-baby-1 text-[1.7rem]`}>
             <SubMenu 
                 name="صفر تا صد" 
                 mainLink="courses" 
