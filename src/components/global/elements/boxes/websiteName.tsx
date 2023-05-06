@@ -7,11 +7,11 @@ const WebsiteName : React.FC<WebsiteNameProps> = ({
     cls,
 }) => {
     return (
-        <div className={`${cls} flex items-center sm:text-[2.5rem] text-[1.8rem]`}>
-            <img className="w-20 h-20" src="./images/webLogo.png" alt="rahat-bekhun-learn-easily-website" />
-            <div className="mr-2 space-x-1 space-x-reverse">
-                <span className={`nozha text-baby-1`}> راحت </span>
-                <span className={`nozha text-baby-2`}> بخون </span>
+        <div className={`${cls} flex items-center text-[2.5rem]`}>
+            <img className="w-16 h-16" src="./images/webLogo.png" alt="rahat-bekhun-learn-easily-website" />
+            <div className="xl:flex lg:hidden flex mr-1 space-x-1 space-x-reverse">
+                <div className={`nozha text-baby-1`}> راحت </div>
+                <div className={`nozha text-baby-2`}> بخون </div>
             </div>
         </div>
     )

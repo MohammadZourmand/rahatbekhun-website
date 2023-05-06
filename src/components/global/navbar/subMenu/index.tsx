@@ -16,13 +16,13 @@ interface SubMenuProps {
 
 const SubMenu : React.FC<SubMenuProps> = ({name, mainLink, searchLink, mainImg, mainInfo, mainHead, items, cls, subCls}) => {
 
-    const linkStyle = `group after:content-[''] after:absolute after:transition-all after:duration-500 after:w-0 hover:after:w-full after:bottom-0 after:left-0 after:h-full after:border-b-[3.5px] after:border-b-baby-1 relative text-center nozha mx-4 py-4 px-1 transition`
+    const linkStyle = `group py-5 px-1 after:content-[''] after:absolute after:transition-all after:duration-500 after:w-0 hover:after:w-full after:bottom-0 after:left-0 after:h-full after:border-b-[3.5px] after:border-b-baby-1 relative text-center nozha transition`
 
 
     return (
         <div className={linkStyle}>
             {name}
-            <div className={`${cls} group-hover:grid hidden animate-fade grid-cols-12 w-[42vw] p-4 absolute top-[4.6rem] border-[1rem] border-transparent -right-8 text-base bg-white shadow-all-md z-10 rounded-lg`}>
+            <div className={`${cls} group-hover:grid hidden animate-fade grid-cols-12 xl:w-[42vw] lg:w-[56vw] p-4 absolute top-[5.1rem] border-[1rem] border-transparent -right-28 text-base bg-white shadow-all-md z-10 rounded-lg`}>
                 <div className="col-span-5 flex flex-col items-center justify-center">
                     <img src={mainImg} alt="0-to-100-course-rahat-bekhun" />
                     <Link className="text-xl font-black mt-4 text-center" href={`${mainLink}`}> {mainHead} </Link>

@@ -13,12 +13,12 @@ const Home : React.FC = () => {
     return (
         <>
             <Header />
-            <Welcome />
+            {/* <Welcome />
             <OfferClasses />
             <BigEvent />
             <Teachers />
             <Sentences />
-            <Footer />
+            <Footer /> */}
         </>
     )
 }

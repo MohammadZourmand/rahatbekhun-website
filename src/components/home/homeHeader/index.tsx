@@ -12,7 +12,7 @@ import { ActivityBroken, EditSquare, EditSquareBroken, GameBroken, LeftIcon, Use
 const HomeHeader = () => {
   return (
     <header>
-      <div className="flex flex-col mx-24 items-center relative overflow-hidden">
+      <div className="flex flex-col items-center relative overflow-hidden">
         <Navbar />
         <div className="grid grid-cols-12 mx-20 mt-20 mb-8">
           <div className="col-span-6 text-lg flex flex-col justify-center items-start">
