@@ -1,10 +1,17 @@
-
+// ? react =======================
 import Link from "next/link";
+
+// ? components ==================
 import SubMenu from "./subMenu";
 import { ExamsSubMenuInfo, GamesSubMenuInfo, GradesBox, VideosSubMenuInfo } from "./subMenu/grades";
 import WebsiteName from "../elements/boxes/websiteName";
-import { AlarmBrokenIcon, CartBrokenIcon, CategoryBroken, SearchBrokenIcon, UserBrokenIcon } from "@/assets/icons";
+
+// ? libraries ===================
 import PN from "persian-number";
+
+// ? assets ======================
+import { AlarmBrokenIcon, CartBrokenIcon, CategoryBroken, SearchBrokenIcon, UserBrokenIcon } from "@/assets/icons";
+
 
 interface ComputerNavbarProps {
     cls ?: string

@@ -14,16 +14,16 @@ const HomeHeader = () => {
     <header>
       <div className="flex flex-col items-center relative overflow-hidden">
         <Navbar />
-        <div className="grid grid-cols-12 mx-20 mt-20 mb-8">
-          <div className="col-span-6 text-lg flex flex-col justify-center items-start">
-            <h2 className="font-black text-[3.2rem] text-gray-700 leading-[1.7]"> درس خوندن با راحت بخون خیلی راحت و لذت بخشه !</h2>
-            <p className="mt-4 text-lg text-gray-400 leading-loose" > اینجا با کلی دانش آموز باهوش دیگه که مثل خودت هستن بازی کن حرف بزن و کلی چیز جدید یاد بگیر و پیشرفت کن ! </p>
+        <div className="xl:grid xl:grid-cols-12 flex flex-col-reverse lg:mx-20 lg:mt-20 m-4 mb-8">
+          <div className="xl:col-span-6 mt-12 text-lg flex flex-col xl:items-start items-center">
+            <h2 className="font-black lg:text-[3.2rem] text-4xl lg:text-right text-center text-gray-700 lg:leading-[1.7] leading-loose"> درس خوندن با راحت بخون خیلی راحت و لذت بخشه !</h2>
+            <p className="mt-4 text-lg text-gray-400 leading-loose lg:text-right text-center" > اینجا با کلی دانش آموز باهوش دیگه که مثل خودت هستن بازی کن حرف بزن و کلی چیز جدید یاد بگیر و پیشرفت کن ! </p>
             <Link href={"/courses"} className="group my-8 flex items-center text-base font-semibold bg-[dodgerblue] text-white p-5 rounded-xl " >
               مشاهده دوره های صفر تا صد
               <LeftIcon color="white" cls="group-hover:-translate-x-2 transition mr-2" />
             </Link>
-            <div className="grid grid-cols-12 w-4/5 mx-4 mt-8">
-              <div className="col-span-6 flex items-center font-semibold text-gray-500">
+            <div className="grid grid-cols-12 items-center w-4/5 mx-4 lg:mt-8 mt-4">
+              <div className="sm:col-span-6 col-span-12 flex items-center justify-center font-semibold text-gray-500">
                 <div className="relative w-6 h-6 rounded-full bg-baby-6/30">
                   <ActivityBroken color="rgb(237 7 139)" cls="absolute -top-2 -right-2" />
                 </div>
@@ -31,7 +31,7 @@ const HomeHeader = () => {
                   متناسب با روند شما
                 </div>
               </div>
-              <div className="col-span-6 flex items-center font-semibold text-gray-500">
+              <div className="sm:col-span-6 col-span-12 flex items-center justify-center sm:mt-0 mt-8 font-semibold text-gray-500">
                 <div className="relative w-6 h-6 rounded-full bg-slate-700/30">
                   <UsersBroken color="rgb(51 65 85)" cls="absolute -top-2 -right-2" />
                 </div>
@@ -39,7 +39,7 @@ const HomeHeader = () => {
                   یادگیری گروهی در تیم
                 </div>
               </div>
-              <div className="col-span-6 flex items-center mt-8 font-semibold text-gray-500">
+              <div className="sm:col-span-6 col-span-12 flex items-center justify-center mt-8 font-semibold text-gray-500">
                 <div className="relative w-6 h-6 rounded-full bg-baby-4/30">
                   <GameBroken color="rgb(244 231 0)" cls="absolute -top-2 -right-2" />
                 </div>
@@ -47,7 +47,7 @@ const HomeHeader = () => {
                   یادگیری از طریق بازی
                 </div>
               </div>
-              <div className="col-span-6 flex items-center mt-8 font-semibold text-gray-500">
+              <div className="sm:col-span-6 col-span-12 flex items-center justify-center mt-8 font-semibold text-gray-500">
                 <div className="relative w-6 h-6 rounded-full bg-baby-7/30">
                   <EditSquareBroken color="rgb(0 123 255)" cls="absolute -top-2 -right-2" />
                 </div>
@@ -57,7 +57,7 @@ const HomeHeader = () => {
               </div>
             </div>
           </div>
-          <Lottie className="col-span-6" animationData={ReadingBoy} />
+          <Lottie className="xl:col-span-6" animationData={ReadingBoy} />
         </div>
       </div>
     </header>

@@ -1,11 +1,11 @@
 // ? react =======================
-import { Dispatch, SetStateAction, useState } from "react"
+import { Dispatch, SetStateAction, useState } from "react";
 
 // ? components ==================
-import { SearchTypesData, searchTypesDataProps } from "./searchTypesData"
+import { SearchTypesData, searchTypesDataProps } from "./searchTypesData";
 
 // ? assets ======================
-import { SearchBrokenIcon } from "@/assets/icons"
+import { SearchBrokenIcon } from "@/assets/icons";
 
 interface SearchModalProps {
     isFocus : boolean
