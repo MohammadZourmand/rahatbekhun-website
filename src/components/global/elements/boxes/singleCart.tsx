@@ -1,5 +1,8 @@
-import { IconBrandWechat, IconCategory2, IconClock, IconUser } from "@tabler/icons-react";
+// ? libraries ===================
 import PN from "persian-number";
+
+// ? assets ===================
+import { IconBrandWechat, IconCategory2, IconClock, IconUser } from "@tabler/icons-react";
 
 export interface SingleCartProps {
     cls ?: string

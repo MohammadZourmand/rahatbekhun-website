@@ -1,4 +1,7 @@
+// ? types  ======================
 import { teachersInfoType } from "@/types/home";
+
+// ? assets ======================
 import { IconBrandGithub, IconBrandInstagram, IconBrandTelegram, IconUserExclamation } from "@tabler/icons-react";
 
 const Slide : React.FC<teachersInfoType> = ({

@@ -1,4 +1,4 @@
-
+// ? types =====================
 import { classOfferedSliderType } from "@/types/home";
 
 export const classOfferedDetails : classOfferedSliderType[] = [

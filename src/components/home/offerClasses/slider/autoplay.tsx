@@ -1,7 +1,7 @@
-// react
+// ? react =========================
 import { useRef } from "react";
 
-// libraries
+// ? libraries =====================
 import PN from "persian-number";
 
 let progressCircle : any;

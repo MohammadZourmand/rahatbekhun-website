@@ -1,13 +1,16 @@
-import React from "react";
-// Import Swiper React components
-
-import Lottie from "lottie-react";
-import ReadingBoy from "@/assets/animation/lottieFiles/reading-boy.json"; 
-
-
-import Navbar from "../../global/navbar";
+// ? react =======================
 import Link from "next/link";
-import { ActivityBroken, EditSquare, EditSquareBroken, GameBroken, LeftIcon, UsersBroken } from "@/assets/icons";
+import React from "react";
+
+// ? components ==================
+import Navbar from "../../global/navbar";
+
+// ? libraries ===================
+import Lottie from "lottie-react";
+
+// ? assets ===================
+import { ActivityBroken, EditSquareBroken, GameBroken, LeftIcon, UsersBroken } from "@/assets/icons";
+import ReadingBoy from "@/assets/animation/lottieFiles/reading-boy.json"; 
 
 const HomeHeader = () => {
   return (

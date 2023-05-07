@@ -1,8 +1,8 @@
+// ? components ==================
 import WhiteWave from "@/components/global/waves/whiteWave";
 import Header from "@/components/global/elements/header";
 import OfferSlider from "./slider";
 import PinkBtn from "@/components/global/elements/buttons/pink";
-
 
 const OfferClasses : React.FC = () => {
 

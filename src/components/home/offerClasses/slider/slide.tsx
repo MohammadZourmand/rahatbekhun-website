@@ -1,6 +1,9 @@
+// ? libraries ===================
 import PN from "persian-number"
 
+// ? types  ======================
 import { classOfferedSliderType } from "@/types/home";
+
 
 const Slide : React.FC<classOfferedSliderType> = ({
     ageCategory,

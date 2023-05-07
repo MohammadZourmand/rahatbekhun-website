@@ -1,8 +1,11 @@
-
-import { IconBrandYoutube, IconDeviceGamepad2, IconFileReport } from "@tabler/icons-react";
+// ? components ==================
 import Box from "./box";
+
+// ? libraries ===================
 import Lottie from "lottie-react";
 
+// ? assets ======================
+import { IconBrandYoutube, IconDeviceGamepad2, IconFileReport } from "@tabler/icons-react";
 import StudentOnPen from "@/assets/animation/lottieFiles/onlineLearning.json";
 
 const Main : React.FC = () => {

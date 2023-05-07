@@ -1,11 +1,13 @@
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// import required modules
+// ? components ==================
 import Slide from "./slide";
 import { teachersDetails } from "./slidersDetails";
-import { classOfferedSliderType } from "@/types/home";
+
+// ? libraries ===================
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from 'swiper';
+
+// ? types  ======================
+import { classOfferedSliderType } from "@/types/home";
 
 const TeachersSlider : React.FC = () => {
 
