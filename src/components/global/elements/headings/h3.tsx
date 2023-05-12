@@ -18,7 +18,7 @@ const Heading3 : React.FC<HeadingsProps> = ({
                 ${isNozha && "nozha"}
                 ${center ? "text-center" : "text-right"}
                 ${weight ?? "font-bold"}
-                mt-28 lg:text-3xl md:text-2xl sm:text-xl text-lg
+                lg:text-3xl md:text-2xl sm:text-xl text-lg
             `}>
             {text}
         </h3>
