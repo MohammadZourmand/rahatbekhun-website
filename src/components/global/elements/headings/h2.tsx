@@ -1,16 +1,32 @@
 
-interface Heading2Props {
+export interface HeadingsProps {
     cls ?: string,
-    text : string
+    text : string,
+    color ?: string,
+    isNozha ?: boolean,
+    center ?: boolean,
+    weight ?: string
 }
 
-const Heading2 : React.FC<Heading2Props> = ({
+const Heading2 : React.FC<HeadingsProps> = ({
     cls,
-    text
+    text,
+    color,
+    isNozha,
+    center,
+    weight
 }) => {
 
     return (
-        <h2 className={`${cls} mt-28 roosta text-baby-1 lg:text-6xl md:text-6xl sm:text-5xl xs:text-[2.45rem] text-[2.65rem]`}>
+        <h2
+            className={` 
+                ${cls}
+                ${color ?? "text-gray-700"}
+                ${isNozha && "nozha"}
+                ${!center ? "text-center" : "text-right"}
+                ${weight ?? "font-bold"}
+                mt-28 lg:text-4xl md:text-6xl sm:text-5xl xs:text-[2.45rem] text-[2.65rem]
+            `}>
             {text}
         </h2>
     )

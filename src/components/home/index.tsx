@@ -13,8 +13,8 @@ const Home : React.FC = () => {
     return (
         <>
             <Header />
-            {/* <Welcome />
-            <OfferClasses />
+            <Welcome />
+            {/* <OfferClasses />
             <BigEvent />
             <Teachers />
             <Sentences />
