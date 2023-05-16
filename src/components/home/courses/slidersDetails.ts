@@ -1,7 +1,7 @@
 // ? types =====================
-import { classOfferedSliderType } from "@/types/home";
+import { CartType } from "@/types/home";
 
-export const classOfferedDetails : classOfferedSliderType[] = [
+export const classOfferedDetails : CartType[] = [
     {
         name : "آموزش محاسبات سریع",
         details : "محاسبات ذهنی ریاضی برای دانش آموزان ابتدایی بدون استفاده از دست",

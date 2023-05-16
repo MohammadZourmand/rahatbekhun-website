@@ -2,16 +2,15 @@
 import PN from "persian-number"
 
 // ? types  ======================
-import { classOfferedSliderType } from "@/types/home";
-import { FolderBroken, LeftIcon, Star, StarBroken } from "@/assets/icons";
-import Heading3 from "@/components/global/elements/headings/h3";
-import Heading5 from "@/components/global/elements/headings/h5";
+import { CartType } from "@/types/home";
+
+// ? assets ======================
+import { FolderBroken, LeftIcon, Star } from "@/assets/icons";
 import Heading6 from "@/components/global/elements/headings/h6";
 import Paragraph from "@/components/global/elements/paragraph";
-import { useState, useEffect } from "react";
 
 
-const Slide : React.FC<classOfferedSliderType> = ({
+const Cart : React.FC<CartType> = ({
     ageCategory,
     sessions,
     price,
@@ -27,11 +26,11 @@ const Slide : React.FC<classOfferedSliderType> = ({
 
 
     return (
-        <section className={`${cls} rounded-lg bg-white shadow-lg shadow-babyTransparent-2`}>
+        <section className={`${cls} group rounded-lg bg-white shadow-lg`}>
             {/* image part */}
             <div className="relative overflow-hidden h-56 rounded-t-lg">
-                <div className={`text-sm bg-baby-11 absolute text-white top-4 left-4 px-3 py-1 rounded`}>{category}</div>
-                <img className="overflow-hidden" src={image} alt="" />
+                <div className={`z-10 text-sm bg-baby-11 absolute text-white top-4 left-4 px-3 py-1 rounded`}>{category}</div>
+                <img className="overflow-hidden group-hover:scale-105 transition duration-500" src={image} alt="" />
             </div>
             {/* text part */}
             <div className="flex flex-col xl:p-4 p-3">
@@ -80,4 +79,4 @@ const Slide : React.FC<classOfferedSliderType> = ({
     )
 }
 
-export default Slide;
+export default Cart;

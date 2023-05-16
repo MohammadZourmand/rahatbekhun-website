@@ -1,5 +1,5 @@
 
-export interface classOfferedSliderType {
+export interface CartType {
     ageCategory ?: string,
     sessions ?: number | string,
     price ?: number,
