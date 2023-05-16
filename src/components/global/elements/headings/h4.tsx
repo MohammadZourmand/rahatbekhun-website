@@ -1,7 +1,7 @@
 
 import { HeadingsProps } from "./h2";
 
-const Heading6 : React.FC<HeadingsProps> = ({
+const Heading4 : React.FC<HeadingsProps> = ({
     cls,
     text,
     color,
@@ -11,18 +11,18 @@ const Heading6 : React.FC<HeadingsProps> = ({
 }) => {
 
     return (
-        <h6
+        <h4
             className={` 
                 ${cls}
                 ${color ?? "text-gray-700"}
                 ${isNozha && "nozha"}
                 ${center ? "text-center" : "text-right"}
                 ${weight ?? "font-bold"}
-                md:text-xl sm:text-lg text-base
+                lg:text-3xl md:text-2xl sm:text-xl text-lg
             `}>
             {text}
-        </h6>
+        </h4>
     )
 }
 
-export default Heading6;
+export default Heading4;

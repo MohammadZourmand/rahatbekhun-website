@@ -6,6 +6,11 @@ export interface classOfferedSliderType {
     name : string,
     details : string,
     image : string
+    cls ?: string
+    category : string
+    offPrice ?: number
+    votesAverage : number
+    votes : number
 }
 
 export interface teachersInfoType {

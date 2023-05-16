@@ -12,13 +12,13 @@ const Heading3 : React.FC<HeadingsProps> = ({
 
     return (
         <h3
-            className={` 
+            className={`
+                lg:text-4xl md:text-3xl text-2xl
                 ${cls}
                 ${color ?? "text-gray-700"}
                 ${isNozha && "nozha"}
                 ${center ? "text-center" : "text-right"}
                 ${weight ?? "font-bold"}
-                lg:text-3xl md:text-2xl sm:text-xl text-lg
             `}>
             {text}
         </h3>
