@@ -18,7 +18,7 @@ const Courses : React.FC = () => {
     const [type, setType] = useState<string>("all")
 
     return (
-        <section className="relative flex flex-col bg-gray-200/80 py-28 lg:mt-12 xl:px-32 lg:px-12 sm:px-[30px] xs:px-8 px-2">
+        <section className="relative flex flex-col bg-gray-200/80 sm:py-28 py-16 lg:mt-12 xl:px-32 lg:px-12 sm:px-[30px] xs:px-8 px-2">
             <header className="grid grid-cols-12">
                 <div className="lg:col-span-7 col-span-12">
                     <Heading3 cls=" lg:w-96 !leading-relaxed lg:!text-right !text-center" text="دوره ای را که می خواهید سریع پیدا کنید !" />
