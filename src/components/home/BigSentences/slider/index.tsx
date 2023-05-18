@@ -13,8 +13,7 @@ const SentenceSlider : React.FC = () => {
         <Swiper
             slidesPerView={1}
             id="sentenceSlider"
-            modules={[Autoplay, Navigation]}
-            navigation={true}
+            modules={[Autoplay]}
             autoplay={{
                 delay: 5000,
                 disableOnInteraction: false,

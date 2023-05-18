@@ -14,7 +14,7 @@ const Slide : React.FC<sentencesType> = ({
                 <img className="!w-20 !h-20 rounded-full" src={image} alt="" />
             </header>
             <main>
-                <Paragraph center={true} cls="!text-2xl !leading-loose !mt-6 !font-medium text-white px-64" text={sentence} />
+                <Paragraph center={true} cls="md:!text-2xl !text-xl !leading-loose !mt-6 !font-medium text-white xl:px-64 px-4" text={sentence} />
             </main>
             <footer className="flex flex-col items-center gap-2 mt-5">
                 <span className="text-xl text-white font-extrabold">{name}</span>

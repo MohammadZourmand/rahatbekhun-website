@@ -22,7 +22,7 @@ const Home : React.FC = () => {
             <TeachersClasses />
             <Sentences />
             <OfferedArticles />
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }
