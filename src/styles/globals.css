@@ -223,3 +223,15 @@
 	stroke-dasharray: 125.6;
 	transform: rotate(-90deg);
   }
+
+/* ! home slider --- sentences */
+
+.sentence-slider .swiper-button-next, .sentence-slider .swiper-button-prev {
+	color: white !important;
+	width: 86px;
+	height: 86px;
+	border: 1px solid white;
+	padding: 100px;
+	border-radius: 9999px;
+	transform: matrix(0.3, 0, 0, 0.3, 0, -72);
+}

@@ -16,11 +16,11 @@ const SentenceSlider : React.FC = () => {
             modules={[Autoplay, Navigation]}
             navigation={true}
             autoplay={{
-                delay: 2500,
+                delay: 5000,
                 disableOnInteraction: false,
             }}
             loop={true}
-            className="flex items-center justify-center sm:mt-16 mt-4 h-full w-full"
+            className="flex items-center justify-center h-full w-full sentence-slider"
             dir="rtl"
         >
             {

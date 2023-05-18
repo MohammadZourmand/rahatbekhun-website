@@ -1,6 +1,5 @@
 import Paragraph from "@/components/global/elements/paragraph";
 import { sentencesType } from "@/types/home";
-import { IconBrandGithub, IconBrandInstagram, IconBrandTelegram, IconUserExclamation } from "@tabler/icons-react";
 
 const Slide : React.FC<sentencesType> = ({
     name,
@@ -10,20 +9,17 @@ const Slide : React.FC<sentencesType> = ({
 }) => {
 
     return (
-        <section className="group relative flex items-center justify-center h-full">
-            <div className="flex flex-col items-center">
-                <img className="!w-20 !h-20" src="./images/home/sentence/testimonial.webp" alt="" />
-                <Paragraph cls="text-lg !mt-6 !font-semibold" text={sentence} />
-                <div className="flex items-center gap-3 mt-6">
-                    <div>
-                        <img className="!w-16 !h-16 rounded-full" src={image} alt="" />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                        <span className="text-baby-6 text-xl roosta">{name}</span>
-                        <span className="text-slate-700 text-sm">{job}</span>
-                    </div>
-                </div>
-            </div>
+        <section className="flex flex-col items-center justify-center h-full">
+            <header>
+                <img className="!w-20 !h-20 rounded-full" src={image} alt="" />
+            </header>
+            <main>
+                <Paragraph center={true} cls="!text-2xl !leading-loose !mt-6 !font-medium text-white px-64" text={sentence} />
+            </main>
+            <footer className="flex flex-col items-center gap-2 mt-5">
+                <span className="text-xl text-white font-extrabold">{name}</span>
+                <span className="text-xs text-gray-200">{job}</span>
+            </footer>
         </section>
     )
 }
