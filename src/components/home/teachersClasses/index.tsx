@@ -12,7 +12,7 @@ const TeachersClasses : React.FC = () => {
         <section className="relative grid grid-cols-12 xl:my-44 my-16 xl:mx-64 md:mx-40 sm:mx-[30px] xs:mx-[10px] mx-6">
             <div className="xl:col-span-5 col-span-12 flex flex-col justify-center gap-y-3">
                 <BlueParagraph cls="font-semibold !text-center xl:!text-right" text="راحت بخون دستیار آموزگاران" />
-                <Heading3 cls="!leading-relaxed !text-center xl:!text-right" text="راحت بخون را همیار کلاس خود کنید !" />
+                <Heading3 cls="!leading-relaxed !text-center xl:!text-right text-gray-800" text="راحت بخون را همیار کلاس خود کنید !" />
                 <Paragraph cls="font-medium leading-loose !text-center xl:!text-right" text="راحت بخون با ارائه مطالب، آزمایشگاه ها، کلاس ها، و بازی ها و موارد مشابه دیگر به شما آموزگاران دست یاری می دهد تا تجربه ی آموزشی بهتری را رقم بزنید !" />
                 <div className="flex xs:flex-row flex-col justify-center items-center gap-8 mt-6">
                     <DarkBlueBtn href="/" text="برو بریم"/>
@@ -20,7 +20,7 @@ const TeachersClasses : React.FC = () => {
                 </div>
             </div>
             <div className="xl:col-span-7 col-span-12">
-                <img className="sm:scale-100 scale-125 translate-y-12" src="./images/home/teamwork.jpg" alt="raharbekhun-helps-teachers-with-assistants-class" />
+                <img className="translate-y-12" src="./images/home/teamwork.jpg" alt="raharbekhun-helps-teachers-with-assistants-class" />
             </div>
         </section>
     )

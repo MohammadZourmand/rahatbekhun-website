@@ -13,6 +13,15 @@ export interface CartType {
     votes : number
 }
 
+export interface Cart2Type {
+    subject : string,
+    name : string,
+    image : string
+    cls ?: string
+    category : string
+    date : string
+}
+
 export interface teachersInfoType {
     name : string,
     details : string,

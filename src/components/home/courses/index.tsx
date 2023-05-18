@@ -4,7 +4,7 @@ import { useState } from "react";
 // ? components =======================
 import Heading3 from "@/components/global/elements/headings/h3";
 import Paragraph from "@/components/global/elements/paragraph";
-import Slide from "./slide";
+import Slide from "./cart";
 
 // ? assets ===========================
 import { classOfferedDetails } from "./slidersDetails";

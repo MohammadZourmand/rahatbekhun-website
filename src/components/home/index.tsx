@@ -9,6 +9,7 @@ import GameLearning from "./gameLearning";
 import Courses from "./courses";
 import Inviting from "./inviting";
 import TeachersClasses from "./teachersClasses";
+import OfferedArticles from "./offeredArticles";
 
 
 const Home : React.FC = () => {
@@ -21,6 +22,7 @@ const Home : React.FC = () => {
             <Courses />
             <Inviting />
             <TeachersClasses />
+            <OfferedArticles />
             {/* <BigEvent />
             <Teachers />
             <Sentences />
