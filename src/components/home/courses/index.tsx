@@ -21,8 +21,8 @@ const Courses : React.FC = () => {
         <section className="relative flex flex-col bg-gray-200/80 sm:py-28 py-16 lg:mt-12 xl:px-32 lg:px-12 sm:px-[30px] xs:px-8 px-2">
             <header className="grid grid-cols-12">
                 <div className="lg:col-span-7 col-span-12">
-                    <Heading3 cls=" lg:w-96 !leading-relaxed lg:!text-right !text-center" text="دوره ای را که می خواهید سریع پیدا کنید !" />
-                    <Paragraph cls="mt-4 lg:!text-right !text-center" text={"شما تنها نیستید ! آماده ایم که به شما کمک کنیم تا شما دوره مناسب را پیدا کنید !"} />
+                    <Heading3 cls=" lg:w-96 !leading-relaxed lg:!text-right !text-center" text="دوره ای را که می خواهی سریع پیدا کن !" />
+                    <Paragraph cls="mt-4 lg:!text-right !text-center" text={"تو تنها نیستی ! آماده ایم که بهت کمک کنیم تا دوره مناسب با مشکلاتت رو پیدا کنی !"} />
                 </div>
                 <div className="lg:col-span-5 col-span-12 lg:self-end lg:justify-self-end justify-self-center lg:mt-0 mt-6 flex xl:gap-10 lg:gap-6 xs:gap-10 gap-4">
                     <div onClick={() => setType("all")} className={`${type === "all" && "text-baby-7 !font-bold"} font-medium cursor-pointer`}>همه</div>
