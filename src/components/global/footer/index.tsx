@@ -1,56 +1,43 @@
 import Link from "next/link";
 import WebsiteName from "../elements/boxes/websiteName";
-import { IconBrandGooglePlay, IconBrandInstagram, IconBrandTelegram, IconBrandZalando } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandGooglePlay, IconBrandInstagram, IconBrandTelegram, IconBrandZalando } from "@tabler/icons-react";
+import Paragraph from "../elements/paragraph";
+import WebsiteInfo from "./websiteInfo";
+import Heading6 from "../elements/headings/h6";
+import { SearchBrokenIcon } from "@/assets/icons";
 
 
 const Footer : React.FC = () => {
     
     return (
-        <footer className="bg-baby-8 text-white">
-            <div data-aos="fade-up" data-aos-duration="3000" className="grid grid-cols-12 gap-x-8 sm:px-12 sm:pt-12 sm:pb-6 pb-6">
-                <div className="lg:col-span-5 col-span-12 flex flex-col sm:p-6 p-2">
-                    <WebsiteName isFixed cls="sm:block flex justify-center" />
-                    <p className="text-white sm:text-right text-center leading-[2.5]"> ما در راحت بخون مفتخریم که در خدمت دانش آموزان بزرگ کشور بزرگ و پرشکوه ایران هستیم. دانش آموزانی که هر کدامشان قطعه کوچک پازل بزرگ آینده درخشان کشوری پیشرفته و به دور از هر سختی و جنگی خواهند بود اگر ما راه را به آنها نشان دهیم . </p>
-                    <div className="flex sm:justify-start justify-center py-8">
-                        <Link href="#" className="bg-baby-1 transition-all duration-500 hover:bg-baby-6 rounded-full p-2 ml-2">
-                            <IconBrandGooglePlay color="white" className="scale-[.8]"/>
-                        </Link>
-                        <Link href="#" className="bg-baby-1 transition-all duration-500 hover:bg-baby-6 rounded-full p-2 mx-2">
-                            <IconBrandTelegram color="white" className="scale-[.8]"/>
-                        </Link>
-                        <Link href="#" className="bg-baby-1 transition-all duration-500 hover:bg-baby-6 rounded-full p-2 mx-2">
-                            <IconBrandInstagram color="white" className="scale-[.9]"/>
-                        </Link>
-                        <Link href="#" className="bg-baby-1 transition-all duration-500 hover:bg-baby-6 rounded-full p-2 mx-2">
-                            <IconBrandZalando color="white" className="scale-[.8]"/>
-                        </Link>
-                    </div>
-                </div>
-                <div className="lg:col-span-7 col-span-12 grid grid-cols-12 sm:p-6 p-2">
+        <footer className="bg-gray-200/80 text-white flex flex-col">
+            <div className="grid grid-cols-12 lg:gap-x-8 xl:px-12 lg:px-6 sm:px-12 sm:pt-12 sm:pb-6 pb-6">
+                <WebsiteInfo cls="lg:col-span-4 col-span-12" />
+                <div className="lg:col-span-5 col-span-12 grid grid-cols-12 sm:p-6 p-2">
                     <div className="col-span-6">
-                        <h2 className="roosta sm:text-3xl text-[1.8rem] py-7"> لینک های سریع </h2>
-                        <ul className="space-y-6">
-                            <li>
+                        <Heading6 cls="text-gray-900 lg:!text-right !text-center" text="لینک های سریع" />
+                        <ul className="space-y-4 mt-6 text-sm">
+                            <li className="text-gray-600 lg:text-right text-center">
                                 <Link href="#">
                                     کلاس ها
                                 </Link>
                             </li>
-                            <li>
+                            <li className="text-gray-600 lg:text-right text-center">
                                 <Link href="#">
                                     پیوستن به ما    
                                 </Link>
                             </li>
-                            <li>
+                            <li className="text-gray-600 lg:text-right text-center">
                                 <Link href="#">
                                     درباره ما    
                                 </Link>
                             </li>
-                            <li>
+                            <li className="text-gray-600 lg:text-right text-center">
                                 <Link href="#">
                                     وبلاگ
                                 </Link>
                             </li>
-                            <li>
+                            <li className="text-gray-600 lg:text-right text-center">
                                 <Link href="#">
                                     رویدادها
                                 </Link>
@@ -58,29 +45,29 @@ const Footer : React.FC = () => {
                         </ul>
                     </div>
                     <div className="col-span-6">
-                        <h2 className="roosta sm:text-3xl text-[1.8rem] py-7"> ارتباط با ما </h2>
-                        <ul className="space-y-6">
-                            <li>
+                        <Heading6 cls="text-gray-900 lg:!text-right !text-center" text="ارتباط با ما" />
+                        <ul className="space-y-4 mt-6 text-sm">
+                            <li className="text-gray-600 lg:text-right text-center">
                                 <Link href="#">
                                     تیم ما
                                 </Link>
                             </li>
-                            <li>
+                            <li className="text-gray-600 lg:text-right text-center">
                                 <Link href="#">
                                     قوانین و مقررات   
                                 </Link>
                             </li>
-                            <li>
+                            <li className="text-gray-600 lg:text-right text-center">
                                 <Link href="#">
                                     دریافت گواهی    
                                 </Link>
                             </li>
-                            <li>
+                            <li className="text-gray-600 lg:text-right text-center">
                                 <Link href="#">
                                     انتقادات و پیشنهادات
                                 </Link>
                             </li>
-                            <li>
+                            <li className="text-gray-600 lg:text-right text-center">
                                 <Link href="#">
                                     چشم انداز
                                 </Link>
@@ -88,8 +75,20 @@ const Footer : React.FC = () => {
                         </ul>
                     </div>
                 </div>
+                <div className="lg:col-span-3 col-span-12 flex justify-center sm:py-6 py-2">
+                    <form className="flex flex-col lg:items-start items-center">
+                        <Heading6 text={"خبررسانی"} cls="text-gray-900 mt-4 lg:mt-0" />
+                        <div className="grid grid-cols-12 lg:pl-6 mt-6">
+                            <input placeholder="ایمیل خود را وارد کنید." className="col-span-9 py-1 px-5 text-gray-900 outline-none" />
+                            <button type="submit" className="flex justify-center p-3 bg-baby-9 col-span-3">
+                                <SearchBrokenIcon color="white" cls="w-6 h-6" />
+                            </button>
+                        </div>
+                        <Paragraph cls="font-medium text-sm mt-6 leading-loose !text-center lg:!text-right" text="آخرین اخبار درمورد تخفیف ها، اطلاع رسانی ها و موارد دیگر را دریافت کنی ." />
+                    </form>
+                </div>
             </div>
-            <div className="pb-12 text-center">
+            <div className="xl:py-8 py-4 md:text-base text-xs sm:text-sm xl:mx-32 mx-4 text-center text-gray-700 border-t border-t-gray-300">
                 تمام حقوق مادی و معنوی این سایت متعلق به راحت بخون است .
             </div>
         </footer>

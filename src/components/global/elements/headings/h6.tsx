@@ -13,12 +13,12 @@ const Heading6 : React.FC<HeadingsProps> = ({
     return (
         <h6
             className={` 
-                ${cls}
                 ${color ?? "text-gray-700"}
                 ${isNozha && "nozha"}
                 ${center ? "text-center" : "text-right"}
                 ${weight ?? "font-bold"}
                 md:text-xl sm:text-lg text-base
+                ${cls}
             `}>
             {text}
         </h6>
