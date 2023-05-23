@@ -1,11 +1,13 @@
+// ? React ==========================
 import Link from "next/link";
-import WebsiteName from "../elements/boxes/websiteName";
-import { IconBrandGithub, IconBrandGooglePlay, IconBrandInstagram, IconBrandTelegram, IconBrandZalando } from "@tabler/icons-react";
+
+// ? Components =====================
 import Paragraph from "../elements/paragraph";
 import WebsiteInfo from "./websiteInfo";
 import Heading6 from "../elements/headings/h6";
-import { SearchBrokenIcon } from "@/assets/icons";
 
+// ? assets =========================
+import { SearchBrokenIcon } from "@/assets/icons";
 
 const Footer : React.FC = () => {
     

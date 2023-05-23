@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
 import Slide from "./slide";
 import { sentencesType } from "@/types/home";
-import { Autoplay, Navigation } from 'swiper';
+import { Autoplay } from 'swiper';
 import { scientists } from "./slidersDetails";
 
 const SentenceSlider : React.FC = () => {

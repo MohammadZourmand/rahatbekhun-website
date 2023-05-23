@@ -16,10 +16,11 @@ import { AlarmBrokenIcon, CartBrokenIcon, CategoryBroken, SearchBrokenIcon, User
 interface ComputerNavbarProps {
     cls ?: string
     setIsFocusOnSearch : React.Dispatch<React.SetStateAction<boolean>>
+    isWhite ?: boolean
 }
 
 
-const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls, setIsFocusOnSearch}) => {
+const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls, setIsFocusOnSearch, isWhite}) => {
 
     const linkStyle = `group flex items-center justify-center bg-baby-1 rounded-full sm:w-12 sm:h-12 w-10 h-10 after:hidden after:content-[''] after:absolute after:transition-all after:duration-500 after:w-0 hover:after:w-full after:bottom-0 after:left-0 after:h-full after:border-b-[3.5px] after:border-b-baby-6 relative text-center nozha py-4 px-1 transition`
 
@@ -28,7 +29,8 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls, setIsFocusOnSearch
             <div className="flex items-center">
                 <WebsiteName cls="justify-center ml-8" />
                 <div className={`${cls} lg:flex hidden xl:space-x-reverse space-x-reverse xl:space-x-16 space-x-10 items-center justify-start xl:px-10 lg:px-6 text-baby-1 text-[1.7rem]`}>
-                    <SubMenu 
+                    <SubMenu
+                        isWhite={isWhite} 
                         name="صفر تا صد" 
                         mainLink="courses" 
                         searchLink="/" 
@@ -37,7 +39,8 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls, setIsFocusOnSearch
                         mainImg={"./images/home/searchTypes/online-learning.png"}
                         mainInfo={"بررسی کامل مطالب به همراه بازی، آزمون و کاربرگ"} 
                     />
-                    <SubMenu 
+                    <SubMenu
+                        isWhite={isWhite} 
                         name="ویدیوها" 
                         mainLink="videos" 
                         searchLink="/" 
@@ -47,7 +50,8 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls, setIsFocusOnSearch
                         mainInfo={"آموزش های آسان برای آموزگاران و دانش آموزان"}
                         subCls="!col-span-6"
                     />
-                    <SubMenu 
+                    <SubMenu
+                        isWhite={isWhite} 
                         name="کاربرگ" 
                         mainLink="worksheets" 
                         searchLink="/" 
@@ -56,7 +60,8 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls, setIsFocusOnSearch
                         mainImg={"./images/home/searchTypes/worksheet.png"}
                         mainInfo={"کاربرگ های مهارت محور و خلاقانه برای تکمیل یادگیری یا سنجش"} 
                     />
-                    <SubMenu 
+                    <SubMenu
+                        isWhite={isWhite} 
                         cls="-right-12" 
                         name="بازی" 
                         mainLink="games" 
@@ -66,7 +71,8 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls, setIsFocusOnSearch
                         mainImg={"./images/home/searchTypes/game.png"}
                         mainInfo={"یادگیری با بازی های فکری و آموزنده بدون خستگی"} 
                     />
-                    <SubMenu 
+                    <SubMenu
+                        isWhite={isWhite} 
                         cls="-right-8" 
                         name="آزمون" 
                         mainLink="exams" 

@@ -18,12 +18,12 @@ const Paragraph : React.FC<ParagraphProps> = ({
 
     return (
         <p className={`
-            ${cls}
             ${color ?? "text-gray-400"}
             ${isNozha && "nozha"}
             ${center ? "text-center" : "text-right"}
             ${weight ?? "font-bold"}
             text-base
+            ${cls}
         `}>
            {text}
         </p>
