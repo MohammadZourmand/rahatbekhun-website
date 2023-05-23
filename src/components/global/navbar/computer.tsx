@@ -22,7 +22,7 @@ interface ComputerNavbarProps {
 
 const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls, setIsFocusOnSearch, isWhite}) => {
 
-    const linkStyle = `group flex items-center justify-center bg-baby-1 rounded-full sm:w-12 sm:h-12 w-10 h-10 after:hidden after:content-[''] after:absolute after:transition-all after:duration-500 after:w-0 hover:after:w-full after:bottom-0 after:left-0 after:h-full after:border-b-[3.5px] after:border-b-baby-6 relative text-center nozha py-4 px-1 transition`
+    const linkStyle = `group flex items-center justify-center ${isWhite ? "bg-white" : "bg-baby-1"} rounded-full sm:w-12 sm:h-12 w-10 h-10 after:hidden after:content-[''] after:absolute after:transition-all after:duration-500 after:w-0 hover:after:w-full after:bottom-0 after:left-0 after:h-full after:border-b-[3.5px] after:border-b-baby-6 relative text-center nozha py-4 px-1 transition`
 
     return (
         <div className={`${cls} flex justify-between items-center rounded-lg`}>
@@ -87,20 +87,20 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls, setIsFocusOnSearch
             </div>
             <div className="flex items-center space-x-reverse space-x-3 xl:px-10 lg:px-6">
                 <div onClick={() => setIsFocusOnSearch(true)} className={`${linkStyle}`}>
-                    <SearchBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color="white" />
+                    <SearchBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
                 </div>
                 <Link href={"/profile"} className={`${linkStyle} md:flex hidden`}>
-                    <CartBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color="white" />
+                    <CartBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
                 </Link>
                 <Link href={"/profile"} className={`${linkStyle} md:flex hidden`}>
-                    <AlarmBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color="white" />
+                    <AlarmBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
                     <span className={`absolute -bottom-1 -right-1 bg-baby-4 px-2 rounded-full`}> {PN.convertEnToPe(1)} </span>
                 </Link>
                 <Link href={"/profile"} className={`${linkStyle} md:flex hidden`}>
-                    <UserBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color="white" />
+                    <UserBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
                 </Link>
                 <Link href={"/profile"} className={`${linkStyle} lg:hidden`}>
-                    <CategoryBroken cls={"group-hover:scale-[1.2] transition-all duration-500"} color="white" />
+                    <CategoryBroken cls={"group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
                 </Link>
             </div>
         </div>
