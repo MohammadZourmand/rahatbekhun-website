@@ -50,7 +50,7 @@ const SelectBox : FC<SelectBoxProps> = ({cls}) =>  {
     <Listbox value={selected} onChange={setSelected}>
       {({ open }) => (
         <div className={`${cls}`}>
-          <Listbox.Label className="basis-2/5 text-sm font-medium leading-6 text-gray-900 ml-2"> مرتب سازی بر اساس : </Listbox.Label>
+          <Listbox.Label className="basis-2/5 text-sm font-medium leading-6 text-gray-900 ml-2 sm:mb-0 mb-3"> مرتب سازی بر اساس : </Listbox.Label>
           <div className={`relative basis-3/5`}>
             <Listbox.Button className="relative w-full cursor-default rounded-md bg-white py-1.5 pr-3 pl-10 text-left text-gray-900 shadow-sm focus:outline-none sm:text-sm sm:leading-6">
               <span className="flex items-center">
