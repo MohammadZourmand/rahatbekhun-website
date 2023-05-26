@@ -15,6 +15,7 @@ import Cart from "../home/courses/cart";
 import SelectBox from "./selectBox";
 import Opener from "./opener";
 import SwitchComponent from "./switch";
+import MyCheckBox from "./checkBox";
 
 
 const Courses : React.FC = () => {
@@ -59,41 +60,13 @@ const Courses : React.FC = () => {
                             head="دسته بندی موضوع" 
                             main={
                                 <main className="space-y-3">
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="ریاضی و محاسبات" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="زبان پارسی" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="علوم و آزمایشگاه" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="تاریخ و جغرافیا" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="هنر و طراحی" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="درک مطلب" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="متفرقه" />
-                                    </label>
+                                    <MyCheckBox text={"ریاضی و محاسبات"} />
+                                    <MyCheckBox text={"زبان پارسی"} />
+                                    <MyCheckBox text={"علوم و آزمایشگاه"} />
+                                    <MyCheckBox text={"تاریخ و جغرافیا"} />
+                                    <MyCheckBox text={"هنر و طراحی"} />
+                                    <MyCheckBox text={"درک مطلب"} />
+                                    <MyCheckBox text={"متفرقه"} />
                                 </main>
                             } 
                         />
@@ -102,65 +75,12 @@ const Courses : React.FC = () => {
                             head="سطح دانش آموز" 
                             main={
                                 <main className="space-y-3">
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="اول ابتدایی" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="دوم ابتدایی" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="سوم ابتدایی" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="چهارم ابتدایی" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="پنجم ابتدایی" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="ششم ابتدایی" />
-                                    </label>
-                                </main>
-                            } 
-                        />
-                        {/* // ! Course Price */}
-
-                        <Opener
-                            head="هزینه دوره ها" 
-                            main={
-                                <main className="space-y-3">
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="تمامی دوره ها" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="دوره های رایگان" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="دوره های ویژه" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="دوره های نقدی" />
-                                    </label>
+                                    <MyCheckBox text={"اول ابتدایی"} />
+                                    <MyCheckBox text={"دوم ابتدایی"} />
+                                    <MyCheckBox text={"سوم ابتدایی"} />
+                                    <MyCheckBox text={"چهارم ابتدایی"} />
+                                    <MyCheckBox text={"پنجم ابتدایی"} />
+                                    <MyCheckBox text={"ششم ابتدایی"} />
                                 </main>
                             } 
                         />
@@ -169,29 +89,14 @@ const Courses : React.FC = () => {
                             head="نوع مخاطب"
                             main={
                                 <main className="space-y-3">
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="دانش آموز" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="آموزگاران و دانشجویان" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="والدین دانش آموزان" />
-                                    </label>
-                                    <label className="group myCheckbox !flex items-center">
-                                        <input type="checkbox" />
-                                        <div className="checkmark"></div>
-                                        <Paragraph cls={`text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text="عمومی" />
-                                    </label>
+                                    <MyCheckBox text={"دانش آموز"} />
+                                    <MyCheckBox text={"آموزگاران و دانشجویان"} />
+                                    <MyCheckBox text={"والدین دانش آموزان"} />
+                                    <MyCheckBox text={"عمومی"} />
                                 </main>
                             } 
                         />
+
                     </form>
                 </aside>
                 <section className="lg:order-1 order-1 lg:col-span-8 col-span-12 flex flex-col">

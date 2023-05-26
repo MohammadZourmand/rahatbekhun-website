@@ -43,6 +43,16 @@ module.exports = {
           '0%' : { transform : 'scale(1)' },
           '100%' : { transform : 'scale(1.08)' }
         },
+        comeFromTop : {
+          '0%' : { 
+            transform : 'translateY(-20px)',
+            opacity : 0
+          },
+          '100%' : { 
+            transform : 'translateY(0)',
+            opacity : 1
+          }
+        },
         fade : {
           '0%' : { opacity : 0 },
           '100%' : { opacity : 1 }
@@ -50,7 +60,8 @@ module.exports = {
       },
       animation : {
         scaleToScreen : 'scaleToScreen 10s linear infinite',
-        fade : 'fade .2s linear'
+        fade : 'fade .2s linear',
+        comeFromTop : 'comeFromTop .4s ease'
       },
       boxShadow : {
         'all-sm' : '0 0 10px #e2e8f0',
