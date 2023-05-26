@@ -15,7 +15,7 @@ const Opener : FC<OpenerProps> = ({head, main, cls, defaultOpen}) => {
   return (
     <div className={`$cls w-full`}>
       <div className="mx-auto w-full max-w-md rounded-2xl">
-      <header onClick={() => setOpen(!open)} className='group flex w-full justify-between rounded-lg p-4 text-left text-sm font-medium text-purple-900 hover:bg-gray-800 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75'>
+      <header onClick={() => setOpen(!open)} className='group flex w-full justify-between rounded-lg p-4 text-left text-sm font-medium text-purple-900 hover:bg-gray-800 focus:outline-none'>
         <Heading6 cls="text-gray-900 group-hover:text-white" text={head} />
         <ChevronLeftCircleBroken
           cls={`${
@@ -23,7 +23,7 @@ const Opener : FC<OpenerProps> = ({head, main, cls, defaultOpen}) => {
           } h-6 w-6 fill-gray-700 group-hover:fill-white`}
         />
       </header>
-      <main className={`${open ? "block" : "hidden"} animate-comeFromTop mr-8 mt-2 mb-4`}>
+      <main className={`${open ? "block" : "hidden"} animate-comeFromTop mx-4 mt-2 mb-4`}>
           {main}
       </main>
       </div>
