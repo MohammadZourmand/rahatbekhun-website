@@ -1,6 +1,12 @@
-import { ChevronLeftCircleBroken } from '@/assets/icons'
+// ? react ==================
+import { useState, FC } from "react";
+
+// ? components =============
 import Heading6 from '../global/elements/headings/h6';
-import {useState, FC} from "react";
+
+// ? assets =================
+import { ChevronLeftCircleBroken } from '@/assets/icons'
+
 interface OpenerProps {
     main : any
     head : string

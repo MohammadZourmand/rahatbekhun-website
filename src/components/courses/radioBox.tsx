@@ -1,7 +1,9 @@
+// ? react =================
 import { FC, useState } from 'react'
-import { RadioGroup } from '@headlessui/react'
-import { CheckIcon } from '@/assets/icons'
 
+// ? assets ================
+import { RadioGroup } from '@headlessui/react';
+import { CheckIcon } from '@/assets/icons';
 interface MyRadioProps {
     cls ?: string
     options : string[]

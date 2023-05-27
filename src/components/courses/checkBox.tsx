@@ -1,4 +1,7 @@
-import { useRef, useState } from "react";
+// ? react =================
+import { useState } from "react";
+
+// ? components ============
 import Paragraph from "../global/elements/paragraph";
 
 interface MyCheckBoxProps {

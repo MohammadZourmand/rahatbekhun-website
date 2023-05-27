@@ -1,4 +1,7 @@
+// ? react ====================
 import React from "react";
+
+// ? libraries ================
 import PN from "persian-number";
 
 interface RangeInputProps {
