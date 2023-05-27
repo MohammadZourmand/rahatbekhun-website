@@ -13,8 +13,8 @@ const Opener : FC<OpenerProps> = ({head, main, cls, defaultOpen}) => {
   const [open, setOpen] = useState(defaultOpen ?? false)
 
   return (
-    <div className={`$cls w-full`}>
-      <div className="mx-auto w-full max-w-md rounded-2xl">
+    <div className={`${cls} w-full`}>
+      <div className="lg:w-full w-11/12 mx-auto rounded-2xl">
       <header onClick={() => setOpen(!open)} className='group flex w-full justify-between rounded-lg p-4 text-left text-sm font-medium text-purple-900 hover:bg-gray-800 focus:outline-none'>
         <Heading6 cls="text-gray-900 group-hover:text-white" text={head} />
         <ChevronLeftCircleBroken

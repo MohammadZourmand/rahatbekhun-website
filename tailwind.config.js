@@ -53,6 +53,16 @@ module.exports = {
             opacity : 1
           }
         },
+        comeFromBottom : {
+          '0%' : {
+            transform : 'translateY(100px)',
+            opacity : 0.7
+          },
+          '100%' : {
+            transform : 'translateY(0)',
+            opacity : 1
+          }
+        },
         fade : {
           '0%' : { opacity : 0 },
           '100%' : { opacity : 1 }
@@ -61,7 +71,8 @@ module.exports = {
       animation : {
         scaleToScreen : 'scaleToScreen 10s linear infinite',
         fade : 'fade .2s linear',
-        comeFromTop : 'comeFromTop .4s ease'
+        comeFromTop : 'comeFromTop .4s ease',
+        comeFromBottom : 'comeFromBottom .4s ease'
       },
       boxShadow : {
         'all-sm' : '0 0 10px #e2e8f0',
