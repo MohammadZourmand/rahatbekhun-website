@@ -26,7 +26,7 @@ const MobileNavbar : React.FC<MobileNavbarProps> = ({
                     setState={setShowNavbar}
                     cls={"absolute top-2 left-2 cursor-pointer"}
                 />
-                <WebsiteName isFixed={false} />
+                <WebsiteName isWhite={false} />
                 <Links />
                 <UserBtns />
                 <NavImg />

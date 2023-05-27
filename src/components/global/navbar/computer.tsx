@@ -16,7 +16,7 @@ import { AlarmBrokenIcon, CartBrokenIcon, CategoryBroken, SearchBrokenIcon, User
 interface ComputerNavbarProps {
     cls ?: string
     setIsFocusOnSearch : React.Dispatch<React.SetStateAction<boolean>>
-    isWhite ?: boolean
+    isWhite : boolean
 }
 
 
@@ -27,7 +27,7 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls, setIsFocusOnSearch
     return (
         <div className={`${cls} flex justify-between items-center rounded-lg`}>
             <div className="flex items-center">
-                <WebsiteName cls="justify-center ml-8" />
+                <WebsiteName isWhite={isWhite} cls="justify-center ml-8" />
                 <div className={`${cls} lg:flex hidden xl:space-x-reverse space-x-reverse xl:space-x-16 space-x-10 items-center justify-start xl:px-10 lg:px-6 text-baby-1 text-[1.7rem]`}>
                     <SubMenu
                         isWhite={isWhite} 

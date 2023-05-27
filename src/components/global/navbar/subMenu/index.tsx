@@ -17,13 +17,13 @@ interface SubMenuProps {
 
 const SubMenu : React.FC<SubMenuProps> = ({isWhite, name, mainLink, searchLink, mainImg, mainInfo, mainHead, items, cls, subCls}) => {
 
-    const linkStyle = `${isWhite ? "after:border-b-white" : "after:border-b-baby-1"} group py-5 px-1 after:content-[''] after:absolute after:transition-all after:duration-500 after:w-0 hover:after:w-full after:bottom-0 after:left-0 after:h-full after:border-b-[3.5px] relative text-center nozha transition`
+    const linkStyle = `${isWhite ? "after:border-b-white" : "after:border-b-baby-1"} z-40 group py-5 px-1 after:content-[''] after:absolute after:transition-all after:duration-500 after:w-0 hover:after:w-full after:bottom-0 after:left-0 after:h-full after:border-b-[3.5px] relative text-center nozha transition`
 
 
     return (
         <div className={linkStyle}>
             <div className={`${isWhite && "text-white"} nozha`}> {name} </div>
-            <div className={`${cls} ${!isWhite && "shadow-all-md"} group-hover:grid hidden animate-fade grid-cols-12 xl:w-[42vw] lg:w-[56vw] p-4 absolute top-[5.1rem] border-[1rem] border-transparent -right-28 text-base bg-white z-10 rounded-lg`}>
+            <div className={`${cls} ${isWhite ? "border border-gray-200" : "shadow-all-md border-transparent border-[1rem]"} group-hover:grid hidden animate-fade grid-cols-12 xl:w-[42vw] lg:w-[56vw] p-4 absolute top-[5.1rem] -right-28 text-base bg-white z-10 rounded-lg`}>
                 <div className="col-span-5 flex flex-col items-center justify-center">
                     <img src={mainImg} alt="0-to-100-course-rahat-bekhun" />
                     <Link className="text-xl font-black mt-4 text-center" href={`${mainLink}`}> {mainHead} </Link>

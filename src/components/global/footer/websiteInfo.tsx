@@ -11,7 +11,7 @@ const WebsiteInfo : React.FC<WebsiteInfoProps> = ({cls}) => {
 
     return (
         <div className={`${cls} flex flex-col ${cls}`}>
-            <WebsiteName cls="justify-center lg:justify-start mt-8 lg:mt-0" textCls="lg:!flex" />
+            <WebsiteName isWhite={false} cls="justify-center lg:justify-start mt-8 lg:mt-0" textCls="lg:!flex" />
             <Paragraph cls="leading-loose font-medium mt-4 text-gray-500 lg:!text-right !text-center px-4 lg:px-0" text={" ما در راحت بخون مفتخریم که در خدمت دانش آموزان بزرگ کشور بزرگ و پرشکوه ایران هستیم. دانش آموزانی که هر کدامشان قطعه کوچک پازل بزرگ آینده درخشان کشوری پیشرفته و به دور از هر سختی و جنگی خواهند بود اگر ما راه را به آنها نشان دهیم . "} />
             <div className="flex lg:justify-start justify-center py-8">
                 <Link href="#" className="group bg-baby-6 transition-all duration-500 rounded-md p-2 ml-2">

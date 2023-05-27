@@ -15,7 +15,7 @@ const PageHeader : React.FC<PageHeaderProps> = ({
         <header className={`
             bg-[url('/images/courses/school-girl-wearing-headphones-virtual-school.jpg')]
             lg:bg-[center_top_-8rem]
-            sm:h-[30rem] h-[25rem] bg-cover overflow-hidden relative w-full
+            sm:h-[30rem] h-[25rem] bg-cover relative w-full
         `}>
             <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
             <Navbar isWhite={true} />
