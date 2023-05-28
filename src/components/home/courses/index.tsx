@@ -4,7 +4,7 @@ import { useState } from "react";
 // ? components =======================
 import Heading3 from "@/components/global/elements/headings/h3";
 import Paragraph from "@/components/global/elements/paragraph";
-import Cart from "./cart";
+import Cart from "../../global/elements/boxes/cart";
 
 // ? assets ===========================
 import { classOfferedDetails } from "./slidersDetails";
@@ -44,6 +44,7 @@ const Courses : React.FC = () => {
                             ) 
                                 return (
                                     <Cart
+                                        href={`/courses/${item.category}/${item.href}`}
                                         category={item.category}
                                         cls={"col-span-12 sm:col-span-6 lg:col-span-4"}
                                         key={index}

@@ -1,3 +1,7 @@
+// ? react =======================
+import Link from "next/link";
+import {useState} from "react";
+
 // ? libraries ===================
 import PN from "persian-number"
 
@@ -21,15 +25,43 @@ const Cart : React.FC<CartType> = ({
     category,
     offPrice,
     votes,
-    votesAverage
+    votesAverage,
+    href
 }) => {
 
+    const [faCategory, setFaCategory] = useState<string>("عمومی")
+
+    const categoryChooser = (category : string) => {
+        let faCategory : string;
+
+        switch (category) {
+            case "math":
+                faCategory = "ریاضی"
+                break;
+            case "persian":
+                faCategory = "فارسی"
+                break;
+            case "other":
+                faCategory = "متفرقه"
+                break;
+            case "public":
+                faCategory = "عمومی"
+                break;
+            default:
+                faCategory = "بدون دسته بندی"
+                break;
+        }
+
+        return faCategory
+    }
+
+    console.log(href)
 
     return (
         <section className={`${cls} group rounded-lg bg-white shadow-lg`}>
             {/* image part */}
             <div className="relative overflow-hidden h-56 rounded-t-lg">
-                <div className={`z-10 text-sm bg-baby-11 absolute text-white top-4 left-4 px-3 py-1 rounded`}>{category}</div>
+                <div className={`z-10 text-sm bg-baby-11 absolute text-white top-4 left-4 px-3 py-1 rounded`}>{categoryChooser(category)}</div>
                 <img className="overflow-hidden group-hover:scale-105 transition duration-500" src={image} alt="" />
             </div>
             {/* text part */}
@@ -47,7 +79,9 @@ const Cart : React.FC<CartType> = ({
                             <Star cls="w-4 h-4" color="#f4e700" />
                         </div>
                     </div>
-                    <Heading6 cls="font-extrabold mt-4" text={name} />
+                    <Link href={href}>
+                        <Heading6 cls="font-extrabold mt-4" text={name} />
+                    </Link>
                 </header>
                 <main className="mt-4">
                     <Paragraph cls="font-medium text-[.9rem] leading-relaxed" text={details} />

@@ -16,8 +16,8 @@ const WebsiteName : React.FC<WebsiteNameProps> = ({
         <Link href={"/"} className={`${cls} flex items-center text-[2.5rem]`}>
             {
                 isWhite
-                ? <img className="w-16 h-16 z-10" src="./images/white-webLogo.svg" alt="rahat-bekhun-learn-easily-website" />
-                : <img className="w-16 h-16 z-10" src="./images/webLogo.png" alt="rahat-bekhun-learn-easily-website" />
+                ? <img className="w-16 h-16 z-10" src="/images/white-webLogo.svg" alt="rahat-bekhun-learn-easily-website" />
+                : <img className="w-16 h-16 z-10" src="/images/webLogo.png" alt="rahat-bekhun-learn-easily-website" />
 }
             
             <div className={`xl:flex lg:hidden ${textCls} flex mr-1 space-x-1 space-x-reverse`}>

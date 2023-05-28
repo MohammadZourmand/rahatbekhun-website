@@ -36,7 +36,7 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls, setIsFocusOnSearch
                         searchLink="/" 
                         items={GradesBox}
                         mainHead={"دوره های آموزشی"}
-                        mainImg={"./images/home/searchTypes/online-learning.png"}
+                        mainImg={"/images/home/searchTypes/online-learning.png"}
                         mainInfo={"بررسی کامل مطالب به همراه بازی، آزمون و کاربرگ"} 
                     />
                     <SubMenu
@@ -46,7 +46,7 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls, setIsFocusOnSearch
                         searchLink="/" 
                         items={VideosSubMenuInfo}
                         mainHead={"مشاهده تمامی ویدیوها"}
-                        mainImg={"./images/home/searchTypes/video.png"}
+                        mainImg={"/images/home/searchTypes/video.png"}
                         mainInfo={"آموزش های آسان برای آموزگاران و دانش آموزان"}
                         subCls="!col-span-6"
                     />
@@ -57,7 +57,7 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls, setIsFocusOnSearch
                         searchLink="/" 
                         items={GradesBox}
                         mainHead={"مشاهده تمامی کاربرگ ها"}
-                        mainImg={"./images/home/searchTypes/worksheet.png"}
+                        mainImg={"/images/home/searchTypes/worksheet.png"}
                         mainInfo={"کاربرگ های مهارت محور و خلاقانه برای تکمیل یادگیری یا سنجش"} 
                     />
                     <SubMenu
@@ -68,7 +68,7 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls, setIsFocusOnSearch
                         searchLink="/" 
                         items={GamesSubMenuInfo}
                         mainHead={"مشاهده تمامی بازی ها"}
-                        mainImg={"./images/home/searchTypes/game.png"}
+                        mainImg={"/images/home/searchTypes/game.png"}
                         mainInfo={"یادگیری با بازی های فکری و آموزنده بدون خستگی"} 
                     />
                     <SubMenu
@@ -79,7 +79,7 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({cls, setIsFocusOnSearch
                         searchLink="/" 
                         items={ExamsSubMenuInfo}
                         mainHead={"مشاهده تمامی آزمون ها"}
-                        mainImg={"./images/home/searchTypes/exam.png"}
+                        mainImg={"/images/home/searchTypes/exam.png"}
                         mainInfo={"آزمون های فردی، دونفره، گروهی و جشنواره ای برای تمامی پایه ها"}
                         subCls="col-span-6"
                     />

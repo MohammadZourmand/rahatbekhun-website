@@ -5,11 +5,9 @@ import PN from "persian-number"
 import { Cart2Type } from "@/types/home";
 
 // ? assets ======================
-import { ClockBroken, FolderBroken, LeftIcon, Star } from "@/assets/icons";
+import { ClockBroken } from "@/assets/icons";
 import Heading6 from "@/components/global/elements/headings/h6";
 import Paragraph from "@/components/global/elements/paragraph";
-import Heading4 from "../headings/h4";
-
 
 const Cart2 : React.FC<Cart2Type> = ({
     subject,
@@ -19,7 +17,6 @@ const Cart2 : React.FC<Cart2Type> = ({
     category,
     date,
 }) => {
-
 
     return (
         <section className={`${cls} group rounded-lg bg-white shadow-lg`}>

@@ -10,12 +10,8 @@ const Blog : React.FC = () => {
 
     return (
         <>
-            <Navbar isFixed={true} />
-            <PageHeader
-                hasLinkBtn={false}
-                mainText="وبلاگ"
-                page="blog"
-            />
+            <Navbar isWhite={true} />
+            <PageHeader />
             <SearchBox />
             <SortSlider />
             <TrendingArticles />

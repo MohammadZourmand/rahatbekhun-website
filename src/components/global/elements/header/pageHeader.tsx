@@ -26,10 +26,10 @@ const PageHeader : React.FC<PageHeaderProps> = ({
                     {
                         pagination?.map((item : string, index : number) => {
                             return (
-                                <>
-                                    <span key={index} className="relative mx-3 after:absolute after:bottom-2 after:left-0 after:w-1 after:h-1 after:bg-white after:rounded-full"></span>
+                                <div key={index}>
+                                    <span className="relative mx-3 after:absolute after:bottom-2 after:left-0 after:w-1 after:h-1 after:bg-white after:rounded-full"></span>
                                     <span>{item}</span>
-                                </>
+                                </div>
                             )
                         })
                     }

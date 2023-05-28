@@ -2,7 +2,7 @@
 import { FC } from "react";
 
 // ? components & types ======
-import Cart from "@/components/home/courses/cart";
+import Cart from "@/components/global/elements/boxes/cart";
 import { CartType } from "@/types/home";
 import { classOfferedDetails } from "@/components/home/courses/slidersDetails";
 
@@ -19,6 +19,7 @@ const ShowCoursesCarts : FC<ShowCoursesCartsProps> = () => {
                     classOfferedDetails.map((item : CartType, index : number) => {
                         return (
                             <Cart
+                                href={`courses/${item?.category}/${item.href}`}
                                 category={item.category}
                                 cls={"col-span-12 sm:col-span-6"}
                                 key={index}

@@ -11,6 +11,7 @@ export interface CartType {
     offPrice ?: number
     votesAverage : number
     votes : number
+    href : string
 }
 
 export interface Cart2Type {

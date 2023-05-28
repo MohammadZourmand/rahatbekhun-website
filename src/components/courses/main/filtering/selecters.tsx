@@ -17,10 +17,11 @@ const Selecters : React.FC<SelectersProps> = () => {
         <>
             {
                 CoursesFilteringTitles?.map((filter : CoursesFilteringTitlesProps) => {
-                    if(filter.id < 5 ) {
+                    if(filter?.id < 5 ) {
                         return (
                             <Opener
-                                head={filter.title} 
+                                key={filter?.id}
+                                head={filter?.title} 
                                 main={
                                     <main className="space-y-3">
                                         <MyRadio options={filter?.items} />
@@ -30,13 +31,15 @@ const Selecters : React.FC<SelectersProps> = () => {
                         )
                     } else if(filter.id === 5) {
                         return (
-                            <Opener 
+                            <Opener
+                                key={filter?.id}
                                 head={filter?.title}
                                 main={
                                     CoursesFilteringTitles?.map((filter : CoursesFilteringTitlesProps) => {
                                         if(filter?.id < 9 && filter?.id > 5) {
                                             return (
                                                 <Opener
+                                                    key={filter?.id}
                                                     head={filter?.title} 
                                                     main={
                                                         <main className="space-y-3">
@@ -48,6 +51,7 @@ const Selecters : React.FC<SelectersProps> = () => {
                                         } else if(filter?.id === 9 ) {
                                             return (
                                                 <Opener
+                                                    key={filter?.id}
                                                     head={filter?.title} 
                                                     main={
                                                         <RangeInput />
