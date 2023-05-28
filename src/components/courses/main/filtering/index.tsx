@@ -1,6 +1,6 @@
 
 // ? Componenets & types ==
-import SwitchComponent from "../../switch";
+import SwitchComponent from "../../../global/elements/inputs/switch";
 import { FilteringProps } from "@/types/courses";
 import CloseIconAbs from "./closeIconAbs";
 import AnimationWithBg from "./animationWithBg";

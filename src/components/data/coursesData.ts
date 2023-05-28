@@ -1,8 +1,9 @@
 // ? types =====================
 import { CartType } from "@/types/home";
 
-export const classOfferedDetails : CartType[] = [
+export const coursesData : CartType[] = [
     {
+        type : "courses",
         href : "learn-fast-calculations",
         name : "آموزش محاسبات سریع",
         details : "محاسبات ذهنی ریاضی برای دانش آموزان ابتدایی بدون استفاده از دست",
@@ -10,9 +11,11 @@ export const classOfferedDetails : CartType[] = [
         category : "math",
         sessions : "18",
         votesAverage : 4.4,
-        votes : 121
+        votes : 121,
+        price : 0
     },
     {
+        type : "courses",
         href : "learn-all-types-of-verbs",
         name : "آموزش انواع فعل",
         details : "بررسی انواع فعل های آموزش داده شده در کتاب های فارسی پایه اول تا ششم",
@@ -26,6 +29,7 @@ export const classOfferedDetails : CartType[] = [
         votes : 56
     },
     {
+        type : "courses",
         href : "learn-types-of-deductions",
         name : "آموزش کسرها",
         details : "بررسی کامل مفهوم کسر تا عملیات ریاضی کسرها و تبدیل آن ها به عدد مخلوط",
@@ -38,6 +42,7 @@ export const classOfferedDetails : CartType[] = [
         votes : 142
     },
     {
+        type : "courses",
         href : "learn-multiplication-table",
         name : "آموزش مفهوم و جدول ضرب",
         details : "بررسی کامل و کودکانه مفهوم ضرب و ارائه راهکارهای مختلف برای حفظ جدول ضرب",
@@ -46,9 +51,11 @@ export const classOfferedDetails : CartType[] = [
         sessions : "6",
         ageCategory : "9-14",
         votesAverage : 4.3,
-        votes : 18
+        votes : 18,
+        price : 0
     },
     {
+        type : "courses",
         href : "learn-problem-solving",
         name : "آموزش آسان حل مسئله",
         details : "زیر و بالا کردن انواع مسئله ها و سوال ها برای آموزش چگونگی حل مسئله",
@@ -56,9 +63,11 @@ export const classOfferedDetails : CartType[] = [
         category : "other",
         sessions : "10",
         votesAverage : 4.6,
-        votes : 426
+        votes : 426,
+        price : 0
     },
     {
+        type : "courses",
         href : "learn-four-options-solving",
         name : "حل سوالات چهار گزینه ای",
         details : "بررسی روش های حل مسئله سریع مخصوص آزمون های ورودی تیزهوشان",

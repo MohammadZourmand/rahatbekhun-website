@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 const SingleCoursePage : NextPage = () => {
 
     const router = useRouter()
-    console.log(router.query)
 
     return (
         <SingleCourse />

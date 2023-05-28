@@ -2,7 +2,7 @@
 import Heading4 from "@/components/global/elements/headings/h4";
 import LiTickIcon from "@/components/global/elements/lists/liTickIcon";
 import BlueLeft from "@/components/global/elements/buttons/blueLeft";
-import { ListInfo, ListInfoProps } from "./listInfo";
+import { ListInfo, ListInfoProps } from "../../data/home/gameLearningInfo";
 import Paragraph from "@/components/global/elements/paragraph";
 
 const GameLearning : React.FC = () => {

@@ -8,7 +8,7 @@ const SingleCourse : React.FC<SingleCourseProps> = () => {
 
     return (
         <>
-            <Navbar isWhite={false} />
+            <Navbar isWhite={false} cls={"shadow-xl shadow-gray-100 pb-4"} />
         </>
     )
 }

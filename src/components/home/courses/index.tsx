@@ -7,7 +7,7 @@ import Paragraph from "@/components/global/elements/paragraph";
 import Cart from "../../global/elements/boxes/cart";
 
 // ? assets ===========================
-import { classOfferedDetails } from "./slidersDetails";
+import { coursesData } from "../../data/coursesData";
 
 // ? types ============================
 import { CartType } from "@/types/home";
@@ -34,7 +34,7 @@ const Courses : React.FC = () => {
             </header>
             <main className="grid grid-cols-12 mt-10 gap-x-5 gap-y-6">
                 {
-                    classOfferedDetails.map((item : CartType, index : number) => {
+                    coursesData.map((item : CartType, index : number) => {
                            
                             if (type === "math"  && item.category === "ریاضی"
                                 || type === "persian"  && item.category === "فارسی"
@@ -44,19 +44,9 @@ const Courses : React.FC = () => {
                             ) 
                                 return (
                                     <Cart
-                                        href={`/courses/${item.category}/${item.href}`}
-                                        category={item.category}
-                                        cls={"col-span-12 sm:col-span-6 lg:col-span-4"}
                                         key={index}
-                                        name={item.name}
-                                        details={item.details}
-                                        image={item.image}
-                                        sessions={item.sessions}
-                                        ageCategory={item.ageCategory}
-                                        price={item.price}
-                                        offPrice={item.offPrice}
-                                        votesAverage={item.votesAverage}
-                                        votes={item.votes}
+                                        cls={"col-span-12 sm:col-span-6 lg:col-span-4"}
+                                        item={item}
                                     />
                                 )
                             

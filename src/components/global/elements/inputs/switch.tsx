@@ -1,6 +1,6 @@
 import { useState, FC } from 'react'
 import { Switch } from '@headlessui/react'
-import Heading6 from '../global/elements/headings/h6'
+import Heading6 from '../headings/h6'
 
 interface SwitchComponentProps {
     cls ?: string

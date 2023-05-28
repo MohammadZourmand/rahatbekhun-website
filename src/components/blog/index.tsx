@@ -11,7 +11,7 @@ const Blog : React.FC = () => {
     return (
         <>
             <Navbar isWhite={true} />
-            <PageHeader />
+            {/* <PageHeader /> */}
             <SearchBox />
             <SortSlider />
             <TrendingArticles />

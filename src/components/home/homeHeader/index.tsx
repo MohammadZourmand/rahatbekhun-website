@@ -17,7 +17,7 @@ const HomeHeader = () => {
   return (
     <header>
       <div className="flex flex-col items-center relative overflow-hidden">
-        <Navbar />
+        <Navbar isWhite={false} />
         <div className="xl:grid xl:grid-cols-12 flex flex-col-reverse lg:mx-20 lg:mt-20 m-4 mb-8">
           <div className="xl:col-span-6 mt-12 text-lg flex flex-col xl:items-start items-center">
             <h2 className="font-black lg:text-[3.2rem] text-4xl lg:text-right text-center text-gray-700 lg:leading-[1.7] leading-loose"> درس خوندن با راحت بخون خیلی راحت و لذت بخشه !</h2>

@@ -1,12 +1,12 @@
 
 export interface CartType {
+    type : string
     ageCategory ?: string,
-    sessions ?: number | string,
-    price ?: number,
+    sessions : number | string,
+    price : number,
     name : string,
     details : string,
     image : string
-    cls ?: string
     category : string
     offPrice ?: number
     votesAverage : number

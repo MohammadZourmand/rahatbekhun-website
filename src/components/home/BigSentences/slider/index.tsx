@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Slide from "./slide";
 import { sentencesType } from "@/types/home";
 import { Autoplay } from 'swiper';
-import { scientists } from "./slidersDetails";
+import { scientists } from "../../../data/home/sentencesSliderData";
 
 const SentenceSlider : React.FC = () => {
 

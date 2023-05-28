@@ -15,8 +15,8 @@ const TeachersClasses : React.FC = () => {
                 <Heading3 cls="!leading-relaxed !text-center xl:!text-right text-gray-800" text="راحت بخون را همیار کلاس خود کن !" />
                 <Paragraph cls="font-medium leading-loose !text-center xl:!text-right" text="راحت بخون با ارائه مطالب، آزمایشگاه ها، کلاس ها، و بازی ها و موارد مشابه دیگه به شما آموزگاران دست یاری میده تا تجربه ی آموزشی بهتری رو رقم بزنین !" />
                 <div className="flex xs:flex-row flex-col justify-center items-center gap-8 mt-6">
-                    <DarkBlueBtn href="/" text="برو بریم"/>
-                    <TransparentBtn text={"مشاهده جزئیات"} href="/" />
+                    <DarkBlueBtn href="/games" text="برو بریم"/>
+                    <TransparentBtn text={"مشاهده جزئیات"} href="/games" />
                 </div>
             </div>
             <div className="xl:col-span-7 col-span-12">

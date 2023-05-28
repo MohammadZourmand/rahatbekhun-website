@@ -3,11 +3,11 @@ import { FC, Dispatch, SetStateAction } from "react";
 
 // ? components =====================
 import BlackBtn from "../filtering/blackBtn";
-import SelectBox from "../../selectBox";
+import SelectBox from "../../../global/elements/inputs/selectBox";
 import SearchForm from "./searchForm";
 import ShowCoursesModel from "./showModel";
 import MatchedCourses from "./mathedCourses";
-import { SortItems } from "../../data/sortItems";
+import { SortItems } from "@/components/data/sortItems";
 
 interface CoursesHeaderProps {
     setState : Dispatch<SetStateAction<boolean>>

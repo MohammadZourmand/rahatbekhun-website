@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // ? components ============
-import Paragraph from "../global/elements/paragraph";
+import Paragraph from "../paragraph";
 
 interface MyCheckBoxProps {
     cls ?: string

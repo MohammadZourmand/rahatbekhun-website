@@ -1,11 +1,11 @@
 // ? Componenets & types ==
-import Opener from "../../opener";
-import MyRadio from "../../radioBox";
-import RangeInput from "../../rangeInput";
+import Opener from "../../../global/elements/boxes/opener";
+import MyRadio from "../../../global/elements/inputs/radioBox";
+import RangeInput from "../../../global/elements/inputs/rangeInput";
 import { CoursesFilteringTitlesProps } from "@/types/courses";
 
 // ? assets ===============
-import { CoursesFilteringTitles } from "../../data/selectboxOptions";
+import { CoursesFilteringTitles } from "../../../data/courses/CoursesFilteringTitles";
 
 interface SelectersProps {
 

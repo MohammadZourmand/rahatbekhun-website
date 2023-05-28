@@ -2,7 +2,7 @@ import WhiteBtn from "@/components/global/elements/buttons/white";
 import Heading3 from "@/components/global/elements/headings/h3";
 import Heading5 from "@/components/global/elements/headings/h5";
 import Paragraph from "@/components/global/elements/paragraph";
-import OpaCart from "./opaCart";
+import OpaCart from "../../global/elements/boxes/clearCart";
 
 
 const Inviting : React.FC = () => {
@@ -18,14 +18,14 @@ const Inviting : React.FC = () => {
                     text="میتونم آنلاین تدریس کنم"
                     btnText="همین الان ثبت نام کن"
                     cls="sm:col-span-1 col-span-2"
-                    href="/"
+                    href="/contact-us"
                     src="./images/home/teacher-man-with-book.jpg"
                 />
                 <OpaCart
                     text="میتونم محتوا تولید کنم"
                     btnText="همین الان شروع کن"
                     cls="sm:col-span-1 col-span-2"
-                    href="/"
+                    href="/contact-us"
                     src="./images/home/woman-making-beauty-vlog-with-her-professional-camera.jpg"
                 />
             </main>

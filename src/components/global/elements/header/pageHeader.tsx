@@ -1,40 +1,32 @@
 import Navbar from "../../navbar";
+import Breadcrumb, { BreadcrumbItemsProps } from "../boxes/breadcrumb";
 
 
 interface PageHeaderProps {
-    title ?: string,
-    pagination ?: string[]
+    title : string,
+    breadcrumbItems : BreadcrumbItemsProps[]
+    imgBgSrc : string
+    imgBgCls ?: string
 }
 
 const PageHeader : React.FC<PageHeaderProps> = ({
     title,
-    pagination
+    breadcrumbItems,
+    imgBgSrc,
+    imgBgCls
 }) => {
 
     return (
         <header className={`
-            bg-[url('/images/courses/school-girl-wearing-headphones-virtual-school.jpg')]
             lg:bg-[center_top_-8rem]
-            sm:h-[30rem] h-[25rem] bg-cover relative w-full
+            overflow-hidden sm:h-[30rem] h-[25rem] bg-cover relative w-full
         `}>
-            <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
+            <img className={`${imgBgCls} absolute -top-20 left-0 w-full -z-10`} src={imgBgSrc} alt="" />
+            <div className="absolute top-0 left-0 w-full h-full bg-black/20"></div>
             <Navbar isWhite={true} />
-            <div className="text-white sm:px-[6.5rem] sm:py-16 px-[3rem] py-8 flex flex-col md:items-start items-center justify-center my-32 xs:rounded-[5rem] rounded-[3rem]">
+            <div className={`text-white sm:px-[6.5rem] sm:py-16 px-[3rem] py-8 flex flex-col md:items-start items-center justify-center my-32 xs:rounded-[5rem] rounded-[3rem]`}>
                 <h2 className="sm:text-5xl text-[1.9rem] !leading-tight font-extrabold md:text-right text-center z-10">{title}</h2>
-                <h3 className="text-medium !leading-none my-8 z-10">
-                    <span>خانه </span>
-                    {
-                        pagination?.map((item : string, index : number) => {
-                            return (
-                                <div key={index}>
-                                    <span className="relative mx-3 after:absolute after:bottom-2 after:left-0 after:w-1 after:h-1 after:bg-white after:rounded-full"></span>
-                                    <span>{item}</span>
-                                </div>
-                            )
-                        })
-                    }
-
-                </h3>
+                <Breadcrumb items={breadcrumbItems} />
             </div>
         </header>
     )

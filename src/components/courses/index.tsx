@@ -11,7 +11,13 @@ const Courses : FC = () => {
 
     return (
         <>
-            <PageHeader title="دوره های آموزشی" pagination={["دوره های آموزشی"]} />
+            <PageHeader 
+                title="دوره های آموزشی"
+                breadcrumbItems={[
+                    {href : "courses", value : "دوره های آموزشی"}
+                ]}
+                imgBgSrc={'./images/courses/school-girl-wearing-headphones-virtual-school.jpg'}
+            />
             <CoursesPageMain />
             <Footer cls="mt-8" />
         </>

@@ -2,7 +2,7 @@
 import { useState, FC } from "react";
 
 // ? components =============
-import Heading6 from '../global/elements/headings/h6';
+import Heading6 from '../headings/h6';
 
 // ? assets =================
 import { ChevronLeftCircleBroken } from '@/assets/icons'

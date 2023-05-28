@@ -10,32 +10,32 @@ const Links : React.FC = () => {
 
     return (
         <div className="my-4">
-            <Link href="/" className={linkStyle}>
+            <Link href="//" className={linkStyle}>
                 <>
                     <IconHome color="#2c3e50" className={iconStyle} />
                     <span> خانه </span>
                 </> 
             </Link>
-            <Link href="/" className={linkStyle}>
+            <Link href="/courses" className={linkStyle}>
                 <>
                     <IconSchool color="#2c3e50" className={iconStyle} />
                     <span> دوره های آموزشی </span>
                 </>
             </Link>
-            <Link href="/" className={linkStyle}>
+            <Link href="/worksheets" className={linkStyle}>
                 <>
                     <IconFile3d color="#2c3e50" className={iconStyle} />
                     <span> کاربرگ ها </span>
                 </>
             </Link>
-            <Link href="/" className={linkStyle}>
+            <Link href="/blog" className={linkStyle}>
                 <>
                 
                     <IconArticle color="#2c3e50" className={iconStyle} />
                     <span> وبلاگ </span>
                 </>
             </Link>
-            <Link href="/" className={linkStyle}>
+            <Link href="/contact-us" className={linkStyle}>
                 <>
                     <IconPhone color="#2c3e50" className={iconStyle} />
                     <span> ارتباط با ما </span>
