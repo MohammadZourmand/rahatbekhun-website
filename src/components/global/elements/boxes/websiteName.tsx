@@ -13,7 +13,7 @@ const WebsiteName : React.FC<WebsiteNameProps> = ({
     isWhite
 }) => {
     return (
-        <Link href={"//"} className={`${cls} flex items-center text-[2.5rem]`}>
+        <Link href={"/"} className={`${cls} flex items-center text-[2.5rem]`}>
             {
                 isWhite
                 ? <img className="w-16 h-16 z-10" src="/images/white-webLogo.svg" alt="rahat-bekhun-learn-easily-website" />

@@ -1,5 +1,6 @@
 // TODO => NEXT.JS
 import type { AppProps } from 'next/app'
+import { useEffect } from 'react';
 
 // todo => CSS STYLES
 import '@/styles/globals.css';
@@ -7,8 +8,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
 import AOS from "aos";
+
+// todo => Redux & Modules
+import { Provider } from 'react-redux';
+import { store } from '@/store';
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -16,5 +20,9 @@ export default function App({ Component, pageProps }: AppProps) {
     AOS.init();
   }, [])
 
-  return <Component {...pageProps} />
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  )
 }

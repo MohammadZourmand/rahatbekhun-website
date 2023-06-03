@@ -13,9 +13,6 @@ const CartTextFooter : React.FC<CartTextFooterProps> = ({item}) => {
 
     const { offPrice, price } = item
 
-    console.log(offPrice, price)
-    console.log(<FaSpan value={price} hasSlicer={true} />)
-
     return (
         <footer className={`${offPrice ? "gap-0" : "gap-4"} flex items-center justify-between gap-4 border-t px-4 pt-4 pb-1`}>
             <div className={`text-baby-12 font-semibold`}>

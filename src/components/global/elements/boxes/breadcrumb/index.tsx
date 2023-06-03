@@ -9,18 +9,20 @@ export interface BreadcrumbItemsProps {
 interface BreadcrumbProps {
     items : BreadcrumbItemsProps[]
     cls ?: string
+    isWhite : boolean
+    size ?: string
 }   
 
-const Breadcrumb : React.FC<BreadcrumbProps> = ({cls, items}) => {
+const Breadcrumb : React.FC<BreadcrumbProps> = ({cls, items, isWhite, size}) => {
 
     return (
-        <h3 className={`${cls} text-medium !leading-none my-8 z-10`}>
-            <Link href={"//"}> خانه </Link>
+        <h3 className={`${cls} ${isWhite === undefined ? "text-medium" : `text-${size}`} !leading-none my-8 z-10`}>
+            <Link className={`${isWhite ? "text-white" : "text-gray-600"}`} href={"/"}> خانه </Link>
             {
                 items?.map((item : BreadcrumbItemsProps, index : number) => {
                     return (
-                        <Link href={item?.href} key={index}>
-                            <span className="relative mx-3 after:absolute after:bottom-2 after:left-0 after:w-1 after:h-1 after:bg-white after:rounded-full"></span>
+                        <Link className={`${isWhite ? "text-white" : "text-gray-600"}`} href={item?.href} key={index}>
+                            <span className={`${isWhite ? "after:bg-white" : "after:bg-gray-600"} relative mx-3 after:absolute after:bottom-2 after:left-0 after:w-1 after:h-1 after:rounded-full`}></span>
                             <span>{item?.value}</span>
                         </Link>
                     )

@@ -26,7 +26,7 @@ const PageHeader : React.FC<PageHeaderProps> = ({
             <Navbar isWhite={true} />
             <div className={`text-white sm:px-[6.5rem] sm:py-16 px-[3rem] py-8 flex flex-col md:items-start items-center justify-center my-32 xs:rounded-[5rem] rounded-[3rem]`}>
                 <h2 className="sm:text-5xl text-[1.9rem] !leading-tight font-extrabold md:text-right text-center z-10">{title}</h2>
-                <Breadcrumb items={breadcrumbItems} />
+                <Breadcrumb items={breadcrumbItems} isWhite={true} />
             </div>
         </header>
     )

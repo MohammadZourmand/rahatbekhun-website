@@ -1,0 +1,45 @@
+import { Star } from "@/assets/icons"
+import FaSpan from "@/components/global/elements/boxes/cart/faSpan"
+import Paragraph from "@/components/global/elements/paragraph"
+
+interface HeaderProps {
+    cls ?: string
+}
+
+const Header : React.FC<HeaderProps> = () => {
+
+    return (
+        <div className="grid grid-cols-12 mt-12 items-center">
+            <div className="col-span-3 flex items-center">
+                <div>
+                    <img className="w-12 h-12 rounded-full border-2 border-white shadow-all-md" src="/images/home/teachers/mohammad-zourmand.jpg" alt="Mohammad-zourmand-creator-of-rahat-bekhun" />
+                </div>
+                <div className="mr-4 py-1">
+                    <Paragraph cls="text-xs text-gray-500" text="آموزگار" />
+                    <Paragraph cls="text-sm mt-1 text-gray-700 !font-extrabold" text="محمد زورمند" />
+                </div>
+            </div>
+            <div className="col-span-3">
+                <div className="">
+                    <Paragraph cls="text-xs text-gray-500" text="آخرین بروزرسانی :" />
+                    <FaSpan cls="text-sm !mt-1 text-gray-700 !font-extrabold" value={"25 اردیبهشت 1401"}/>
+                </div>
+            </div>
+            <div className="col-span-6">
+                <Paragraph cls="text-xs text-gray-500" text="امتیاز دوره :" />
+                <div className="flex items-center">
+                    {
+                        [1,2,3,4,5].map((item) => {
+                            return (
+                                <Star key={item} cls="fill-yellow-400 w-5 h-5" />
+                            )
+                        })
+                    }
+                    <FaSpan cls="text-sm mt-1 mr-2 text-gray-700 !font-extrabold" value={"(4.5)"}/>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Header
