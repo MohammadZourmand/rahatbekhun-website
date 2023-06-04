@@ -1,166 +1,56 @@
-import { useState } from 'react'
-import { Tab } from '@headlessui/react'
-import { DocumentBrokenIcon, FolderBroken, Star, StarBroken, UsersBroken } from '@/assets/icons'
+import { DocumentBrokenIcon, FolderBroken, StarBroken, UsersBroken } from '@/assets/icons';
+import { ReactNode, useState } from 'react';
+import CourseInfo from './info';
+import { courseDetails } from './courseInfo';
+import CourseEpisodes from './episodes';
 
-function classNames(...classes : any[]) {
-  return classes.filter(Boolean).join(' ')
+interface TabSwitcherProps {
+
 }
 
-const TabSwitcher = () => {
+interface TabSwitcherCategoriesProps {
+  id : number,
+  text : string,
+  icon : ReactNode
+}
 
-  const [selectedIcon, setSelectedIcon] = useState(0)
+const TabSwitcher : React.FC<TabSwitcherProps> = () => {
 
-  let [categories] = useState({
-    "مشخصات دوره": [
-      {
-        id: 1,
-        title: 'Does drinking coffee make you smarter?',
-        date: '5h ago',
-        commentCount: 5,
-        shareCount: 2,
-      },
-      {
-        id: 2,
-        title: "So you've bought coffee... now what?",
-        date: '2h ago',
-        commentCount: 3,
-        shareCount: 2,
-      },
-    ],
-    "قسمت ها": [
-      {
-        id: 1,
-        title: 'Is tech making coffee better or worse?',
-        date: 'Jan 7',
-        commentCount: 29,
-        shareCount: 16,
-      },
-      {
-        id: 2,
-        title: 'The most innovative things happening in coffee',
-        date: 'Mar 19',
-        commentCount: 24,
-        shareCount: 12,
-      },
-    ],
-    "نظرات": [
-      {
-        id: 1,
-        title: 'Ask Me Anything: 10 answers to your questions about coffee',
-        date: '2d ago',
-        commentCount: 9,
-        shareCount: 5,
-      },
-      {
-        id: 2,
-        title: "The worst advice we've ever heard about coffee",
-        date: '4d ago',
-        commentCount: 1,
-        shareCount: 2,
-      },
-    ],
-    "پرسش و پاسخ": [
-        {
-          id: 1,
-          title: 'Ask Me Anything: 10 answers to your questions about coffee',
-          date: '2d ago',
-          commentCount: 9,
-          shareCount: 5,
-        },
-        {
-          id: 2,
-          title: "The worst advice we've ever heard about coffee",
-          date: '4d ago',
-          commentCount: 1,
-          shareCount: 2,
-        },
-    ],
-  })
+  const [selectedTab, setSelectedTab] = useState(0)
 
-  const categoriesIcons = [
-    <DocumentBrokenIcon cls={`${selectedIcon === 0 ? 'fill-white' : 'fill-gray-700'} !w-6 !h-6`} />,
-    <FolderBroken cls={`${selectedIcon === 1 ? 'fill-white' : 'fill-gray-700'} !w-6 !h-6`} />,
-    <StarBroken cls={`${selectedIcon === 2 ? 'fill-white' : 'fill-gray-700'} !w-6 !h-6`} />,
-    <UsersBroken cls={`${selectedIcon === 3 ? 'fill-white' : 'fill-gray-700'} !w-6 !h-6`} />,
+  const categories : TabSwitcherCategoriesProps[] = [
+    {id : 0, text : "مشخصات دوره", icon : <DocumentBrokenIcon cls={`${selectedTab === 0 ? "fill-white" : "fill-gray-800" } !w-6 !h-6 transition duration-300`} />},
+    {id : 1, text : "ویدیوها", icon : <FolderBroken cls={`${selectedTab === 1 ? "fill-white" : "fill-gray-800" } !w-6 !h-6 transition duration-300`} />},
+    {id : 2, text : "نظرات", icon : <StarBroken cls={`${selectedTab === 2 ? "fill-white" : "fill-gray-800" } !w-6 !h-6 transition duration-300`} />},
+    {id : 3, text : "پرسش و پاسخ", icon : <UsersBroken cls={`${selectedTab === 3 ? "fill-white" : "fill-gray-800" } !w-6 !h-6 transition duration-300`} />}
   ]
-
-  // console.log(Object.values(categories))
+  
 
   return (
-    <div className="w-full py-16">
-      <Tab.Group>
-        <Tab.List className="flex rounded-xl bg-blue-900/20 ">
-          {Object.keys(categories).map((category, categoryIcon) => (
-            <Tab
-              key={category}
-              className={({ selected }) => {
-
-                selected && selectedIcon === categoryIcon
-
-                return classNames(
-                  'w-full outline-none flex justify-center items-center text-center py-4 text-sm font-bold leading-5 transition-all',
-                  categoryIcon === 0 && 'rounded-r-md',
-                  categoryIcon === 3 && 'rounded-l-md',
-                  selected 
-                    ? 'bg-baby-9 text-white shadow'
-                    : 'bg-gray-200 text-gray-800'
-                )
-              }
-
-              }
-            >
-              {
-                categoriesIcons.map((icon, iconIndex) => (
-                  categoryIcon === iconIndex && <div key={iconIndex}>
-                    {icon}
-                  </div>
-                ))
-              }             
-              {category}
-            </Tab>
-          ))}
-        </Tab.List>
-        <Tab.Panels className="mt-2">
-          {Object.values(categories).map((posts, idx) => (
-            <Tab.Panel
-              key={idx}
-              className={classNames(
-                'rounded-xl bg-white p-3',
-                'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2'
-              )}
-            >
-              <ul>
-                {posts.map((post) => (
-                  <li
-                    key={post.id}
-                    className="relative rounded-md p-3 hover:bg-gray-100"
-                  >
-                    <h3 className="text-sm font-medium leading-5">
-                      {post.title}
-                    </h3>
-
-                    <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500">
-                      <li>{post.date}</li>
-                      <li>&middot;</li>
-                      <li>{post.commentCount} comments</li>
-                      <li>&middot;</li>
-                      <li>{post.shareCount} shares</li>
-                    </ul>
-
-                    <a
-                      href="#"
-                      className={classNames(
-                        'absolute inset-0 rounded-md',
-                        'ring-blue-400 focus:z-10 focus:outline-none focus:ring-2'
-                      )}
-                    />
-                  </li>
-                ))}
-              </ul>
-            </Tab.Panel>
-          ))}
-        </Tab.Panels>
-      </Tab.Group>
+    <div className='mt-8'>
+      <div className='grid grid-cols-12 w-full bg-gray-200/80 rounded-md'>
+        {
+          categories.map((item : TabSwitcherCategoriesProps) => {
+            return (
+              <div
+                className={`
+                  ${selectedTab === item.id ? "bg-baby-9" : ""}
+                  ${item.id === 0 && "rounded-r-md"}
+                  ${item.id === 3 && "rounded-l-md"}
+                  flex justify-center items-center col-span-3 py-4 transition duration-300
+                `}
+                onClick={() => setSelectedTab(item.id)} key={item.id}>
+                {(item.icon)}
+                <span className={`${selectedTab === item.id ? "text-white" : "text-gray-800"} mr-1`}>{item.text}</span>
+              </div>
+            )
+          })
+        }
+      </div>
+      <div className='mt-16 h-96'>
+        { selectedTab === 0 && <CourseInfo description={courseDetails.description} /> }
+        { selectedTab === 1 && <CourseEpisodes episodes={courseDetails.episodes} /> }
+      </div>
     </div>
   )
 }

@@ -28,7 +28,7 @@ const SingleCourseMain : React.FC<SingleCourseMainProps> = ({cls}) => {
             <BgColorfulBadge text={"ریاضی"} cls="mt-8"/>
             <Heading1 text="دوره آموزش محاسبات سریع" cls="!mt-6" center={false}/>
             <Header />
-            <img className="mt-12 h-96" src="/images/courses/boy-answering-questions-fast.jpg" alt="math-tricks-answer-questions-fast" />
+            <img className="mt-12" src="/images/courses/boy-answering-questions-fast.jpg" alt="math-tricks-answer-questions-fast" />
             <TabSwitcher />
         </main>
     )
