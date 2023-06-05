@@ -6,6 +6,7 @@ export interface episodeCommentsProps {
     text : string
     score : string
     date : string
+    id : number
 }
 
 export interface episodesInfoProps {
@@ -46,7 +47,7 @@ export interface courseInfoProps {
 }
 
 export const courseDetails : courseInfoProps = {
-    name: "آموزش محاسبات سریع ریاضی",
+    name: "آموزش محاسبات سریع",
     teachers: [
         { id: 1, name: "محمدزورمند", img: "/images/home/teachers/mohammad-zourmand.jpg", href: "/" }
     ],
@@ -55,7 +56,7 @@ export const courseDetails : courseInfoProps = {
     lastUpdate: "14/3/1402",
     price: 43000,
     offPercent: 50,
-    category: "ریاضی",
+    category: "math",
     imgLabel: "/images/courses/boy-answering-questions-fast.jpg",
     episodesNumber: 18,
     students: 42,
@@ -69,6 +70,7 @@ export const courseDetails : courseInfoProps = {
                 type: "video",
                 comments: [
                     {
+                        id : 1,
                         username: "جواد مرتضوی",
                         userPicture: "/images/home/teachers/teacher-man-1.webp",
                         href: "/",
@@ -85,6 +87,7 @@ export const courseDetails : courseInfoProps = {
                 time: 12,
                 type: "video",
                 comments: [{
+                    id : 1,
                     username: "جواد مرتضوی",
                     userPicture: "/images/home/teachers/teacher-man-1.webp",
                     href: "/",
@@ -102,6 +105,7 @@ export const courseDetails : courseInfoProps = {
                 time: 15,
                 type: "video",
                 comments: [{
+                    id : 1,
                     username: "جواد مرتضوی",
                     userPicture: "/images/home/teachers/teacher-man-1.webp",
                     href: "/",
@@ -117,6 +121,7 @@ export const courseDetails : courseInfoProps = {
                 time: 9,
                 type: "video",
                 comments: [{
+                    id : 1,
                     username: "جواد مرتضوی",
                     userPicture: "/images/home/teachers/teacher-man-1.webp",
                     href: "/",
@@ -132,6 +137,7 @@ export const courseDetails : courseInfoProps = {
                 time: 4,
                 type: "video",
                 comments: [{
+                    id : 1,
                     username: "جواد مرتضوی",
                     userPicture: "/images/home/teachers/teacher-man-1.webp",
                     href: "/",
@@ -147,6 +153,7 @@ export const courseDetails : courseInfoProps = {
                 time: 19,
                 type: "video",
                 comments: [{
+                    id : 1,
                     username: "جواد مرتضوی",
                     userPicture: "/images/home/teachers/teacher-man-1.webp",
                     href: "/",
@@ -164,6 +171,7 @@ export const courseDetails : courseInfoProps = {
                 time: 14,
                 type: "video",
                 comments: [{
+                    id : 1,
                     username: "جواد مرتضوی",
                     userPicture: "/images/home/teachers/teacher-man-1.webp",
                     href: "/",
@@ -179,6 +187,7 @@ export const courseDetails : courseInfoProps = {
                 time: 12,
                 type: "video",
                 comments: [{
+                    id : 1,
                     username: "جواد مرتضوی",
                     userPicture: "/images/home/teachers/teacher-man-1.webp",
                     href: "/",
@@ -192,6 +201,7 @@ export const courseDetails : courseInfoProps = {
     },
     comments : [
         {
+            id : 1,
             username: "جواد مرتضوی",
             userPicture: "/images/home/teachers/teacher-man-1.webp",
             href: "/",
@@ -200,6 +210,7 @@ export const courseDetails : courseInfoProps = {
             date: "12/2/1402"
         },
         {
+            id : 2,
             username: "جواد مرتضوی",
             userPicture: "/images/home/teachers/teacher-man-1.webp",
             href: "/",
@@ -221,6 +232,7 @@ const episodes = {
             type: "video",
             comments: [
                 {
+                    id : 1,
                     username: "جواد مرتضوی",
                     userPicture: "/images/home/teachers/teacher-man-1.webp",
                     href: "/",
@@ -237,6 +249,7 @@ const episodes = {
             time: 12,
             type: "video",
             comments: [{
+                id : 1,
                 username: "جواد مرتضوی",
                 userPicture: "/images/home/teachers/teacher-man-1.webp",
                 href: "/",
@@ -254,6 +267,7 @@ const episodes = {
             time: 15,
             type: "video",
             comments: [{
+                id : 1,
                 username: "جواد مرتضوی",
                 userPicture: "/images/home/teachers/teacher-man-1.webp",
                 href: "/",
@@ -269,6 +283,7 @@ const episodes = {
             time: 9,
             type: "video",
             comments: [{
+                id : 1,
                 username: "جواد مرتضوی",
                 userPicture: "/images/home/teachers/teacher-man-1.webp",
                 href: "/",
@@ -284,6 +299,7 @@ const episodes = {
             time: 4,
             type: "video",
             comments: [{
+                id : 1,
                 username: "جواد مرتضوی",
                 userPicture: "/images/home/teachers/teacher-man-1.webp",
                 href: "/",
@@ -299,6 +315,7 @@ const episodes = {
             time: 19,
             type: "video",
             comments: [{
+                id : 1,
                 username: "جواد مرتضوی",
                 userPicture: "/images/home/teachers/teacher-man-1.webp",
                 href: "/",
@@ -316,6 +333,7 @@ const episodes = {
             time: 14,
             type: "video",
             comments: [{
+                id : 1,
                 username: "جواد مرتضوی",
                 userPicture: "/images/home/teachers/teacher-man-1.webp",
                 href: "/",
@@ -331,6 +349,7 @@ const episodes = {
             time: 12,
             type: "video",
             comments: [{
+                id : 1,
                 username: "جواد مرتضوی",
                 userPicture: "/images/home/teachers/teacher-man-1.webp",
                 href: "/",

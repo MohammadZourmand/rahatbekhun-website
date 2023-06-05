@@ -3,6 +3,8 @@ import { ReactNode, useState } from 'react';
 import CourseInfo from './info';
 import { courseDetails } from './courseInfo';
 import CourseEpisodes from './episodes';
+import CommentsCourseParts from './commentsPart';
+import Paragraph from '../../paragraph';
 
 interface TabSwitcherProps {
 
@@ -47,9 +49,11 @@ const TabSwitcher : React.FC<TabSwitcherProps> = () => {
           })
         }
       </div>
-      <div className='mt-16 h-96'>
+      <div className='mt-16'>
         { selectedTab === 0 && <CourseInfo description={courseDetails.description} /> }
         { selectedTab === 1 && <CourseEpisodes episodes={courseDetails.episodes} /> }
+        { selectedTab === 2 && <CommentsCourseParts /> }
+        { selectedTab === 3 && <Paragraph center={true} text='این قسمت به زودی اضافه می شود .'/> }
       </div>
     </div>
   )

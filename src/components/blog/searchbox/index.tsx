@@ -43,7 +43,7 @@ const SearchBox : React.FC = () => {
                         name={"text"}
                         placeholder={"قسمتی از چیزی که دنبال آن هستید را وارد کنید !"}
                     />
-                    <SelectBox  cls="lg:col-span-4 sm:col-span-10 col-span-12" />
+                    {/* <SelectBox  cls="lg:col-span-4 sm:col-span-10 col-span-12" /> */}
                     <GrayButton cls="sm:col-span-2 col-span-5 py-3" />
                 </Form>
             </Formik>

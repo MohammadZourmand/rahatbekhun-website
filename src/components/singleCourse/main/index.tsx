@@ -5,6 +5,9 @@ import BgColorfulBadge from "@/components/global/elements/boxes/badges/bgColorfu
 import Heading1 from "@/components/global/elements/headings/h1";
 import Header from "./head";
 import TabSwitcher from "@/components/global/elements/boxes/tabSwitcher";
+import ShareBox from "./shareBox";
+import FaSpan from "@/components/global/elements/boxes/cart/faSpan";
+import RelatedCourses from "./relatedCourse";
 
 interface SingleCourseMainProps {
     cls ?: string
@@ -30,6 +33,11 @@ const SingleCourseMain : React.FC<SingleCourseMainProps> = ({cls}) => {
             <Header />
             <img className="mt-12" src="/images/courses/boy-answering-questions-fast.jpg" alt="math-tricks-answer-questions-fast" />
             <TabSwitcher />
+            {/* <div className="mt-16">
+                <span className="font-bold text-lg mb-4 block"> دوره را به اشتراک بگذارید : </span>
+                <ShareBox />
+            </div> */}
+            <RelatedCourses />
         </main>
     )
 }

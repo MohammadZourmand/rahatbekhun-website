@@ -1,5 +1,6 @@
 import { Star } from "@/assets/icons"
 import FaSpan from "@/components/global/elements/boxes/cart/faSpan"
+import FiveStars from "@/components/global/elements/boxes/fiveStars"
 import Paragraph from "@/components/global/elements/paragraph"
 
 interface HeaderProps {
@@ -28,13 +29,7 @@ const Header : React.FC<HeaderProps> = () => {
             <div className="col-span-6">
                 <Paragraph cls="text-xs text-gray-500" text="امتیاز دوره :" />
                 <div className="flex items-center">
-                    {
-                        [1,2,3,4,5].map((item) => {
-                            return (
-                                <Star key={item} cls="fill-yellow-400 w-5 h-5" />
-                            )
-                        })
-                    }
+                    <FiveStars />
                     <FaSpan cls="text-sm mt-1 mr-2 text-gray-700 !font-extrabold" value={"(4.5)"}/>
                 </div>
             </div>

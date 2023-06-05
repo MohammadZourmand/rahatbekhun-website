@@ -9,6 +9,7 @@ interface FieldProps {
     placeholder : string
     fieldCls ?: string
     name : string
+    as ?: string
 }
 
 interface InputProps extends FieldProps,ErrorProps {
@@ -31,7 +32,7 @@ const Input : React.FC<InputProps> = ({
             <Field
                 {...props}
                 name={name}
-                className={` ${fieldCls} focus:bg-slate-100 transition duration-500 bg-slate-50 h-full w-full outline-none px-6 py-5 text-[.9rem] font-light rounded-lg`} 
+                className={` ${fieldCls} text-gray-900  focus:bg-white focus:outline-baby-9 outline-transparent transition duration-500 bg-gray-200/60 h-full w-full px-6 py-5 text-[.9rem] rounded-lg`} 
             />
             <ErrorMessage
                 component={component ?? "div"}
