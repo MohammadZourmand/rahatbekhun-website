@@ -71,7 +71,7 @@ module.exports = {
       animation : {
         scaleToScreen : 'scaleToScreen 10s linear infinite',
         fade : 'fade .2s linear',
-        comeFromTop : 'comeFromTop .4s ease',
+        comeFromTop : 'comeFromTop .4s ease both',
         comeFromBottom : 'comeFromBottom .4s ease'
       },
       boxShadow : {
