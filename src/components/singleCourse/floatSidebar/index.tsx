@@ -19,8 +19,16 @@ const FloatSidebar : React.FC<FloatSidebarProps> = ({cls}) => {
     console.log(courseDetails.price/100*courseDetails.offPercent)
     
     return (
-        <aside className={`${cls} flex flex-col gap-y-4`}>
-            <div className="p-6 bg-white rounded-lg shadow-2xl shadow-gray-200">
+        <aside className={`${cls} relative flex flex-col gap-y-8`}>
+            {/* <div
+                style={{
+                    backgroundColor : 'transparent',
+                    backgroundImage : `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2322c55e' fill-opacity='0.72' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E")`
+                }}
+                className={`absolute top-32 -left-8 h-[6.7rem] w-24`}
+            >   
+            </div> */}
+            <div className="z-10 p-6 bg-white rounded-lg shadow-all-lg shadow-gray-200">
                 <div className="relative flex items-center justify-center rounded-md overflow-hidden">
                     <img src={courseDetails.imgLabel} alt="" />
                     <div className="absolute top-0 left-0 bg-black/30 w-full h-full"></div>
@@ -69,8 +77,8 @@ const FloatSidebar : React.FC<FloatSidebarProps> = ({cls}) => {
                 </div>
                 <BlueBtn text="ثبت نام در دوره"/>
             </div>
-            <div className="flex flex-col gap-y-6 p-6 bg-white rounded-lg shadow-2xl shadow-gray-200">
-                <Heading6 cls="text-gray-800" text="دوره های مشابه" />
+            <div className="flex flex-col gap-y-6 py-8 px-6 bg-white rounded-lg shadow-all-lg shadow-gray-200">
+                <Heading6 cls="text-gray-800 !text-base" text="دوره های پیش نیاز" />
                 <div className="flex flex-col gap-y-8">
                 {
                     [1,2,3].map((item : number) => {
@@ -81,13 +89,13 @@ const FloatSidebar : React.FC<FloatSidebarProps> = ({cls}) => {
                                 </div>
                                 <div className="col-span-2">
                                     <div className="mb-1">
-                                        <FiveStars />
+                                        <FiveStars cls="scale-[.7] -mr-8" />
                                     </div>
                                     <div>
-                                        <Link className="text-gray-800 font-semibold" href={"/"}>
+                                        <Link className="text-gray-800 text-sm font-semibold" href={"/"}>
                                             {courseDetails.name}
                                         </Link>
-                                        <PriceBox cls="mt-1" priceCls="text-xl !text-baby-9" markCls="text-sm !text-baby-9/90" offPercent={30} isOff={false} price={courseDetails.price} />
+                                        <PriceBox cls="mt-1" priceCls="text-lg !text-baby-9" markCls="text-xs mt-1 !text-baby-9/90" offPercent={30} isOff={false} price={courseDetails.price} />
                                     </div>
                                 </div>
                             </div>

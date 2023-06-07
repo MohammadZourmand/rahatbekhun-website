@@ -17,24 +17,26 @@ const RelatedCourses : React.FC<RelatedCoursesProps> = ({
 
 
     return (
-        <div className={`${cls} grid grid-cols-12 gap-10 mt-12`}>
-            <header className="col-span-12">
+        <div className={`${cls} flex flex-col sm:gap-10 mt-12`}>
+            <header>
                 <Heading3 cls="" text="دوره های مشابه" />
                 <Paragraph cls="font-medium mt-5" text="دوره هایی مشابه به آنچه در بالا دیده اید را در اینجا پیدا کنید : " />          
             </header>
+            <main className="grid grid-cols-12 mt-4 xs:gap-4 gap-y-4">
             {
                 coursesData.map((course : CartType, index) => {
                     return (
                         <>
                             {
                                 course.category === courseDetails.category && course.name !== courseDetails.name && (
-                                    <Cart cls="col-span-6" key={index} item={course} />
+                                    <Cart cls="xs:col-span-6 col-span-12" key={index} item={course} />
                                 ) 
                             }
                         </>
                     )
                 })
             }
+            </main>
         </div>
     )
 }

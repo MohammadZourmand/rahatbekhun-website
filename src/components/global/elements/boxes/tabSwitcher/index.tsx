@@ -43,7 +43,7 @@ const TabSwitcher : React.FC<TabSwitcherProps> = () => {
                 `}
                 onClick={() => setSelectedTab(item.id)} key={item.id}>
                 {(item.icon)}
-                <span className={`${selectedTab === item.id ? "text-white" : "text-gray-800"} mr-1`}>{item.text}</span>
+                <span className={`sm:block hidden ${selectedTab === item.id ? "text-white" : "text-gray-800"} mr-1`}>{item.text}</span>
               </div>
             )
           })

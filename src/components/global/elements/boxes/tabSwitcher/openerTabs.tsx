@@ -30,7 +30,7 @@ const TabOpener : React.FC<TabOpenerProps> = ({item, index}) => {
                 item[1].map((episode : episodesInfoProps) => {
                     return (
                             <li key={episode?.id} className="group transition-all grid grid-cols-12 bg-white hover:bg-baby-9 hover:border-transparent border border-gray-200 rounded-md py-4 pr-6 pl-8">
-                                <div className="col-span-3 flex items-center">
+                                <div className="sm:col-span-3 xs:col-span-4 col-span-12 flex items-center">
                                     <span className="ml-1 relative bottom-0.5">
                                         {typeIconSelector(episode?.type)}
                                     </span>
@@ -39,10 +39,10 @@ const TabOpener : React.FC<TabOpenerProps> = ({item, index}) => {
                                         {typeTranslator(episode?.type)}
                                     </span>
                                 </div>
-                                <div className="col-span-6">
+                                <div className="xs:col-span-6 col-span-12 xs:my-0 my-4">
                                     <FaSpan cls="transition text-gray-900 group-hover:text-white" value={episode?.name} />
                                 </div>
-                                <div className="col-span-3 flex items-center justify-self-end">
+                                <div className="md:col-span-3 md:mt-0 xs:mt-4 mt-0 text-right col-span-12 flex items-center md:justify-self-end">
                                     <ClockBroken cls={`transition fill-gray-600 group-hover:fill-white w-5 h-5`} />
                                     <FaSpan cls="transition text-gray-600 group-hover:text-white mr-1 text-sm" value={`${episode?.time} دقیقه`} />
                                     <FaSpan cls="text-white bg-baby-6 rounded text-sm px-2 py-[1px] mr-3" value={`${episode?.comments?.length} دیدگاه`} />
