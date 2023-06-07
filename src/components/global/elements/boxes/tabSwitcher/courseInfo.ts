@@ -32,7 +32,9 @@ export interface partedEpisodes {
 export interface courseInfoProps {
     name : string
     teachers : teachersInfo[]
+    studentsAge : string
     score : number
+    prerequisite : boolean
     startDate : string
     lastUpdate : string
     price : number
@@ -51,10 +53,12 @@ export const courseDetails : courseInfoProps = {
     teachers: [
         { id: 1, name: "محمدزورمند", img: "/images/home/teachers/mohammad-zourmand.jpg", href: "/" }
     ],
+    prerequisite : true,
     score: 4.5,
-    startDate: "14/1/1402",
+    startDate: "1402/1/11",
     lastUpdate: "14/3/1402",
-    price: 43000,
+    price: 86,
+    studentsAge : "دوم ابتدایی",
     offPercent: 50,
     category: "math",
     imgLabel: "/images/courses/boy-answering-questions-fast.jpg",
