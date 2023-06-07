@@ -8,6 +8,7 @@ import FiveStars from "@/components/global/elements/boxes/fiveStars";
 import Heading6 from "@/components/global/elements/headings/h6";
 import Link from "next/link";
 import Paragraph from "@/components/global/elements/paragraph";
+import ShareBox from "../main/shareBox";
 
 interface FloatSidebarProps {
     cls ?: string
@@ -19,7 +20,7 @@ const FloatSidebar : React.FC<FloatSidebarProps> = ({cls}) => {
     console.log(courseDetails.price/100*courseDetails.offPercent)
     
     return (
-        <aside className={`${cls} relative flex flex-col gap-y-8`}>
+        <aside className={`${cls} relative flex flex-col gap-y-8 lg:mt-0 mt-12 lg:mx-0 mx-2`}>
             {/* <div
                 style={{
                     backgroundColor : 'transparent',
@@ -103,6 +104,10 @@ const FloatSidebar : React.FC<FloatSidebarProps> = ({cls}) => {
                     })
                 }
                 </div>
+            </div>
+            <div className="flex flex-col items-center mt-2 py-8 px-6 bg-white rounded-lg shadow-all-lg shadow-gray-200">
+                <span className="font-bold text-lg mb-4 block"> دوره را به اشتراک بگذارید : </span>
+                <ShareBox />
             </div>
         </aside>
     )

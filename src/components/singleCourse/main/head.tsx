@@ -10,8 +10,8 @@ interface HeaderProps {
 const Header : React.FC<HeaderProps> = () => {
 
     return (
-        <div className="grid grid-cols-12 mt-12 items-center">
-            <div className="col-span-3 flex items-center">
+        <div className="grid grid-cols-12 sm:mt-12 mt-6 items-center px-2">
+            <div className="sm:col-span-3 xs:col-span-4 col-span-12 flex items-center">
                 <div>
                     <img className="w-12 h-12 rounded-full border-2 border-white shadow-all-md" src="/images/home/teachers/mohammad-zourmand.jpg" alt="Mohammad-zourmand-creator-of-rahat-bekhun" />
                 </div>
@@ -20,13 +20,13 @@ const Header : React.FC<HeaderProps> = () => {
                     <Paragraph cls="text-sm mt-1 text-gray-700 !font-extrabold" text="محمد زورمند" />
                 </div>
             </div>
-            <div className="col-span-3">
+            <div className="sm:col-span-3 xs:col-span-4 col-span-6 xs:mt-0 mt-6">
                 <div className="">
                     <Paragraph cls="text-xs text-gray-500" text="آخرین بروزرسانی :" />
                     <FaSpan cls="text-sm !mt-1 text-gray-700 !font-extrabold" value={"25 اردیبهشت 1401"}/>
                 </div>
             </div>
-            <div className="col-span-6">
+            <div className="sm:col-span-6 xs:col-span-4 col-span-6 xs:mt-0 mt-6">
                 <Paragraph cls="text-xs text-gray-500" text="امتیاز دوره :" />
                 <div className="flex items-center">
                     <FiveStars />

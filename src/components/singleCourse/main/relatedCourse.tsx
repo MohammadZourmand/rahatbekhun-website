@@ -29,7 +29,7 @@ const RelatedCourses : React.FC<RelatedCoursesProps> = ({
                         <>
                             {
                                 course.category === courseDetails.category && course.name !== courseDetails.name && (
-                                    <Cart cls="xs:col-span-6 col-span-12" key={index} item={course} />
+                                    <Cart cls="sm:col-span-6 col-span-12" key={index} item={course} />
                                 ) 
                             }
                         </>

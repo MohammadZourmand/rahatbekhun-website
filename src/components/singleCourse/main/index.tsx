@@ -18,7 +18,7 @@ const SingleCourseMain : React.FC<SingleCourseMainProps> = ({cls}) => {
     const query = useSelector((state : RootState) => state.singleArticleSlice)
 
     return (
-        <main className={`${cls} relative p-2`}>
+        <main className={`${cls} relative`}>
             <div className="bg-pink-300 absolute top-32 -right-28 w-[3.5rem] h-[3.5rem] rounded-full"></div>
             <div
                 style={{
@@ -37,15 +37,10 @@ const SingleCourseMain : React.FC<SingleCourseMainProps> = ({cls}) => {
                 size={"sm"}
             />
             <BgColorfulBadge text={"ریاضی"} cls="mt-8"/>
-            <Heading1 text="دوره آموزش محاسبات سریع" cls="!mt-6" center={false}/>
+            <Heading1 text="دوره آموزش محاسبات سریع" cls="!mt-6 sm:px-0 px-2" center={false}/>
             <Header />
             <img className="mt-12" src="/images/courses/boy-answering-questions-fast.jpg" alt="math-tricks-answer-questions-fast" />
             <TabSwitcher />
-            {/* <div className="mt-16">
-                <span className="font-bold text-lg mb-4 block"> دوره را به اشتراک بگذارید : </span>
-                <ShareBox />
-            </div> */}
-            <RelatedCourses />
         </main>
     )
 }
