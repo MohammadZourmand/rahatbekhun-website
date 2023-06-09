@@ -7,11 +7,13 @@ import Paragraph from "../paragraph";
 interface MyCheckBoxProps {
     cls ?: string
     text : string
+    textCls ?: string
 }
 
 const MyCheckBox : React.FC<MyCheckBoxProps> =  ({
     cls,
-    text
+    text,
+    textCls
 }) => {
 
     const [isChecked , setIsChecked] = useState(false)
@@ -20,7 +22,7 @@ const MyCheckBox : React.FC<MyCheckBoxProps> =  ({
         <label className={`${cls} group myCheckbox !flex items-center` }>
             <input type="checkbox"  onChange={() => setIsChecked(!isChecked)}/>
             <div className="checkmark"></div>
-            <Paragraph cls={`${isChecked ? "!font-bold text-gray-800" : "!font-medium"} text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text={text} />
+            <Paragraph cls={`${textCls} ${isChecked ? "!font-bold text-gray-800" : "!font-medium"} text-gray-700 font-medium !text-[.9rem] mr-2 group-hover:text-baby-9`} text={text} />
         </label>
     )
 }
