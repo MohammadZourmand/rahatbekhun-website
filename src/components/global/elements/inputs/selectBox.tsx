@@ -16,9 +16,11 @@ interface SelectBoxProps {
     cls ?: string
     items : SortItemsProps[]
     label ?: string
+    labelCls ?: string
+    btnCls ?: string
 }
 
-const SelectBox : FC<SelectBoxProps> = ({cls, items, label}) =>  {
+const SelectBox : FC<SelectBoxProps> = ({cls, items, label, labelCls, btnCls}) =>  {
   const [selected, setSelected] = useState(items[0])
 
   return (
@@ -26,10 +28,10 @@ const SelectBox : FC<SelectBoxProps> = ({cls, items, label}) =>  {
       {({ open }) => (
         <div className={`${cls} flex items-center`}>
           {
-            label && <Listbox.Label className="basis-2/5 text-sm font-medium leading-6 text-gray-900 ml-2 sm:mb-0 mb-3">{label}</Listbox.Label>
+            label && <Listbox.Label className={`${labelCls} basis-2/5 text-sm font-medium leading-6 text-gray-900 ml-2 sm:mb-0 mb-3`}>{label}</Listbox.Label>
           }
-          <div className={`relative basis-3/5`}>
-            <Listbox.Button className="relative w-full cursor-default rounded-md bg-white py-1.5 pr-3 pl-10 text-left text-gray-900 shadow-sm focus:outline-none sm:text-sm sm:leading-6">
+          <div className={`relative basis-3/5 w-full`}>
+            <Listbox.Button className={`${btnCls} relative w-full cursor-default rounded-md bg-white py-1.5 pr-3 pl-10 text-left text-gray-900 shadow-sm focus:outline-none sm:text-sm sm:leading-6`}>
               <span className="flex items-center">
                 <span className="block truncate mr-2 text-[.9rem]">{selected.text}</span>
               </span>
