@@ -35,21 +35,21 @@ const SignUpForm : React.FC<SignUpFormProps> = () => {
             </header>
             <main className="relative">
                 <img className="absolute xs:w sm:block hidden xl:-top-40 xl:right-48 sm:-top-40 sm:-right-0 md:right-24 lg:right-0 z-[-1] opacity-10" src="/images/login/form-bg.webp" alt="" />
-                <img className="absolute -top-56 right-8 xl:-top-24 xl:right-48 sm:-top-24 sm:right-16 z-[-1] animate-slowSpin" src="/images/login/circle.webp" alt="" />
+                <img className="absolute -top-56 right-8 xs:-top-40 xl:-top-24 xl:right-48 sm:-top-24 sm:right-16 z-[-1] animate-slowSpin" src="/images/login/circle.webp" alt="" />
                 <Formik
                     initialValues={initialValues}
                     onSubmit={submitHandler}
                 >
-                    <Form className="relative z-[1] flex flex-col bg-white sm:max-w-3xl sm:mx-auto xs:mx-6 mx-1 shadow-all-lg shadow-[#e5e7eb] rounded-lg xs:px-8 px-4 xs:py-12 py-6 mt-16">  
+                    <Form className="relative z-[1] flex flex-col bg-white sm:max-w-3xl md:mx-auto xs:mx-6 mx-1 shadow-all-lg shadow-[#e5e7eb] rounded-lg xs:px-8 px-4 xs:py-12 py-6 mt-16">  
                             <img className="absolute sm:block -top-16 -right-16 z-[-1] animate-goAndBack" src="/images/login/dot.webp" alt="" />
-                            <img className="absolute -top-48 left-4 xl:-left-40 sm:-left-16 md:-left-28 z-[-1] animate-goAndBack" src="/images/login/zigzag.webp" alt="" />
-                            <img className="absolute sm:block hidden top-32 xl:-left-56 sm:-left-16 md:-left-32" src="/images/login/man-1.webp" alt="" />
-                            <img className="absolute sm:block z-[-1] -top-20 right-0 w-20 sm:w-24 sm:top-24 xl:-right-56 sm:-right-16 md:-right-32" src="/images/login/man-2.webp" alt="" />
-                            <Link href={"/sign-up"} className="self-center w-1/2 xs:mx-8 relative overflow-hidden hover:after:w-[110%] hover:text-white transition-all after:transition-all after:duration-500 duration-500 after:absolute after:-top-5 after:left-0 after:w-1/6 after:h-[200%] after:rounded-r-full after:bg-baby-5 bg-gray-100 pr-8 text-gray-500 text-sm after:z-[-1] z-[1] rounded-md py-3 mb-4">
+                            <img className="absolute -top-48 left-4 xl:-left-40 sm:-left-0 lg:-left-28 z-[-1] animate-goAndBack" src="/images/login/zigzag.webp" alt="" />
+                            <img className="absolute lg:block hidden top-32 xl:-left-56 lg:-left-32" src="/images/login/man-1.webp" alt="" />
+                            <img className="absolute lg:block sm:hidden block z-[-1] -top-20 right-0 w-20 sm:w-24 sm:top-24 xl:-right-56 sm:-right-16 md:-right-32" src="/images/login/man-2.webp" alt="" />
+                            <Link href={"/sign-up"} className="self-center sm:w-1/2 w-11/12 xs:w-2/3 xs:mx-8 relative overflow-hidden hover:after:w-[110%] hover:text-white transition-all after:transition-all after:duration-500 duration-500 after:absolute after:-top-5 after:left-0 after:w-1/6 after:h-[200%] after:rounded-r-full after:bg-baby-5 bg-gray-100 pr-8 text-gray-500 text-sm after:z-[-1] z-[1] rounded-md py-3 mb-4">
                                 <IconBrandGoogle className="absolute left-0 top-0 ml-3 my-[.6rem]" stroke={3} color="white" />
                                 با حساب گوگل خودت وارد شو 
                             </Link>
-                            <div className="self-center w-1/2 text-sm xs:mx-6 flex xs:justify-between justify-center text-gray-500 mb-7 text-center">
+                            <div className="self-center sm:w-1/2 text-sm xs:mx-6 flex xs:justify-between justify-center text-gray-500 mb-7 text-center">
                                 <span className="relative bottom-[2px]"> ..... </span>
                                 <div className="mx-2 xs:mx-0">
                                     یا با ایمیل خودت از 
@@ -59,7 +59,7 @@ const SignUpForm : React.FC<SignUpFormProps> = () => {
                                 <span className="relative bottom-[2px]"> ..... </span>
                             </div>
                             <div className="grid grid-cols-12 gap-4">
-                                <div className="col-span-6">
+                                <div className="md:col-span-6 col-span-12 ">
                                     <MyLabel text="نام و نام خانوادگی :" cls="mb-3 font-medium" htmlFor="username" />
                                     <Input
                                         fieldCls="!py-4"
@@ -67,7 +67,7 @@ const SignUpForm : React.FC<SignUpFormProps> = () => {
                                         name={"username"} 
                                     />
                                 </div>
-                                <div className="col-span-6">
+                                <div className="md:col-span-6 col-span-12 ">
                                     <MyLabel text="نام کاربری :" cls="mb-3 font-medium" htmlFor="username" />
                                     <Input
                                         fieldCls="!py-4"
@@ -75,7 +75,7 @@ const SignUpForm : React.FC<SignUpFormProps> = () => {
                                         name={"username"} 
                                     />
                                 </div>
-                                <div className="col-span-6">
+                                <div className="md:col-span-6 col-span-12 ">
                                     <MyLabel text="رمز عبور :" cls="mt-6 mb-3 font-medium" htmlFor="username" />
                                     <Input
                                         fieldCls="!py-4"
@@ -83,7 +83,7 @@ const SignUpForm : React.FC<SignUpFormProps> = () => {
                                         name={"password"} 
                                     />
                                 </div>
-                                <div className="col-span-6">
+                                <div className="md:col-span-6 col-span-12 ">
                                     <MyLabel text="تکرار رمز عبور :" cls="mt-6 mb-3 font-medium" htmlFor="username" />
                                     <Input
                                         fieldCls="!py-4"
@@ -92,7 +92,7 @@ const SignUpForm : React.FC<SignUpFormProps> = () => {
                                     />
                                 </div>
                                 <SelectBox
-                                    cls="col-span-6 flex-col !items-start"
+                                    cls="md:col-span-6 col-span-12  flex-col !items-start"
                                     labelCls="mt-6 mb-3 font-medium !text-gray-900 !text-base"
                                     label="شما چه کاره هستید ؟"
                                     btnCls="w-full !bg-gray-100 !py-3 !text-gray-600 mt-3"
@@ -104,7 +104,7 @@ const SignUpForm : React.FC<SignUpFormProps> = () => {
                                     ]}
                                 />
                                 <SelectBox
-                                    cls="col-span-6 flex-col !items-start"
+                                    cls="md:col-span-6 col-span-12  flex-col !items-start"
                                     labelCls="mt-6 mb-3 font-medium !text-gray-900 !text-base"
                                     label={true ? "پایه تحصیلی فرزند شما کدام است ؟" : "کلاس چندم هستی ؟"}
                                     btnCls="w-full !bg-gray-100 !py-3 !text-gray-600 mt-3"
@@ -121,9 +121,9 @@ const SignUpForm : React.FC<SignUpFormProps> = () => {
                                 <MyCheckBox
                                     text="قوانین سایت را قبول دارم و به آنها احترام می گذارم ." 
                                     textCls="!text-gray-700 !text-sm"
-                                    cls="mt-8 self-center col-span-6"
+                                    cls="mt-8 justify-self-center self-center md:col-span-6 col-span-12 "
                                 />
-                                <Link className="col-span-6 text-left text-gray-500 text-sm block mt-8" href={"/forgot-password"}>
+                                <Link className="lg:col-span-6 col-span-12 lg:text-left text-center text-gray-500 text-sm block lg:mt-8 mt-5" href={"/forgot-password"}>
                                     مشاهده قوانین سایت راحت بخون
                                 </Link>
                                 <BlueBtn cls="col-span-12 mt-8 w-full" text={"ثبت نام در سایت"} />
