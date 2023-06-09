@@ -23,56 +23,65 @@ const SignInForm : React.FC<SignInFormProps> = () => {
     const submitHandler = () => {}
 
     return (
-        <section className="bg-gray-50 pt-4 pb-32 mx-auto lg:px-48">
-            <header className="mt-16">
+        <section className="z-[1]  relative bg-gray-50 pt-4 pb-32 mx-auto lg:px-48">
+            <header className="mt-16 xs:mx-0 mx-8">
                 <Heading3 center={true} cls="lg:w-[20rem] font-extrabold mx-auto text-gray-800 !leading-relaxed" text={"برای تجربه لحظات بهتر وارد حسابت شو !"} />
-                <p className="text-center text-gray-500 text-sm mt-5">
+                <p className="text-center text-gray-500 text-sm mt-5 z-[1]">
                     حساب کاربری راحت بخون برای خودت نداری ؟ همین الان از
                     <Link href={"/sign-up"}> اینجا </Link>
                     ثبت نام کن.
                 </p>
             </header>
-            <Formik
-                initialValues={initialValues}
-                onSubmit={submitHandler}
-            >
-                <Form className="flex flex-col bg-white max-w-lg mx-auto shadow-all-lg shadow-[#e5e7eb] rounded-lg px-16 py-12 mt-16">  
-                    <Link href={"/sign-up"} className="mx-8 relative overflow-hidden hover:after:w-[110%] hover:text-white transition-all after:transition-all after:duration-500 duration-500 after:absolute after:-top-5 after:left-0 after:w-1/6 after:h-[200%] after:rounded-r-full after:bg-baby-5 bg-gray-100 pr-8 text-gray-500 text-sm after:z-[-1] z-[1] rounded-md py-3 mb-4">
-                        <IconBrandGoogle className="absolute left-0 top-0 ml-3 my-[.6rem]" stroke={3} color="white" />
-                        با حساب گوگل خودت وارد شو 
-                    </Link>
-                    <div className="text-sm mx-6 flex justify-between text-gray-500 mb-7 text-center">
-                        <span className="relative bottom-[2px]"> ..... </span>
-                        <div>
-                            یا با ایمیل خودت از 
-                            <Link className="hover:text-baby-9" href={"/sign-up"}> اینجا </Link>
-                            ثبت نام کن !
-                        </div>
-                        <span className="relative bottom-[2px]"> ..... </span>
-                    </div>
-                    <MyLabel text="نام کاربری :" cls="mb-3 font-medium" htmlFor="username" />
-                    <Input
-                        fieldCls="!py-4"
-                        placeholder={"نام کاربری خودت رو اینجا وارد کن !"}
-                        name={"username"} 
-                    />
-                    <MyLabel text="رمز عبور :" cls="mt-6 mb-3 font-medium" htmlFor="username" />
-                    <Input
-                        fieldCls="!py-4"
-                        placeholder={"رمز خودت رو اینجا وارد کن !"}
-                        name={"password"} 
-                    />
-                    <MyCheckBox
-                        text="حساب کاربری من را فعال نگهدار !" 
-                        textCls="!text-gray-700 !text-sm"
-                        cls="mt-8 self-center"
-                    />
-                    <BlueBtn cls="mt-8 w-full" text={"ورود به سایت"} />
-                    <Link className="self-center text-gray-500 text-sm mt-5 block" href={"/forgot-password"}>
-                        رمز عبورم رو فراموش کردم !
-                    </Link>
-            </Form>
-        </Formik>
+            <main className="relative">
+                <img className="absolute xs:w sm:block hidden xl:-top-40 xl:right-48 sm:-top-40 sm:-right-0 md:right-24 lg:right-0 z-[-1] opacity-10" src="/images/login/form-bg.webp" alt="" />
+                <img className="absolute -top-56 right-8 xl:-top-24 xl:right-48 sm:-top-24 sm:right-16 z-[-1] animate-slowSpin" src="/images/login/circle.webp" alt="" />
+                <Formik
+                    initialValues={initialValues}
+                    onSubmit={submitHandler}
+                >
+                    <Form className="relative z-[1] flex flex-col bg-white sm:max-w-lg sm:mx-auto xs:mx-6 mx-1 shadow-all-lg shadow-[#e5e7eb] rounded-lg xs:px-16 px-4 xs:py-12 py-6 mt-16">  
+                            <img className="absolute sm:block -top-16 -right-16 z-[-1] animate-goAndBack" src="/images/login/dot.webp" alt="" />
+                            <img className="absolute -top-48 left-4 xl:-left-40 sm:-left-16 md:-left-28 z-[-1] animate-goAndBack" src="/images/login/zigzag.webp" alt="" />
+                            <img className="absolute sm:block hidden top-32 xl:-left-56 sm:-left-16 md:-left-32" src="/images/login/man-1.webp" alt="" />
+                            <img className="absolute sm:block z-[-1] -top-20 right-0 w-20 sm:w-24 sm:top-24 xl:-right-56 sm:-right-16 md:-right-32" src="/images/login/man-2.webp" alt="" />
+                            <Link href={"/sign-up"} className="xs:mx-8 relative overflow-hidden hover:after:w-[110%] hover:text-white transition-all after:transition-all after:duration-500 duration-500 after:absolute after:-top-5 after:left-0 after:w-1/6 after:h-[200%] after:rounded-r-full after:bg-baby-5 bg-gray-100 pr-8 text-gray-500 text-sm after:z-[-1] z-[1] rounded-md py-3 mb-4">
+                                <IconBrandGoogle className="absolute left-0 top-0 ml-3 my-[.6rem]" stroke={3} color="white" />
+                                با حساب گوگل خودت وارد شو 
+                            </Link>
+                            <div className="text-sm xs:mx-6 flex xs:justify-between justify-center text-gray-500 mb-7 text-center">
+                                <span className="relative bottom-[2px]"> ..... </span>
+                                <div className="mx-2 xs:mx-0">
+                                    یا با ایمیل خودت از 
+                                    <Link className="hover:text-baby-9" href={"/sign-up"}> اینجا </Link>
+                                    ثبت نام کن !
+                                </div>
+                                <span className="relative bottom-[2px]"> ..... </span>
+                            </div>
+                            <MyLabel text="نام کاربری :" cls="mb-3 font-medium" htmlFor="username" />
+                            <Input
+                                fieldCls="!py-4"
+                                placeholder={"نام کاربری خودت رو اینجا وارد کن !"}
+                                name={"username"} 
+                            />
+                            <MyLabel text="رمز عبور :" cls="mt-6 mb-3 font-medium" htmlFor="username" />
+                            <Input
+                                fieldCls="!py-4"
+                                placeholder={"رمز خودت رو اینجا وارد کن !"}
+                                name={"password"} 
+                            />
+                            <MyCheckBox
+                                text="حساب کاربری من را فعال نگهدار !" 
+                                textCls="!text-gray-700 !text-sm"
+                                cls="mt-8 self-center"
+                            />
+                            <BlueBtn cls="mt-8 w-full" text={"ورود به سایت"} />
+                            <Link className="self-center text-gray-500 text-sm mt-5 block" href={"/forgot-password"}>
+                                رمز عبورم رو فراموش کردم !
+                            </Link>
+                    </Form>
+                </Formik>
+            </main>
+
     </section>
     )
 }

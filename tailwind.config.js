@@ -67,12 +67,22 @@ module.exports = {
           '0%' : { opacity : 0 },
           '100%' : { opacity : 1 }
         },
+        slowSpin : {
+          '0%' :  {transform: 'rotate(0deg)'},
+          '100%' :  {transform: 'rotate(360deg)'}
+        },
+        goAndBack : {
+          '0%' :  { transform: 'translateY(0)'},
+          '100%' :  { transform: 'translateY(5rem)'}
+        }
       },
       animation : {
         scaleToScreen : 'scaleToScreen 10s linear infinite',
         fade : 'fade .2s linear',
         comeFromTop : 'comeFromTop .4s ease both',
-        comeFromBottom : 'comeFromBottom .4s ease'
+        comeFromBottom : 'comeFromBottom .4s ease',
+        slowSpin : 'slowSpin 4s linear infinite',
+        goAndBack : 'goAndBack 4s linear infinite alternate'
       },
       boxShadow : {
         'all-sm' : '0 0 10px #e2e8f0',
