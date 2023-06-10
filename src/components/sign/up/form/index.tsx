@@ -83,12 +83,20 @@ const SignUpForm : React.FC<SignUpFormProps> = () => {
                                         name={"password"} 
                                     />
                                 </div>
-                                <div className="md:col-span-6 col-span-12 ">
+                                <div className="md:col-span-6 col-span-12">
                                     <MyLabel text="تکرار رمز عبور :" cls="mt-6 mb-3 font-medium" htmlFor="username" />
                                     <Input
                                         fieldCls="!py-4"
                                         placeholder={"تکرار رمزت رو اینجا وارد کن !"}
                                         name={"password"} 
+                                    />
+                                </div>
+                                <div className="md:col-span-6 col-span-12">
+                                    <MyLabel text="شماره موبایل" cls="mt-6 mb-3 font-medium" htmlFor="username" />
+                                    <Input
+                                        fieldCls="!py-4"
+                                        placeholder={"یک شماره موبایل برای موارد ضروری ..."}
+                                        name={"mobile"} 
                                     />
                                 </div>
                                 <SelectBox
@@ -101,21 +109,6 @@ const SignUpForm : React.FC<SignUpFormProps> = () => {
                                         {id : 2 , text : "آموزگار"},
                                         {id : 3 , text : "والد دانش آموز"},
                                         {id : 4 , text : "دیگر"},
-                                    ]}
-                                />
-                                <SelectBox
-                                    cls="md:col-span-6 col-span-12  flex-col !items-start"
-                                    labelCls="mt-6 mb-3 font-medium !text-gray-900 !text-base"
-                                    label={true ? "پایه تحصیلی فرزند شما کدام است ؟" : "کلاس چندم هستی ؟"}
-                                    btnCls="w-full !bg-gray-100 !py-3 !text-gray-600 mt-3"
-                                    items={[
-                                        {id : 1 , text : "انتخاب نشده است ..."},
-                                        {id : 2 , text : "اول ابتدایی"},
-                                        {id : 3 , text : "دوم ابتدایی"},
-                                        {id : 4 , text : "سوم ابتدایی"},
-                                        {id : 5 , text : "چهارم ابتدایی"},
-                                        {id : 6 , text : "پنجم ابتدایی"},
-                                        {id : 7 , text : "ششم ابتدایی"},
                                     ]}
                                 />
                                 <MyCheckBox

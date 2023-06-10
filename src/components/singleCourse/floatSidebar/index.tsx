@@ -21,14 +21,7 @@ const FloatSidebar : React.FC<FloatSidebarProps> = ({cls}) => {
     
     return (
         <aside className={`${cls} relative flex flex-col gap-y-8 lg:mt-0 mt-12 lg:mx-0 mx-2`}>
-            {/* <div
-                style={{
-                    backgroundColor : 'transparent',
-                    backgroundImage : `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2322c55e' fill-opacity='0.72' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E")`
-                }}
-                className={`absolute top-32 -left-8 h-[6.7rem] w-24`}
-            >   
-            </div> */}
+            <img className="absolute top-36 -left-8" src="/images/courses/course-dot.webp" alt="dot-image-for-background-course" />
             <div className="z-10 p-6 bg-white rounded-lg shadow-all-lg shadow-gray-200">
                 <div className="relative flex items-center justify-center rounded-md overflow-hidden">
                     <img src={courseDetails.imgLabel} alt="" />
