@@ -7,8 +7,10 @@ import BlueBtn from "@/components/global/elements/buttons/blue";
 import FiveStars from "@/components/global/elements/boxes/fiveStars";
 import Heading6 from "@/components/global/elements/headings/h6";
 import Link from "next/link";
-import Paragraph from "@/components/global/elements/paragraph";
 import ShareBox from "../main/shareBox";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "@/store";
+import { addProduct } from "@/store/slices/cart";
 
 interface FloatSidebarProps {
     cls ?: string
@@ -17,7 +19,19 @@ interface FloatSidebarProps {
 const FloatSidebar : React.FC<FloatSidebarProps> = ({cls}) => {
 
 
-    console.log(courseDetails.price/100*courseDetails.offPercent)
+    const dispatch = useDispatch()
+
+    const addToCartList = () => {
+
+        let {price, offPercent, name, courseLink, imgLabel} = courseDetails
+       
+        dispatch(addProduct({
+            price : offPercent ? price*(100-offPercent)/100 : price,
+            link : courseLink,
+            name : name,
+            img : imgLabel
+        }))
+    }
     
     return (
         <aside className={`${cls} relative flex flex-col gap-y-8 lg:mt-0 mt-12 lg:mx-0 mx-2`}>
@@ -69,7 +83,7 @@ const FloatSidebar : React.FC<FloatSidebarProps> = ({cls}) => {
                         text={courseDetails.prerequisite ? "دارد" : "ندارد"}
                     />
                 </div>
-                <BlueBtn text="ثبت نام در دوره"/>
+                <BlueBtn onClick={() => addToCartList()} text="ثبت نام در دوره"/>
             </div>
             <div className="flex flex-col gap-y-6 py-8 px-6 bg-white rounded-lg shadow-all-lg shadow-gray-200">
                 <Heading6 cls="text-gray-800 !text-base" text="دوره های پیش نیاز" />

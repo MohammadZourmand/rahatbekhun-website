@@ -74,6 +74,17 @@ module.exports = {
         goAndBack : {
           '0%' :  { transform: 'translateY(0)'},
           '100%' :  { transform: 'translateY(5rem)'}
+        },
+        comeFromRight : {
+          '0%' :  {
+            transform: 'translateX(10rem)'
+          },
+          '50%' :  {
+            transform: 'translateX(-2rem)'
+          },
+          '100%' :  {
+            transform: 'translateX(0)'
+          }      
         }
       },
       animation : {
@@ -82,7 +93,8 @@ module.exports = {
         comeFromTop : 'comeFromTop .4s ease both',
         comeFromBottom : 'comeFromBottom .4s ease',
         slowSpin : 'slowSpin 4s linear infinite',
-        goAndBack : 'goAndBack 4s linear infinite alternate'
+        goAndBack : 'goAndBack 4s linear infinite alternate',
+        comeFromRight : 'comeFromRight .7s ease-in-out alternate'
       },
       boxShadow : {
         'all-sm' : '0 0 10px #e2e8f0',

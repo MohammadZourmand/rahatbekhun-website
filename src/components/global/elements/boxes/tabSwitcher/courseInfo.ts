@@ -31,6 +31,7 @@ export interface partedEpisodes {
 }
 export interface courseInfoProps {
     name : string
+    courseLink : string
     teachers : teachersInfo[]
     studentsAge : string
     score : number
@@ -50,6 +51,7 @@ export interface courseInfoProps {
 
 export const courseDetails : courseInfoProps = {
     name: "آموزش محاسبات سریع",
+    courseLink : "learn-fast-calculations", 
     teachers: [
         { id: 1, name: "محمدزورمند", img: "/images/home/teachers/mohammad-zourmand.jpg", href: "/" }
     ],
@@ -59,7 +61,7 @@ export const courseDetails : courseInfoProps = {
     lastUpdate: "14/3/1402",
     price: 86,
     studentsAge : "دوم ابتدایی",
-    offPercent: 50,
+    offPercent: 39,
     category: "math",
     imgLabel: "/images/courses/boy-answering-questions-fast.jpg",
     episodesNumber: 18,

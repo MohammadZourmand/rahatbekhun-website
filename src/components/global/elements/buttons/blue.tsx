@@ -1,16 +1,18 @@
 
 interface BlueBtnProps {
     text : string,
-    cls ?: string
+    cls ?: string,
+    onClick ?: any
 }
 
 const BlueBtn : React.FC<BlueBtnProps> = ({
     text,
-    cls
+    cls,
+    ...props
 }) => {
 
     return (
-        <button className={`${cls} text-center hover:shadow-xl bg-baby-9 border text-white rounded-lg px-5 py-3 mx-auto transition duration-500`}>
+        <button {...props} className={`${cls} text-center hover:shadow-xl bg-baby-9 border text-white rounded-lg px-5 py-3 mx-auto transition duration-500`}>
             <span className=""> {text} </span>
         </button>
     )
