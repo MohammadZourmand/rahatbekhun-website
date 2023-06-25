@@ -1,3 +1,4 @@
+import { SuccsesToast, WarningToast } from '@/components/lib/swal'
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
@@ -19,9 +20,15 @@ export const cartProducts = createSlice({
 
         if(state.length === 0) {
           state.push(action.payload)
+          SuccsesToast("محصول به سبد خرید اضافه شد !")
         } else {
           state?.forEach((product : CartItemsProps) => {
-            product.link !== link && state.push(action.payload)
+            if(product.link !== link) {
+              state.push(action.payload)
+              SuccsesToast("محصول به سبد خرید اضافه گردید !")
+            } else {
+              WarningToast("این محصول در سبد شما هست !")
+            }
           })
         }
 

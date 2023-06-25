@@ -2,8 +2,6 @@
 import { FC, Suspense, useState, lazy } from "react";
 
 import { CartBrokenIcon } from "@/assets/icons";
-;
-import DarkBackground from "../darkBg";
 
 const CartProductsPopup = lazy(() => import("./popup"))
 
@@ -25,8 +23,6 @@ const Cart : FC<CartProps> = ({isWhite}) => {
             <Suspense>
                 { show && <CartProductsPopup setShow={setShow} />}
             </Suspense>
-            {/* // ! dark background */}
-            {/* <DarkBackground show={show} setShow={setShow} /> */}
         </div>
     )
 }
