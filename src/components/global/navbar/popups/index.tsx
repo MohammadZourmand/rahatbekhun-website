@@ -28,7 +28,6 @@ const PopupIcons : React.FC<PopupIconsProps> = ({isWhite}) => {
     return (
         <>
             <Cart isWhite={isWhite}/>
-
             <Link href={"/profile"} className={`${linkStyle} md:flex hidden`}>
                 <AlarmBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
                 <span className={`absolute -bottom-1 -right-1 bg-baby-4 px-2 rounded-full`}> {PN.convertEnToPe(1)} </span>
@@ -39,14 +38,6 @@ const PopupIcons : React.FC<PopupIconsProps> = ({isWhite}) => {
             <Link href={"/profile"} className={`${linkStyle} lg:hidden`}>
                 <CategoryBroken cls={"group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
             </Link>
-            {/* // TODO => Navbar PopUps */}
-            {/* // TODO => Black Background */}
-
-            {/* // TODO => Profile */}
-            {/* // TODO => Cart */}
-            
-            {/* // TODO => Alerts */}
-            {/* // TODO => Profile */}
         </>
     )
 }

@@ -26,13 +26,13 @@ const RelatedCourses : React.FC<RelatedCoursesProps> = ({
             {
                 coursesData.map((course : CartType, index) => {
                     return (
-                        <>
+                        <div className="sm:col-span-6 col-span-12" key={index}>
                             {
                                 course.category === courseDetails.category && course.name !== courseDetails.name && (
-                                    <Cart cls="sm:col-span-6 col-span-12" key={index} item={course} />
+                                    <Cart item={course} />
                                 ) 
                             }
-                        </>
+                        </div>
                     )
                 })
             }

@@ -20,7 +20,7 @@ export const cartProducts = createSlice({
         if(state.length === 0) {
           state.push(action.payload)
         } else {
-          state.forEach((product : CartItemsProps) => {
+          state?.forEach((product : CartItemsProps) => {
             product.link !== link && state.push(action.payload)
           })
         }

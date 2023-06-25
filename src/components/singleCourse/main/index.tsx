@@ -5,9 +5,6 @@ import BgColorfulBadge from "@/components/global/elements/boxes/badges/bgColorfu
 import Heading1 from "@/components/global/elements/headings/h1";
 import Header from "./head";
 import TabSwitcher from "@/components/global/elements/boxes/tabSwitcher";
-import ShareBox from "./shareBox";
-import FaSpan from "@/components/global/elements/boxes/cart/faSpan";
-import RelatedCourses from "./relatedCourse";
 
 interface SingleCourseMainProps {
     cls ?: string
