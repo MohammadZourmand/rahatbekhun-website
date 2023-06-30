@@ -1,5 +1,5 @@
 // ? react ==================
-import { useState, FC } from 'react'
+import { useState, FC, useEffect, Dispatch, SetStateAction } from 'react'
 
 // ? assets =================
 import { Listbox, Transition } from '@headlessui/react'
@@ -18,13 +18,14 @@ interface SelectBoxProps {
     label ?: string
     labelCls ?: string
     btnCls ?: string
+    selected ?: any
+    setSelected ?: any
 }
 
-const SelectBox : FC<SelectBoxProps> = ({cls, items, label, labelCls, btnCls}) =>  {
-  const [selected, setSelected] = useState(items[0])
+const SelectBox : FC<SelectBoxProps> = ({cls, items, label, labelCls, btnCls, selected, setSelected}) =>  {
 
   return (
-    <Listbox value={selected} onChange={setSelected}>
+    <Listbox value={selected} onChange={(e : React.ChangeEvent<HTMLInputElement>) => setSelected(e,selected[0])}>
       {({ open }) => (
         <div className={`${cls} flex items-center`}>
           {
@@ -33,7 +34,7 @@ const SelectBox : FC<SelectBoxProps> = ({cls, items, label, labelCls, btnCls}) =
           <div className={`relative basis-3/5 w-full`}>
             <Listbox.Button className={`${btnCls} relative w-full cursor-default rounded-md bg-white py-1.5 pr-3 pl-10 text-left text-gray-900 shadow-sm focus:outline-none sm:text-sm sm:leading-6`}>
               <span className="flex items-center">
-                <span className="block truncate mr-2 text-[.9rem]">{selected.text}</span>
+                <span className="block truncate mr-2 text-[.9rem]">{selected[1]}</span>
               </span>
               <span className="pointer-events-none absolute inset-y-0 left-0 ml-2 flex items-center">
                 <ChevronLeftCircleBroken cls={"h-5 w-5 text-gray-400 -rotate-90 fill-gray-400"} aria-hidden="true" />
