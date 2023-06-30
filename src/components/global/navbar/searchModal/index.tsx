@@ -23,7 +23,7 @@ const SearchModal : React.FC<SearchModalProps> = ({
     return (
         <>
             {/* shadow for window when the search form is focus ... */}
-            <div onClick={() => setIsFocus(false)} className={`${isFocus ? "fixed" : "hidden"} animate-fade bg-gray-900/80 z-40 top-0 left-0 w-full h-full`}></div>
+            <div onClick={() => setIsFocus(false)} className={`${isFocus ? "fixed" : "hidden"} animate-fade bg-gray-900/80 z-50 top-0 left-0 w-full h-full`}></div>
             <div className={`mx-auto xl:w-[60%] xs:w-[70%] w-full relative col-span-12 grid grid-cols-12 gap-x-6 justify-between items-center mt-4 px-4 rounded-xl after:hidden`}>
                 <div className={`${isFocus ? "absolute" : "hidden"} w-full top-20 grid grid-cols-12 justify-center z-50 h-96`}>
                     <form className="group col-span-12 mb-4 grid grid-cols-12 relative z-50">
