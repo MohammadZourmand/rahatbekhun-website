@@ -20,6 +20,7 @@ interface SelectBoxProps {
     btnCls ?: string
     selected ?: any
     setSelected ?: any
+    id ?: string
 }
 
 const SelectBox : FC<SelectBoxProps> = ({cls, items, label, labelCls, btnCls, selected, setSelected}) =>  {
@@ -31,8 +32,8 @@ const SelectBox : FC<SelectBoxProps> = ({cls, items, label, labelCls, btnCls, se
           {
             label && <Listbox.Label className={`${labelCls} basis-2/5 text-sm font-medium leading-6 text-gray-900 ml-2 sm:mb-0 mb-3`}>{label}</Listbox.Label>
           }
-          <div className={`relative basis-3/5 w-full`}>
-            <Listbox.Button className={`${btnCls} relative w-full cursor-default rounded-md bg-white py-1.5 pr-3 pl-10 text-left text-gray-900 shadow-sm focus:outline-none sm:text-sm sm:leading-6`}>
+          <div className={`relative h-full w-full`}>
+            <Listbox.Button className={`${btnCls} relative w-full h-full cursor-default rounded-md bg-white py-1.5 pr-3 pl-10 text-left text-gray-900 shadow-sm focus:outline-none sm:text-sm sm:leading-6`}>
               <span className="flex items-center">
                 <span className="block truncate mr-2 text-[.9rem]">{selected[1]}</span>
               </span>

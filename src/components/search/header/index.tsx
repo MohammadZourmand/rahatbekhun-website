@@ -10,9 +10,9 @@ import AdvancedSearchFrom from "../form"
 const AdvancedSearchHeader : FC = () => {
 
     return (
-        <header className="relative h-[46rem]">
+        <header className="flex flex-col relative h-[50rem]">
             {/* // * background */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-b-[100%]">
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-b-[100%] -z-10">
                 <img className="absolute -top-32 left-0 w-full h-[120%]" src="./images/search/kids-around-school-table.jpg" alt="kids-learning-teamwork" />
                 <div className="absolute top-0 left-0 w-full h-full bg-blue-900/70"></div>
             </div>
