@@ -1,16 +1,14 @@
 import { FC } from "react"
+
 import Navbar from "../../global/navbar"
-import Heading1 from "@/components/global/elements/headings/h1"
 import Heading2 from "@/components/global/elements/headings/h2"
-import Heading3 from "@/components/global/elements/headings/h3"
-import AdvancedSearch from ".."
 import AdvancedSearchFrom from "../form"
 
 
 const AdvancedSearchHeader : FC = () => {
 
     return (
-        <header className="flex flex-col relative h-[50rem]">
+        <header className="flex flex-col relative h-screen">
             {/* // * background */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-b-[100%] -z-10">
                 <img className="absolute -top-32 left-0 w-full h-[120%]" src="./images/search/kids-around-school-table.jpg" alt="kids-learning-teamwork" />

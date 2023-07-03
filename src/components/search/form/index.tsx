@@ -3,13 +3,17 @@ import { FC, useEffect, useState } from "react";
 import { Form, Formik } from "formik";
 
 import { searchFormInitialValues as initialState, searchFormSelectboxOptions, searchFormInitialValuesProps as valuesType} from "./initialvalues";
-import SelectBox from "@/components/global/elements/inputs/selectBox";
 import { setSelectBoxTitle } from "./setSelectboxTitle";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
+import { typeChecker } from "./typeChecker";
+import { WarningToast } from "@/components/lib/swal";
+import SelectBox from "@/components/global/elements/inputs/selectBox";
 
 const AdvancedSearchFrom : FC = () => {
 
-    const submitHandler = () => {}
+    const submitHandler = () => {
+        WarningToast("جستجو ناقص انجام شد !")
+    }
 
     // * get queries and send to server and get&set data
     useEffect(() => {
@@ -18,11 +22,14 @@ const AdvancedSearchFrom : FC = () => {
 
     const [initialValues , setInitialValues] = useState<valuesType>(initialState)
 
-    const selectboxesChangeHandler : (e: {id : number, text : string}, type: string) => void = (e, type) => {
+    const selectboxesChangeHandler : (type : string, value: string) => void = (type, value) => {
+        
+        console.log(type, value)
+
         setInitialValues((prevState) => {
             return {
                 ...prevState,
-                [type] : e.text
+                [type] : value
             }
         })
     }
@@ -47,8 +54,8 @@ const AdvancedSearchFrom : FC = () => {
                         }
 
                         return (
-                            <div key={index} className="col-span-4 my-2 flex items-center justify-between">
-                                <div className="relative ml-6 font-semibold text-white my-4">{setSelectBoxTitle(values[0])}</div>
+                            typeChecker(values[0] , initialValues._type) && <div key={index} className="col-span-4 my-2 flex items-center justify-between">
+                                <span className="relative text-lg ml-6 font-semibold text-white my-6">{setSelectBoxTitle(values[0])}</span>
                                 <SelectBox
                                     items={selectboxItemsFinder().map((item, index) => {
                                         return {id : index, text : item}
@@ -56,6 +63,7 @@ const AdvancedSearchFrom : FC = () => {
                                     selected={[values[0], values[1]]}
                                     setSelected={selectboxesChangeHandler}
                                     cls="h-12 w-56"
+                                    textBtnCls="text-base"
                                 ></SelectBox>
                             </div>
                         )

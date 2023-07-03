@@ -1,68 +1,61 @@
 
 export const setSelectBoxTitle = (title : string) => {
     switch (title) {
-        case "type":
-            
+        case "_type":
         return "نوع محتوا : "
 
-        case "subject":
-        
-        return "درس مورد نظر : "
+        case "_subject":
+        return "موضوع (کتاب) : "
 
-        case "grade":
-        
+        case "_grade":
         return "پایه تحصیلی : "
 
-        case "userType":
-        
-        return "مخاطب :"
-
-        case "rating":
-        
+        case "_rating":
         return "امتیاز : "
 
-        case "author":
-        
+        case "_author":
         return "نویسنده : "
 
-        case "studentsNum":
+        case "videosUserType":
+        return "مخاطب :"
         
+        case "coursesUserType":
+        return "مخاطب :"
+
+        case "coursesStudentsNum":
         return "تعداد دانش آموزان : "
 
-        case "episodesNum":
-        
+        case "coursesEpisodesNum":
         return "تعداد قسمت ها :"
 
         case "worksheetType":
-        
         return "نوع کاربرگ : "
 
         case "worksheetBorder":
-        
         return "حاشیه دور کاربرگ : "
 
         case "worksheetKey":
-        
         return "پاسخنامه کاربرگ : "
 
         case "worksheetColor":
-        
         return "رنگ آمیزی کاربرگ :"
 
         case "worksheetPaper":
-        
         return "تعداد صفحات کاربرگ : "
 
         case "worksheetUsability":
-        
         return "کاربرد کاربرگ : "
 
         case "worksheetRotation":
-        
         return "جهت کاربرگ : "
+        
+        case "testLevel":
+        return "سطح آزمون : "
+
+        case "testType":
+        return "نوع آزمون : "
 
         default:
-
         return "---"
     }
 }
