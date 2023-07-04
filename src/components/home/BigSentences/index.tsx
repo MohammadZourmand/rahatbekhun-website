@@ -1,4 +1,4 @@
-import WhiteWave from "@/components/global/waves/whiteWave";
+import WhiteWave from "@/components/global/waves/wave";
 import SentenceSlider from "./slider";
 
 

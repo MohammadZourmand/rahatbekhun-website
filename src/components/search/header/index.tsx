@@ -3,14 +3,15 @@ import { FC } from "react"
 import Navbar from "../../global/navbar"
 import Heading2 from "@/components/global/elements/headings/h2"
 import AdvancedSearchFrom from "../form"
+import Wave from "@/components/global/waves/wave"
 
 
 const AdvancedSearchHeader : FC = () => {
 
     return (
-        <header className="flex flex-col relative h-screen">
+        <header className="flex flex-col relative pb-56 overflow-hidden">
             {/* // * background */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-b-[100%] -z-10">
+            <div className="absolute bottom-16 top-0 left-0 w-full h-full overflow-hidden -z-10">
                 <img className="absolute -top-32 left-0 w-full h-[120%]" src="./images/search/kids-around-school-table.jpg" alt="kids-learning-teamwork" />
                 <div className="absolute top-0 left-0 w-full h-full bg-blue-900/70"></div>
             </div>
@@ -22,6 +23,9 @@ const AdvancedSearchHeader : FC = () => {
             />
             {/* // * searching Form  */}
             <AdvancedSearchFrom />
+            {/* // * White Wave & black wave */}
+            <Wave cls={"fill-sky-500 scale-y-[.7] scale-x-[1.2] absolute -bottom-[4.7rem]"} />
+            <Wave cls={"fill-white scale-y-[.7] scale-x-[1.2] absolute -bottom-[5rem]"} />
         </header>
     )
 }

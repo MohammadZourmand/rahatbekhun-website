@@ -31,8 +31,8 @@ export const setSelectBoxTitle = (title : string) => {
         case "worksheetType":
         return "نوع کاربرگ : "
 
-        case "worksheetBorder":
-        return "حاشیه دور کاربرگ : "
+        case "worksheetLesson":
+        return "فصل کاربرگ : "
 
         case "worksheetKey":
         return "پاسخنامه کاربرگ : "

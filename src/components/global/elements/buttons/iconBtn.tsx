@@ -26,7 +26,7 @@ const IconBtn : FC<IconBtnProps> = ({
 
     return (
         <button 
-            className={`${cls} group my-8 flex items-center text-base font-semibold bg-baby-3 text-white p-5 rounded-xl`}
+            className={`${cls} group my-8 flex items-center justify-center transition-all text-center text-base font-semibold bg-baby-3 text-white p-5 rounded-xl`}
             {...props}
         >
             {text}

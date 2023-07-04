@@ -9,7 +9,7 @@ export const searchFormSelectboxOptions = {
     coursesStudentsNum : [ "---" , "پایین تر از 100"  , "از 100 تا 300 نفر"  , "از 301 تا 500 نفر"  , "از 500 تا 1000 نفر"  , "بالاتر از 1000 نفر" ],
     coursesEpisodesNum :  ["---" , "کمتر از 5"  , "از 6 تا 10 قسمت"  , "از 10 تا 20 قسمت"  , "بیش از 20 قسمت"], 
     worksheetType :  ["تمامی کاربرگ ها" , "کاربرگ تمرینی"  , "کاربرگ خلاقانه"  , "کاربرگ پلاس"  , "کاربرگ تستی"],
-    worksheetBorder : [ "---" , "با حاشیه"  , "بی حاشیه" , "با قابلیت تغییر حاشیه"],
+    worksheetLesson : [ "---" , "با حاشیه"  , "بی حاشیه" , "با قابلیت تغییر حاشیه"],
     worksheetKey :  ["باپاسخ و بی پاسخ" , "با پاسخ"  , "بی پاسخ" ],
     worksheetColor : [ "---" , "رنگی"  , "سیاه و سفید"  , "بدون عکس"],
     worksheetPaper :  ["---" , "1 برگی"  , "2 برگی"  , "3 برگی"  , "4 برگی"  , "بیش از 4 برگ"], 
@@ -31,7 +31,7 @@ export interface searchFormInitialValuesProps {
     coursesStudentsNum : "---" | "پایین تر از 100"  | "از 100 تا 300 نفر"  | "از 301 تا 500 نفر"  | "از 500 تا 1000 نفر"  | "بالاتر از 1000 نفر" 
     coursesEpisodesNum : "---" | "کمتر از 5"  | "از 6 تا 10 قسمت"  | "از 10 تا 20 قسمت"  | "بیش از 20 قسمت" 
     worksheetType ?: "تمامی کاربرگ ها" | "کاربرگ تمرینی"  | "کاربرگ خلاقانه"  | "کاربرگ پلاس"  | "کاربرگ تستی"
-    worksheetBorder ?: "----" | "با حاشیه"  | "بی حاشیه" | "با قابلیت تغییر حاشیه"
+    worksheetLesson ?: string
     worksheetKey ?: "باپاسخ و بی پاسخ" | "با پاسخ"  | "بی پاسخ" 
     worksheetColor ?: "----" | "رنگی"  | "سیاه و سفید"  | "بدون عکس"
     worksheetPaper ?: "----" | "1 برگی"  | "2 برگی"  | "3 برگی"  | "4 برگی"  | "بیش از 4 برگ" 
@@ -53,7 +53,7 @@ export const searchFormInitialValues : searchFormInitialValuesProps = {
     coursesStudentsNum : "---",
     coursesEpisodesNum : "---", 
     worksheetType : "تمامی کاربرگ ها",
-    worksheetBorder : "----",
+    worksheetLesson : "----",
     worksheetKey : "باپاسخ و بی پاسخ",
     worksheetColor : "----",
     worksheetPaper : "----",

@@ -39,7 +39,7 @@ const AdvancedSearchFrom : FC = () => {
             initialValues={initialValues}
             onSubmit={submitHandler}
         >
-            <Form className="mx-48 mt-16 self-center grid grid-cols-12 justify-between gap-x-8">
+            <Form className="2xl:mx-20 mt-16 self-center grid grid-cols-12 justify-between md:gap-x-6">
                 {
                     Object.entries(initialValues).map((values, index) => {
 
@@ -54,7 +54,7 @@ const AdvancedSearchFrom : FC = () => {
                         }
 
                         return (
-                            typeChecker(values[0] , initialValues._type) && <div key={index} className="col-span-4 my-2 flex items-center justify-between">
+                            typeChecker(values[0] , initialValues._type) && <div key={index} className="xl:col-span-4 md:col-span-6 col-span-12 my-2 flex items-center justify-between">
                                 <span className="relative text-lg ml-6 font-semibold text-white my-6">{setSelectBoxTitle(values[0])}</span>
                                 <SelectBox
                                     items={selectboxItemsFinder().map((item, index) => {
@@ -62,7 +62,7 @@ const AdvancedSearchFrom : FC = () => {
                                     })}
                                     selected={[values[0], values[1]]}
                                     setSelected={selectboxesChangeHandler}
-                                    cls="h-12 w-56"
+                                    cls="h-12 w-48 xs:w-72 md:w-56 lg:w-72 xl:w-56"
                                     textBtnCls="text-base"
                                 ></SelectBox>
                             </div>
@@ -71,7 +71,7 @@ const AdvancedSearchFrom : FC = () => {
                 }
                 <IconBtn
                     text="آغاز جست و جو"
-                    cls="self-center col-span-12 mx-auto"
+                    cls="self-center col-span-12 mx-auto hover:px-12"
                     iconName={"search"}
                 />
             </Form>
