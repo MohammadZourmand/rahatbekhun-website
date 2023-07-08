@@ -2,8 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
 export interface singleArticleStateProps {
-  category : "",
-  course : ""
+  category : string,
+  course : string
 }
 
 const initialState : singleArticleStateProps = {

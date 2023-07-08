@@ -6,7 +6,7 @@ export interface SelectBoxProps {
     label ?: string
     labelCls ?: string
     btnCls ?: string
-    selected ?: any
+    selected ?: string[]
     setSelected ?: any
     id ?: string
     textBtnCls ?: string

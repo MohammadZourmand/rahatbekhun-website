@@ -1,18 +1,22 @@
 import { FC, useEffect, useState } from "react";
 
 import { Form, Formik } from "formik";
+import { useDispatch } from "react-redux";
+import { WarningToast } from "@/components/lib/swal";
+import { loadingsSetter } from "@/store/slices/loadings";
 
 import { searchFormInitialValues as initialState, searchFormSelectboxOptions, searchFormInitialValuesProps as valuesType} from "./initialvalues";
-import { setSelectBoxTitle } from "./setSelectboxTitle";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
 import { typeChecker } from "./typeChecker";
-import { WarningToast } from "@/components/lib/swal";
-import SelectBox from "@/components/global/elements/inputs/selectBox";
-import SelectBoxDiv from "./selectboxDic";
+import SelectBoxDiv from "./selectboxDiv";
 
 const AdvancedSearchFrom : FC = () => {
 
+    const dispatch = useDispatch()
+
+
     const submitHandler = () => {
+        dispatch(loadingsSetter("pages"))
         WarningToast("جستجو ناقص انجام شد !")
     }
 

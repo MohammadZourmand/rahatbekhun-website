@@ -1,3 +1,5 @@
+import PN from "persian-number";
+
 interface ParagraphProps {
     text : string,
     cls ?: string,
@@ -25,7 +27,7 @@ const Paragraph : React.FC<ParagraphProps> = ({
             text-base
             ${cls}
         `}>
-           {text}
+           {PN.convertEnToPe(text)}
         </p>
     )
 }

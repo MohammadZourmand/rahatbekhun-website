@@ -20,7 +20,7 @@ const SelectBox : FC<SelectBoxProps> = ({textBtnCls, cls, items, label, labelCls
 
   return (
     <Listbox 
-      value={selected.text}
+      value={selected[1]}
       onChange={(selectboxSelected) => {
         setSelected(selected[0],selectboxSelected)
       }}

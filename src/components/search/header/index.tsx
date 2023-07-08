@@ -2,7 +2,7 @@ import { FC } from "react"
 
 import Navbar from "../../global/navbar"
 import Heading2 from "@/components/global/elements/headings/h2"
-import AdvancedSearchFrom from "../form"
+import AdvancedSearchFrom from "./form"
 import Wave from "@/components/global/waves/wave"
 
 import bg from "./../../../../public/images/search/kids-around-school-table.jpg";
@@ -14,7 +14,7 @@ const AdvancedSearchHeader : FC = () => {
             style={{
                 backgroundImage : `url(${bg.src})`
             }}
-            className={`flex flex-col relative pb-56 overflow-hidden mb-96`}>
+            className={`flex flex-col relative pb-56 overflow-hidden`}>
             {/* // * background shadow */}
             <div className="absolute bottom-0 left-0 w-full h-full bg-gray-900/60"></div>
             {/* // * head of header :( navbar & text-headings  */}
