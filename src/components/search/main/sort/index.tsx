@@ -28,7 +28,7 @@ const SortBox : FC = () => {
                     ]}
                     selected={["sort", selected]}
                     setSelected={setSelected}
-                    cls="w-48 xs:mt-0 mt-3"
+                    cls="w-48 xs:mt-0 mt-3 z-20"
                     textBtnCls="font-semibold"
                 />
             </div>

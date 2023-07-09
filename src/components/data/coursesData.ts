@@ -3,7 +3,7 @@ import { CartType } from "@/types/home";
 
 export const coursesData : CartType[] = [
     {
-        type : "courses",
+        type : "worksheet",
         href : "learn-fast-calculations",
         name : "آموزش محاسبات سریع",
         details : "محاسبات ذهنی ریاضی برای دانش آموزان ابتدایی بدون استفاده از دست",
@@ -29,7 +29,7 @@ export const coursesData : CartType[] = [
         votes : 56
     },
     {
-        type : "courses",
+        type : "game",
         href : "learn-types-of-deductions",
         name : "آموزش کسرها",
         details : "بررسی کامل مفهوم کسر تا عملیات ریاضی کسرها و تبدیل آن ها به عدد مخلوط",
@@ -42,7 +42,7 @@ export const coursesData : CartType[] = [
         votes : 142
     },
     {
-        type : "courses",
+        type : "video",
         href : "learn-multiplication-table",
         name : "آموزش مفهوم و جدول ضرب",
         details : "بررسی کامل و کودکانه مفهوم ضرب و ارائه راهکارهای مختلف برای حفظ جدول ضرب",
@@ -55,7 +55,7 @@ export const coursesData : CartType[] = [
         price : 0
     },
     {
-        type : "courses",
+        type : "article",
         href : "learn-problem-solving",
         name : "آموزش آسان حل مسئله",
         details : "زیر و بالا کردن انواع مسئله ها و سوال ها برای آموزش چگونگی حل مسئله",
@@ -67,7 +67,7 @@ export const coursesData : CartType[] = [
         price : 0
     },
     {
-        type : "courses",
+        type : "test",
         href : "learn-four-options-solving",
         name : "حل سوالات چهار گزینه ای",
         details : "بررسی روش های حل مسئله سریع مخصوص آزمون های ورودی تیزهوشان",

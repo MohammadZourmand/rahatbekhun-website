@@ -28,7 +28,7 @@ const CartTextFooter : React.FC<CartTextFooterProps> = ({item}) => {
                     </div>
             }
             <div className="flex items-center">
-                <span className="ml-1 text-sm">مشاهده جزئیات</span>
+                <span className="ml-1 text-sm">مشاهده</span>
                 <LeftIcon cls="w-5 h-5" color="#374151" />
             </div>
         </footer>

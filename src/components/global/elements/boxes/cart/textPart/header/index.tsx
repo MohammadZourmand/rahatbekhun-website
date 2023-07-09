@@ -8,7 +8,8 @@ import { CartType } from "@/types/home";
 // ? assets ======================
 import { FolderBroken, Star } from "@/assets/icons";
 import Heading6 from "@/components/global/elements/headings/h6";
-import FaSpan from "../faSpan";
+import FaSpan from "../../faSpan";
+import IconChooser from "./iconChooser";
 
 interface CartTextHeaderProps {
     item : CartType
@@ -22,7 +23,7 @@ const CartTextHeader : React.FC<CartTextHeaderProps> = ({item}) => {
             <header>
                 <div className="flex justify-between items-center text-gray-400 text-sm">
                     <div className="flex items-center">
-                        <FolderBroken cls="ml-1 w-5 h-5" color="rgba(156 163 175)" />
+                        {IconChooser(item)}
                         <FaSpan value={sessions} />
                         <span>قسمت</span>
                     </div>
