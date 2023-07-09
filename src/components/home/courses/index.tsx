@@ -4,13 +4,13 @@ import { useState } from "react";
 // ? components =======================
 import Heading3 from "@/components/global/elements/headings/h3";
 import Paragraph from "@/components/global/elements/paragraph";
-import Cart from "../../global/elements/boxes/cart";
+import Cart from "../../global/elements/boxes/card";
 
 // ? assets ===========================
 import { coursesData } from "../../data/coursesData";
 
 // ? types ============================
-import { CartType } from "@/types/home";
+import { CardType } from "@/types/home";
 
 const Courses : React.FC = () => {
 
@@ -34,7 +34,7 @@ const Courses : React.FC = () => {
             </header>
             <main className="grid grid-cols-12 mt-10 gap-x-5 gap-y-6">
                 {
-                    coursesData.map((item : CartType, index : number) => {
+                    coursesData.map((item : CardType, index : number) => {
                            
                             if (type === "math"  && item.category === "ریاضی"
                                 || type === "persian"  && item.category === "فارسی"

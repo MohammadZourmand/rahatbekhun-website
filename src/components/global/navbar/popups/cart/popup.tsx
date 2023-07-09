@@ -48,7 +48,7 @@ const CartProductsPopup : FC<CartProductsPopupProps> = ({
         setTotal(totalPrices)
     }
 
-    // * get cart products from state in redux
+    // * get card products from state in redux
     const cartProducts = useSelector(( state : RootState) => state.cartProducts)
 
     return (

@@ -29,9 +29,13 @@ const ComputerNavbar : React.FC<ComputerNavbarProps> = ({subMenusCls, cls, setIs
                 <SubMenus isWhite={isWhite} cls={subMenusCls} />
             </div>
             <div className="flex items-center space-x-reverse space-x-3 xl:px-10 lg:px-6">
-                <div onClick={() => setIsFocusOnSearch(true)} className={`${linkStyle}`}>
+                <Link
+                    href={"/search"}
+                    // onClick={() => setIsFocusOnSearch(true)}
+                    className={`${linkStyle}`}
+                >
                     <SearchBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
-                </div>
+                </Link>
                 <PopupIcons isWhite={isWhite} />
             </div>
         </div>

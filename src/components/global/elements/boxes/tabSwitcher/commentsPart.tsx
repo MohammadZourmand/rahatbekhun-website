@@ -1,7 +1,7 @@
 import { Star } from "@/assets/icons";
 import Heading6 from "../../headings/h6";
 import Paragraph from "../../paragraph";
-import FaSpan from "../cart/faSpan";
+import FaSpan from "../card/faSpan";
 import { courseDetails, episodeCommentsProps } from "./courseInfo";
 import StaticProgressbar from "./staticProgress";
 import Link from "next/link";

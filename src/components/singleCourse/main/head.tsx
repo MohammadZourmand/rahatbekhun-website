@@ -1,5 +1,5 @@
 import { Star } from "@/assets/icons"
-import FaSpan from "@/components/global/elements/boxes/cart/faSpan"
+import FaSpan from "@/components/global/elements/boxes/card/faSpan"
 import FiveStars from "@/components/global/elements/boxes/fiveStars"
 import Paragraph from "@/components/global/elements/paragraph"
 

@@ -1,12 +1,12 @@
 
 // ? types  ======================
-import { CartType } from "@/types/home";
+import { CardType } from "@/types/home";
 
 // ? assets ======================
 import Paragraph from "@/components/global/elements/paragraph";
 
 interface CartTextMainProps {
-    item : CartType
+    item : CardType
 }
 
 const CartTextMain : React.FC<CartTextMainProps> = ({item}) => {

@@ -1,12 +1,12 @@
 // ? types & components ==========
-import { CartType } from "@/types/home";
+import { CardType } from "@/types/home";
 import FaSpan from "../faSpan";
 
 // ? assets ======================
 import { LeftIcon } from "@/assets/icons";
 
 interface CartTextFooterProps {
-    item : CartType
+    item : CardType
 }
 
 const CartTextFooter : React.FC<CartTextFooterProps> = ({item}) => {

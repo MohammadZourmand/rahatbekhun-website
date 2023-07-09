@@ -1,7 +1,7 @@
 
 import { ChevronLeftCircleBroken, ClockBroken } from "@/assets/icons";
 import {useState} from "react";
-import FaSpan from "../cart/faSpan";
+import FaSpan from "../card/faSpan";
 import { episodesInfoProps } from "./courseInfo";
 import { typeIconSelector } from "./typeSelector";
 import { typeTranslator } from "./typeTranslator";

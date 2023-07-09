@@ -1,5 +1,5 @@
 
-import FaSpan from "@/components/global/elements/boxes/cart/faSpan"
+import FaSpan from "@/components/global/elements/boxes/card/faSpan"
 import {ReactNode} from "react"
 
 interface SubjectBoxProps {

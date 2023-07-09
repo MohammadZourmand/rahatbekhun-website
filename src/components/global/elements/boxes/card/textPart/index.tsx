@@ -1,12 +1,12 @@
 // ? types & components =================
-import { CartType } from "@/types/home";
+import { CardType } from "@/types/home";
 import CartTextHeader from "./header";
 import CartTextMain from "./main";
 import CartTextFooter from "./footer";
 import IconChooser from "./header/iconChooser";
 
 interface CartTextPartProps {
-    item : CartType
+    item : CardType
 }
 
 const CartTextPart : React.FC<CartTextPartProps> = ({item}) => {

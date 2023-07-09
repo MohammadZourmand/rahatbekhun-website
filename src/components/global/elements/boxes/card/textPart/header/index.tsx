@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 // ? types  ======================
-import { CartType } from "@/types/home";
+import { CardType } from "@/types/home";
 
 // ? assets ======================
 import { FolderBroken, Star } from "@/assets/icons";
@@ -12,7 +12,7 @@ import FaSpan from "../../faSpan";
 import IconChooser from "./iconChooser";
 
 interface CartTextHeaderProps {
-    item : CartType
+    item : CardType
 }
 
 const CartTextHeader : React.FC<CartTextHeaderProps> = ({item}) => {

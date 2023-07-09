@@ -1,7 +1,7 @@
 import { FC } from "react"
 
 import { coursesData } from "@/components/data/coursesData";
-import Cart from "@/components/global/elements/boxes/cart";
+import Card from "@/components/global/elements/boxes/card";
 
 
 const MatchedSearchResults : FC = () => {
@@ -11,7 +11,7 @@ const MatchedSearchResults : FC = () => {
         {
             coursesData.map((item) => {
                 return (
-                    <Cart
+                    <Card
                         key={item.name}
                         item={item}
                         cls="lg:col-span-4 md:col-span-6 col-span-12"

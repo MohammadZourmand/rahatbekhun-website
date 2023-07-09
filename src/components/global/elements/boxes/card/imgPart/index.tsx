@@ -4,12 +4,12 @@ import Link from "next/link";
 import {useState} from "react";
 
 // ? types =======================
-import { CartType } from "@/types/home";
+import { CardType } from "@/types/home";
 import { CategoryChecker } from "./categoryChecker";
 
 
 interface CartImgPartProps {
-    item : CartType
+    item : CardType
 }
 
 const CartImgPart : React.FC<CartImgPartProps> = ({item}) => {

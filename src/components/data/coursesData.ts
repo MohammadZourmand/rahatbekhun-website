@@ -1,7 +1,7 @@
 // ? types =====================
-import { CartType } from "@/types/home";
+import { CardType } from "@/types/home";
 
-export const coursesData : CartType[] = [
+export const coursesData : CardType[] = [
     {
         type : "worksheet",
         href : "learn-fast-calculations",

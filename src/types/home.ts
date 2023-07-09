@@ -1,5 +1,5 @@
 
-export interface CartType {
+export interface CardType {
     type : string
     ageCategory ?: string,
     sessions : number | string,
@@ -14,7 +14,7 @@ export interface CartType {
     href : string
 }
 
-export interface Cart2Type {
+export interface Card2Type {
     subject : string,
     name : string,
     image : string
