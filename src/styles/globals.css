@@ -102,6 +102,25 @@
 	box-shadow: 0px 30px 40px 0px rgba(1, 11, 60, 0.06);
 }
 
+/* ! scroll bar ========== */
+::-webkit-scrollbar-track
+{
+	background-color: rgb(240, 240, 240);
+	border-radius: 1rem !important;
+}
+
+::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #dfe6e9;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #74b9ff;
+	border-radius: 10px;
+}
+
 /* ! Range Input ========= */
 
 .rangeInput {

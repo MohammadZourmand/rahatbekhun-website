@@ -2,13 +2,15 @@ import { IconCheck } from "@tabler/icons-react";
 
 interface LiTickIconProps {
     text : string
+    cls ?: string
+    iconCls ?: string
 }
 
-const LiTickIcon : React.FC<LiTickIconProps> = ({text}) => {
+const LiTickIcon : React.FC<LiTickIconProps> = ({text, cls, iconCls}) => {
 
     return (
-        <li className="flex items-center">
-            <IconCheck className="w-5 h-5" color="green"/>
+        <li className={`${cls} flex items-center`}>
+            <IconCheck className={`w-5 h-5 ${iconCls}`} color="green"/>
             <p className="mr-2">{text}</p>
         </li>
     )
