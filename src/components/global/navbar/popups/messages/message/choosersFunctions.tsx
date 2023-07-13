@@ -15,10 +15,10 @@ export const TypeMessageIconChooser : React.FC<IconChooserProps> = ({type}) => {
 export const messageBgColorChooser = (type : string) => {
 
     switch (type) {
-        case "warning": return "bg-amber-400/60"
-        case "info": return "bg-cyan-400/60"
-        case "success": return "bg-green-400/60"
-        default: return "bg-rose-400/60"
+        case "warning": return "bg-amber-400/60 hover:bg-amber-400/80"
+        case "info": return "bg-cyan-400/60 hover:bg-cyan-400/100"
+        case "success": return "bg-green-400/60 hover:bg-green-400/100"
+        default: return "bg-rose-400/60 hover:bg-rose-400/100"
     }
 }
 

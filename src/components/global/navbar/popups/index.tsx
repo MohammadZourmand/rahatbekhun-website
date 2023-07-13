@@ -9,6 +9,7 @@ import PN from "persian-number";
 import { AlarmBrokenIcon, CategoryBroken, UserBrokenIcon } from "@/assets/icons";
 import Cart from "./cart";
 import Messages from "./messages";
+import UserPanelPopup from "./user";
 
 interface PopupIconsProps {
     isWhite : boolean
@@ -24,9 +25,7 @@ const PopupIcons : React.FC<PopupIconsProps> = ({isWhite}) => {
         <>
             <Cart isWhite={isWhite}/>
             <Messages isWhite={isWhite} />
-            <Link href={"/profile"} className={`${linkStyle} md:flex hidden`}>
-                <UserBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
-            </Link>
+            <UserPanelPopup isWhite={isWhite} />
             <Link href={"/profile"} className={`${linkStyle} lg:hidden`}>
                 <CategoryBroken cls={"group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
             </Link>

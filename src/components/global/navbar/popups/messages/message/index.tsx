@@ -13,7 +13,7 @@ interface MessageBoxProps {
 const MessageBox : FC<MessageBoxProps> = ({item}) => {
     return (
         <div className={`group relative flex sm:flex-row flex-col items-center sm:items-start py-4 rounded-lg 
-            ${item.seen ? "bg-gray-500/40" : messageBgColorChooser(item.type)}
+            ${item.seen ? "bg-gray-500/40" : messageBgColorChooser(item.type)} transition
         `}>
             <div className="pr-2">
                 {TypeMessageIconChooser(item)}
