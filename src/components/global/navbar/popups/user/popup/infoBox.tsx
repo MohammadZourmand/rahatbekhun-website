@@ -15,9 +15,9 @@ const InfoBox : FC<InfoBoxProps> = ({
 }) => {
 
     return (
-        <div className={`${cls} flex flex-col col-span-4 items-center`}>
+        <div className={`${cls} group flex flex-col col-span-4 items-center`}>
             <div className="bg-gray-200/50 shadow-all-lg rounded-full">
-                <img src={img} className={imgCls}/>
+                <img src={img} className={`${imgCls} group-hover:scale-110 duration-500`}/>
             </div>
             <FaSpan 
                 value={value}

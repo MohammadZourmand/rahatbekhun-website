@@ -1,18 +1,20 @@
 
-import Heading6 from "@/components/global/elements/headings/h6";
 import Link from "next/link";
 import { FC, Dispatch, SetStateAction } from "react";
+
 import { userInfo } from "./user";
 import UserGradeChooser from "./userGardeChooser";
 import FaSpan from "@/components/global/elements/boxes/card/faSpan";
 import InfoBox from "./infoBox";
-import { EyeBrokenIcon } from "@/assets/icons";
+import LinkBox from "./linkbox";
+import Heading6 from "@/components/global/elements/headings/h6";
+import CloseIcon from "../../../mobile/closeIcon";
 
 interface UserPopupProps {
     setShow : Dispatch<SetStateAction<boolean>>
 }
 
-const UserPopup : FC<UserPopupProps> = ({}) => {
+const UserPopup : FC<UserPopupProps> = ({setShow}) => {
     return (
         <section className={`
             max-w-xl sm:w-[20rem] w-[95vw]
@@ -20,13 +22,15 @@ const UserPopup : FC<UserPopupProps> = ({}) => {
             rounded-lg animate-comeFromTop bg-white/30 z-50 sm:absolute 
             fixed top-16 md:-left-6 -left-0
         `}>
+            <CloseIcon setState={setShow} cls="absolute "/>
             <div className="relative w-full h-full flex flex-col justify-center items-center">
                 <Link
                     href={"./user-panel"}
-                    className={`flex justify-evenly w-full items-center relative top-1`}
+                    className={`flex group justify-evenly w-full items-center relative top-1`}
                 >
                     <div className="bg-white rounded-full">
                         <img
+                            className="group-hover:scale-105 transition"
                             src="./images/webLogo.png"
                             width={100}
                             height={100}
@@ -45,16 +49,20 @@ const UserPopup : FC<UserPopupProps> = ({}) => {
                     </div>
                 </Link>
                 <div className="grid grid-cols-12  justify-between p-2 w-full mt-2">
-                    <div className="flex flex-col col-span-4 items-center">
-                        {UserGradeChooser(userInfo)}
+                    <div className="group flex flex-col col-span-4 items-center">
+                        <div className="group-hover:scale-110 duration-500 transition bg-gray-50 w-16 h-16 flex items-center justify-center rounded-full">
+                            {UserGradeChooser(userInfo)}                        
+                        </div>
                         <span className=" bg-gray-900 text-white border-b border-b-gray-300/60 shadow-all-md shadow-red-500/30 font-semibold py-0.5 px-5 mt-1 rounded-lg text-center">{userInfo.grade}</span>
                         <span className="bg-white border-b border-b-gray-300/60 shadow-sm font-semibold py-0.5 px-2 rounded-b-lg text-center text-sm">درجه</span>
                     </div>
                     <InfoBox subject={"اشتراک"} value={userInfo.subscription + "روز"} img={"./images/userGrades/crown.png"} />
                     <InfoBox subject={"تجربه"} value={userInfo.score} img={"./images/userGrades/experience.png"} />
                 </div>
-                <div className="bg-red-600 w-full h-24">
-                    
+                <div className="mt-4 grid grid-cols-3 gap-3 w-full h-24">
+                    <LinkBox href="/" title="پنل کاربری" iconName="user" cls="col-span-1 bg-baby-9" />
+                    <LinkBox href="/" title="وضعیت کاربر" iconName="chart" cls="col-span-1 bg-baby-12" />
+                    <LinkBox href="/" title="پرسش و پاسخ" iconName="chat" cls="col-span-1 bg-baby-6" />
                 </div>
             </div>
         </section>

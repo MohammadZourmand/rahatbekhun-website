@@ -1,10 +1,34 @@
 
+import { ChartBrokenIcon, ChatBrokenIcon, UserBrokenIcon } from "@/assets/icons";
+import Link from "next/link";
 import { FC } from "react";
 
 interface LinkBoxProps {
-
+    iconName : string
+    cls ?: string
+    title : string
+    href : string
 }
 
-const LinkBox : FC<LinkBoxProps> = () => {
-    
+const iconChooser = (iconName : string) => {
+    switch (iconName) {
+        case "user": return (<UserBrokenIcon cls="fill-white w-8 h-8"/>)
+        case "chart": return (<ChartBrokenIcon cls="fill-white w-8 h-8"/>)
+        case "chat": return (<ChatBrokenIcon cls="fill-white w-8 h-8"/>)
+    }
 }
+
+const LinkBox : FC<LinkBoxProps> = ({iconName, cls, title, href}) => {
+    return (
+        <Link href={href} className={`${cls} hover:-translate-y-3 hover:scale-105 duration-500 transition rounded-lg flex flex-col space-y-2 items-center justify-center`}>
+            <div>
+                {iconChooser(iconName)}
+            </div>
+            <div>
+                <span className="text-sm text-white">{title}</span>
+            </div>
+        </Link>
+    )
+}
+
+export default LinkBox;
