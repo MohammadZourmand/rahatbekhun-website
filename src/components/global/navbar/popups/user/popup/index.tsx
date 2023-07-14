@@ -5,6 +5,8 @@ import { FC, Dispatch, SetStateAction } from "react";
 import { userInfo } from "./user";
 import UserGradeChooser from "./userGardeChooser";
 import FaSpan from "@/components/global/elements/boxes/card/faSpan";
+import InfoBox from "./infoBox";
+import { EyeBrokenIcon } from "@/assets/icons";
 
 interface UserPopupProps {
     setShow : Dispatch<SetStateAction<boolean>>
@@ -19,29 +21,9 @@ const UserPopup : FC<UserPopupProps> = ({}) => {
             fixed top-16 md:-left-6 -left-0
         `}>
             <div className="relative w-full h-full flex flex-col justify-center items-center">
-                <div className="absolute flex flex-col justify-between top-0 p-2">
-                    {UserGradeChooser(userInfo)}
-                    <span className="bg-white border-b border-b-gray-300/60 shadow-sm font-semibold py-0.5 px-1 mt-1 rounded-lg text-center text-sm">{userInfo.grade}</span>
-                </div>
-                <div className="absolute flex justify-between top-12 left-0 p-2 w-full h-32">
-                    <div className="flex flex-col">
-                        <img src="./images/userGrades/achievement.png" />
-                        <FaSpan 
-                            value={userInfo.score}
-                            cls="bg-white border-b border-b-gray-300/60 py-0.5 px-1 mt-1 rounded-lg text-center text-sm"
-                        />
-                    </div>
-                    <div className="flex flex-col">
-                        <img src="./images/userGrades/crown.png" className="scale-[.8]"/>
-                        <FaSpan 
-                            value={`${userInfo.subscription} روز`}
-                            cls="bg-white border-b border-b-gray-300/60 py-0.5 px-1 mt-1 rounded-lg text-center text-sm"
-                        />
-                    </div>
-                </div>
                 <Link
                     href={"./user-panel"}
-                    className={`flex flex-col items-center relative top-1`}
+                    className={`flex justify-evenly w-full items-center relative top-1`}
                 >
                     <div className="bg-white rounded-full">
                         <img
@@ -51,12 +33,27 @@ const UserPopup : FC<UserPopupProps> = ({}) => {
                             alt="گروه آموزشی راحت بخون"
                         />
                     </div>
-                    <Heading6 
-                        text={userInfo.name}
-                        cls="mt-2 bg-white rounded-xl font-medium !text-[.9rem] px-2 py-0.5"
-                    />
+                    <div className="space-y-2">
+                        <Heading6 
+                            text={userInfo.name}
+                            cls="mt-2 bg-gray-800 text-white rounded-xl shadow-all-md font-medium !text-[.9rem] px-2 py-0.5"
+                        />
+                        <div className="text-sm px-2 py-1 rounded-lg shadow-all-sm">
+                            <span className="text-gray-800 font-semibold"> لقب : </span>
+                            <FaSpan cls="font-semibold text-gray-900" value={userInfo.userNickname} />
+                        </div>
+                    </div>
                 </Link>
-                <div className="absolute bottom-0 left-0 bg-red-600 w-full h-24">
+                <div className="grid grid-cols-12  justify-between p-2 w-full mt-2">
+                    <div className="flex flex-col col-span-4 items-center">
+                        {UserGradeChooser(userInfo)}
+                        <span className=" bg-gray-900 text-white border-b border-b-gray-300/60 shadow-all-md shadow-red-500/30 font-semibold py-0.5 px-5 mt-1 rounded-lg text-center">{userInfo.grade}</span>
+                        <span className="bg-white border-b border-b-gray-300/60 shadow-sm font-semibold py-0.5 px-2 rounded-b-lg text-center text-sm">درجه</span>
+                    </div>
+                    <InfoBox subject={"اشتراک"} value={userInfo.subscription + "روز"} img={"./images/userGrades/crown.png"} />
+                    <InfoBox subject={"تجربه"} value={userInfo.score} img={"./images/userGrades/experience.png"} />
+                </div>
+                <div className="bg-red-600 w-full h-24">
                     
                 </div>
             </div>
