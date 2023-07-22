@@ -10,7 +10,7 @@ import Cart from "../../global/elements/boxes/card";
 import { coursesData } from "../../data/coursesData";
 
 // ? types ============================
-import { CardType } from "@/types/home";
+import { courseInfoType } from "@/types/home";
 
 const Courses : React.FC = () => {
 
@@ -34,7 +34,7 @@ const Courses : React.FC = () => {
             </header>
             <main className="grid grid-cols-12 mt-10 gap-x-5 gap-y-6">
                 {
-                    coursesData.map((item : CardType, index : number) => {
+                    coursesData.map((item : courseInfoType, index : number) => {
                            
                             if (type === "math"  && item.category === "ریاضی"
                                 || type === "persian"  && item.category === "فارسی"

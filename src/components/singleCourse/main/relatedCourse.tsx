@@ -3,7 +3,7 @@ import Cart from "@/components/global/elements/boxes/card";
 import { courseDetails } from "@/components/global/elements/boxes/tabSwitcher/courseInfo";
 import Heading3 from "@/components/global/elements/headings/h3";
 import Paragraph from "@/components/global/elements/paragraph";
-import { CardType } from "@/types/home";
+import { courseInfoType } from "@/types/home";
 
 
 interface RelatedCoursesProps {
@@ -24,7 +24,7 @@ const RelatedCourses : React.FC<RelatedCoursesProps> = ({
             </header>
             <main className="grid grid-cols-12 mt-4 xs:gap-4 gap-y-4">
             {
-                coursesData.map((course : CardType, index) => {
+                coursesData.map((course : courseInfoType, index) => {
                     return (
                         <div className="sm:col-span-6 col-span-12" key={index}>
                             {

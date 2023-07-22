@@ -1,11 +1,11 @@
 // ? types & components  ======================
-import { CardType } from "@/types/home";
+import { courseInfoType } from "@/types/home";
 import CardImgPart from "./imgPart";
 import CardTextPart from "./textPart";
 
 interface CardProps {
     cls ?: string
-    item : CardType
+    item : courseInfoType
 }
 
 const Card : React.FC<CardProps> = ({
@@ -14,7 +14,7 @@ const Card : React.FC<CardProps> = ({
 }) => {
 
     return (
-        <section className={`${cls} group rounded-lg bg-white shadow-lg`}>
+        <section className={`${cls} hover:scale-[1.03] transition duration-300 p-7 group rounded-lg bg-white shadow-all-lg shadow-gray-300/70`}>
             <CardImgPart  item={item} />
             <CardTextPart item={item} />
         </section>

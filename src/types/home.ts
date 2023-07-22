@@ -1,5 +1,5 @@
 
-export interface CardType {
+export interface courseInfoType {
     type : string
     ageCategory ?: string,
     sessions : number | string,
@@ -8,10 +8,14 @@ export interface CardType {
     details : string,
     image : string
     category : string
-    offPrice ?: number
+    offPrecent ?: number
     votesAverage : number
     votes : number
     href : string
+    studentsNumber : number
+    isFavorite : boolean
+    author : string
+    group ?: string
 }
 
 export interface Card2Type {

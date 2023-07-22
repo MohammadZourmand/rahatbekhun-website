@@ -8,6 +8,7 @@ interface PriceBoxProps {
     cls ?: string
     priceCls ?: string
     markCls ?: string
+    lineCls ?: string
 }
 
 const PriceBox : React.FC<PriceBoxProps> = ({
@@ -17,7 +18,8 @@ const PriceBox : React.FC<PriceBoxProps> = ({
     price,
     cls,
     priceCls,
-    markCls
+    markCls,
+    lineCls
 }) => {
 
     return (
@@ -31,7 +33,7 @@ const PriceBox : React.FC<PriceBoxProps> = ({
                     ? (
                         <>
                             <FaSpan cls={`${priceCls} text-xl font-semibold text-gray-400`} value={price} />
-                            <div className="absolute top-0 left-1 w-full h-1/2 border-b-[3px] border-gray-500/70"></div>
+                            <div className={`${lineCls} absolute top-0 left-1 w-full h-1/2 border-b-[3px] border-gray-500/70`}></div>
                         </>
                     )
                     : (

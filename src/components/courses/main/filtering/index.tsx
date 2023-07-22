@@ -1,15 +1,13 @@
 
 // ? Componenets & types ==
-import SwitchComponent from "../../../global/elements/inputs/switch";
 import { FilteringProps } from "@/types/courses";
 import CloseIconAbs from "./closeIconAbs";
 import AnimationWithBg from "./animationWithBg";
 import FilteringHeaders from "./header";
-import Selecters from "./selecters";
-import BlackBtn from "./blackBtn";
 
 // ? assets ===============
 import SearcherAnimal from "@/assets/animation/lottieFiles/searching-cartoon.json"; 
+import Filters from "./filters";
 
 const Filtering : React.FC<FilteringProps> = ({cls, setState, state}) => {
 
@@ -18,10 +16,7 @@ const Filtering : React.FC<FilteringProps> = ({cls, setState, state}) => {
             <AnimationWithBg animationDate={SearcherAnimal} />
             <CloseIconAbs setState={setState} />
             <FilteringHeaders setState={setState} />
-            <SwitchComponent text="فقط دوره های رایگان" />
-            <SwitchComponent text="فقط دوره های تخفیف دار" />
-            <Selecters />
-            <BlackBtn text="اعمال فیلتر بر دوره ها" icon="filter" />
+            <Filters />
         </div>
     )
 }

@@ -42,7 +42,7 @@ const UserPopup : FC<UserPopupProps> = ({setShow}) => {
                             text={userInfo.name}
                             cls="mt-2 bg-gray-800 text-white rounded-xl shadow-all-md font-medium !text-[.9rem] px-2 py-0.5"
                         />
-                        <div className="text-sm px-2 py-1 rounded-lg shadow-all-sm">
+                        <div className="text-sm bg-white px-2 py-1 rounded-lg shadow-all-sm">
                             <span className="text-gray-800 font-semibold"> لقب : </span>
                             <FaSpan cls="font-semibold text-gray-900" value={userInfo.userNickname} />
                         </div>
@@ -50,7 +50,7 @@ const UserPopup : FC<UserPopupProps> = ({setShow}) => {
                 </Link>
                 <div className="grid grid-cols-12  justify-between p-2 w-full mt-2">
                     <div className="group flex flex-col col-span-4 items-center">
-                        <div className="group-hover:scale-110 duration-500 transition bg-gray-50 w-16 h-16 flex items-center justify-center rounded-full">
+                        <div className="group-hover:scale-110 duration-500 transition bg-gray-200/50 shadow-all-lg w-16 h-16 flex items-center justify-center rounded-full">
                             {UserGradeChooser(userInfo)}                        
                         </div>
                         <span className=" bg-gray-900 text-white border-b border-b-gray-300/60 shadow-all-md shadow-red-500/30 font-semibold py-0.5 px-5 mt-1 rounded-lg text-center">{userInfo.grade}</span>

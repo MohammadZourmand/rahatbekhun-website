@@ -1,7 +1,7 @@
 // ? types =====================
-import { CardType } from "@/types/home";
+import { courseInfoType } from "@/types/home";
 
-export const coursesData : CardType[] = [
+export const coursesData : courseInfoType[] = [
     {
         type : "worksheet",
         href : "learn-fast-calculations",
@@ -12,7 +12,12 @@ export const coursesData : CardType[] = [
         sessions : "18",
         votesAverage : 4.4,
         votes : 121,
-        price : 0
+        price : 58,
+        offPrecent : 100,
+        studentsNumber : 24,
+        isFavorite : true,
+        author : "محمد زورمند",
+        group : "راحت بخون"
     },
     {
         type : "courses",
@@ -22,11 +27,14 @@ export const coursesData : CardType[] = [
         image : "/images/home/slider/persianNastaliq.jpg",
         category : "persian",
         sessions : "10",
-        price : 40000,
-        offPrice : 28000,
+        price : 34,
+        offPrecent : 70,
         ageCategory : "9-12",
         votesAverage : 3.7,
-        votes : 56
+        votes : 56,
+        studentsNumber : 24,
+        isFavorite : false,
+        author : "محمد زورمند"
     },
     {
         type : "game",
@@ -37,9 +45,13 @@ export const coursesData : CardType[] = [
         category : "math",
         sessions : "8",
         ageCategory : "9-14",
-        price : 20000,
+        price : 20,
+        offPrecent : 50,
         votesAverage : 4.8,
-        votes : 142
+        votes : 142,
+        studentsNumber : 24,
+        isFavorite : false,
+        author : "محمد زورمند"
     },
     {
         type : "video",
@@ -52,7 +64,11 @@ export const coursesData : CardType[] = [
         ageCategory : "9-14",
         votesAverage : 4.3,
         votes : 18,
-        price : 0
+        price : 18,
+        offPrecent : 30,
+        studentsNumber : 24,
+        isFavorite : false,
+        author : "محمد زورمند"
     },
     {
         type : "article",
@@ -64,7 +80,11 @@ export const coursesData : CardType[] = [
         sessions : "10",
         votesAverage : 4.6,
         votes : 426,
-        price : 0
+        price : 150,
+        offPrecent : 10,
+        studentsNumber : 24,
+        isFavorite : false,
+        author : "محمد زورمند"
     },
     {
         type : "test",
@@ -74,10 +94,13 @@ export const coursesData : CardType[] = [
         image : "/images/home/slider/test-question.jpg",
         category : "public",
         sessions : "24",
-        price : 100000,
-        offPrice : 73000,
+        price : 100,
+        offPrecent : 0,
         ageCategory : "12-14",
         votesAverage : 3.8,
-        votes : 231
+        votes : 231,
+        studentsNumber : 24,
+        isFavorite : false,
+        author : "محمد زورمند"
     }
 ]
