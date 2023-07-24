@@ -86,6 +86,16 @@ module.exports = {
           '100%' :  {
             transform: 'translateX(0)'
           }      
+        },
+        scaleX : {
+          '0%' :  {
+            transform: 'scaleX(0.1)',
+            right : '-40px'
+          },
+          '100%' :  {
+            transform: 'scaleX(1)',
+            right : '0'
+          }      
         }
       },
       animation : {
@@ -95,7 +105,8 @@ module.exports = {
         comeFromBottom : 'comeFromBottom .4s ease',
         slowSpin : 'slowSpin 4s linear infinite',
         goAndBack : 'goAndBack 4s linear infinite alternate',
-        comeFromRight : 'comeFromRight .7s ease-in-out alternate'
+        comeFromRight : 'comeFromRight .7s ease-in-out alternate',
+        scaleX : 'scaleX .3s alternate'
       },
       boxShadow : {
         'all-sm' : '0 0 10px #e2e8f0',

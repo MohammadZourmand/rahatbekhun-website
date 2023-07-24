@@ -3,8 +3,9 @@ import { courseInfoType } from "@/types/home";
 import FaSpan from "../../faSpan";
 
 // ? assets ======================
-import { LeftIcon } from "@/assets/icons";
+import { ChevronLeft, LeftIcon } from "@/assets/icons";
 import PriceBox from "@/components/singleCourse/floatSidebar/price";
+import Link from "next/link";
 
 interface CartTextFooterProps {
     item : courseInfoType
@@ -12,7 +13,7 @@ interface CartTextFooterProps {
 
 const CartTextFooter : React.FC<CartTextFooterProps> = ({item}) => {
 
-    const { offPrecent, price } = item
+    const { offPrecent, price, href } = item
 
     return (
         <footer className={`${offPrecent ? "gap-0" : "gap-4"} flex items-center justify-between gap-4 pt-3`}>
@@ -34,8 +35,8 @@ const CartTextFooter : React.FC<CartTextFooterProps> = ({item}) => {
                                 isOff={false}
                                 price={price}
                                 offPercent={offPrecent}
-                                priceCls="!text-gray-500/80 !font-extrabold"
-                                markCls="!text-gray-500/80 !font-extrabold"
+                                priceCls="!text-gray-500 !font-extrabold"
+                                markCls="!text-gray-500 !font-extrabold !scale-[0.7] relative !-right-[3px]"
                             />   
                             <PriceBox
                                 cls="scale-[.9]"
@@ -47,19 +48,12 @@ const CartTextFooter : React.FC<CartTextFooterProps> = ({item}) => {
                             />
                         </div>
                     ) 
-                    // ? <FaSpan value={offPrecent} hasSlicer={true} suffix={"تومان"}/>
-                    // : price === 0 ? "رایگان"  : <FaSpan value={price} hasSlicer={true} suffix={"تومان"}/>  
                 }
             </div>
-            {/* {
-                offPrecent && <div className={`text-baby-6 line-through text-xs font-semibold`}>
-                        {<FaSpan value={price} hasSlicer={true} suffix={"تومان"}/>}
-                    </div>
-            }
-            <div className="flex items-center">
-                <span className="ml-1 text-sm">مشاهده</span>
-                <LeftIcon cls="w-5 h-5" color="#374151" />
-            </div> */}
+            <Link href={`/courses/${href}`} className="relative group hover:after:block hover:after:border-baby-9 after:animate-scaleX flex items-center after:hidden after:absolute after:w-[93%] after:-right-0 after:border-b-2 after:p-3 after:border-gray-700">
+                <p className="group-hover:text-baby-9 text-gray-700 transition ml-[1px] text-xs font-semibold">توضیح کامل تر</p>
+                <ChevronLeft cls="fill-gray-700 group-hover:fill-baby-9 transition w-5 h-5 relative bottom-[1px]" />
+            </Link>
         </footer>
     )
 }

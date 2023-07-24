@@ -22,7 +22,7 @@ const ShowCoursesCarts : FC<ShowCoursesCartsProps> = () => {
                         return (
                             <Card
                                 key={index}
-                                cls={"col-span-12 sm:col-span-4"}
+                                cls={"col-span-12 sm:col-span-6 lg:col-span-4"}
                                 item={item}
                             />
                         )

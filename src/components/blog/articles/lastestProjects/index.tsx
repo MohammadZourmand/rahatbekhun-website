@@ -2,7 +2,6 @@ import SectionHeader from "@/components/global/elements/header/sectionHeader";
 import { IconBook, IconBooks } from "@tabler/icons-react";
 import { CartsInfo } from "./carts/cartsInfo";
 import SingleCart, { SingleCartProps } from "../../../global/elements/boxes/singleCart";
-import PinkBtn from "@/components/global/elements/buttons/pink";
 import BlueBtn from "@/components/global/elements/buttons/blue";
 
 interface LastestArticlesProps {

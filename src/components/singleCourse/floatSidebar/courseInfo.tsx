@@ -1,6 +1,6 @@
 import { CategoryBroken, ClockBroken, UserBrokenIcon, UsersBroken } from "@/assets/icons";
 
-import { addProduct } from "@/store/slices/card";
+import { addProduct } from "@/store/slices/cart";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/store";
 
