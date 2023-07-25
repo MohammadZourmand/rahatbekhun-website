@@ -3,7 +3,6 @@ import { FC, Dispatch, SetStateAction } from "react";
 
 // ? components =====================
 import BlackBtn from "../filtering/blackBtn";
-import SelectBox from "../../../global/elements/inputs/selectBox";
 import SearchForm from "./searchForm";
 import ShowCoursesModel from "./showModel";
 import MatchedCourses from "./mathedCourses";
@@ -23,12 +22,6 @@ const CoursesHeader : FC<CoursesHeaderProps> = ({setState}) => {
                     <ShowCoursesModel />
                     <MatchedCourses />
                 </div>
-                {/* <SelectBox 
-                    label=" مرتب سازی بر اساس : "
-                    items={SortItems}
-                    cls="sm:flex-row flex-col z-20 w-80"
-                    selected={}
-                /> */}
             </div>
         </header>
     )

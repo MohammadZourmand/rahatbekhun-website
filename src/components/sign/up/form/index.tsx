@@ -3,7 +3,6 @@ import Heading3 from "@/components/global/elements/headings/h3";
 import MyCheckBox from "@/components/global/elements/inputs/checkBox";
 import Input from "@/components/global/elements/inputs/input";
 import MyLabel from "@/components/global/elements/inputs/label";
-import SelectBox from "@/components/global/elements/inputs/selectBox";
 import { IconBrandGoogle } from "@tabler/icons-react";
 import { Form, Formik } from "formik";
 import Link from "next/link";
@@ -99,7 +98,7 @@ const SignUpForm : React.FC<SignUpFormProps> = () => {
                                         name={"mobile"} 
                                     />
                                 </div>
-                                <SelectBox
+                                {/* <SelectBox
                                     cls="md:col-span-6 col-span-12  flex-col !items-start"
                                     labelCls="mt-6 mb-3 font-medium !text-gray-900 !text-base"
                                     label="شما چه کاره هستید ؟"
@@ -110,7 +109,7 @@ const SignUpForm : React.FC<SignUpFormProps> = () => {
                                         {id : 3 , text : "والد دانش آموز"},
                                         {id : 4 , text : "دیگر"},
                                     ]}
-                                />
+                                /> */}
                                 <MyCheckBox
                                     text="قوانین سایت را قبول دارم و به آنها احترام می گذارم ." 
                                     textCls="!text-gray-700 !text-sm"

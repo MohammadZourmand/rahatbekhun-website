@@ -5,6 +5,7 @@ import { FC , useState } from "react";
 import CoursesHeader from "./header";
 import Filtering from "./filtering";
 import ShowCoursesCarts from "./showCarts";
+import Filters from "./filters";
 
 const CoursesPageMain : FC = () => {
     const [showFilters, setShowFilters] = useState(false)
@@ -12,9 +13,7 @@ const CoursesPageMain : FC = () => {
     return (
         <>
             <section className="grid grid-cols-12 justify-start items-start 2xl:max-w-[1400px] xl:mx-auto mx-2 mt-8 xl:gap-x-2 lg:gap-x-6">
-                {/* <aside className="lg:grid hidden lg:col-span-3 col-span-12 grid-cols-12 lg:gap-y-5 xs:gap-6 gap-y-6 mt-8 lg:mt-0">
-                    <Filtering />
-                </aside> */}
+                <Filters />
                 <ShowCoursesCarts />
             </section>
             {/* // TODO : Filtering in Mobile */}

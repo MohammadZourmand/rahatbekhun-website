@@ -1,5 +1,4 @@
 import { CategoryBroken, FilterBroken } from "@/assets/icons";
-import SelectBox from "@/components/global/elements/inputs/selectBox";
 import { FC, useState } from "react";
 
 
@@ -17,20 +16,6 @@ const SortBox : FC = () => {
             </div>
             <div className="flex xs:flex-row flex-col items-center">
                 <p className="xs:ml-4 ml-1 font-semibold"> مرتب سازی بر اساس : </p>
-                <SelectBox
-                    items={[
-                        {id : 1, text : "جدیدترین"},
-                        {id : 2, text : "محبوب ترین"},
-                        {id : 3, text : "پر بحث ترین"},
-                        {id : 4, text : "شلوغ ترین"},
-                        {id : 5, text : "قدیمی ترین"},
-                        {id : 5, text : "در دست ساخت"},
-                    ]}
-                    selected={["sort", selected]}
-                    setSelected={setSelected}
-                    cls="w-48 xs:mt-0 mt-3 z-20"
-                    textBtnCls="font-semibold"
-                />
             </div>
         </div>
     )

@@ -27,12 +27,12 @@ const AdvancedSearchFrom : FC = () => {
 
     const [initialValues , setInitialValues] = useState<valuesType>(initialState)
 
-    const selectboxesChangeHandler : (type : string, value: string) => void = (type, value) => {
+    const selectboxesChangeHandler : (key : string, value: string) => void = (key, value) => {
         
         setInitialValues((prevState) => {
             return {
                 ...prevState,
-                [type] : value
+                [key] : value
             }
         })
     }
@@ -61,7 +61,8 @@ const AdvancedSearchFrom : FC = () => {
                                 key={index}
                                 itemsFinder={selectboxItemsFinder}
                                 changeHandler={selectboxesChangeHandler}
-                                values={values}
+                                name={values[0]}
+                                initialState={initialValues}
                             />
                         )
                     })
