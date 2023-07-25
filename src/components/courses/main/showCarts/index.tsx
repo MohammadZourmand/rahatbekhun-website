@@ -14,8 +14,8 @@ interface ShowCoursesCartsProps {
 const ShowCoursesCarts : FC<ShowCoursesCartsProps> = () => {
 
     return (
-        <section className="lg:order-1 order-1 lg:col-span-12 col-span-12 flex flex-col">
-            <CoursesHeader />
+        <section className="flex flex-col mt-8">
+            {/* <CoursesHeader /> */}
             <main className="grid grid-cols-12 md:gap-8 sm:gap-4 gap-y-8">
                 {
                     coursesData.map((item : courseInfoType, index : number) => {

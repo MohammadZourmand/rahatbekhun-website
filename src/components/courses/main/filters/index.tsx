@@ -3,6 +3,8 @@ import { coursesFilteringTitles } from "./intialvalues"
 import { filtersInfo } from "./filtersInfo";
 import FilterBox from "./filterBox";
 import { useState } from "react";
+import IconBtn from "@/components/global/elements/buttons/iconBtn";
+import { WarningToast } from "@/components/lib/swal";
 
 interface FiltersProps {
 
@@ -24,10 +26,10 @@ const Filters : React.FC<FiltersProps> = () => {
     return (
         <Formik
             initialValues={initialValues}
-            onSubmit={() => {}}
+            onSubmit={() => {WarningToast("اطلاعات دریافت شد !")}}
         >
-            <Form className="col-span-12">
-                <fieldset className="grid grid-cols-10 w-full">
+            <Form className="absolute -top-48 xs:p-8 w-full rounded-lg">
+                <fieldset className="grid grid-cols-10 gap-8 w-full">
                     {
                         Object.entries(filtersInfo).map((item, index) => {
                             return (
@@ -36,12 +38,13 @@ const Filters : React.FC<FiltersProps> = () => {
                                     name={item[0]}
                                     options={item[1]}
                                     handler={changeHandler}
-                                    cls="col-span-2"
+                                    cls="lg:col-span-2 xs:col-span-5 col-span-10"
                                     values={initialValues}
                                 />
                             )
                         })
                     }
+                    <IconBtn cls="my-0 py-[8px] px-8 self-end lg:col-span-2 col-span-10" iconName="filter" text="فیلتر"/>
                 </fieldset>
             </Form>
         </Formik>

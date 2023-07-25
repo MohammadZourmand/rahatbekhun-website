@@ -1,4 +1,4 @@
-import { EyeBrokenIcon, SearchBrokenIcon } from "@/assets/icons";
+import { EyeBrokenIcon, FilterBrokenIcon, SearchBrokenIcon } from "@/assets/icons";
 import Link from "next/link";
 import { FC } from "react";
 
@@ -17,6 +17,8 @@ const iconChooser : (key : string) => any = (key : string) => {
             return (<SearchBrokenIcon cls="group-hover:scale-[1.2] transition fill-white w-6 h-6 mr-3"/>)
         case "eye":
             return (<EyeBrokenIcon cls="group-hover:scale-[1.2] transition fill-white w-6 h-6 mr-3"/>)
+        case "filter":
+            return (<FilterBrokenIcon cls="group-hover:scale-[1.2] transition fill-white w-6 h-6 mr-3"/>)
         default:
             return null
     }

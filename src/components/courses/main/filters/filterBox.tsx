@@ -20,17 +20,21 @@ const FilterBox : React.FC<FilterBoxProps> = ({
             return "نحوه نمایش :"
             case "grade":
             return "پایه تحصیلی :"
+            case "type":
+            return "نوع دوره :"
         }
     }
 
     return (
         <div className={`${cls} flex flex-col items-start`}>
-            <span>{titleTranslator(name)}</span>
+            <span className="text-white mr-1">{titleTranslator(name)}</span>
             <Selecter 
                 options={options}
                 name={name}
                 setter={handler}
                 values={values}
+                cls="mt-[5px] w-full"
+                optionsListCls="!z-50"
             />
         </div>
     )

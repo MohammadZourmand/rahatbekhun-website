@@ -12,7 +12,7 @@ const CoursesPageMain : FC = () => {
 
     return (
         <>
-            <section className="grid grid-cols-12 justify-start items-start 2xl:max-w-[1400px] xl:mx-auto mx-2 mt-8 xl:gap-x-2 lg:gap-x-6">
+            <section className="relative flex flex-col 2xl:max-w-[1400px] xl:mx-auto mx-2 mt-8 xl:gap-x-2 lg:gap-x-6">
                 <Filters />
                 <ShowCoursesCarts />
             </section>
