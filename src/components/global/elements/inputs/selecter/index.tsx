@@ -25,7 +25,7 @@ const Selecter : React.FC<SelecterProps> = ({
     return (
         <div className={`relative ${cls}`}>
             {/* // ! btn */}
-            <div className={`px-4 py-2 bg-white rounded-lg flex items-center justify-between ${cls}`} onClick={() => setIsOpen(!isOpen)}>
+            <div className={`cursor-pointer px-4 py-2 bg-white rounded-lg flex items-center justify-between ${cls}`} onClick={() => setIsOpen(!isOpen)}>
                 <div className={btnCls}>
                 {
                     Object.entries(values).map((item, index) => {
@@ -46,7 +46,7 @@ const Selecter : React.FC<SelecterProps> = ({
                         return (
                             <li
                                 key={index}
-                                className={`${values[name] === option && "!bg-gray-200 text-baby-7"} p-2 hover:bg-gray-200 rounded-lg`} 
+                                className={`${values[name] === option && "!bg-gray-200 text-baby-7"} p-2 cursor-pointer hover:bg-gray-200 rounded-lg`} 
                                 onClick={() => optionHandler(option)}
                             >{option}</li>
                         )

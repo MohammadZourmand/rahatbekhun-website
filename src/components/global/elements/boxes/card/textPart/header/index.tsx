@@ -32,7 +32,7 @@ const CartTextHeader : React.FC<CartTextHeaderProps> = ({item}) => {
                 </div>
                 </div>
                 <Link href={`${type}/${category}/${href}`}>
-                    <Heading5 color="text-gray-800" cls="font-extrabold mt-3" text={name} />
+                    <Heading5 color="text-gray-800" cls="font-extrabold mt-3 hover:text-baby-9 transition duration-500" text={name} />
                 </Link>
             </header>
     )
