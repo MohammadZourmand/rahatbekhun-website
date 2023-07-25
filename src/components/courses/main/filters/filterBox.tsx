@@ -27,7 +27,7 @@ const FilterBox : React.FC<FilterBoxProps> = ({
 
     return (
         <div className={`${cls} flex flex-col items-start`}>
-            <span className="text-white mr-1">{titleTranslator(name)}</span>
+            <span className="lg:text-white text-gray-800 mr-1">{titleTranslator(name)}</span>
             <Selecter 
                 options={options}
                 name={name}

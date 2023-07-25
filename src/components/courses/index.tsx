@@ -1,5 +1,5 @@
 // ? react =======================
-import { useState , FC } from "react";
+import { FC } from "react";
 
 // ? components & types ==========
 import PageHeader from "../global/elements/header/pageHeader";
@@ -11,7 +11,8 @@ const Courses : FC = () => {
     return (
         <>
             <PageHeader
-                cls="!h-[80vh]"
+                imgBgCls="sm:scale-100 md:h-auto h-full"
+                cls="xl:h-[80vh]"
                 title="دوره های آموزشی"
                 breadcrumbItems={[
                     {href : "courses", value : "دوره های آموزشی"}

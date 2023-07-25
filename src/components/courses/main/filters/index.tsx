@@ -2,15 +2,17 @@ import { Form, Formik } from "formik"
 import { coursesFilteringTitles } from "./intialvalues"
 import { filtersInfo } from "./filtersInfo";
 import FilterBox from "./filterBox";
-import { useState } from "react";
+import { useState, Dispatch, SetStateAction } from "react";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
 import { WarningToast } from "@/components/lib/swal";
+import Heading5 from "@/components/global/elements/headings/h5";
 
 interface FiltersProps {
-
+    showFilters : boolean
+    setShowFilters : Dispatch<SetStateAction<boolean>>
 }
 
-const Filters : React.FC<FiltersProps> = () => {
+const Filters : React.FC<FiltersProps> = ({setShowFilters, showFilters}) => {
     
     const [initialValues, setInitialValues] = useState(coursesFilteringTitles)
 
@@ -28,7 +30,7 @@ const Filters : React.FC<FiltersProps> = () => {
             initialValues={initialValues}
             onSubmit={() => {WarningToast("اطلاعات دریافت شد !")}}
         >
-            <Form className="absolute -top-48 xs:p-8 w-full rounded-lg">
+            <Form className={`${showFilters && "!block "} p-8 lg:p-0 lg:w-full w-[96vw] lg:block hidden fixed top-16 mx-auto lg:backdrop-blur-0 backdrop-blur-md bg-gray-100/90 z-50 lg:z-0 lg:bg-transparent lg:absolute xl:-top-48 lg:-top-40 xs:p-8 rounded-lg`}>
                 <fieldset className="grid grid-cols-10 gap-8 w-full">
                     {
                         Object.entries(filtersInfo).map((item, index) => {
@@ -44,7 +46,7 @@ const Filters : React.FC<FiltersProps> = () => {
                             )
                         })
                     }
-                    <IconBtn cls="my-0 py-[8px] px-8 self-end lg:col-span-2 col-span-10" iconName="filter" text="فیلتر"/>
+                    <IconBtn cls="!my-0 py-[8px] px-8 self-end lg:col-span-2 col-span-10" iconName="filter" text="اعمال فیلتر"/>
                 </fieldset>
             </Form>
         </Formik>
