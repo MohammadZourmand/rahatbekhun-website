@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 
 // ? components
 import BlueBtn from "@/components/global/elements/buttons/blue";
-import PriceBox from "@/components/singleCourse/floatSidebar/price";
+import PriceBox from "@/components/courses/singleCourse/floatSidebar/price";
 
 interface CartProductsFooterProps {
     total : number

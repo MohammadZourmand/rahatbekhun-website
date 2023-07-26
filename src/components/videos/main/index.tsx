@@ -6,7 +6,7 @@ import ShowCoursesCarts from "./showCarts";
 import Filters from "./filters";
 import { FilterBrokenIcon } from "@/assets/icons";
 
-const CoursesPageMain : FC = () => {
+const VideosPageMain : FC = () => {
     const [showFilters, setShowFilters] = useState<boolean>(false)
 
     return (
@@ -35,4 +35,4 @@ const CoursesPageMain : FC = () => {
     )
 }
 
-export default CoursesPageMain;
+export default VideosPageMain;

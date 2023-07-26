@@ -4,7 +4,7 @@ import FaSpan from "../../faSpan";
 
 // ? assets ======================
 import { ChevronLeft, LeftIcon } from "@/assets/icons";
-import PriceBox from "@/components/singleCourse/floatSidebar/price";
+import PriceBox from "@/components/courses/singleCourse/floatSidebar/price";
 import Link from "next/link";
 
 interface CartTextFooterProps {

@@ -1,4 +1,4 @@
-import SingleCourse from "@/components/courses/singleCourse";
+import SingleVideo from "@/components/videos/singleVideo";
 import { AppDispatch } from "@/store";
 import { addQuery } from "@/store/slices/singleArticle";
 import { NextPage } from "next";
@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
 
-const SingleCoursePage : NextPage = () => {
+const SingleVideoPage : NextPage = () => {
 
     const router = useRouter()
     const dispatch = useDispatch<AppDispatch>()
@@ -17,7 +17,7 @@ const SingleCoursePage : NextPage = () => {
     }, [])
 
     return (
-        <SingleCourse />
+        <SingleVideo />
     )
 }
 
@@ -29,4 +29,4 @@ export const getServerSideProps = async () => {
     }
 }
 
-export default SingleCoursePage;
+export default SingleVideoPage;
