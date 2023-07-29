@@ -14,7 +14,7 @@ interface SheetsCardTextPartProps {
 const SheetsCardTextPart : React.FC<SheetsCardTextPartProps> = ({item, cls}) => {
 
     return (
-        <div className={`${cls} py-10 px-5 w-72 h-full`}>
+        <div className={`${cls} py-10 px-5`}>
             <WorksheetCardHeader item={item} />
             <WorksheetCardMain item={item}/>
             <WorksheetCardFooter item={item}/>
