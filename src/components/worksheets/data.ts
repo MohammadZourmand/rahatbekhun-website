@@ -12,11 +12,11 @@ export interface worksheetsDataProps {
     worksheetType : "کاربرگ تمرینی"  | "کاربرگ خلاقانه"  | "کاربرگ پلاس"  | "کاربرگ تستی"
     worksheetLesson : string
     worksheetKey :  "با پاسخ"  | "بی پاسخ"
-    keySrc ?: string
     worksheetColor :  "رنگی"  | "سیاه و سفید"  | "بدون عکس"
     worksheetPaper :  "1 برگی"  | "2 برگی"  | "3 برگی"  | "4 برگی"  | "بیش از 4 برگ" 
-    worksheetUsability : "برای تمرین و آزمون" | "مخصوص آزمون"  | "مخصوص تمرین"  | "با قابلیت تغییر"
+    worksheetUsability : "برای تمرین و آزمون" | "مخصوص آزمون"  | "مخصوص تمرین"  | "با قابلیت تغییر برای آزمون یا تمرین"
     worksheetRotation : "عمودی"  | "افقی"
+    worksheetsPrice : number
 }
 
 export const worksheetsData : worksheetsDataProps[] = [
@@ -37,6 +37,7 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetUsability : "برای تمرین و آزمون",
         worksheetRotation : "عمودی",
         authorName : "محمد زورمند",
+        worksheetsPrice : 1200
     },
     {
         id : 2,
@@ -55,6 +56,7 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetUsability : "برای تمرین و آزمون",
         worksheetRotation : "عمودی",
         authorName : "محمد زورمند",
+        worksheetsPrice : 1200
     },
     {
         id : 3,
@@ -73,6 +75,7 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetUsability : "برای تمرین و آزمون",
         worksheetRotation : "افقی",
         authorName : "محمد زورمند",
+        worksheetsPrice : 2000
     },
     {
         id : 4,
@@ -91,6 +94,7 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetUsability : "برای تمرین و آزمون",
         worksheetRotation : "عمودی",
         authorName : "محمد زورمند",
+        worksheetsPrice : 0
     },
     {
         id : 5,
@@ -109,6 +113,7 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetUsability : "برای تمرین و آزمون",
         worksheetRotation : "عمودی",
         authorName : "محمد زورمند",
+        worksheetsPrice : 0
     },
     {
         id : 6,
@@ -127,5 +132,6 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetUsability : "برای تمرین و آزمون",
         worksheetRotation : "عمودی",
         authorName : "محمد زورمند",
+        worksheetsPrice : 500
     },
 ]

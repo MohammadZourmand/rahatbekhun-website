@@ -12,7 +12,7 @@ interface SheetsCardProps {
 const SheetsCard : FC<SheetsCardProps> = ({item, cls}) => {
 
     return (
-        <div className={`bg-white relative h-96 ${cls} rounded-md flex items-start justify-end`}>
+        <div className={`bg-white relative h-[25rem] ${cls} rounded-md flex items-start justify-end`}>
             <SheetsCardImgPart item={item} />
             <SheetsCardTextPart item={item} />
         </div>
