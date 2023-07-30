@@ -1,14 +1,33 @@
 import SheetsCard from "@/components/global/elements/boxes/sheetsCard";
 import { worksheetsData, worksheetsDataProps } from "../data";
-
+import Filters from "./filters";
+import {FC, useState} from "react";
+import { FilterBrokenIcon } from "@/assets/icons";
 interface WorksheetsMainProps {
 
 }
 
-const WorksheetsMain : React.FC<WorksheetsMainProps> = () => {
+const WorksheetsMain : FC<WorksheetsMainProps> = () => {
+
+    const [showFilters, setShowFilters] = useState<boolean>(false)
 
     return (
-        <div className={`grid grid-cols-12 gap-y-16 xl:gap-x-8 lg:gap-x-4 md:gap-x-4 bg-gray-200/70 xl:px-8 px-4 py-20`}>
+        <div className={`relative grid grid-cols-12 gap-y-16 xl:gap-x-8 lg:gap-x-4 md:gap-x-4 bg-gray-200/70 xl:px-8 px-4 py-20`}>
+            <button
+                className={`flex flex-col bottom-8 right-8 w-20 h-20
+                    items-center justify-center rounded-full z-50 bg-baby-3
+                    text-white text-sm shadow-all-md shadow-gray-700 hover:scale-110
+                    transition duration-500 lg:hidden fixed
+                `}
+                onClick={() => setShowFilters(true)}
+            >
+                <FilterBrokenIcon cls="fill-white h-8 w-8"/>
+                فیلترها
+            </button>
+            <div onClick={() => setShowFilters(false)} className={`${showFilters ? "fixed" : "hidden" } lg:!hidden top-0 left-0 w-full h-full bg-gray-900/60 z-40`}></div>
+            <div className="relative col-span-12 w-full 2xl:max-w-[1400px] xl:mx-auto">
+                <Filters setShowFilters={setShowFilters} showFilters={showFilters} />
+            </div>
             {
                 worksheetsData.map((item : worksheetsDataProps, index : number) => {
                     return <SheetsCard

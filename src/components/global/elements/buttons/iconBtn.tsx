@@ -9,6 +9,7 @@ interface IconBtnProps {
     type ?: "button" | "submit" | "reset"
     iconName : string
     href ?: string
+    onClick ?: any
 }
 
 const iconChooser : (key : string) => any = (key : string) => {

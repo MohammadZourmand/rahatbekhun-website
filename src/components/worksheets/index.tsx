@@ -1,6 +1,7 @@
 import { FC } from "react";
 import PageHeader from "../global/elements/header/pageHeader";
 import WorksheetsMain from "./main";
+import Footer from "../global/footer";
 
 
 const Worksheets : FC = () => {
@@ -17,6 +18,7 @@ const Worksheets : FC = () => {
                 imgBgSrc={"/images/worksheets/girl-s-hand-writing-her-notebook.jpg"}
             />
             <WorksheetsMain />
+            <Footer cls="bg-gray-200 shadow-all-md"/>
         </>
     )
 }

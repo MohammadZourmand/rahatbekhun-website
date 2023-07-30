@@ -27,10 +27,6 @@ const CoursesPageMain : FC = () => {
                 <Filters showFilters={showFilters} setShowFilters={setShowFilters}/>
                 <ShowCoursesCarts />
             </section>
-            {/* // TODO : Filtering in Mobile */}
-            {/* <div className={`${showFilters ? "grid" : "hidden"} fixed bottom-0 left-0 w-full h-screen z-50 animate-comeFromBottom overflow-scroll`}>
-                <Filtering setState={setShowFilters} state={showFilters} />
-            </div> */}
         </>
     )
 }

@@ -6,7 +6,6 @@ export interface worksheetsDataProps {
     _author : "راحت بخون"  | "سازندگان تاییدشده"  | "سازندگان معمولی"
     _grade : "اول" | "دوم"  | "سوم"  | "چهارم"  | "پنجم"  | "ششم" 
     _rating :  number
-    price : number
     authorName : string
     worksheetName : string
     worksheetType : "کاربرگ تمرینی"  | "کاربرگ خلاقانه"  | "کاربرگ پلاس"  | "کاربرگ تستی"
@@ -16,7 +15,8 @@ export interface worksheetsDataProps {
     worksheetPaper :  "1 برگی"  | "2 برگی"  | "3 برگی"  | "4 برگی"  | "بیش از 4 برگ" 
     worksheetUsability : "برای تمرین و آزمون" | "مخصوص آزمون"  | "مخصوص تمرین"  | "با قابلیت تغییر برای آزمون یا تمرین"
     worksheetRotation : "عمودی"  | "افقی"
-    worksheetsPrice : number
+    worksheetPrice : number
+    worksheetImg : string
 }
 
 export const worksheetsData : worksheetsDataProps[] = [
@@ -28,7 +28,6 @@ export const worksheetsData : worksheetsDataProps[] = [
         _author : "راحت بخون",
         _rating : 4.2,
         worksheetName : "کاربرگ فصل پنجم ریاضی دوم ابتدایی",
-        price : 0,
         worksheetType : "کاربرگ تمرینی",
         worksheetLesson : "فصل 5 : اندازه گیری",
         worksheetKey : "بی پاسخ",
@@ -37,7 +36,8 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetUsability : "برای تمرین و آزمون",
         worksheetRotation : "عمودی",
         authorName : "محمد زورمند",
-        worksheetsPrice : 1200
+        worksheetPrice : 1200,
+        worksheetImg : "./images/worksheets/worksheetPictures/slide1.png"
     },
     {
         id : 2,
@@ -47,7 +47,6 @@ export const worksheetsData : worksheetsDataProps[] = [
         _author : "راحت بخون",
         _rating : 4.3,
         worksheetName : "کاربرگ فصل 3 فارسی دوم",
-        price : 0,
         worksheetType : "کاربرگ تمرینی",
         worksheetLesson : "فصل 3 : فصل سوم",
         worksheetKey : "بی پاسخ",
@@ -56,7 +55,8 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetUsability : "برای تمرین و آزمون",
         worksheetRotation : "عمودی",
         authorName : "محمد زورمند",
-        worksheetsPrice : 1200
+        worksheetPrice : 1200,
+        worksheetImg : "./images/worksheets/worksheetPictures/slide1.png"
     },
     {
         id : 3,
@@ -66,7 +66,6 @@ export const worksheetsData : worksheetsDataProps[] = [
         _author : "راحت بخون",
         _rating : 4.8,
         worksheetName : "کاربرگ فصل هفتم ریاضی دوم ابتدایی",
-        price : 2,
         worksheetType : "کاربرگ پلاس",
         worksheetLesson : "فصل 7 : احتمال",
         worksheetKey : "با پاسخ",
@@ -75,7 +74,8 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetUsability : "برای تمرین و آزمون",
         worksheetRotation : "افقی",
         authorName : "محمد زورمند",
-        worksheetsPrice : 2000
+        worksheetPrice : 2000,
+        worksheetImg : "./images/worksheets/worksheetPictures/slide1.png"
     },
     {
         id : 4,
@@ -85,7 +85,6 @@ export const worksheetsData : worksheetsDataProps[] = [
         _author : "راحت بخون",
         _rating : 4.2,
         worksheetName : "کاربرگ فصل پنجم ریاضی دوم ابتدایی",
-        price : 18,
         worksheetType : "کاربرگ تمرینی",
         worksheetLesson : "فصل 5 : اندازه گیری",
         worksheetKey : "بی پاسخ",
@@ -94,7 +93,8 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetUsability : "برای تمرین و آزمون",
         worksheetRotation : "عمودی",
         authorName : "محمد زورمند",
-        worksheetsPrice : 0
+        worksheetPrice : 0,
+        worksheetImg : "./images/worksheets/worksheetPictures/slide1.png"
     },
     {
         id : 5,
@@ -104,7 +104,6 @@ export const worksheetsData : worksheetsDataProps[] = [
         _author : "راحت بخون",
         _rating : 4.2,
         worksheetName : "کاربرگ فصل پنجم ریاضی دوم ابتدایی",
-        price : 0,
         worksheetType : "کاربرگ تمرینی",
         worksheetLesson : "فصل 5 : اندازه گیری",
         worksheetKey : "بی پاسخ",
@@ -113,7 +112,8 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetUsability : "برای تمرین و آزمون",
         worksheetRotation : "عمودی",
         authorName : "محمد زورمند",
-        worksheetsPrice : 0
+        worksheetPrice : 0,
+        worksheetImg : "./images/worksheets/worksheetPictures/slide1.png"
     },
     {
         id : 6,
@@ -123,7 +123,6 @@ export const worksheetsData : worksheetsDataProps[] = [
         _author : "راحت بخون",
         _rating : 4.2,
         worksheetName : "کاربرگ فصل پنجم ریاضی دوم ابتدایی",
-        price : 1,
         worksheetType : "کاربرگ تمرینی",
         worksheetLesson : "فصل 5 : اندازه گیری",
         worksheetKey : "بی پاسخ",
@@ -132,6 +131,7 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetUsability : "برای تمرین و آزمون",
         worksheetRotation : "عمودی",
         authorName : "محمد زورمند",
-        worksheetsPrice : 500
+        worksheetPrice : 500,
+        worksheetImg : "./images/worksheets/worksheetPictures/slide1.png"
     },
 ]

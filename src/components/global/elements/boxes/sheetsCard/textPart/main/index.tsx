@@ -2,21 +2,25 @@
 import { EyeBrokenIcon, KeyBrokenIcon, PaperBrokenIcon, SwapBrokenIcon } from "@/assets/icons";
 import Popover from "../popover";
 import { setSheetsIcon } from "../setSheetsIcon";
-import Paragraph from "@/components/global/elements/paragraph";
 import { worksheetsDataProps } from "@/components/worksheets/data";
 import TickList from "./tickList";
-
+import {FC, useState} from "react"
 interface WorksheetCardMainProps {
     item : worksheetsDataProps
 }
 
-const WorksheetCardMain : React.FC<WorksheetCardMainProps> = ({item}) => {
+const WorksheetCardMain : FC<WorksheetCardMainProps> = ({item}) => {
+
+    const [showWorksheet, setShowWorksheet] = useState<boolean>(false)
 
     return (
         <main className="w-full">
+            <div onClick={() => setShowWorksheet(false)} className={`${showWorksheet ? "fixed" : "hidden" } flex items-center justify-center top-0 left-0 w-full h-full bg-gray-900/60 z-40`}>
+                <img src={item.worksheetImg} alt="worksheet" className="z-50" />
+            </div>
             <div className="flex flex-col items-center">
                 <div className="flex gap-2"> 
-                    <div className="transition border group relative cursor-pointer rounded-lg border-sky-500 hover:bg-sky-500 p-1">
+                    <div onClick={() => setShowWorksheet(true)} className="transition border group relative cursor-pointer rounded-lg border-sky-500 hover:bg-sky-500 p-1">
                         <EyeBrokenIcon cls="group-hover:scale-110 transition fill-sky-500 w-5 h-5 group-hover:fill-white" />
                         <Popover 
                             value={"نیم نگاه"}
