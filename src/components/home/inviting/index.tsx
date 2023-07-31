@@ -2,7 +2,7 @@ import WhiteBtn from "@/components/global/elements/buttons/white";
 import Heading3 from "@/components/global/elements/headings/h3";
 import Heading5 from "@/components/global/elements/headings/h5";
 import Paragraph from "@/components/global/elements/paragraph";
-import OpaCart from "../../global/elements/boxes/clearCart";
+import OpaCart from "../../global/elements/cards/btnCart";
 
 
 const Inviting : React.FC = () => {

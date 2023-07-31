@@ -11,7 +11,7 @@ import Lottie from "lottie-react";
 // ? assets ===================
 import { ActivityBroken, EditSquareBroken, GameBroken, LeftIcon, UsersBroken } from "@/assets/icons";
 import ReadingBoy from "@/assets/animation/lottieFiles/reading-boy.json"; 
-import BlueLeft from "@/components/global/elements/buttons/blueLeft";
+import IconBtn from "@/components/global/elements/buttons/iconBtn";
 
 const HomeHeader = () => {
   return (
@@ -22,7 +22,10 @@ const HomeHeader = () => {
           <div className="xl:col-span-6 mt-12 text-lg flex flex-col xl:items-start items-center">
             <h2 className="font-black lg:text-[3.2rem] text-4xl lg:text-right text-center text-gray-700 lg:leading-[1.7] leading-loose"> درس خوندن با راحت بخون خیلی راحت و لذت بخشه !</h2>
             <p className="mt-4 text-lg text-gray-400 leading-loose lg:text-right text-center" > اینجا با کلی دانش آموز باهوش دیگه که مثل خودت هستن بازی کن حرف بزن و کلی چیز جدید یاد بگیر و پیشرفت کن ! </p>
-            <BlueLeft text="مشاهده دوره های صفر تا صد" href="/courses" />
+            <IconBtn 
+              iconName="left"
+              text="مشاهده دوره های صفر تا صد"
+            />
             <div className="grid grid-cols-12 items-center w-4/5 mx-4 lg:mt-8 mt-4">
               <div className="sm:col-span-6 col-span-12 flex items-center justify-center font-semibold text-gray-500">
                 <div className="relative w-6 h-6 rounded-full bg-baby-6/30">

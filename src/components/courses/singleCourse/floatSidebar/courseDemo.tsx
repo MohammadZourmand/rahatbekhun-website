@@ -1,6 +1,6 @@
 import { PlayBrokenIcon } from "@/assets/icons";
 
-import { courseDetails } from "@/components/global/elements/boxes/tabSwitcher/courseInfo";
+import { courseDetails } from "@/components/global/elements/cards/tabSwitcher/courseInfo";
 
 const CourseDemoSidebar : React.FC = () => {
 

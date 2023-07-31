@@ -1,5 +1,5 @@
 import Navbar from "../../navbar";
-import Breadcrumb, { BreadcrumbItemsProps } from "../boxes/breadcrumb";
+import Breadcrumb, { BreadcrumbItemsProps } from "../cards/breadcrumb";
 
 interface PageHeaderProps {
     title : string,

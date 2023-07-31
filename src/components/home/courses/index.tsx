@@ -4,7 +4,7 @@ import { useState } from "react";
 // ? components =======================
 import Heading3 from "@/components/global/elements/headings/h3";
 import Paragraph from "@/components/global/elements/paragraph";
-import Cart from "../../global/elements/boxes/card";
+import Cart from "../../global/elements/cards/card";
 
 // ? assets ===========================
 import { coursesData } from "../../data/coursesData";

@@ -1,4 +1,4 @@
-import { CartBrokenIcon, EyeBrokenIcon, FilterBrokenIcon, SearchBrokenIcon } from "@/assets/icons";
+import { CartBrokenIcon, EyeBrokenIcon, FilterBrokenIcon, LeftIcon, SearchBrokenIcon } from "@/assets/icons";
 import Link from "next/link";
 import { FC } from "react";
 
@@ -22,6 +22,8 @@ const iconChooser : (key : string) => any = (key : string) => {
             return (<FilterBrokenIcon cls="group-hover:scale-[1.2] transition fill-white w-6 h-6 mr-3"/>)
         case "cart":
             return (<CartBrokenIcon cls="group-hover:scale-[1.2] transition fill-white w-6 h-6 mr-3"/>)
+        case "left":
+            return (<LeftIcon cls="group-hover:scale-[1.05] group-hover:-translate-x-1.5 transition fill-white w-6 h-6 mr-3"/>)
         default:
             return null
     }

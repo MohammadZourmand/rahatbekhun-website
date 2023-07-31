@@ -2,7 +2,7 @@ import { Form, Formik } from "formik";
 import Input from "../../inputs/input";
 import BlueBtn from "../../buttons/blue";
 import FaSpan from "../card/faSpan";
-import FiveStars from "../fiveStars";
+import FiveStars from "../stars/fiveStars";
 
 interface InsertCommentCoursePartProps {
 

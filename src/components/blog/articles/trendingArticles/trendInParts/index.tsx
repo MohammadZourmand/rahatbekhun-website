@@ -1,6 +1,6 @@
 import SectionHeader from "@/components/global/elements/header/sectionHeader";
 import { PartsInfoProps } from "./partsInfo";
-import SingleCart from "@/components/global/elements/boxes/singleCart";
+import SingleCart from "@/components/global/elements/cards/singleCart";
 
 interface TrendInPartsProps {
     item : PartsInfoProps

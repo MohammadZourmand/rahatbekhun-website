@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
-import Breadcrumb from "@/components/global/elements/boxes/breadcrumb";
-import BgColorfulBadge from "@/components/global/elements/boxes/badges/bgColorful";
+import Breadcrumb from "@/components/global/elements/cards/breadcrumb";
+import BgColorfulBadge from "@/components/global/elements/cards/badges/bgColorful";
 import Heading1 from "@/components/global/elements/headings/h1";
 import Header from "./head";
-import TabSwitcher from "@/components/global/elements/boxes/tabSwitcher";
+import TabSwitcher from "@/components/global/elements/cards/tabSwitcher";
 
 interface SingleCourseMainProps {
     cls ?: string

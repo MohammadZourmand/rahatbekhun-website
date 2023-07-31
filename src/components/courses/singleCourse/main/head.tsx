@@ -1,6 +1,5 @@
-import { Star } from "@/assets/icons"
-import FaSpan from "@/components/global/elements/boxes/card/faSpan"
-import FiveStars from "@/components/global/elements/boxes/fiveStars"
+import FaSpan from "@/components/global/elements/translators/faSpan"
+import FiveStars from "@/components/global/elements/cards/stars/fiveStars"
 import Paragraph from "@/components/global/elements/paragraph"
 
 interface HeaderProps {

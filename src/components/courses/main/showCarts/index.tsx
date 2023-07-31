@@ -2,10 +2,9 @@
 import { FC } from "react";
 
 // ? components & types ======
-import Card from "@/components/global/elements/boxes/card";
+import Card from "@/components/global/elements/cards/card";
 import { courseInfoType } from "@/types/home";
 import { coursesData } from "@/components/data/coursesData";
-import CoursesHeader from "../header";
 
 interface ShowCoursesCartsProps {
 

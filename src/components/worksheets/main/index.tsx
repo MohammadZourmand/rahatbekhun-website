@@ -1,4 +1,4 @@
-import SheetsCard from "@/components/global/elements/boxes/sheetsCard";
+import SheetsCard from "@/components/global/elements/cards/sheetsCard";
 import { worksheetsData, worksheetsDataProps } from "../data";
 import Filters from "./filters";
 import {FC, useState} from "react";

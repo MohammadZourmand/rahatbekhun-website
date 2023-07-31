@@ -1,14 +1,14 @@
 import { Star } from "@/assets/icons";
 import Heading6 from "../../headings/h6";
 import Paragraph from "../../paragraph";
-import FaSpan from "../card/faSpan";
+import FaSpan from "@/components/global/elements/translators/faSpan";
 import { courseDetails, episodeCommentsProps } from "./courseInfo";
 import StaticProgressbar from "./staticProgress";
 import Link from "next/link";
 import Heading5 from "../../headings/h5";
 import { Formik } from "formik";
 import InsertCommentCoursePart from "./insertCommentPart";
-import FiveStars from "../fiveStars";
+import FiveStars from "../stars/fiveStars";
 
 interface CommentsCoursePartsProps {
 

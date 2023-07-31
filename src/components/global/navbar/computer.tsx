@@ -2,12 +2,12 @@
 import Link from "next/link";
 
 // ? components ==================
-import WebsiteName from "../elements/boxes/websiteName";
 
 // ? assets ======================
 import { SearchBrokenIcon } from "@/assets/icons";
 import SubMenus from "./subMenus";
 import PopupIcons from "./popups";
+import WebsiteName from "../elements/boxes/websiteName";
 
 
 interface ComputerNavbarProps {

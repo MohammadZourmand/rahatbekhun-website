@@ -2,7 +2,7 @@ import { FC } from "react";
 import Link from "next/link";
 
 import { messageBgColorChooser, messageHeadTextColorChooser, messageTextColorChooser, TypeMessageIconChooser } from "./choosersFunctions";
-import FaSpan from "@/components/global/elements/boxes/card/faSpan";
+import FaSpan from "@/components/global/elements/translators/faSpan";
 import { messagesInfoProps } from "../messagesInfo";
 
 

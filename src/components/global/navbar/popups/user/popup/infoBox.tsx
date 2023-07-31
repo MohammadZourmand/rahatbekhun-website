@@ -1,5 +1,5 @@
 
-import FaSpan from "@/components/global/elements/boxes/card/faSpan";
+import FaSpan from "@/components/global/elements/translators/faSpan";
 import {FC} from "react";
 
 interface InfoBoxProps {

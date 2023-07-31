@@ -1,4 +1,4 @@
-import Cart2 from "@/components/global/elements/boxes/card2";
+import Cart2 from "@/components/global/elements/cards/card2";
 import Heading3 from "@/components/global/elements/headings/h3";
 import Paragraph from "@/components/global/elements/paragraph";
 

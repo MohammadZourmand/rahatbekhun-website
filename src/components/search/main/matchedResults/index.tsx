@@ -1,7 +1,7 @@
 import { FC } from "react"
 
 import { coursesData } from "@/components/data/coursesData";
-import Card from "@/components/global/elements/boxes/card";
+import Card from "@/components/global/elements/cards/card";
 
 
 const MatchedSearchResults : FC = () => {

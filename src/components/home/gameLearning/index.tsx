@@ -1,9 +1,9 @@
 // ? components ====================
 import Heading4 from "@/components/global/elements/headings/h4";
 import LiTickIcon from "@/components/global/elements/lists/liTickIcon";
-import BlueLeft from "@/components/global/elements/buttons/blueLeft";
 import { ListInfo, ListInfoProps } from "../../data/home/gameLearningInfo";
 import Paragraph from "@/components/global/elements/paragraph";
+import IconBtn from "@/components/global/elements/buttons/iconBtn";
 
 const GameLearning : React.FC = () => {
 
@@ -23,7 +23,12 @@ const GameLearning : React.FC = () => {
                         ListInfo.map((item : ListInfoProps) => <LiTickIcon key={item?.id} text={item?.text} />)
                     }
                 </ul>
-                <BlueLeft text="بریم بازی" href="/games" cls="self-center lg:self-start" />
+                <IconBtn 
+                    href="/games"
+                    text="بریم بازی"
+                    cls="self-center lg:self-start"
+                    iconName="left"
+                />
             </div>
         </section>
     )

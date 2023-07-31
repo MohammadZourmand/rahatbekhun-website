@@ -1,6 +1,6 @@
 import { coursesData } from "@/components/data/coursesData";
-import Cart from "@/components/global/elements/boxes/card";
-import { courseDetails } from "@/components/global/elements/boxes/tabSwitcher/courseInfo";
+import Cart from "@/components/global/elements/cards/card";
+import { courseDetails } from "@/components/global/elements/cards/tabSwitcher/courseInfo";
 import Heading3 from "@/components/global/elements/headings/h3";
 import Paragraph from "@/components/global/elements/paragraph";
 import { courseInfoType } from "@/types/home";

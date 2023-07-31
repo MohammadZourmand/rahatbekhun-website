@@ -6,7 +6,8 @@ export interface courseInfoType {
     price : number,
     name : string,
     details : string,
-    image : string
+    imageSrc : string
+    imageAlt : string
     category : string
     offPrecent ?: number
     votesAverage : number

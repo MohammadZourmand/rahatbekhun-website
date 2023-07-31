@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/store";
 
 import BlueBtn from "@/components/global/elements/buttons/blue";
-import { courseDetails } from "@/components/global/elements/boxes/tabSwitcher/courseInfo";
+import { courseDetails } from "@/components/global/elements/cards/tabSwitcher/courseInfo";
 import SubjectBox from "./subjectBox";
 
 const CourseInfoSidebar : React.FC = () => {

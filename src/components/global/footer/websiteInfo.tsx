@@ -1,7 +1,7 @@
 import Link from "next/link";
-import WebsiteName from "../elements/boxes/websiteName";
 import Paragraph from "../elements/paragraph";
 import { IconBrandGithub, IconBrandTelegram } from "@tabler/icons-react";
+import WebsiteName from "../elements/boxes/websiteName";
 
 interface WebsiteInfoProps {
     cls ?: string
