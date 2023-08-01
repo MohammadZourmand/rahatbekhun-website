@@ -1,8 +1,8 @@
 
 import PageHeader from "../global/elements/header/pageHeader";
-import Navbar from "./../global/navbar";
-import LastestArticles from "./articles/lastestProjects";
-import TrendingArticles from "./articles/trendingArticles";
+import Footer from "../global/footer";
+import BestArticles from "./bestArticles";
+import NewArticles from "./getNews";
 import SearchBox from "./searchbox";
 import SortSlider from "./sortSlider";
 
@@ -10,11 +10,20 @@ const Blog : React.FC = () => {
 
     return (
         <>
-            <Navbar isWhite={true} />
-            {/* <PageHeader /> */}
+            <PageHeader
+                imgBgCls="sm:scale-100 md:h-auto h-full"
+                cls="xl:h-[65vh]" 
+                title={"وبلاگ"}
+                breadcrumbItems={[
+                    {href : "/blog", value : "وبلاگ"}
+                ]} 
+                imgBgSrc={"/images/blog/aerial-view-man-typing-retro-typewriter.jpg"}                
+            />
             <SearchBox />
             <SortSlider />
-            <TrendingArticles />
+            <BestArticles />
+            <NewArticles />
+            <Footer />
         </>      
     )
 }

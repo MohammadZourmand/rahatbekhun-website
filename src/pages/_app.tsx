@@ -13,7 +13,7 @@ import AOS from "aos";
 // todo => Redux & Modules
 import { Provider } from 'react-redux';
 import { store } from '@/store';
-import Loadings from '@/components/global/components/loadings';
+import Loadings from '@/components/global/elements/loadings';
 
 export default function App({ Component, pageProps }: AppProps) {
 

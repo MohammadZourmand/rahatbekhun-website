@@ -20,12 +20,19 @@ export interface courseInfoType {
 }
 
 export interface Card2Type {
-    subject : string,
-    name : string,
-    image : string
+    item : Card2TypeProps
     cls ?: string
-    category : string
-    date : string
+}
+
+export interface Card2TypeProps {
+    imgSrc : string,
+    imgAlt : string,
+    head : string,
+    para : string,
+    date : string,
+    author : string,
+    category : string,
+    comments ?: number
 }
 
 export interface teachersInfoType {

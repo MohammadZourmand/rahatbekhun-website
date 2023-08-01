@@ -8,7 +8,7 @@ export const FooterLinksData1 : FooterLinksDataProps[] = [
     {name : "کلاس ها", href : "#"},
     {name : "پیوستن به ما", href : "#"},
     {name : "درباره ما", href : "#"},
-    {name : "وبلاگ", href : "#"},
+    {name : "وبلاگ", href : "/blog"},
     {name : "رویدادها", href : "#"},
 ]
 

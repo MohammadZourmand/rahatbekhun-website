@@ -1,3 +1,4 @@
+import { CartsInfo } from "@/components/blog/articles/lastestProjects/carts/cartsInfo";
 import Cart2 from "@/components/global/elements/cards/card2";
 import Heading3 from "@/components/global/elements/headings/h3";
 import Paragraph from "@/components/global/elements/paragraph";
@@ -12,30 +13,15 @@ const OfferedArticles : React.FC = () => {
                 <Paragraph cls="mt-6" center={true} text="اینجا مقاله ها و نوشته هایی هست که باعث میشه همیشه اطلاعاتت از همه چی کافی باشه ! چه دانش آموز باشی چه آموزگار! " />
             </header>
             <main className="grid grid-cols-12 lg:gap-8 md:gap-4 gap-y-8 mt-12">
-                <Cart2
-                    subject="روز اول چگونه باید وارد کلاس شویم ؟"
-                    name="نویسنده راحت بخون"
-                    image="./images/home/woman-making-beauty-vlog-with-her-professional-camera.jpg"
-                    category="آموزشی معلمان"
-                    date={"1401/6/17"}
-                    cls="lg:col-span-4 md:col-span-6 col-span-12 "
-                />
-                <Cart2
-                    subject="روز اول چگونه باید وارد کلاس شویم ؟"
-                    name="نویسنده راحت بخون"
-                    image="./images/home/woman-making-beauty-vlog-with-her-professional-camera.jpg"
-                    category="آموزشی معلمان"
-                    date={"1401/6/17"}
-                    cls="lg:col-span-4 md:col-span-6 col-span-12 "
-                />
-                <Cart2
-                    subject="روز اول چگونه باید وارد کلاس شویم ؟"
-                    name="نویسنده راحت بخون"
-                    image="./images/home/woman-making-beauty-vlog-with-her-professional-camera.jpg"
-                    category="آموزشی معلمان"
-                    date={"1401/6/17"}
-                    cls="lg:col-span-4 md:col-span-6 col-span-12 "
-                />
+                {
+                    CartsInfo.map((item, index) => (
+                        <Cart2
+                            key={index}
+                            cls="lg:col-span-4 md:col-span-6 col-span-12"
+                            item={item}
+                        />
+                    ))
+                }
             </main>
         </section>
     )

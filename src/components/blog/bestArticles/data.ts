@@ -1,7 +1,5 @@
 
-import { SingleCartProps } from "../../../global/elements/cards/singleCart"
-
-export const CartsInfo : SingleCartProps[] = [
+export const CartsInfo = [
     {
         imgSrc : "./images/blog/front-view-desk-with-stacked-books-copy-space.jpg",
         imgAlt : "lorem",

@@ -1,8 +1,9 @@
 import Link from "next/link";
 
-import FiveStars from "@/components/global/elements/cards/stars/fiveStars";
-import { courseDetails } from "@/components/global/elements/cards/tabSwitcher/courseInfo";
+
 import PriceBox from "./price";
+import { courseDetails } from "@/components/global/elements/boxes/tabSwitcher/courseInfo";
+import FiveStars from "@/components/global/elements/boxes/stars/fiveStars";
 
 
 

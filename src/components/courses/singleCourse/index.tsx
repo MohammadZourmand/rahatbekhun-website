@@ -1,8 +1,9 @@
-import Footer from "../global/footer";
-import Navbar from "../global/navbar";
+
+import Navbar from "@/components/global/navbar";
 import FloatSidebar from "./floatSidebar";
 import SingleCourseMain from "./main";
 import RelatedCourses from "./main/relatedCourse";
+import Footer from "@/components/global/footer";
 
 interface SingleCourseProps {
 

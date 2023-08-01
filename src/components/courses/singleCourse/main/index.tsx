@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
-import Breadcrumb from "@/components/global/elements/cards/breadcrumb";
-import BgColorfulBadge from "@/components/global/elements/cards/badges/bgColorful";
 import Heading1 from "@/components/global/elements/headings/h1";
 import Header from "./head";
-import TabSwitcher from "@/components/global/elements/cards/tabSwitcher";
+import Breadcrumb from "@/components/global/elements/boxes/breadcrumb";
+import BgColorfulBadge from "@/components/global/elements/boxes/badges/bgColorful";
+import TabSwitcher from "@/components/global/elements/boxes/tabSwitcher";
 
 interface SingleCourseMainProps {
     cls ?: string
@@ -16,7 +16,7 @@ const SingleCourseMain : React.FC<SingleCourseMainProps> = ({cls}) => {
 
     return (
         <main className={`${cls} relative`}>
-            <Breadcrumb 
+            <Breadcrumb
                 items={[
                     {href : "courses", value : "دوره های آموزشی"},
                     {href : query.category , value : "دسته بندی دوره"},

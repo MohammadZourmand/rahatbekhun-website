@@ -1,5 +1,5 @@
 import PriceBox from "@/components/courses/singleCourse/floatSidebar/price"
-import { CartItemsProps } from "@/store/slices/card"
+import { CartItemsProps } from "@/store/slices/cart"
 import Link from "next/link"
 
 interface ProductsProps {

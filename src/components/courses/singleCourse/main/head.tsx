@@ -1,6 +1,6 @@
 import FaSpan from "@/components/global/elements/translators/faSpan"
-import FiveStars from "@/components/global/elements/cards/stars/fiveStars"
 import Paragraph from "@/components/global/elements/paragraph"
+import FiveStars from "@/components/global/elements/boxes/stars/fiveStars"
 
 interface HeaderProps {
     cls ?: string

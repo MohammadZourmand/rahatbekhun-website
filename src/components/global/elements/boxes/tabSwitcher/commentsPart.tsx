@@ -1,12 +1,11 @@
-import { Star } from "@/assets/icons";
+import Link from "next/link";
+
 import Heading6 from "../../headings/h6";
 import Paragraph from "../../paragraph";
 import FaSpan from "@/components/global/elements/translators/faSpan";
 import { courseDetails, episodeCommentsProps } from "./courseInfo";
 import StaticProgressbar from "./staticProgress";
-import Link from "next/link";
 import Heading5 from "../../headings/h5";
-import { Formik } from "formik";
 import InsertCommentCoursePart from "./insertCommentPart";
 import FiveStars from "../stars/fiveStars";
 
@@ -26,7 +25,7 @@ const CommentsCourseParts : React.FC<CommentsCoursePartsProps> = () => {
                     <div className="sm:col-span-1 col-span-3 sm:p-0 p-4 bg-gray-200/70 flex flex-col items-center justify-center">
                         <FaSpan cls="text-[5rem] text-gray-800 tracking-tight font-bold" value={courseDetails.score}/>
                         <div className="flex">
-                        <FiveStars />
+                            <FiveStars />
                         </div>
                         <FaSpan cls="mt-3 text-gray-500 font-semibold" value={`از ${courseDetails.comments.length} نمره`}/>
                     </div>  

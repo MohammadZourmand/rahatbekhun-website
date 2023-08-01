@@ -2,11 +2,13 @@
 interface ButtonProps {
     btnType ?: boolean
     cls ?: string
+    text : string
 }
 
 const GrayButton : React.FC<ButtonProps> = ({
     cls,
-    btnType
+    btnType,
+    text
 }) => {
     
     return (
@@ -14,7 +16,7 @@ const GrayButton : React.FC<ButtonProps> = ({
             className={`${cls} col-start-4 bg-slate-700 text-center text-xl text-white rounded-lg`}
             type={btnType ? "button" : "submit"}
         >
-            تایید 
+            {text}
         </button>
 
     )

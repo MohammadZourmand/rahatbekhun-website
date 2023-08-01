@@ -1,4 +1,4 @@
-import { courseDetails } from "@/components/global/elements/cards/tabSwitcher/courseInfo";
+import { courseDetails } from "@/components/global/elements/boxes/tabSwitcher/courseInfo";
 import PriceBox from "./price";
 import FaSpan from "@/components/global/elements/translators/faSpan";
 
