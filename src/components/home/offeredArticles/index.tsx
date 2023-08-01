@@ -1,5 +1,5 @@
 import { CartsInfo } from "@/components/blog/bestArticles/data";
-import Cart2 from "@/components/global/elements/cards/card2";
+import Card2 from "@/components/global/elements/cards/card2";
 import Heading3 from "@/components/global/elements/headings/h3";
 import Paragraph from "@/components/global/elements/paragraph";
 
@@ -15,7 +15,7 @@ const OfferedArticles : React.FC = () => {
             <main className="grid grid-cols-12 lg:gap-8 md:gap-4 gap-y-8 mt-12">
                 {
                     CartsInfo.map((item, index) => (
-                        <Cart2
+                        <Card2
                             key={index}
                             cls="lg:col-span-4 md:col-span-6 col-span-12"
                             item={item}

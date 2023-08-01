@@ -1,5 +1,5 @@
 import { ActivityIcon, ChartIcon } from "@/assets/icons";
-import Cart2 from "@/components/global/elements/cards/card2";
+import Card2 from "@/components/global/elements/cards/card2";
 import SectionHeader from "@/components/global/elements/header/sectionHeader";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
 import { CartsInfo } from "./data";
@@ -23,7 +23,7 @@ const BestArticles : React.FC<BestArticlesProps> = () => {
                 {
                     CartsInfo.map((item, index) => {
                         return (
-                            <Cart2
+                            <Card2
                                 key={index}
                                 cls="lg:col-span-4 md:col-span-6 col-span-12"
                                 item={item} 

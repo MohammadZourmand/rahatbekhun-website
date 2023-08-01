@@ -1,5 +1,5 @@
 import { CartsInfo } from "@/components/blog/bestArticles/data";
-import Cart2 from "@/components/global/elements/cards/card2";
+import Card2 from "@/components/global/elements/cards/card2";
 
 interface MatchedArticles {
     cls ?: string
@@ -13,7 +13,7 @@ const MatchedArticles : React.FC<MatchedArticles> = () => {
                 {
                     CartsInfo.map((item, index) => {
                         return (
-                            <Cart2
+                            <Card2
                                 key={index}
                                 cls="md:col-span-6 col-span-12"
                                 item={item} 
@@ -24,7 +24,7 @@ const MatchedArticles : React.FC<MatchedArticles> = () => {
                 {
                     CartsInfo.map((item, index) => {
                         return (
-                            <Cart2
+                            <Card2
                                 key={index}
                                 cls="md:col-span-6 col-span-12"
                                 item={item} 

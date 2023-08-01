@@ -6,11 +6,12 @@ import { Card2Type } from "@/types/home";
 
 // ? assets ======================
 import { ClockBroken } from "@/assets/icons";
-import Heading6 from "@/components/global/elements/headings/h6";
 import Paragraph from "@/components/global/elements/paragraph";
 import Heading1 from "../../headings/h1";
+import Link from "next/link";
+import { badgeBgColorChooser, badgeTextColorChooser, badgeTextTranslator } from "./badgeColorChooser";
 
-const Cart2 : React.FC<Card2Type> = ({item, cls}) => {
+const Card2 : React.FC<Card2Type> = ({item, cls}) => {
 
     return (
         <section className={`${cls} group rounded-lg bg-white shadow-lg`}>
@@ -21,10 +22,12 @@ const Cart2 : React.FC<Card2Type> = ({item, cls}) => {
             {/* text part */}
             <div className="flex flex-col xl:p-4 p-3">
                 <header className="flex">
-                    <div className={`justify-self-start text-sm bg-baby-11/20 font-semibold text-baby-11 px-2.5 py-[3px] rounded`}>{item.category}</div>
+                    <div className={`${badgeTextColorChooser(item.category)} ${badgeBgColorChooser(item.category)} justify-self-start text-sm font-semibold  px-2.5 py-[3px] rounded`}>{badgeTextTranslator(item.category)}</div>
                 </header>
                 <main className="mt-5">
-                    <Heading1 cls="!text-xl !mt-1 text-gray-800" text={item.head} /> 
+                    <Link href={`/articles/${item.linkName}`}>
+                        <Heading1 cls="!text-xl !mt-1 text-gray-800 hover:text-baby-9 transition duration-300" text={item.head} /> 
+                    </Link>
                 </main>
                 <footer className={`flex items-center justify-between gap-4 pt-4 pb-1`}>
                     <div className="flex mt-4 mb-4 items-center">
@@ -41,4 +44,4 @@ const Cart2 : React.FC<Card2Type> = ({item, cls}) => {
     )
 }
 
-export default Cart2;
+export default Card2;

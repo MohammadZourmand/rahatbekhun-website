@@ -32,7 +32,8 @@ export interface Card2TypeProps {
     date : string,
     author : string,
     category : string,
-    comments ?: number
+    comments ?: number,
+    linkName : string
 }
 
 export interface teachersInfoType {
