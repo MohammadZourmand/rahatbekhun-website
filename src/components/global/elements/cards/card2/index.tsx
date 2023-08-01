@@ -8,24 +8,25 @@ import { Card2Type } from "@/types/home";
 import { ClockBroken } from "@/assets/icons";
 import Heading6 from "@/components/global/elements/headings/h6";
 import Paragraph from "@/components/global/elements/paragraph";
+import Heading1 from "../../headings/h1";
 
 const Cart2 : React.FC<Card2Type> = ({item, cls}) => {
 
     return (
         <section className={`${cls} group rounded-lg bg-white shadow-lg`}>
             {/* image part */}
-            <div className="relative overflow-hidden h-56 rounded-t-lg">
+            <div className="overflow-hidden rounded-t-lg">
                 <img className="overflow-hidden group-hover:scale-105 transition duration-500" src={item.imgSrc} alt={item.imgAlt} />
             </div>
             {/* text part */}
             <div className="flex flex-col xl:p-4 p-3">
                 <header className="flex">
-                    <div className={`justify-self-start text-sm bg-baby-11/20 font-semibold text-baby-11 px-3 py-1 rounded`}>{item.category}</div>
+                    <div className={`justify-self-start text-sm bg-baby-11/20 font-semibold text-baby-11 px-2.5 py-[3px] rounded`}>{item.category}</div>
                 </header>
-                <main className="mt-8">
-                    <Heading6 text={item.head} /> 
+                <main className="mt-5">
+                    <Heading1 cls="!text-xl !mt-1 text-gray-800" text={item.head} /> 
                 </main>
-                <footer className={`flex items-center justify-between gap-4  pt-4 pb-1`}>
+                <footer className={`flex items-center justify-between gap-4 pt-4 pb-1`}>
                     <div className="flex mt-4 mb-4 items-center">
                         <img className="w-9 h-9 border-2 border-gray-200 shadow-xl rounded-full" src="./images/home/teachers/mohammad-zourmand.jpg" alt="suthor" />
                         <Paragraph cls="text-gray-600 text-xs mr-2" text={item.author} />

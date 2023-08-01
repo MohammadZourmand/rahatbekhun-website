@@ -10,7 +10,7 @@ interface ArticlesSideBarProps {
 const ArticlesSideBar : React.FC<ArticlesSideBarProps> = () => {
 
     return (
-        <aside className="col-span-4 flex flex-col">
+        <aside className="lg:col-span-4 col-span-12 flex flex-col md:px-12 sm:px-28 xs:p-4 lg:p-0 mt-8 xs:mt-0">
             <Searchbox />
             <RecentFiles />
             <SubjectsPart />

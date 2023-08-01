@@ -9,7 +9,7 @@ interface RecentFilesProps {
 const RecentFiles : React.FC<RecentFilesProps> = () => {
 
     return (
-        <div className="mt-12">
+        <div className="lg:mt-10 mt-6">
             <Heading6 
                 text="آخرین مقالات"
                 cls="text-gray-800 px-1 py-4 border-b border-gray-100"

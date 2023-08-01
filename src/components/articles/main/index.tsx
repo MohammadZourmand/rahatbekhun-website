@@ -8,7 +8,7 @@ interface ArticlesPageMain {
 const ArticlesPageMain : React.FC<ArticlesPageMain> = () => {
 
     return (
-        <main className="grid grid-cols-12 max-w-[1200px] gap-x-24 mx-auto mt-12">
+        <main className="grid grid-cols-12 xl:max-w-[1200px] xl:gap-x-24 lg:gap-x-12 mx-auto px-2 mt-12">
             <MatchedArticles />
             <ArticlesSideBar />
         </main>

@@ -22,12 +22,8 @@ const category = [
 
 const SubjectsPart : React.FC<SubjectsPartProps> = () => {
 
-    const submitHandler = (values) => {
-        console.log(values)
-    }
-
     return (
-        <div className="mt-12">
+        <div className="lg:mt-8 mt-6">
             <Heading6 
                 text="دسته بندی مقالات"
                 cls="text-gray-800 px-1 py-4 border-b border-gray-200"

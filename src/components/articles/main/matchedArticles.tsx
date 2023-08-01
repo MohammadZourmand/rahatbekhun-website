@@ -8,7 +8,7 @@ interface MatchedArticles {
 const MatchedArticles : React.FC<MatchedArticles> = () => {
 
     return (
-        <main className="col-span-8">
+        <main className="lg:col-span-8 col-span-12 lg:p-0 sm:py-12 md:px-12 sm:px-28 xs:p-4">
             <div className="grid grid-cols-12 md:gap-6 gap-y-6">
                 {
                     CartsInfo.map((item, index) => {
