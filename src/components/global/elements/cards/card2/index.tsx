@@ -9,7 +9,7 @@ import { ClockBroken } from "@/assets/icons";
 import Paragraph from "@/components/global/elements/paragraph";
 import Heading1 from "../../headings/h1";
 import Link from "next/link";
-import { badgeBgColorChooser, badgeTextColorChooser, badgeTextTranslator } from "./badgeColorChooser";
+import { badgeBgColorChooser, badgeTextColorChooser, badgeTextTranslator } from "../../translators/badgeColorChooser";
 
 const Card2 : React.FC<Card2Type> = ({item, cls}) => {
 

@@ -1,5 +1,7 @@
 import { FC } from "react";
 import SingleArticlePageHeader from "./header";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store";
 
 interface SingleArticleProps {
 
@@ -7,13 +9,21 @@ interface SingleArticleProps {
 
 const SingleArticle : FC<SingleArticleProps> = () => {
 
+    const articleInfo = useSelector((state : RootState) => state.articleInfoSlice)
+
     return (
         <div>
             <SingleArticlePageHeader
                 imgBgCls="sm:scale-100 md:h-auto h-full"
                 cls="xl:h-[80vh]"
-                title="دوره های آموزشی"
-                imgBgSrc={'./images/courses/portrait-pretty-young-girl-smiling.jpg'} breadcrumbItems={[]}            />
+                title={articleInfo.head}
+                imgBgSrc={articleInfo.imgSrc}
+                imgBgAlt={articleInfo.imgAlt}
+                category={articleInfo.category}
+                author={articleInfo.author}
+                date={articleInfo.date}
+            />
+
         </div>
     )
 }

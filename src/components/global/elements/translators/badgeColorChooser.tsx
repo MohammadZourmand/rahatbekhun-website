@@ -28,6 +28,20 @@ export const badgeTextColorChooser = (value) => {
     }
 }
 
+export const singleArticleBadgeBgColorChooser = (value) => {
+
+    switch (value) {
+        case "math":
+            return "bg-blue-600"
+        case "sport":
+            return "bg-green-600"
+        case "others":
+            return "bg-purple-600"
+        default:
+            return "bg-purple-600"
+    }
+}
+
 export const badgeTextTranslator = (value) => {
 
     switch (value) {

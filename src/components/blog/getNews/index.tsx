@@ -2,7 +2,7 @@ import { ActivityIcon, ChartIcon } from "@/assets/icons";
 import Card2 from "@/components/global/elements/cards/card2";
 import SectionHeader from "@/components/global/elements/header/sectionHeader";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
-import { CartsInfo } from "../bestArticles/data";
+import { cardsInfo } from "../bestArticles/data";
 
 export interface NewArticlesProps {
 
@@ -21,7 +21,7 @@ const NewArticles : React.FC<NewArticlesProps> = () => {
             <main className="flex flex-col py-10 px-2 xs:px-5 md:px-24">
                 <div className="grid grid-cols-12 md:gap-6 gap-y-6">
                 {
-                    CartsInfo.map((item, index) => {
+                    cardsInfo.map((item, index) => {
                         return (
                             <Card2
                                 key={index}

@@ -3,12 +3,14 @@ import { configureStore } from '@reduxjs/toolkit'
 import singleArticleSlice from './slices/singleArticle/index';
 import cartProducts from './slices/cart';
 import setLoadingSlice from './slices/loadings/index';
+import  articleInfoSlice  from './slices/article/index';
 
 export const store = configureStore({
   reducer: {
     singleArticleSlice,
     cartProducts,
-    setLoadingSlice
+    setLoadingSlice,
+    articleInfoSlice
   },
 })
 

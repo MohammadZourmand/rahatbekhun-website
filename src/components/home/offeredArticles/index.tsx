@@ -1,4 +1,4 @@
-import { CartsInfo } from "@/components/blog/bestArticles/data";
+import { cardsInfo } from "@/components/blog/bestArticles/data";
 import Card2 from "@/components/global/elements/cards/card2";
 import Heading3 from "@/components/global/elements/headings/h3";
 import Paragraph from "@/components/global/elements/paragraph";
@@ -14,7 +14,7 @@ const OfferedArticles : React.FC = () => {
             </header>
             <main className="grid grid-cols-12 lg:gap-8 md:gap-4 gap-y-8 mt-12">
                 {
-                    CartsInfo.map((item, index) => (
+                    cardsInfo.map((item, index) => (
                         <Card2
                             key={index}
                             cls="lg:col-span-4 md:col-span-6 col-span-12"

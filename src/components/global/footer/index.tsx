@@ -21,13 +21,13 @@ const Footer : React.FC<FooterProps> = ({cls}) => {
                     <div className="col-span-6">
                         <Heading6 cls="text-gray-900 lg:!text-right !text-center" text="لینک های سریع" />
                         <ul className="space-y-4 mt-6 text-sm">
-                            { FooterLinksData1.map((item) => <LiFooter item={item}/>) }
+                            { FooterLinksData1.map((item, index) => <LiFooter key={index} item={item}/>) }
                         </ul>
                     </div>
                     <div className="col-span-6">
                         <Heading6 cls="text-gray-900 lg:!text-right !text-center" text="ارتباط با ما" />
                         <ul className="space-y-4 mt-6 text-sm">
-                            { FooterLinksData2.map((item) => <LiFooter item={item}/>) }
+                            { FooterLinksData2.map((item, index) => <LiFooter key={index} item={item}/>) }
                         </ul>
                     </div>
                 </div>
