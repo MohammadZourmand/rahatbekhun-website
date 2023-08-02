@@ -18,7 +18,7 @@ const TeachersClasses : React.FC = () => {
                 </div>
             </div>
             <div className="xl:col-span-7 col-span-12">
-                <img className="translate-y-12" src="./images/home/teamwork.jpg" alt="raharbekhun-helps-teachers-with-assistants-class" />
+                <img className="translate-y-12" src="/images/home/teamwork.jpg" alt="raharbekhun-helps-teachers-with-assistants-class" />
             </div>
         </section>
     )

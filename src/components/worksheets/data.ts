@@ -37,7 +37,7 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetRotation : "عمودی",
         authorName : "محمد زورمند",
         worksheetPrice : 1200,
-        worksheetImg : "./images/worksheets/worksheetPictures/slide1.png"
+        worksheetImg : "/images/worksheets/worksheetPictures/slide1.png"
     },
     {
         id : 2,
@@ -56,7 +56,7 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetRotation : "عمودی",
         authorName : "محمد زورمند",
         worksheetPrice : 1200,
-        worksheetImg : "./images/worksheets/worksheetPictures/slide1.png"
+        worksheetImg : "/images/worksheets/worksheetPictures/slide1.png"
     },
     {
         id : 3,
@@ -75,7 +75,7 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetRotation : "افقی",
         authorName : "محمد زورمند",
         worksheetPrice : 2000,
-        worksheetImg : "./images/worksheets/worksheetPictures/slide1.png"
+        worksheetImg : "/images/worksheets/worksheetPictures/slide1.png"
     },
     {
         id : 4,
@@ -94,7 +94,7 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetRotation : "عمودی",
         authorName : "محمد زورمند",
         worksheetPrice : 0,
-        worksheetImg : "./images/worksheets/worksheetPictures/slide1.png"
+        worksheetImg : "/images/worksheets/worksheetPictures/slide1.png"
     },
     {
         id : 5,
@@ -113,7 +113,7 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetRotation : "عمودی",
         authorName : "محمد زورمند",
         worksheetPrice : 0,
-        worksheetImg : "./images/worksheets/worksheetPictures/slide1.png"
+        worksheetImg : "/images/worksheets/worksheetPictures/slide1.png"
     },
     {
         id : 6,
@@ -132,6 +132,6 @@ export const worksheetsData : worksheetsDataProps[] = [
         worksheetRotation : "عمودی",
         authorName : "محمد زورمند",
         worksheetPrice : 500,
-        worksheetImg : "./images/worksheets/worksheetPictures/slide1.png"
+        worksheetImg : "/images/worksheets/worksheetPictures/slide1.png"
     },
 ]

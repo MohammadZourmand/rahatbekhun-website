@@ -14,7 +14,7 @@ const Articles = () => {
                 breadcrumbItems={[
                     {href : "articles", value : "نوشته های آموزشی"}
                 ]}
-                imgBgSrc={'./images/blog/blank-business-cards-cup-coffee-wooden-table-corporate-stationary-branding-mock-up.jpg'}
+                imgBgSrc={'/images/blog/blank-business-cards-cup-coffee-wooden-table-corporate-stationary-branding-mock-up.jpg'}
             />
             <ArticlesPageMain />
             <Footer cls="mt-8" />

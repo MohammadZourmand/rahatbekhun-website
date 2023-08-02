@@ -31,7 +31,7 @@ const Card2 : React.FC<Card2Type> = ({item, cls}) => {
                 </main>
                 <footer className={`flex items-center justify-between gap-4 pt-4 pb-1`}>
                     <div className="flex mt-4 mb-4 items-center">
-                        <img className="w-9 h-9 border-2 border-gray-200 shadow-xl rounded-full" src="./images/home/teachers/mohammad-zourmand.jpg" alt="suthor" />
+                        <img className="w-9 h-9 border-2 border-gray-200 shadow-xl rounded-full" src="/images/home/teachers/mohammad-zourmand.jpg" alt="suthor" />
                         <Paragraph cls="text-gray-600 text-xs mr-2" text={item.author} />
                     </div>
                     <div className="flex items-center">

@@ -36,7 +36,7 @@ const SingleArticlePageHeader : React.FC<SingleArticlePageHeaderProps> = ({
             <div className={`text-white sm:px-[6.5rem] sm:py-16 px-[3rem] py-8 flex flex-col md:items-start items-center justify-center xl:my-24 my-20 xs:rounded-[5rem] rounded-[3rem]`}>
                 <div className={`${singleArticleBadgeBgColorChooser(category)} z-0 mb-6 text-white justify-self-start text-sm font-semibold  px-3 py-[3px] rounded`}>{badgeTextTranslator(category)}</div>
                 <h2 className="sm:text-[3.5rem] text-[1.9rem] tracking-tight !leading-tight font-black md:text-right text-center z-10">{title}</h2>
-                <div className="flex">
+                <div className="flex mt-3">
                     <div className="flex mt-4 mb-4 items-center">
                         <img className="w-9 h-9 border-2 border-white shadow-xl rounded-full z-0" src="/images/home/teachers/mohammad-zourmand.jpg" alt="author" />
                         <Paragraph cls="z-0 text-sm mr-3 text-white" text={author} />

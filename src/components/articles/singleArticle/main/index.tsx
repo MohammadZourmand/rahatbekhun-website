@@ -8,7 +8,7 @@ interface SingleArticleMainProps {
 const SingleArticleMain : FC<SingleArticleMainProps> = () => {
 
     return (
-
+        <></>
     )
 }
 

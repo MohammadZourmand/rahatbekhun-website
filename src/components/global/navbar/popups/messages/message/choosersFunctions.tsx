@@ -5,10 +5,10 @@ interface IconChooserProps {
 
 export const TypeMessageIconChooser : React.FC<IconChooserProps> = ({type}) => {
     switch (type) {
-        case "warning": return (<img className="" src="./images/icons/warning.png"/>)
-        case "info": return (<img className="" src="./images/icons/info.png"/>)
-        case "success": return (<img className="" src="./images/icons/checked.png"/>)
-        default: return (<img className="" src="./images/icons/cancel.png"/>)
+        case "warning": return (<img className="" src="/images/icons/warning.png"/>)
+        case "info": return (<img className="" src="/images/icons/info.png"/>)
+        case "success": return (<img className="" src="/images/icons/checked.png"/>)
+        default: return (<img className="" src="/images/icons/cancel.png"/>)
     }
 }
 

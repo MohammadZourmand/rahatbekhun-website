@@ -10,7 +10,7 @@ const UserGradeChooser : FC<UserGradeChooserProps> = ({grade, }) => {
     switch (grade) {
         case "خالق":
             return (
-                <img src="./images/userGrades/creator.png" />
+                <img src="/images/userGrades/creator.png" />
             )
     
         default:

@@ -17,7 +17,7 @@ const Videos : React.FC<VideosProps> = () => {
                 breadcrumbItems={[
                     {href : "videos", value : "ویدیوهای آموزشی"}
                 ]}
-                imgBgSrc={  './images/courses/person-holding-clapperboard-front-girl-rehearsing-backstage.jpg'}
+                imgBgSrc={  '/images/courses/person-holding-clapperboard-front-girl-rehearsing-backstage.jpg'}
             />
             <VideosPageMain />
             <Footer cls="mt-8" />

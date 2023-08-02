@@ -31,7 +31,7 @@ const UserPopup : FC<UserPopupProps> = ({setShow}) => {
                     <div className="bg-white rounded-full">
                         <img
                             className="group-hover:scale-105 transition"
-                            src="./images/webLogo.png"
+                            src="/images/webLogo.png"
                             width={100}
                             height={100}
                             alt="گروه آموزشی راحت بخون"
@@ -56,8 +56,8 @@ const UserPopup : FC<UserPopupProps> = ({setShow}) => {
                         <span className=" bg-gray-900 text-white border-b border-b-gray-300/60 shadow-all-md shadow-red-500/30 font-semibold py-0.5 px-5 mt-1 rounded-lg text-center">{userInfo.grade}</span>
                         <span className="bg-white border-b border-b-gray-300/60 shadow-sm font-semibold py-0.5 px-2 rounded-b-lg text-center text-sm">درجه</span>
                     </div>
-                    <InfoBox subject={"اشتراک"} value={userInfo.subscription + "روز"} img={"./images/userGrades/crown.png"} />
-                    <InfoBox subject={"تجربه"} value={userInfo.score} img={"./images/userGrades/experience.png"} />
+                    <InfoBox subject={"اشتراک"} value={userInfo.subscription + "روز"} img={"/images/userGrades/crown.png"} />
+                    <InfoBox subject={"تجربه"} value={userInfo.score} img={"/images/userGrades/experience.png"} />
                 </div>
                 <div className="mt-4 grid grid-cols-3 gap-3 w-full h-24">
                     <LinkBox href="/" title="پنل کاربری" iconName="user" cls="col-span-1 bg-baby-9" />
