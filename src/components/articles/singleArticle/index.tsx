@@ -2,6 +2,8 @@ import { FC } from "react";
 import SingleArticlePageHeader from "./header";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
+import SingleArticleMain from "./main";
+import Footer from "@/components/global/footer";
 
 interface SingleArticleProps {
 
@@ -23,7 +25,8 @@ const SingleArticle : FC<SingleArticleProps> = () => {
                 author={articleInfo.author}
                 date={articleInfo.date}
             />
-
+            <SingleArticleMain />
+            <Footer cls="mt-32" />
         </div>
     )
 }
