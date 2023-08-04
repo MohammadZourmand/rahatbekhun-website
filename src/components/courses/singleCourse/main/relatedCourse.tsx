@@ -14,8 +14,6 @@ const RelatedCourses : React.FC<RelatedCoursesProps> = ({
     cls
 }) => {
 
-
-
     return (
         <div className={`${cls} flex flex-col sm:gap-10 mt-12`}>
             <header>

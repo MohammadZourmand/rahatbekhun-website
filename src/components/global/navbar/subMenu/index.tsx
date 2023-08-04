@@ -26,7 +26,7 @@ const SubMenu : React.FC<SubMenuProps> = ({isWhite, name, mainLink, searchLink, 
             <div className={`${cls} ${isWhite ? "border border-gray-200" : "shadow-all-md border-transparent border-[1rem]"} group-hover:grid hidden animate-fade grid-cols-12 xl:w-[42vw] lg:w-[56vw] p-4 absolute top-[5.1rem] -right-28 text-base bg-white z-10 rounded-lg`}>
                 <div className="col-span-5 flex flex-col items-center justify-center">
                     <img src={mainImg} alt="0-to-100-course-rahat-bekhun" />
-                    <Link className="text-xl font-black mt-4 text-center" href={`${mainLink}`}> {mainHead} </Link>
+                    <Link className="text-xl font-black mt-4 text-center" href={`/${mainLink}`}> {mainHead} </Link>
                     <p className="text-center mt-1">{mainInfo}</p>
                     <Link href={`/${searchLink}`} className="flex items-center hover:bg-indigo-900 transition-all bg-baby-1 rounded-lg px-2 py-1 mt-3">
                         <SearchBrokenIcon cls="w-5 h-5" color="white" />

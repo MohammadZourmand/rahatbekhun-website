@@ -1,3 +1,4 @@
+import TagBox from "@/components/global/elements/boxes/tag";
 import Heading6 from "@/components/global/elements/headings/h6";
 
 interface TagsPartProps {
@@ -17,9 +18,7 @@ const TagsPart : React.FC<TagsPartProps> = () => {
             <main className="mt-12 flex flex-wrap gap-2">
                 {
                     mostViewedTags.map((item, index) => (
-                        <div onClick={() => console.log(item)} className="cursor-pointer hover:text-white font-medium hover:bg-baby-9 transition duration-500 px-3 py-2 bg-gray-100 text-gray-700 text-[.9rem] rounded" key={index}>
-                            {item}
-                        </div>
+                        <TagBox value={item} key={index} func={() => console.log(item)}/>
                     ))
                 }
             </main>
