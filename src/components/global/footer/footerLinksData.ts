@@ -5,17 +5,17 @@ interface FooterLinksDataProps {
 }
 
 export const FooterLinksData1 : FooterLinksDataProps[] = [
-    {name : "کلاس ها", href : "#"},
-    {name : "پیوستن به ما", href : "#"},
-    {name : "درباره ما", href : "#"},
+    {name : "خانه", href : "/"},
+    {name : "پیوستن به ما", href : "/contact"},
+    {name : "کلاس ها", href : "/courses"},
     {name : "وبلاگ", href : "/blog"},
-    {name : "رویدادها", href : "#"},
+    {name : "رویدادها", href : "/events"},
 ]
 
 export const FooterLinksData2 : FooterLinksDataProps[] = [
-    {name : "تیم ما", href : "#"},
-    {name : "قوانین و مقررات", href : "#"},
-    {name : "دریافت گواهی ", href : "#"},
-    {name : "انتقادات و پیشنهادات", href : "#"},
-    {name : "چشم انداز", href : "#"},
+    {name : "تیم ما", href : "/team"},
+    {name : "قوانین و مقررات", href : "/roles"},
+    {name : "درباره ما", href : "/about"},
+    {name : "انتقادات و پیشنهادات", href : "/contact"},
+    {name : "چشم انداز", href : "/about"},
 ]

@@ -18,14 +18,14 @@ const Inviting : React.FC = () => {
                     text="میتونم آنلاین تدریس کنم"
                     btnText="همین الان ثبت نام کن"
                     cls="sm:col-span-1 col-span-2"
-                    href="/contact-us"
+                    href="/contact"
                     src="/images/home/teacher-man-with-book.jpg"
                 />
                 <OpaCart
                     text="میتونم محتوا تولید کنم"
                     btnText="همین الان شروع کن"
                     cls="sm:col-span-1 col-span-2"
-                    href="/contact-us"
+                    href="/contact"
                     src="/images/home/woman-making-beauty-vlog-with-her-professional-camera.jpg"
                 />
             </main>

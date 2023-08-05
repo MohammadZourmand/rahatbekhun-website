@@ -8,6 +8,7 @@ import Paragraph from "@/components/global/elements/paragraph";
 import Heading4 from "@/components/global/elements/headings/h4";
 
 import error404 from "@/assets/animation/lottieFiles/error-404.json";
+import Footer from "@/components/global/footer";
 
 const UndefinedPage : NextPage = () => {
 
@@ -22,6 +23,7 @@ const UndefinedPage : NextPage = () => {
                     <Link className="text-baby-9 font-semibold mt-4 block" href={"/"}> برگردیم به خانه </Link>
                 </div>
             </div>
+            <Footer />
         </>
     )
 }
