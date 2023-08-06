@@ -9,7 +9,12 @@ export interface CartItemsProps {
     img : string
 }
 
-const initialState : CartItemsProps[] = []
+const initialState : CartItemsProps[] = [{
+  price : 465,
+  link : "سلام خوبی",
+  name : "سلام خوبی",
+  img : "/images/home/big-discount-champions-learning-event.jpg",
+}]
 
 export const cartProducts = createSlice({
   name: 'cartProducts',
