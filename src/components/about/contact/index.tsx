@@ -5,7 +5,7 @@ import Paragraph from "@/components/global/elements/paragraph";
 const Contact = () => {
 
     return (
-        <section className="grid grid-cols-12 gap-4 lg:px-56 mx-auto py-24 bg-gray-200/70">
+        <section className="grid grid-cols-12 gap-4 2xl:px-56 lg:px-24 mx-auto py-24 bg-gray-200/70">
             <div className="mb-12 col-span-12 self-end relative">
                 <Heading1 
                     text="اگه قصد کمک داری به ما رو داری ما چشم به راهتیم !"
@@ -18,7 +18,7 @@ const Contact = () => {
                     cls="font-medium text-gray-500/80 text-[.84rem] !leading-loose mb-2 pl-2"
                 />
             </div>
-            <div className="grid grid-cols-2 lg:gap-6 gap-4 col-span-12 relative mx-16">
+            <div className="grid grid-cols-2 lg:gap-6 gap-4 col-span-12 relative lg:mx-4 xs:mx-16 mx-4">
                 <OpaCart
                     text="میتونم آنلاین تدریس کنم"
                     btnText="همین الان ثبت نام کن"

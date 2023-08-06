@@ -9,7 +9,7 @@ import IconBtn from "@/components/global/elements/buttons/iconBtn";
 const Team = () => {
 
     return (
-        <section className="grid grid-cols-12 gap-4 max-w-5xl mx-auto my-40">
+        <section className="grid grid-cols-12 gap-4 md:px-0 px-2 max-w-5xl mx-auto my-40">
             <div className="mb-12 col-span-12 self-end relative">
                 <Heading1 
                     text="چه کسایی داخل راحت بخون کار میکنن ؟"
@@ -22,11 +22,11 @@ const Team = () => {
                     cls="font-medium text-gray-500/80 text-[.84rem] !leading-loose mb-2 pl-2"
                 />
             </div>
-            <div className="col-span-12 grid grid-cols-12 gap-12 relative mx-16">
+            <div className="col-span-12 grid grid-cols-12 md:gap-12 sm:gap-6 gap-y-8 relative mx-16">
                 {
                     teamData.map((item) => {
                         return (
-                            <div className="transition duration-500 hover:scale-110 p-6 col-span-4 flex flex-col items-center">
+                            <div className="transition duration-500 hover:scale-110 xs:p-6 md:col-span-4 sm:col-span-6 col-span-12 flex flex-col items-center">
                                 <div className="">
                                     <img className="rounded-full hover:scale-105 transition duration-500" src={item.imgSrc} alt={item.name} />
                                 </div>
@@ -54,7 +54,7 @@ const Team = () => {
                         )
                     })
                 }
-                <Link href={"/contact"} className="transition duration-500 hover:scale-110 p-6 col-span-4 flex flex-col items-center justify-center">
+                <Link href={"/contact"} className="transition duration-500 hover:scale-110 p-6 md:col-span-4 sm:col-span-6 col-span-12 flex flex-col items-center justify-center">
                     <AddUserBrokenIcon cls="fill-baby-9 w-12 h-12" />
                     <div className="my-3 font-semibold">
                         <h1 className="text-center text-baby-9 my-3">عضو جدید باش !</h1>

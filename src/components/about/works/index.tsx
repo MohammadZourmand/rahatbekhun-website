@@ -5,11 +5,11 @@ import {convertEnToPe} from "persian-number"
 const Works = () => {
 
     return (
-        <section className="grid grid-cols-12 gap-4 max-w-5xl mx-auto my-40">
+        <section className="grid grid-cols-12 md:p-0 p-2 gap-4 max-w-5xl mx-auto my-40">
             <div className="mb-12 col-span-12 self-end relative">
                 <Heading1 
                     text="در راحت بخون چه چیزهایی وجود دارند ؟"
-                    cls="!text-xl mb-6"
+                    cls="!text-xl mb-6 !mt-0"
                     center={true}
                 />
                 <Paragraph
@@ -18,10 +18,10 @@ const Works = () => {
                     cls="font-medium text-gray-500/80 text-[.84rem] !leading-loose mb-2 pl-2"
                 />
             </div>
-            <div className="col-span-12 relative mx-16">
+            <div className="col-span-12 relative md:mx-16">
                 <Paragraph
                     text="پیشرفت راحت بخون در کنار شما"
-                    cls="absolute top-28 -right-36 rotate-90 font-medium"    
+                    cls="absolute md:block hidden top-28 -right-36 rotate-90 font-medium"    
                 />
                 <img src="/images/about/children-with-their-hands-up.jpg" className="rounded-lg shadow-all-lg" alt="girl-choosing-right-way-to-go" />
             </div>
