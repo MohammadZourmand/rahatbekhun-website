@@ -7,13 +7,15 @@ export interface CartItemsProps {
     link : string
     name : string
     img : string
+    offPrecent : number
 }
 
 const initialState : CartItemsProps[] = [{
   price : 465,
   link : "سلام خوبی",
-  name : "سلام خوبی",
+  name : "آموزش پیشرفته ریاضیات گسسته",
   img : "/images/home/big-discount-champions-learning-event.jpg",
+  offPrecent : 45,
 }]
 
 export const cartProducts = createSlice({

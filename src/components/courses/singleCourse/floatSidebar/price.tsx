@@ -38,7 +38,7 @@ const PriceBox : React.FC<PriceBoxProps> = ({
                     )
                     : (
                         <>
-                            <FaSpan cls={`${priceCls} text-3xl font-semibold text-gray-800`} value={offPercent && Math.round(price*(100 - offPercent)/100)} />
+                            <FaSpan cls={`${priceCls} text-3xl font-semibold text-gray-800`} value={offPercent !== undefined && Math.round(price*(100 - offPercent)/100)} />
                         </>
                     )
 

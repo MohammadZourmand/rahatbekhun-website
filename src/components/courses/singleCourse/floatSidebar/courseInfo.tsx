@@ -17,10 +17,11 @@ const CourseInfoSidebar : React.FC = () => {
         let {price, offPercent, name, courseLink, imgLabel} = courseDetails
        
         dispatch(addProduct({
-            price : offPercent ? price*(100-offPercent)/100 : price,
+            price : price,
             link : courseLink,
             name : name,
-            img : imgLabel
+            img : imgLabel,
+            offPrecent : offPercent
         }))
     }
 
