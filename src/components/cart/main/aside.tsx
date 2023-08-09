@@ -12,14 +12,14 @@ interface CartMainAsideProps {
 const CartMainAside : React.FC<CartMainAsideProps> = ({cls}) => {
 
     return (
-        <aside className={`${cls} col-span-3 flex flex-col`}>
-            <div className="shadow-all-lg px-6 pb-8 pt-3 rounded-xl">
+        <aside className={`${cls} lg:order-1 order-2 xl:col-span-3 lg:col-span-4 col-span-12 flex flex-col`}>
+            <div className="flex flex-col items-center shadow-all-lg px-6 pb-8 pt-3 rounded-xl">
                 <Lottie className="w-72 h-72" animationData={ManShopping}/>                
                 <Heading4 
                     text="جزئیات سبد خرید"
                     cls="!text-baby-9 !text-3xl"
                 />
-                <div className="space-y-4 mt-6">
+                <div className="flex flex-col w-full space-y-4 mt-6">
                     <div className={"flex items-center justify-between"}>
                         <Paragraph
                             cls="font-medium" 

@@ -2,7 +2,7 @@ import { SuccsesToast, WarningToast } from '@/components/lib/swal'
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
-export interface CartItemsProps {
+export interface cartItemsProps {
     price : number
     link : string
     name : string
@@ -10,7 +10,7 @@ export interface CartItemsProps {
     offPrecent : number
 }
 
-const initialState : CartItemsProps[] = [{
+const initialState : cartItemsProps[] = [{
   price : 465,
   link : "سلام خوبی",
   name : "آموزش پیشرفته ریاضیات گسسته",
@@ -29,7 +29,7 @@ export const cartProducts = createSlice({
           state.push(action.payload)
           SuccsesToast("محصول به سبد خرید اضافه شد !")
         } else {
-          state?.forEach((product : CartItemsProps) => {
+          state?.forEach((product : cartItemsProps) => {
             if(product.link !== link) {
               state.push(action.payload)
               SuccsesToast("محصول به سبد خرید اضافه گردید !")
@@ -42,11 +42,18 @@ export const cartProducts = createSlice({
       },
       emptyCart : () => {
         return []
+      },
+      deleteProduct : (state, action) => {
+        SuccsesToast("FUCK YOU !")
+
+        return state.filter((item) => {
+          return item.link !== action.payload
+        })
       }
     },
   },
 )
 
-export const { addProduct, emptyCart } = cartProducts.actions
+export const { addProduct, emptyCart, deleteProduct } = cartProducts.actions
 
 export default cartProducts.reducer
