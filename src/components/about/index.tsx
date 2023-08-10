@@ -1,5 +1,6 @@
 import PageHeader from "../global/elements/header/pageHeader";
 import Footer from "../global/footer";
+import Wave from "../global/waves/wave";
 import Contact from "./contact";
 import Creation from "./creation";
 import Goal from "./goal";
