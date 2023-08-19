@@ -7,7 +7,7 @@ const FloatedPictures : FC = () => {
             <img
                 src="/images/courses/page-title-shape-1.webp"
                 alt="page-title-shape-1"
-                className="absolute top-[30rem] right-0 scale-[-1]"
+                className="absolute lg:block hidden top-[30rem] right-0 scale-[-1]"
             />
             <img
                 src="/images/courses/page-title-shape-6.webp"

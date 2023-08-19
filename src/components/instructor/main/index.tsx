@@ -13,16 +13,16 @@ import FloatedPictures from "./floated";
 const InstructorMain : FC = () => {
 
     return (
-        <main className="grid grid-cols-3 gap-x-16 max-w-7xl mx-auto mt-32">
+        <main className="grid grid-cols-3 lg:gap-x-16 px-3 sm:px-8 lg:px-0 max-w-7xl mx-auto mt-32">
             <FloatedPictures />
-            <div className="relative col-span-1 rounded-lg">
+            <div className="relative col-span-3 sm:col-span-2 lg:col-span-1 rounded-lg">
                 <div className="w-40 h-40 rounded-full -z-10 absolute top-40 -left-8 bg-sky-500/10"></div>
                 <img className="rounded-lg z-10" src="/images/home/teachers/mohammad-zourmand.jpg" alt="" />
             </div> 
-            <div className="col-span-2 flex flex-col">
-                <div className="border-b pb-6 flex items-end justify-between">
-                    <div className="flex flex-col space-y-1">
-                        <Heading3 
+            <div className="col-span-3 lg:col-span-2 flex flex-col">
+                <div className="border-b pb-6 flex md:flex-row flex-col gap-y-7 md:items-end justify-between">
+                    <div className="flex flex-col gap-y-1 mt-8">
+                        <Heading3
                             text="محمد زورمند"
                             cls="text-gray-800 !text-4xl !font-black"
                         />
@@ -43,7 +43,7 @@ const InstructorMain : FC = () => {
                             <AparatIcon cls="fill-gray-500 w-4 h-4 hover:fill-baby-9 cursor-pointer"/>
                         </div>
                     </div>
-                    <button className="group hover:border-baby-9 hover:bg-baby-9 transition duration-500 flex rounded-lg px-4 py-2 border border-gray-200 text-gray-700">
+                    <button className="group hover:border-baby-9 hover:bg-baby-9 transition duration-500 self-start md:self-end flex rounded-lg px-4 py-2 border border-gray-200 text-gray-700">
                         <span className="group-hover:text-white transition duration-500 tracking-tight font-semibold">دنبال کردن</span>
                     </button>
                 </div>
@@ -65,7 +65,7 @@ const InstructorMain : FC = () => {
                     <div className="grid grid-cols-2 gap-7 mt-10">
                         {
                             coursesData?.map((item, index) => {
-                                return index < 4 && <Card key={index} cls="col-span-1" item={item}/>
+                                return index < 4 && <Card key={index} cls="col-span-2 md:col-span-1" item={item}/>
                             })
                         }
                     </div>
