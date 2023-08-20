@@ -26,14 +26,14 @@ const FilterBox : React.FC<FilterBoxProps> = ({
     }
 
     return (
-        <div className={`${cls} flex flex-col items-start`}>
+        <div className={`${cls} flex flex-col`}>
             <span className="lg:text-white text-gray-800 mr-1">{titleTranslator(name)}</span>
             <Selecter 
                 options={options}
                 name={name}
                 setter={handler}
                 values={values}
-                cls="mt-[5px] w-full"
+                cls="mt-[5px] xs:w-full"
                 optionsListCls="!z-50"
             />
         </div>

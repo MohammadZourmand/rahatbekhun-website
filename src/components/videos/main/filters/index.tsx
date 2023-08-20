@@ -5,6 +5,7 @@ import { useState, Dispatch, SetStateAction } from "react";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
 import { WarningToast } from "@/components/lib/swal";
 import { filtersInfo } from "./filtersInfo";
+import { FilterBrokenIcon } from "@/assets/icons";
 
 interface FiltersProps {
     showFilters : boolean
@@ -29,7 +30,7 @@ const Filters : React.FC<FiltersProps> = ({setShowFilters, showFilters}) => {
             initialValues={initialValues}
             onSubmit={() => {WarningToast("اطلاعات دریافت شد !")}}
         >
-            <Form className={`${showFilters && "!block "} p-8 lg:p-0 lg:w-full w-[96vw] lg:block hidden fixed top-16 mx-auto lg:backdrop-blur-0 backdrop-blur-md bg-gray-100/90 z-50 lg:z-0 lg:bg-transparent lg:absolute xl:-top-48 lg:-top-40 xs:p-8 rounded-lg`}>
+            <Form className={`${showFilters && "!block "} px-2 py-8 xs:px-8 lg:p-0 lg:w-full w-[96vw] lg:block hidden fixed top-16 mx-auto lg:backdrop-blur-0 backdrop-blur-md bg-gray-100/90 z-50 lg:z-0 lg:bg-transparent lg:absolute xl:-top-48 lg:-top-40 rounded-lg`}>
                 <fieldset className="grid grid-cols-10 gap-8 w-full">
                     {
                         Object.entries(filtersInfo).map((item, index) => {
