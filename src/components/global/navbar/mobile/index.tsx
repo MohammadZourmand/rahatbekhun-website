@@ -1,11 +1,11 @@
 import { Dispatch, SetStateAction } from "react";
 
 import CloseIcon from "./closeIcon";
-import WebsiteName from "../../elements/cards/websiteName";
 import Links from "./links";
 import UserBtns from "./userBtns";
 import NavImg from "./navImg";
 import Shadow from "./shadow";
+import WebsiteName from "../../elements/boxes/websiteName";
 
 interface MobileNavbarProps {
     setShowNavbar : Dispatch<SetStateAction<boolean>>,
@@ -18,9 +18,9 @@ const MobileNavbar : React.FC<MobileNavbarProps> = ({
 }) => {
 
     return (
-        <div className={`${showNavbar ? "block" : "hidden"} fixed top-0 left-0 w-full h-full z-[999]`}>
+        <div className={`fixed top-0 left-0 w-full h-full z-[9999]`}>
             <Shadow setShowNavbar={setShowNavbar} />
-            <div className="fixed flex flex-col items-start px-8 py-6 right-0 top-0 h-screen bg-white overflow-y-auto z-[99999]">
+             <div className="fixed animate-comeFromRight flex flex-col items-start px-4 py-6 right-0 top-0 h-screen bg-white overflow-y-auto z-[99999]">
                 <CloseIcon
                     state={showNavbar}
                     setState={setShowNavbar}

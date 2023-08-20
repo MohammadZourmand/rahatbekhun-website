@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { AparatIcon, InstagramIcon, LinkedinIcon, PlusIcon } from "@/assets/icons";
+import { AparatIcon, InstagramIcon, LinkedinIcon } from "@/assets/icons";
 import { coursesData } from "@/components/data/coursesData";
 
 import FiveStarsWithScore from "@/components/global/elements/boxes/stars/fiveStarsWithScore";

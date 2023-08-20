@@ -1,5 +1,4 @@
 // ? react & next ================
-import Link from "next/link";
 import {useState} from "react";
 
 // ? libraries ===================
@@ -26,9 +25,6 @@ const PopupIcons : React.FC<PopupIconsProps> = ({isWhite}) => {
             <Cart isWhite={isWhite}/>
             <Messages isWhite={isWhite} />
             <UserPanelPopup isWhite={isWhite} />
-            <Link href={"/profile"} className={`${linkStyle} lg:hidden`}>
-                <CategoryBroken cls={"group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
-            </Link>
         </>
     )
 }

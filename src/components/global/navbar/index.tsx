@@ -1,9 +1,8 @@
-// ? react =======================
-import {useState} from "react";
 
 // ? components ==================
 import ComputerNavbar from "./computer";
-import SearchModal from "./searchModal";
+import WindowSize from "../functions/windowSize";
+import FloatBtn from "./mobile/floatBtn";
 
 interface NavbarProps {
     cls ?: string
@@ -12,13 +11,15 @@ interface NavbarProps {
 
 const Navbar : React.FC<NavbarProps> = ({cls, isWhite}) => {
 
-    const [isFocus, setIsFocus] = useState<boolean>(false)
     
     return (
-        <nav className={`${cls} grid grid-cols-12 w-full px-4 items-center`}>
-            {/* <SearchModal isFocus={isFocus} setIsFocus={setIsFocus} /> */}
-            <ComputerNavbar isWhite={isWhite} setIsFocusOnSearch={setIsFocus} cls="col-span-12"/>
-        </nav>
+        <>
+            <nav className={`${cls} grid grid-cols-12 w-full px-4 items-center`}>
+                {/* <SearchModal isFocus={isFocus} setIsFocus={setIsFocus} /> */}
+                <ComputerNavbar isWhite={isWhite} cls="col-span-12"/>
+            </nav>
+            {WindowSize().width <= 1024 && <FloatBtn />}
+        </>
     )
 }
 

@@ -1,11 +1,11 @@
 
-export interface GradesBoxProps {
+export interface gradesBoxProps {
     name : string
     img : string
     href : string
 }
 
-export const GradesBox : GradesBoxProps[] = [
+export const gradesBox : gradesBoxProps[] = [
     {
         name : "پایه اول",
         img : "/images/digits/1.png",
@@ -38,7 +38,7 @@ export const GradesBox : GradesBoxProps[] = [
     }
 ]
 
-export const ExamsSubMenuInfo : GradesBoxProps[] = [
+export const ExamsSubMenuInfo : gradesBoxProps[] = [
     {
         name : "آزمون فردی",
         img : "/images/home/searchTypes/individual.png",
@@ -61,7 +61,7 @@ export const ExamsSubMenuInfo : GradesBoxProps[] = [
     },
 ]
 
-export const GamesSubMenuInfo : GradesBoxProps[] = [
+export const GamesSubMenuInfo : gradesBoxProps[] = [
     {
         name : "ریاضی",
         img : "/images/home/searchTypes/math.png",
@@ -94,7 +94,7 @@ export const GamesSubMenuInfo : GradesBoxProps[] = [
     }
 ]
 
-export const VideosSubMenuInfo : GradesBoxProps[] = [
+export const VideosSubMenuInfo : gradesBoxProps[] = [
     {
         name : "برای دانش آموزان",
         img : "/images/home/searchTypes/students.png",
