@@ -55,8 +55,8 @@ const SingleArticlesMainText : FC<SingleArticlesMainTextProps> = ({
             <div className="flex flex-col md:flex-row gap-y-4 justify-between items-center border-t border-gray-100 pt-16">
                 <div className="flex gap-4">
                 {
-                    ["خواندن", "سریع خواندن", "بازدهی خواندن"].map((item : string) => (
-                        <TagBox value={item} func={() => console.log(item)}/>
+                    ["خواندن", "سریع خواندن", "بازدهی خواندن"].map((item : string, index : number) => (
+                        <TagBox key={index} value={item} func={() => console.log(item)}/>
                     ))
                 }
                 </div>

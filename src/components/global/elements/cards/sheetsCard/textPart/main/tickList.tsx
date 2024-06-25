@@ -13,7 +13,7 @@ const TickList : React.FC<TickListProps> = ({options, iconCls, liCls, cls}) => {
         <ul className={`${cls} list-none`}>
             {
                 options.map((item : string, index) => (
-                    <LiTickIcon cls={liCls} iconCls={iconCls} text={item} />
+                    <LiTickIcon key={index} cls={liCls} iconCls={iconCls} text={item} />
                 ))
             }
         </ul>

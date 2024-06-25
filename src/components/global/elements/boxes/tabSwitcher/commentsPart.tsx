@@ -33,9 +33,9 @@ const CommentsCourseParts : React.FC<CommentsCoursePartsProps> = () => {
                         <Heading6 cls="text-gray-800 font-medium !text-base" text="ریز نمرات دوره"/>
                         <div className="mt-6">
                             {
-                                [1,2,3,4,5].map((item : number) => {
+                                [1,2,3,4,5].map((item : number, index : number) => {
                                     return (
-                                        <div className="grid grid-cols-12 items-center justify-center py-2">
+                                        <div key={index} className="grid grid-cols-12 items-center justify-center py-2">
                                             <FaSpan cls="sm:col-span-2 col-span-3 text-gray-600" value={`${item} ستاره`} />
                                             <StaticProgressbar cls="sm:col-span-8 col-span-6" completed={1} all={5} />
                                             <FaSpan cls="sm:col-span-2 col-span-3 text-center text-gray-600" value={`${1/5*100} %`} />

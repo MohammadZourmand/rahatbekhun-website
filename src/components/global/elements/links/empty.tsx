@@ -8,7 +8,7 @@ interface ExampleProps {
 const Example : FC<ExampleProps> = () => {
 
     return (
-
+        <></>
     )
 }
 

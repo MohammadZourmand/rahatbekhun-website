@@ -1,9 +1,9 @@
 import PriceBox from "@/components/courses/singleCourse/floatSidebar/price"
-import { CartItemsProps } from "@/store/slices/cart"
+import { cartItemsProps } from "@/store/slices/cart"
 import Link from "next/link"
 
 interface ProductsProps {
-    product : CartItemsProps
+    product : cartItemsProps
 }
 
 const Products : React.FC<ProductsProps> = ({product}) => {
