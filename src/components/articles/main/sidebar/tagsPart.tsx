@@ -1,13 +1,10 @@
 import TagBox from "@/components/global/elements/boxes/tag";
 import Heading6 from "@/components/global/elements/headings/h6";
 
-interface TagsPartProps {
-    cls ?: string
-}
 
 const mostViewedTags = ["بازی و ریاضی","نقاشی","طراحی","تدریس خلاقانه","تدریس دوطرفه","آزمایش","کوروش"]
 
-const TagsPart : React.FC<TagsPartProps> = () => {
+const TagsPart = () => {
 
     return (
         <div className="lg:mt-12 mt-6">

@@ -6,11 +6,7 @@ interface WhiteBtnProps {
     href : string
 }
 
-const WhiteBtn : React.FC<WhiteBtnProps> = ({
-    href,
-    cls,
-    text
-}) => {
+const WhiteBtn = ({href,cls,text} : WhiteBtnProps) => {
 
     return (
         <Link className={`${cls} hover:bg-white hover:text-gray-700 transition duration-500 text-white border border-white rounded-md px-4 py-2`} href={href}>

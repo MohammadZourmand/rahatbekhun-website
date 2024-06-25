@@ -4,7 +4,7 @@ interface FiveStarsProps {
     cls ?: string
 }
 
-const FiveStars : React.FC<FiveStarsProps> = ({cls}) => {
+const FiveStars = ({cls} : FiveStarsProps) => {
 
     return (
         <div className={`flex ${cls}`}>

@@ -6,7 +6,7 @@ interface WorksheetCardHeaderProps {
     item : worksheetsDataProps
 }
 
-const WorksheetCardHeader : React.FC<WorksheetCardHeaderProps> = ({item}) => {
+const WorksheetCardHeader = ({item} : WorksheetCardHeaderProps) => {
     return (
         <header className="flex flex-col items-center mb-2">
             <Heading1

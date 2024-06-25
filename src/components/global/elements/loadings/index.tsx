@@ -7,7 +7,7 @@ interface LoadingsProps {
     loadingText : string
 }
 
-const Loadings : React.FC<LoadingsProps> = ({loadingText}) => {
+const Loadings = ({loadingText} : LoadingsProps) => {
 
     const loadingType = useSelector((state : RootState) => state.setLoadingSlice.loadingType)
 

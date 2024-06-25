@@ -4,11 +4,8 @@ import SectionHeader from "@/components/global/elements/header/sectionHeader";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
 import { cardsInfo } from "../bestArticles/data";
 
-export interface NewArticlesProps {
 
-}
-
-const NewArticles : React.FC<NewArticlesProps> = () => {
+const NewArticles = () => {
 
     return (
         <section>

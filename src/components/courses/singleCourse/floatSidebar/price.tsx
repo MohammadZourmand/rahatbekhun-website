@@ -11,7 +11,7 @@ interface PriceBoxProps {
     lineCls ?: string
 }
 
-const PriceBox : React.FC<PriceBoxProps> = ({
+const PriceBox = ({
     withoutOff,
     isOff,
     offPercent,
@@ -20,7 +20,7 @@ const PriceBox : React.FC<PriceBoxProps> = ({
     priceCls,
     markCls,
     lineCls
-}) => {
+} : PriceBoxProps) => {
 
     return (
         <div className={`${cls} flex items-center relative`}>

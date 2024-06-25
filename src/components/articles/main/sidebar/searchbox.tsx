@@ -7,7 +7,7 @@ interface SearchboxProps {
     cls ?: string
 }
 
-const Searchbox : React.FC<SearchboxProps> = () => {
+const Searchbox = ({cls} : SearchboxProps ) => {
 
     const submitHandler = (values) => {
         console.log(values)

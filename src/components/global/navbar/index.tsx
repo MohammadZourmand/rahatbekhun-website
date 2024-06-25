@@ -10,13 +10,14 @@ const FloatBtn = lazy(() => import(/* webpackChunkName : "float-btn" */"./mobile
 
 interface NavbarProps {
     isWhite : boolean
+    cls ?: string
 }
 
-const Navbar = ({isWhite} : NavbarProps) => {
+const Navbar = ({isWhite, cls} : NavbarProps) => {
     
     return (
         <>
-            <nav className={`min-w-[320px] grid grid-cols-12 w-full px-4 items-center`}>
+            <nav className={`${cls} min-w-[320px] grid grid-cols-12 w-full px-4 items-center`}>
                 <ComputerNavbar isWhite={isWhite} cls="col-span-12"/>
             </nav>
             <Suspense fallback={<p> Hello </p>}>

@@ -4,11 +4,7 @@ import SectionHeader from "@/components/global/elements/header/sectionHeader";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
 import { cardsInfo } from "./data";
 
-export interface BestArticlesProps {
-
-}
-
-const BestArticles : React.FC<BestArticlesProps> = () => {
+const BestArticles = () => {
 
     return (
         <section className="mb-24">

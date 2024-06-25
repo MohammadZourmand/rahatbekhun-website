@@ -36,9 +36,7 @@ const IconChooser = (value : string) => {
     }
 }
 
-const MiniIconTextBox : React.FC<MiniIconTextBoxProps> = ({
-    text, icon, cls
-}) => {
+const MiniIconTextBox = ({text, icon, cls} : MiniIconTextBoxProps ) => {
     
     return (
         <div className={`${cls} flex items-center`}>

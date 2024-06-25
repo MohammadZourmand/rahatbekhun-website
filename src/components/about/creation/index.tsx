@@ -10,7 +10,10 @@ const Creation = () => {
                     text="داستان راحت بخون"
                     cls="md:block hidden absolute top-16 -left-32 -rotate-90 font-medium"    
                 />
-                <img src="/images/about/question-mark-icon-thinking-solution.jpg" className="rounded-lg shadow-all-lg" alt="girl-choosing-right-way-to-go" />
+                <img 
+                src="/images/about/question-mark-icon-thinking-solution.jpg" 
+                className="rounded-lg shadow-all-lg" 
+                alt="girl-choosing-right-way-to-go" />
             </div>
             <div className="md:order-2 order-1 md:mb-0 lg:mb-12 md:col-span-6 col-span-12 self-end relative">
                 <Heading1 

@@ -15,7 +15,7 @@ interface SingleArticlePageHeaderProps {
     date : string
 }
 
-const SingleArticlePageHeader : React.FC<SingleArticlePageHeaderProps> = ({
+const SingleArticlePageHeader = ({
     title,
     imgBgSrc,
     imgBgAlt,
@@ -24,7 +24,7 @@ const SingleArticlePageHeader : React.FC<SingleArticlePageHeaderProps> = ({
     category,
     author,
     date
-}) => {
+} : SingleArticlePageHeaderProps) => {
 
     return (
         <header className={` lg:bg-[center_top_-8rem]

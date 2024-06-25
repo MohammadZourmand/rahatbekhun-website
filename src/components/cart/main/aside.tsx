@@ -9,7 +9,7 @@ interface CartMainAsideProps {
     cls ?: string
 }
 
-const CartMainAside : React.FC<CartMainAsideProps> = ({cls}) => {
+const CartMainAside = ({cls} : CartMainAsideProps) => {
 
     return (
         <aside className={`${cls} lg:order-1 order-2 xl:col-span-3 lg:col-span-4 col-span-12 flex flex-col`}>

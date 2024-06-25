@@ -10,9 +10,7 @@ interface RelatedCoursesProps {
     cls ?: string
 }
 
-const RelatedCourses : React.FC<RelatedCoursesProps> = ({
-    cls
-}) => {
+const RelatedCourses = ({cls} : RelatedCoursesProps) => {
 
     return (
         <div className={`${cls} flex flex-col sm:gap-10 mt-12`}>

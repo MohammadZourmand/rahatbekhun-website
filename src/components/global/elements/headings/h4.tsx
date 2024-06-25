@@ -1,14 +1,14 @@
 
 import { HeadingsProps } from "./h2";
 
-const Heading4 : React.FC<HeadingsProps> = ({
+const Heading4 = ({
     cls,
     text,
     color,
     isNozha,
     center,
     weight
-}) => {
+} : HeadingsProps) => {
 
     return (
         <h4

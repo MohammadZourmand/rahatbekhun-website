@@ -10,7 +10,7 @@ interface FloatSidebarProps {
     cls ?: string
 }
 
-const FloatSidebar : React.FC<FloatSidebarProps> = ({cls}) => {
+const FloatSidebar = ({cls} : FloatSidebarProps) => {
     
     return (
         <aside className={`${cls} relative flex flex-col gap-y-8 lg:mt-0 mt-12 lg:mx-0 mx-2`}>

@@ -8,7 +8,7 @@ interface CartTextPartProps {
     item : courseInfoType
 }
 
-const CartTextPart : React.FC<CartTextPartProps> = ({item}) => {
+const CartTextPart = ({item} : CartTextPartProps) => {
         
     return (
         <div className="relative flex flex-col py-3">

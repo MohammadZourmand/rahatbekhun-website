@@ -1,6 +1,6 @@
 import Heading1 from "@/components/global/elements/headings/h1";
 import Paragraph from "@/components/global/elements/paragraph";
-convertEnToPe} from "persian-number"
+import {convertEnToPe} from "persian-number"
 const Goal = () => {
 
     return (

@@ -8,7 +8,7 @@ import BlueBtn from "@/components/global/elements/buttons/blue";
 import SubjectBox from "./subjectBox";
 import { courseDetails } from "@/components/global/elements/boxes/tabSwitcher/courseInfo";
 
-const CourseInfoSidebar : React.FC = () => {
+const CourseInfoSidebar = () => {
 
     const dispatch = useDispatch<AppDispatch>()
 

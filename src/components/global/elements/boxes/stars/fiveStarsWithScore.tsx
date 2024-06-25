@@ -5,9 +5,7 @@ interface FiveStarsWithScoreProps {
     votesNumber : number
 }
 
-const FiveStarsWithScore : React.FC<FiveStarsWithScoreProps> = ({
-    votesNumber
-}) => {
+const FiveStarsWithScore = ({votesNumber} : FiveStarsWithScoreProps) => {
 
     return (
         <div className="flex items-center">

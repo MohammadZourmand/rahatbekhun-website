@@ -11,7 +11,7 @@ import Heading1 from "../../headings/h1";
 import Link from "next/link";
 import { badgeBgColorChooser, badgeTextColorChooser, badgeTextTranslator } from "../../translators/badgeColorChooser";
 
-const Card2 : React.FC<Card2Type> = ({item, cls}) => {
+const Card2 = ({item, cls} : Card2Type) => {
 
     return (
         <section className={`${cls} group rounded-lg bg-white shadow-lg`}>

@@ -10,7 +10,7 @@ interface SliderProps {
     cls ?: string
 }
 
-const Slider : React.FC<SliderProps> = ({cls}) => {
+const Slider = ({cls} : SliderProps) => {
     
     return (
             <Swiper

@@ -5,11 +5,7 @@ interface ButtonProps {
     text : string
 }
 
-const GrayButton : React.FC<ButtonProps> = ({
-    cls,
-    btnType,
-    text
-}) => {
+const GrayButton = ({ cls, btnType, text } : ButtonProps) => {
     
     return (
         <button

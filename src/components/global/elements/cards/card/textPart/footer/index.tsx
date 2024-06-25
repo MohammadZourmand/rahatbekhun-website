@@ -10,7 +10,7 @@ interface CartTextFooterProps {
     item : courseInfoType
 }
 
-const CartTextFooter : React.FC<CartTextFooterProps> = ({item}) => {
+const CartTextFooter = ({item} : CartTextFooterProps) => {
 
     const { offPrecent, price, href } = item
 

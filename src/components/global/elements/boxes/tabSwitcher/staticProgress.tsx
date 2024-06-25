@@ -5,11 +5,7 @@ interface StaticProgressbarProps {
     cls ?: string
 }
 
-const StaticProgressbar : React.FC<StaticProgressbarProps> = ({
-    completed,
-    all,
-    cls
-}) => {
+const StaticProgressbar = ({completed,all,cls} : StaticProgressbarProps) => {
     
     const calcWidth = () => {
         let widthSize = completed/all*100

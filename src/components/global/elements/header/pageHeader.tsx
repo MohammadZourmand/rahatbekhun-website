@@ -9,13 +9,13 @@ interface PageHeaderProps {
     cls ?: string
 }
 
-const PageHeader : React.FC<PageHeaderProps> = ({
+const PageHeader = ({
     title,
     breadcrumbItems,
     imgBgSrc,
     imgBgCls,
     cls
-}) => {
+} : PageHeaderProps) => {
 
     return (
         <header className={` lg:bg-[center_top_-8rem]

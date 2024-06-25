@@ -11,9 +11,9 @@ interface SelecterProps {
     optionsListCls ?: string
 }
 
-const Selecter : React.FC<SelecterProps> = ({
+const Selecter = ({
     options, setter, name, values, cls, optionsListCls, btnCls
-}) => {
+} : SelecterProps) => {
 
     const [isOpen, setIsOpen] = useState(false)
     

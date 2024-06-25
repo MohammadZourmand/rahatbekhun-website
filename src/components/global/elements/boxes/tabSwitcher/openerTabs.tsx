@@ -11,9 +11,7 @@ interface TabOpenerProps {
     index : number
 }
 
-
-
-const TabOpener : React.FC<TabOpenerProps> = ({item, index}) => {
+const TabOpener = ({item, index} : TabOpenerProps) => {
     const [showPartList, setShowPartList] = useState<boolean>(false)
 
     return (

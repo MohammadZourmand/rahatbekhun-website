@@ -13,7 +13,7 @@ interface WorksheetCardFooterProps {
     item : worksheetsDataProps
 }
 
-const WorksheetCardFooter : React.FC<WorksheetCardFooterProps> = ({item}) => {
+const WorksheetCardFooter = ({item} : WorksheetCardFooterProps) => {
 
     const dispatch = useDispatch()
 

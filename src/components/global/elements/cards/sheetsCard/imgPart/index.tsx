@@ -5,7 +5,7 @@ interface SheetsCardImgPartProps {
     cls ?: string
 }
 
-const SheetsCardImgPart : React.FC<SheetsCardImgPartProps> = ({item, cls}) => {
+const SheetsCardImgPart = ({item, cls} : SheetsCardImgPartProps) => {
 
     return (
         <div className={`${cls} group absolute -top-12 shadow-all-lg sm:h-1/2 h-[38%] w-11/12 mx-auto rounded-md`}>

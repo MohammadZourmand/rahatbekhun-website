@@ -11,7 +11,7 @@ interface OpaCartProps {
     textCls ?: string
 }
 
-const OpaCart : React.FC<OpaCartProps> = ({
+const OpaCart = ({
     text,
     btnText,
     href,
@@ -19,7 +19,7 @@ const OpaCart : React.FC<OpaCartProps> = ({
     src,
     btnCls,
     textCls
-}) => {
+} : OpaCartProps) => {
 
     return (
         <div className={`${cls} group relative flex items-center overflow-hidden rounded-lg`}>

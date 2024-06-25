@@ -5,7 +5,7 @@ interface MatchedArticles {
     cls ?: string
 }
 
-const MatchedArticles : React.FC<MatchedArticles> = () => {
+const MatchedArticles = ({cls} : MatchedArticles) => {
 
     return (
         <main className="lg:col-span-8 col-span-12 lg:p-0 sm:py-12 md:px-12 sm:px-28 xs:p-4">

@@ -8,11 +8,7 @@ interface TransparentBtnProps {
 }
 
 
-const TransparentBtn : React.FC<TransparentBtnProps> = ({
-    cls,
-    text,
-    href
-}) => {
+const TransparentBtn = ({cls,text,href}: TransparentBtnProps) => {
 
     return (
         <Link className={`${cls} flex items-center gap-1 transition group bg-transparent text-gray-900  rounded-md px-5 py-2`} href={href}>

@@ -7,7 +7,7 @@ interface ArticlesSideBarProps {
     cls ?: string
 }
 
-const ArticlesSideBar : React.FC<ArticlesSideBarProps> = () => {
+const ArticlesSideBar = ({cls} : ArticlesSideBarProps) => {
 
     return (
         <aside className="lg:col-span-4 col-span-12 flex flex-col md:px-12 sm:px-28 xs:p-4 lg:p-0 mt-8 xs:mt-0">

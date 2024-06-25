@@ -6,12 +6,12 @@ interface BgColorfulBadgeProps {
     cls ?: string
 }
 
-const BgColorfulBadge : React.FC<BgColorfulBadgeProps> = ({
+const BgColorfulBadge = ({
     color,
     darkness,
     text,
     cls
-}) => {
+} : BgColorfulBadgeProps) => {
     
     return (
         <span className={`

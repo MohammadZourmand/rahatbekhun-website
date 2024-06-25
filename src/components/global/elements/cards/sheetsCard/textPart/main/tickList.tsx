@@ -7,7 +7,7 @@ interface TickListProps {
     liCls ?: string
 }
 
-const TickList : React.FC<TickListProps> = ({options, iconCls, liCls, cls}) => {
+const TickList = ({options, iconCls, liCls, cls} : TickListProps) => {
 
     return (
         <ul className={`${cls} list-none`}>

@@ -8,12 +8,12 @@ interface SlideProps {
     icon : ReactNode
 }
 
-const Slide : React.FC<SlideProps> = ({
+const Slide = ({
     cls,
     text,
     number,
     icon
-}) => {
+} : SlideProps) => {
 
     return (
         <div className={`${cls} flex flex-col py-4 space-y-2 items-center w-full h-full bg-slate-50 hover:bg-slate-200 rounded-lg`}>

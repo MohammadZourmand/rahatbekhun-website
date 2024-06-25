@@ -8,14 +8,14 @@ export interface HeadingsProps {
     weight ?: string
 }
 
-const Heading2 : React.FC<HeadingsProps> = ({
+const Heading2 = ({
     cls,
     text,
     color,
     isNozha,
     center,
     weight
-}) => {
+} : HeadingsProps) => {
 
     return (
         <h2

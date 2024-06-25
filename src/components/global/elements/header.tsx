@@ -9,13 +9,13 @@ interface HeaderProps {
     cls ?: string
 }
 
-const Header : React.FC<HeaderProps> = ({
+const Header = ({
     headingText,
     paragraphText,
     headingCls,
     paragraphCls,
     cls
-}) => {
+} : HeaderProps) => {
 
     return (
         <div data-aos-duration={"2000"} data-aos={"fade-up"} className={`${cls} flex flex-col items-center lg:mx-[80px] md:mx-[40px] sm:mx-[30px] xs:mx-[10px]`}>

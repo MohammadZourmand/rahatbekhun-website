@@ -1,4 +1,3 @@
-import Heading3 from "../../headings/h3";
 import Heading6 from "../../headings/h6";
 import Paragraph from "../../paragraph";
 
@@ -6,9 +5,7 @@ interface CourseInfoProps {
     description : string
 }
 
-const CourseInfo : React.FC<CourseInfoProps> = ({
-    description
-}) => {
+const CourseInfo = ({description} : CourseInfoProps) => {
 
     return (
         <div className="">

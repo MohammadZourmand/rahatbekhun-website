@@ -13,7 +13,7 @@ interface BreadcrumbProps {
     size ?: string
 }   
 
-const Breadcrumb : React.FC<BreadcrumbProps> = ({cls, items, isWhite, size}) => {
+const Breadcrumb = ({cls, items, isWhite, size} : BreadcrumbProps) => {
 
     return (
         <h3 className={`${cls} ${isWhite === undefined ? "text-medium" : `text-${size}`} !leading-none my-8 z-10`}>

@@ -6,17 +6,13 @@ import CourseEpisodes from './episodes';
 import CommentsCourseParts from './commentsPart';
 import Paragraph from '../../paragraph';
 
-interface TabSwitcherProps {
-
-}
-
 interface TabSwitcherCategoriesProps {
   id : number,
   text : string,
   icon : ReactNode
 }
 
-const TabSwitcher : React.FC<TabSwitcherProps> = () => {
+const TabSwitcher = () => {
 
   const [selectedTab, setSelectedTab] = useState(0)
 

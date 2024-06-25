@@ -4,11 +4,7 @@ import BlueBtn from "../../buttons/blue";
 import FiveStars from "../stars/fiveStars";
 import FaSpan from "../../translators/faSpan";
 
-interface InsertCommentCoursePartProps {
-
-}
-
-const InsertCommentCoursePart : React.FC<InsertCommentCoursePartProps> = () => {
+const InsertCommentCoursePart = () => {
 
     const initialValues = {
         name : '',

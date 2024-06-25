@@ -9,14 +9,14 @@ interface SectionHeaderProps {
     rightAlignment ?: boolean
 }
 
-const SectionHeader : React.FC<SectionHeaderProps> = ({
+const SectionHeader = ({
     cls,
     icon1,
     icon2,
     smallText,
     largeText,
     rightAlignment
-}) => {
+} : SectionHeaderProps) => {
 
     return (
         <h2 className={`${cls} ${rightAlignment ? "items-right " : "items-center"} flex flex-col space-y-3 relative text-center text-3xl py-6`}>

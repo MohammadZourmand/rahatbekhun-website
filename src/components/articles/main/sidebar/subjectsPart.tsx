@@ -1,9 +1,4 @@
 import Heading6 from "@/components/global/elements/headings/h6";
-import { Form, Formik } from "formik";
-
-interface SubjectsPartProps {
-    cls ?: string
-}
 
 const category = [
     {text : "همه", href : "all"},
@@ -20,7 +15,7 @@ const category = [
     {text : "متفرقه", href : "other"},
 ]
 
-const SubjectsPart : React.FC<SubjectsPartProps> = () => {
+const SubjectsPart = () => {
 
     return (
         <div className="lg:mt-8 mt-6">

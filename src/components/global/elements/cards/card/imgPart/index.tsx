@@ -11,7 +11,7 @@ interface CartImgPartProps {
     item : courseInfoType
 }
 
-const CartImgPart : React.FC<CartImgPartProps> = ({item}) => {
+const CartImgPart = ({item} : CartImgPartProps) => {
     
     const {type, imageSrc, imageAlt, href, category} = item
         

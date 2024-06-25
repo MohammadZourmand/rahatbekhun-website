@@ -9,11 +9,7 @@ import Heading5 from "../../headings/h5";
 import InsertCommentCoursePart from "./insertCommentPart";
 import FiveStars from "../stars/fiveStars";
 
-interface CommentsCoursePartsProps {
-
-}
-
-const CommentsCourseParts : React.FC<CommentsCoursePartsProps> = () => {
+const CommentsCourseParts = () => {
     return (
         <div>
             <header>

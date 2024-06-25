@@ -5,7 +5,7 @@ interface ShareBoxProps {
     cls ?: string
 }
 
-const ShareBox : React.FC<ShareBoxProps> = ({cls}) => {
+const ShareBox = ({cls} : ShareBoxProps) => {
 
     return (
         <div className={`${cls} flex gap-x-2 lg:justify-start justify-center`}>

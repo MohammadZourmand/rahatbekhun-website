@@ -10,7 +10,7 @@ interface SingleCourseMainProps {
     cls ?: string
 }
 
-const SingleCourseMain : React.FC<SingleCourseMainProps> = ({cls}) => {
+const SingleCourseMain = ({cls} : SingleCourseMainProps) => {
 
     const query = useSelector((state : RootState) => state.singleArticleSlice)
 

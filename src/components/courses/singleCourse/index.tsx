@@ -5,11 +5,7 @@ import SingleCourseMain from "./main";
 import RelatedCourses from "./main/relatedCourse";
 import Footer from "@/components/global/footer";
 
-interface SingleCourseProps {
-
-}
-
-const SingleCourse : React.FC<SingleCourseProps> = () => {
+const SingleCourse = () => {
 
     return (
         <div className="overflow-hidden">

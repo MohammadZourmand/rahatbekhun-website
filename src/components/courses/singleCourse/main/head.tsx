@@ -2,11 +2,7 @@ import FaSpan from "@/components/global/elements/translators/faSpan"
 import Paragraph from "@/components/global/elements/paragraph"
 import FiveStars from "@/components/global/elements/boxes/stars/fiveStars"
 
-interface HeaderProps {
-    cls ?: string
-}
-
-const Header : React.FC<HeaderProps> = () => {
+const Header = () => {
 
     return (
         <div className="grid grid-cols-12 sm:mt-12 mt-6 items-center px-2">

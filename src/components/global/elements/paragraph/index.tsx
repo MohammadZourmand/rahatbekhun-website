@@ -9,14 +9,14 @@ interface ParagraphProps {
     weight ?: string
 }
 
-const Paragraph : React.FC<ParagraphProps> = ({
+const Paragraph = ({
     cls,
     text,
     color,
     isNozha,
     center,
     weight
-}) => {
+} : ParagraphProps) => {
 
     return (
         <p className={`

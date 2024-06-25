@@ -7,7 +7,7 @@ import FiveStars from "@/components/global/elements/boxes/stars/fiveStars";
 
 
 
-const PrerequisiteCourses : React.FC = () => {
+const PrerequisiteCourses = () => {
 
     return (
         <div className="flex flex-col gap-y-8">

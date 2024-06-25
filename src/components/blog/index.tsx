@@ -5,7 +5,7 @@ import Footer from "../global/footer";
 import Navbar from "../global/navbar";
 
 
-const Blog : React.FC = () => {
+const Blog = () => {
 
     return (
         <>

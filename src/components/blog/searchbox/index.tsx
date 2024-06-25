@@ -4,7 +4,7 @@ import SectionHeader from "@/components/global/elements/header/sectionHeader"
 import { IconFileSearch, IconSearch } from "@tabler/icons-react"
 import { Form, Formik } from "formik"
 
-const SearchBox : React.FC = () => {
+const SearchBox = () => {
 
     const validateHandler = (values : any) => {
         let errors : { text ?: string } = {}

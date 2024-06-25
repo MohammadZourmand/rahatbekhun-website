@@ -17,7 +17,7 @@ interface InputProps extends FieldProps,ErrorProps {
     component ?: string
 }
 
-const Input : React.FC<InputProps> = ({
+const Input = ({
     cls,
     name,
     component,
@@ -25,7 +25,7 @@ const Input : React.FC<InputProps> = ({
     errorCls,
     errorText,
     ...props
-}) => {
+} : InputProps) => {
 
     return (
         <div className={`${cls} relative flex flex-col`}>

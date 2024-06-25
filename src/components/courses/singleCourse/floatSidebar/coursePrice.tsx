@@ -3,7 +3,7 @@ import PriceBox from "./price";
 import FaSpan from "@/components/global/elements/translators/faSpan";
 
 
-const CoursePriceSidebar : React.FC = () => {
+const CoursePriceSidebar = () => {
 
     return (
         <div className="mt-6 flex justify-between">

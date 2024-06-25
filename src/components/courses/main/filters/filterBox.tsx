@@ -8,9 +8,9 @@ interface FilterBoxProps {
     values : Object
 }
 
-const FilterBox : React.FC<FilterBoxProps> = ({
+const FilterBox = ({
     options, name, handler, cls, values
-}) => {
+} : FilterBoxProps) => {
 
     const titleTranslator = (value) => {
         switch (value) {

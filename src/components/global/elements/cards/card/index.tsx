@@ -8,10 +8,7 @@ interface CardProps {
     item : courseInfoType
 }
 
-const Card : React.FC<CardProps> = ({
-    cls,
-    item
-}) => {
+const Card = ({cls,item} : CardProps) => {
 
     return (
         <section className={`${cls} hover:scale-[1.03] transition duration-300 p-7 group rounded-lg bg-white shadow-all-lg shadow-gray-300/70`}>

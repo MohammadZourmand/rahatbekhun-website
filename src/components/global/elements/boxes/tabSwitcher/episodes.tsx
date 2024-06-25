@@ -5,9 +5,7 @@ interface CourseEpisodesProps {
     episodes : partedEpisodes
 }
 
-const CourseEpisodes : React.FC<CourseEpisodesProps> = ({
-    episodes
-}) => {
+const CourseEpisodes = ({episodes} : CourseEpisodesProps) => {
 
     return (
         <div>

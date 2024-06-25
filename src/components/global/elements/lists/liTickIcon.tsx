@@ -6,7 +6,7 @@ interface LiTickIconProps {
     iconCls ?: string
 }
 
-const LiTickIcon : React.FC<LiTickIconProps> = ({text, cls, iconCls}) => {
+const LiTickIcon = ({text, cls, iconCls} : LiTickIconProps) => {
 
     return (
         <li className={`${cls} flex items-center`}>

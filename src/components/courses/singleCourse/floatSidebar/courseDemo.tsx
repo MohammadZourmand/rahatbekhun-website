@@ -1,7 +1,7 @@
 import { PlayBrokenIcon } from "@/assets/icons";
 import { courseDetails } from "@/components/global/elements/boxes/tabSwitcher/courseInfo";
 
-const CourseDemoSidebar : React.FC = () => {
+const CourseDemoSidebar = () => {
 
     return (
         <div className="relative flex items-center justify-center rounded-md overflow-hidden">

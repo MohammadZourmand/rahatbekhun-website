@@ -8,7 +8,7 @@ interface SheetsCardTextPartProps {
     cls ?: string
 }
 
-const SheetsCardTextPart : React.FC<SheetsCardTextPartProps> = ({item, cls}) => {
+const SheetsCardTextPart = ({item, cls} : SheetsCardTextPartProps) => {
 
     return (
         <div className={`${cls} py-10 px-5`}>

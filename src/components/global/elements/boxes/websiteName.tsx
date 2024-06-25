@@ -8,11 +8,11 @@ interface WebsiteNameProps {
     isWhite : boolean
 }
 
-const WebsiteName : React.FC<WebsiteNameProps> = ({
+const WebsiteName = ({
     cls,
     textCls,
     isWhite
-}) => {
+} : WebsiteNameProps) => {
     return (
         <Link href={"/"} className={`${cls} flex items-center text-[2.5rem]`}>
             {

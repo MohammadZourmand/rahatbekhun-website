@@ -3,11 +3,7 @@ import Slider from "./slider";
 import { IconCategory2, IconListDetails } from "@tabler/icons-react";
 
 
-interface SortSliderProps {
-
-}
-
-const SortSlider : React.FC<SortSliderProps> = ({}) => {
+const SortSlider = ({}) => {
 
     return (
         <section className="mb-28">

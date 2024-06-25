@@ -6,7 +6,7 @@ interface RecentFilesProps {
     cls ?: string
 }
 
-const RecentFiles : React.FC<RecentFilesProps> = () => {
+const RecentFiles = ({cls} : RecentFilesProps) => {
 
     return (
         <div className="lg:mt-10 mt-6">

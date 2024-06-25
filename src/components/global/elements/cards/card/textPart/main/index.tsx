@@ -12,7 +12,7 @@ interface CartTextMainProps {
     item : courseInfoType
 }
 
-const CartTextMain : React.FC<CartTextMainProps> = ({item}) => {
+const CartTextMain = ({item} : CartTextMainProps) => {
 
     const {details, studentsNumber, sessions, author, group} = item
 

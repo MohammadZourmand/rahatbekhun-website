@@ -14,7 +14,7 @@ interface CartTextHeaderProps {
     item : courseInfoType
 }
 
-const CartTextHeader : React.FC<CartTextHeaderProps> = ({item}) => {
+const CartTextHeader = ({item} : CartTextHeaderProps) => {
 
     const {votes, type, category, href, name} = item
 

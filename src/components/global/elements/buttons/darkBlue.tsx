@@ -7,11 +7,7 @@ interface DarkBlueBtnProps {
 }
 
 
-const DarkBlueBtn : React.FC<DarkBlueBtnProps> = ({
-    cls,
-    text,
-    href
-}) => {
+const DarkBlueBtn = ({cls,text,href} : DarkBlueBtnProps) => {
 
     return (
         <Link className={`${cls} bg-baby-9 transition duration-500 shadow-lg shadow-white hover:shadow-gray-300 text-white rounded-md px-5 py-2`} href={href}>

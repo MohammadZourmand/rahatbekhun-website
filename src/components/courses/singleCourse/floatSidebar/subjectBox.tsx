@@ -8,11 +8,11 @@ interface SubjectBoxProps {
     subject : string
 }
 
-const SubjectBox : React.FC<SubjectBoxProps> = ({
+const SubjectBox = ({
     icon,
     text,
     subject
-}) => {
+} : SubjectBoxProps) => {
 
     return (
         <div className="flex items-start w-full py-5">

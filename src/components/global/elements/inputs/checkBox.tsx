@@ -10,11 +10,11 @@ interface MyCheckBoxProps {
     textCls ?: string
 }
 
-const MyCheckBox : React.FC<MyCheckBoxProps> =  ({
+const MyCheckBox =  ({
     cls,
     text,
     textCls
-}) => {
+} : MyCheckBoxProps) => {
 
     const [isChecked , setIsChecked] = useState(false)
 

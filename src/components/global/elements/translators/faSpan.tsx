@@ -8,7 +8,7 @@ interface FaSpanProps {
     suffix ?: string
 }
 
-const FaSpan : React.FC<FaSpanProps> = ({cls, hasSlicer, value, suffix}) => {
+const FaSpan = ({cls, hasSlicer, value, suffix} : FaSpanProps) => {
     return (
         <span className={`${cls ? cls : "ml-0.5"}`}>
             {
