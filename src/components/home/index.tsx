@@ -16,12 +16,12 @@ const Home : React.FC = () => {
         <>
             <Header />
             <Welcome />
-            <GameLearning />
+            {/* <GameLearning /> */}
             <Courses />
             <Inviting />
-            <TeachersClasses />
+            {/* <TeachersClasses /> */}
             <Sentences />
-            <OfferedArticles />
+            {/* <OfferedArticles /> */}
             <Footer />
         </>
     )

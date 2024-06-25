@@ -1,16 +1,16 @@
-// ? react =======================
-import { FC } from "react";
 
 // ? components & types ==========
-import PageHeader from "../global/elements/header/pageHeader";
-import CoursesPageMain from "./main";
+// import PageHeader from "../global/elements/header/pageHeader";
+// import CoursesPageMain from "./main";
+import IsMaking from "../global/elements/making";
 import Footer from "../global/footer";
+import Navbar from "../global/navbar";
 
-const Courses : FC = () => {
+const Courses = () => {
 
     return (
         <>
-            <PageHeader
+            {/* <PageHeader
                 imgBgCls="sm:scale-100 md:h-auto h-full"
                 cls="xl:h-[80vh]"
                 title="دوره های آموزشی"
@@ -19,7 +19,9 @@ const Courses : FC = () => {
                 ]}
                 imgBgSrc={'/images/courses/portrait-pretty-young-girl-smiling.jpg'}
             />
-            <CoursesPageMain />
+            <CoursesPageMain /> */}
+            <Navbar isWhite={false} />
+            <IsMaking />
             <Footer cls="mt-8" />
         </>
     )

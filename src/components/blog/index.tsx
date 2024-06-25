@@ -1,16 +1,15 @@
 
 import PageHeader from "../global/elements/header/pageHeader";
+import IsMaking from "../global/elements/making";
 import Footer from "../global/footer";
-import BestArticles from "./bestArticles";
-import NewArticles from "./getNews";
-import SearchBox from "./searchbox";
-import SortSlider from "./sortSlider";
+import Navbar from "../global/navbar";
+
 
 const Blog : React.FC = () => {
 
     return (
         <>
-            <PageHeader
+            {/* <PageHeader
                 imgBgCls="sm:scale-100 md:h-auto h-full"
                 cls="xl:h-[65vh]" 
                 title={"وبلاگ"}
@@ -23,6 +22,9 @@ const Blog : React.FC = () => {
             <SortSlider />
             <BestArticles />
             <NewArticles />
+            <Footer /> */}
+            <Navbar isWhite={false}/>
+            <IsMaking />
             <Footer />
         </>      
     )
