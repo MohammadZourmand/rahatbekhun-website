@@ -1,4 +1,3 @@
-import { FC } from "react";
 
 import { SearchBrokenIcon } from "@/assets/icons";
 import Heading6 from "../elements/headings/h6";
@@ -9,7 +8,7 @@ interface NewsLettersProps {
 }
 
 
-const NewsLetters : FC<NewsLettersProps> = ({cls}) => {
+const NewsLetters = ({cls} : NewsLettersProps) => {
 
     return (
         <form className={`${cls} flex flex-col lg:items-start items-center`}>

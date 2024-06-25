@@ -1,8 +1,8 @@
 import { CategoryBroken, FilterBroken } from "@/assets/icons";
-import { FC, useState } from "react";
+import { useState } from "react";
 
 
-const SortBox : FC = () => {
+const SortBox = () => {
 
     const [isCategoryMode, setIsCategoryMode] = useState<boolean>(false)
     const [selected, setSelected] = useState<string>("جدیدترین")

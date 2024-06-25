@@ -1,18 +1,16 @@
 // ? react =====================
-import { FC, Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 // ? components =====================
 // import BlackBtn from "../filtering/blackBtn";
-import SearchForm from "./searchForm";
 import ShowCoursesModel from "./showModel";
 import MatchedCourses from "./mathedCourses";
-import { SortItems } from "@/components/data/sortItems";
 
 interface CoursesHeaderProps {
     setState ?: Dispatch<SetStateAction<boolean>>
 }
 
-const CoursesHeader : FC<CoursesHeaderProps> = ({setState}) => {
+const CoursesHeader = ({setState} : CoursesHeaderProps) => {
 
     return (
         <header className="mb-12 grid grid-cols-12 xl:gap-x-20 lg:gap-x-10 lg:gap-y-0 gap-y-4">

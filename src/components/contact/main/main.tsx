@@ -1,17 +1,14 @@
-import FiveStars from "@/components/global/elements/boxes/stars/fiveStars";
 import BlueBtn from "@/components/global/elements/buttons/blue";
 import Heading5 from "@/components/global/elements/headings/h5";
 import Input from "@/components/global/elements/inputs/input";
 import Paragraph from "@/components/global/elements/paragraph";
-import FaSpan from "@/components/global/elements/translators/faSpan";
 import { Form, Formik } from "formik";
-import { FC } from "react";
 
 interface MainProps {
     cls ?: string
 }
 
-const Main : FC<MainProps> = ({cls}) => {
+const Main = ({cls} : MainProps) => {
 
     const initialValues = {
         name : '',

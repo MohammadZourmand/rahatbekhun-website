@@ -1,11 +1,11 @@
 import { CategoryBroken, ChartBrokenIcon, EditBrokenIcon, FolderBroken, GameBroken, PaperBrokenIcon, VideoBrokenIcon } from "@/assets/icons";
-import { FC, useRef } from "react";
+import { useRef } from "react";
 
 interface IconChooserProps {
     type : string
 }
 
-const IconChooser : FC<IconChooserProps> = ({type}) => {
+const IconChooser = ({type} : IconChooserProps) => {
 
     const tooltip = useRef(null)
 

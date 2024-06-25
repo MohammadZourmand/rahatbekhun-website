@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
@@ -10,7 +10,7 @@ import IconBtn from "@/components/global/elements/buttons/iconBtn";
 import { typeChecker } from "./typeChecker";
 import SelectBoxDiv from "./selectboxDiv";
 
-const AdvancedSearchFrom : FC = () => {
+const AdvancedSearchFrom = () => {
 
     const dispatch = useDispatch()
 

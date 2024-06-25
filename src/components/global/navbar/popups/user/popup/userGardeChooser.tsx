@@ -1,11 +1,10 @@
 import { UserBrokenIcon } from "@/assets/icons";
-import { FC } from "react";
 
 interface UserGradeChooserProps {
     grade : string
 }
 
-const UserGradeChooser : FC<UserGradeChooserProps> = ({grade, }) => {
+const UserGradeChooser = ({grade} : UserGradeChooserProps) => {
 
     switch (grade) {
         case "خالق":

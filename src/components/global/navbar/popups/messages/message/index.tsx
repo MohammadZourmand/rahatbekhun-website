@@ -1,4 +1,3 @@
-import { FC } from "react";
 import Link from "next/link";
 
 import { messageBgColorChooser, messageHeadTextColorChooser, messageTextColorChooser, TypeMessageIconChooser } from "./choosersFunctions";
@@ -10,7 +9,7 @@ interface MessageBoxProps {
     item : messagesInfoProps
 }
 
-const MessageBox : FC<MessageBoxProps> = ({item}) => {
+const MessageBox = ({item} : MessageBoxProps) => {
     return (
         <div className={`group relative flex sm:flex-row flex-col items-center sm:items-start py-4 rounded-lg 
             ${item.seen ? "bg-gray-500/40" : messageBgColorChooser(item.type)} transition

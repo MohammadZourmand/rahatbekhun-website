@@ -1,7 +1,5 @@
-import { FC } from "react";
 
-
-const SingleWorksheet : FC = () => {
+const SingleWorksheet = () => {
 
     return (
         <div></div>

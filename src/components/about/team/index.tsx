@@ -24,7 +24,7 @@ const Team = () => {
             </div>
             <div className="col-span-12 grid grid-cols-12 md:gap-12 sm:gap-6 gap-y-8 relative mx-16">
                 {
-                    teamData.map((item, index) => {
+                    teamData.map((item,) => {
                         return (
                             <div key={index} className="transition duration-500 hover:scale-110 xs:p-6 md:col-span-4 sm:col-span-6 col-span-12 flex flex-col items-center">
                                 <div className="">

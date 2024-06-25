@@ -1,10 +1,9 @@
-import { FC } from "react";
 import PageHeader from "../global/elements/header/pageHeader";
 import WorksheetsMain from "./main";
 import Footer from "../global/footer";
 
 
-const Worksheets : FC = () => {
+const Worksheets = () => {
 
     return (
         <>  

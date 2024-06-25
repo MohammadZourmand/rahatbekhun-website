@@ -1,7 +1,6 @@
 
 import { ChartBrokenIcon, ChatBrokenIcon, UserBrokenIcon } from "@/assets/icons";
 import Link from "next/link";
-import { FC } from "react";
 
 interface LinkBoxProps {
     iconName : string
@@ -18,7 +17,7 @@ const iconChooser = (iconName : string) => {
     }
 }
 
-const LinkBox : FC<LinkBoxProps> = ({iconName, cls, title, href}) => {
+const LinkBox = ({iconName, cls, title, href} : LinkBoxProps) => {
     return (
         <Link href={href} className={`${cls} hover:-translate-y-3 hover:scale-105 duration-500 transition rounded-lg flex flex-col space-y-2 items-center justify-center`}>
             <div>

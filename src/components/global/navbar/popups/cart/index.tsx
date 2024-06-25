@@ -1,5 +1,5 @@
 
-import { FC, Suspense, useState, lazy } from "react";
+import { Suspense, useState, lazy } from "react";
 
 import { CartBrokenIcon } from "@/assets/icons";
 
@@ -9,7 +9,7 @@ interface CartProps {
     isWhite : boolean
 }
 
-const Cart : FC<CartProps> = ({isWhite}) => {
+const Cart = ({isWhite} : CartProps) => {
 
     const [show, setShow] = useState<boolean>(false)
 

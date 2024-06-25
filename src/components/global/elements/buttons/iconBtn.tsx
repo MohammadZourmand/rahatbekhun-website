@@ -1,6 +1,5 @@
 import { CartBrokenIcon, EyeBrokenIcon, FilterBrokenIcon, LeftIcon, PlusIcon, SearchBrokenIcon } from "@/assets/icons";
 import Link from "next/link";
-import { FC } from "react";
 
 interface IconBtnProps {
     cls ?: string
@@ -31,9 +30,9 @@ const iconChooser : (key : string) => any = (key : string) => {
     }
 }
 
-const IconBtn : FC<IconBtnProps> = ({
+const IconBtn = ({
     cls, text, href, iconName, ...props
-}) => {
+} : IconBtnProps) => {
 
     return (
         href

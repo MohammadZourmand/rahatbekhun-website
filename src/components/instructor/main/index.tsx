@@ -1,5 +1,3 @@
-import { FC } from "react";
-
 import { AparatIcon, InstagramIcon, LinkedinIcon } from "@/assets/icons";
 import { coursesData } from "@/components/data/coursesData";
 
@@ -10,7 +8,7 @@ import Heading6 from "@/components/global/elements/headings/h6";
 import Paragraph from "@/components/global/elements/paragraph";
 import FloatedPictures from "./floated";
 
-const InstructorMain : FC = () => {
+const InstructorMain = () => {
 
     return (
         <main className="grid grid-cols-3 lg:gap-x-16 px-3 sm:px-8 lg:px-0 max-w-7xl mx-auto mt-32">

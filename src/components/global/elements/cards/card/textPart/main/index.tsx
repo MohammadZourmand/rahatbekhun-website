@@ -6,6 +6,7 @@ import { courseInfoType } from "@/types/home";
 import Paragraph from "@/components/global/elements/paragraph";
 import MiniIconTextBox from "./minibox";
 import FaSpan from "../../../../translators/faSpan";
+import Image from "next/image";
 
 interface CartTextMainProps {
     item : courseInfoType
@@ -23,7 +24,13 @@ const CartTextMain : React.FC<CartTextMainProps> = ({item}) => {
             </div>
             <Paragraph cls="tracking-tight font-normal text-[.9rem] leading-[1.8]" text={details} />
             <div className="flex mt-4 mb-4 items-center">
-                <img className="outline outline-1 outline-gray-300 outline-offset-2 w-9 h-9 rounded-full" src="/images/home/teachers/mohammad-zourmand.jpg" alt="author" />
+                <Image
+                    src={"/images/home/teachers/mohammad-zourmand.jpg"}
+                    className="outline outline-1 outline-gray-300 outline-offset-2 rounded-full"
+                    alt={author}
+                    width={40}
+                    height={40}
+                />
                 <p className="text-gray-400 text-sm font-semibold tracking-normal mr-2">
                     توسط&nbsp;
                     <FaSpan cls="text-gray-800" value={author}/>

@@ -1,5 +1,4 @@
 import { Card2TypeProps } from "@/types/home";
-import { FC } from "react";
 import Paragraph from "../../paragraph";
 import Heading6 from "../../headings/h6";
 
@@ -7,7 +6,7 @@ interface MiniCardProps {
     item : Card2TypeProps
 }
 
-const MiniCard : FC<MiniCardProps> = ({item}) => {
+const MiniCard = ({item} : MiniCardProps) => {
 
     return (
         <div className="grid grid-cols-7 gap-x-2">

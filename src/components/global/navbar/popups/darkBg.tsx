@@ -1,15 +1,10 @@
 
-import { FC, useState } from "react";
-
 interface DarkBackgroundProps {
     show : boolean,
     setShow : any
 }
 
-const DarkBackground : FC<DarkBackgroundProps> = ({
-    show,
-    setShow
-}) => {
+const DarkBackground = ({show, setShow} : DarkBackgroundProps) => {
     
     return (
         <div 

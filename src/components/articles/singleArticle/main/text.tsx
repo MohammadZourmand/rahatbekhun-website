@@ -5,15 +5,8 @@ import Heading5 from "@/components/global/elements/headings/h5";
 import BlueLink from "@/components/global/elements/links/blueLink";
 import Paragraph from "@/components/global/elements/paragraph";
 import Sentence from "@/components/global/elements/paragraph/sentence";
-import { FC } from "react";
 
-interface SingleArticlesMainTextProps {
-
-}
-
-const SingleArticlesMainText : FC<SingleArticlesMainTextProps> = ({
-
-}) => {
+const SingleArticlesMainText = () => {
 
     const authorInfo = {
         name : "محمد زورمند",

@@ -1,6 +1,3 @@
-import { FC } from "react";
-
-
 interface SentenceProps {
     text : string
     cls ?: string
@@ -9,7 +6,7 @@ interface SentenceProps {
     tellerCls ?: string
 }
 
-const Sentence : FC<SentenceProps> = ({text, cls, teller, paraCls, tellerCls}) => {
+const Sentence = ({text, cls, teller, paraCls, tellerCls} : SentenceProps) => {
 
     return (
         <div className={`${cls} relative my-14 p-12 bg-gray-100 text-gray-800 overflow-hidden`}>

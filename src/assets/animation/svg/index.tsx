@@ -1,15 +1,13 @@
-import { FC } from "react"
-
 interface IconProps {
     cls ?: string
     color ?: string
     props ?: string
 }
 
-export const SearchIcon : FC<IconProps> = ({
+export const SearchIcon = ({
     cls,
     color,    
-}) => {
+} : IconProps) => {
     return (
         <svg 
             xmlns="http://www.w3.org/2000/svg"

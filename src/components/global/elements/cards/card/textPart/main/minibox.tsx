@@ -30,7 +30,9 @@ const IconChooser = (value : string) => {
                 <></>
             )
         default:
-            break;
+            return (
+                <UsersBroken cls="w-5 h-5 fill-gray-400" />
+            )
     }
 }
 

@@ -12,7 +12,7 @@ import { coursesData } from "../../data/coursesData";
 // ? types ============================
 import { courseInfoType } from "@/types/home";
 
-const Courses : React.FC = () => {
+const Courses = () => {
 
     // TODO : This state use for choose types that user want to see !  
     const [type, setType] = useState<string>("all")

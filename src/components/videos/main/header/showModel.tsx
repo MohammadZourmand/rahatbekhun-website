@@ -1,14 +1,7 @@
-// ? react ==================
-import { FC } from "react";
-
 // ? assets =================
 import { CategoryBroken, FilterBroken } from "@/assets/icons";
 
-interface ShowCoursesModelProps {
-
-}
-
-const ShowCoursesModel : FC<ShowCoursesModelProps> = () => {
+const ShowCoursesModel = () => {
     return (
         <div className="flex items-center">
             <div className={`p-1 cursor-pointer bg-baby-9 rounded-md`}>

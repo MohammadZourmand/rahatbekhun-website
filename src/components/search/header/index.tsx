@@ -1,5 +1,3 @@
-import { FC } from "react"
-
 import Navbar from "../../global/navbar"
 import Heading2 from "@/components/global/elements/headings/h2"
 import AdvancedSearchFrom from "./form"
@@ -7,7 +5,7 @@ import Wave from "@/components/global/waves/wave"
 
 import bg from "./../../../../public/images/search/kids-around-school-table.jpg";
 
-const AdvancedSearchHeader : FC = () => {
+const AdvancedSearchHeader = () => {
 
     return (
         <header

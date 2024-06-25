@@ -1,6 +1,4 @@
-import { FC } from "react";
-
-const FloatedPictures : FC = () => {
+const FloatedPictures = () => {
 
     return (
         <>

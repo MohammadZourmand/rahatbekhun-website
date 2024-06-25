@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { FC } from "react";
 
 interface BlueLinkProps {
     href : string
@@ -8,7 +7,7 @@ interface BlueLinkProps {
 }
 
 
-const BlueLink : FC<BlueLinkProps> = ({href, text, cls}) => {
+const BlueLink = ({href, text, cls} : BlueLinkProps) => {
 
     return (
         <Link className={`${cls} text-baby-9`} href={href}>

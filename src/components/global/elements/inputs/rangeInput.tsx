@@ -1,5 +1,5 @@
 // ? react ====================
-import React from "react";
+import {useState} from "react";
 
 // ? libraries ================
 import PN from "persian-number";
@@ -8,10 +8,10 @@ interface RangeInputProps {
     cls ?: string
 }
 
-const RangeInput : React.FC<RangeInputProps> = ({cls}) => {
+const RangeInput = ({cls} : RangeInputProps) => {
 
-    const [minPrice, setMinPrice] = React.useState<number>(0)
-    const [maxPrice, setMaxPrice] = React.useState<number>(1000000)
+    const [minPrice, setMinPrice] = useState<number>(0)
+    const [maxPrice, setMaxPrice] = useState<number>(1000000)
 
     return (
         <div className={`${cls} flex flex-col space-y-8`}>

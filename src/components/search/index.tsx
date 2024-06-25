@@ -1,9 +1,8 @@
-import { FC } from "react"
 import AdvancedSearchHeader from "./header"
 import AdvancedSearchMain from "./main"
 import Footer from "../global/footer"
 
-const AdvancedSearch : FC = () => {
+const AdvancedSearch = () => {
 
     return (
         <div>

@@ -1,5 +1,5 @@
 // ? react =================
-import { FC, useState } from 'react'
+import { useState } from 'react'
 
 // ? assets ================
 import { RadioGroup } from '@headlessui/react';
@@ -10,7 +10,7 @@ interface MyRadioProps {
 }
 
 
-const MyRadio : FC<MyRadioProps> = ({cls, options}) => {
+const MyRadio = ({cls, options} : MyRadioProps) => {
   const [selected, setSelected] = useState(options[0])
 
   return (

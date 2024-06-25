@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-import { FC, Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 import { userInfo } from "./user";
 import UserGradeChooser from "./userGardeChooser";
@@ -14,7 +14,7 @@ interface UserPopupProps {
     setShow : Dispatch<SetStateAction<boolean>>
 }
 
-const UserPopup : FC<UserPopupProps> = ({setShow}) => {
+const UserPopup = ({setShow} : UserPopupProps) => {
     return (
         <section className={`
             max-w-xl sm:w-[20rem] w-[95vw]

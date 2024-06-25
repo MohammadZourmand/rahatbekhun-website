@@ -1,14 +1,12 @@
 import { AparatIcon, EyeBrokenIcon, GithubIcon, InstagramIcon, MessageBrokenIcon, SendBrokenIcon, SendIcon } from "@/assets/icons";
 import Heading6 from "@/components/global/elements/headings/h6";
-import { IconBrandGithub, IconBrandTelegram } from "@tabler/icons-react";
 import Link from "next/link";
-import { FC } from "react";
 
 interface AsideProps {
     cls ?: string
 }
 
-const Aside : FC<AsideProps> = ({cls}) => {
+const Aside = ({cls} : AsideProps) => {
 
     return (
         <aside className={`${cls} lg:px-0 md:mx-32 sm:mx-28 xs:mx-12 mx-6 xl:col-span-4 lg:col-span-5 col-span-12 relative gap-y-8 lg:mt-0 mt-12 lg:mx-0`}>

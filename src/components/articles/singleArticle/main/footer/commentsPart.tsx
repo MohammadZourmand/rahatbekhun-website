@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { Form, Formik } from "formik";
 import Input from "@/components/global/elements/inputs/input";
 import FaSpan from "@/components/global/elements/translators/faSpan";
@@ -14,7 +13,7 @@ interface CommentsPartProps {
     cls ?: string
 }
 
-const CommentsPart : FC<CommentsPartProps> = ({cls}) => {
+const CommentsPart = ({cls} : CommentsPartProps) => {
 
     const initialValues = {
         name : '',

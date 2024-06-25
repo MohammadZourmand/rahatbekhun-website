@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 import Lottie from "lottie-react";
@@ -7,7 +7,7 @@ import orangeAlert from "@/assets/animation/lottieFiles/orange-alert.json";
 import Paragraph from "@/components/global/elements/paragraph";
 import CloseIcon from "@/components/global/navbar/mobile/closeIcon";
 
-const MassageBox : FC = () => {
+const MassageBox = () => {
 
     const [isShow, setIsShow] = useState<boolean>(true)
 

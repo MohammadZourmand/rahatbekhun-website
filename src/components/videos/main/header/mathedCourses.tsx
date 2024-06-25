@@ -1,7 +1,4 @@
-// ? react ================
-import { FC } from "react";
-
-const MatchedCourses : FC = () => {
+const MatchedCourses = () => {
 
     return (
         <p className="mr-8 text-gray-700">

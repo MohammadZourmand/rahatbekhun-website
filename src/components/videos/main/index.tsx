@@ -1,5 +1,5 @@
 // ? react =======================
-import { FC , useState } from "react";
+import { useState } from "react";
 
 // ? components & types ==========
 import ShowCoursesCarts from "./showCarts";
@@ -7,7 +7,7 @@ import Filters from "./filters";
 import { FilterBrokenIcon } from "@/assets/icons";
 import WindowSize from "@/components/global/functions/windowSize";
 
-const VideosPageMain : FC = () => {
+const VideosPageMain = () => {
     const [showFilters, setShowFilters] = useState<boolean>(false)
 
     return (
