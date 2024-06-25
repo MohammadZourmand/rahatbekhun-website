@@ -1,6 +1,6 @@
 // ? react =======================
 import Link from "next/link";
-import {lazy, Suspense} from "react";
+import dynamic from "next/dynamic";
 
 // ? components ==================
 import WebsiteName from "../elements/boxes/websiteName";
@@ -9,15 +9,14 @@ import WindowSize from "../functions/windowSize";
 // ? assets ======================
 import { SearchBrokenIcon } from "@/assets/icons";
 
-const SubMenus = lazy(() => import(/* webpackChunkName : "sub-menus" */"./subMenus"))
-const PopupIcons = lazy(() => import(/* webpackChunkName : "popup-icons" */"./popups"))
+const SubMenus = dynamic(() => import("./subMenus"))
+const PopupIcons = dynamic(() => import("./popups"))
 
 interface ComputerNavbarProps {
     cls ?: string
     subMenusCls ?: string
     isWhite : boolean
 }
-
 
 const ComputerNavbar = ({subMenusCls, cls, isWhite} : ComputerNavbarProps) => {
 
@@ -27,17 +26,13 @@ const ComputerNavbar = ({subMenusCls, cls, isWhite} : ComputerNavbarProps) => {
         <div className={`${cls} flex justify-between items-center rounded-lg pt-1`}>
             <div className="flex items-center">
                 <WebsiteName isWhite={isWhite} cls="justify-center ml-8" />
-                <Suspense fallback={<p>Hello</p>}>
-                    {WindowSize().width >= 1024 && <SubMenus isWhite={isWhite} cls={subMenusCls} />}
-                </Suspense>
+                {WindowSize().width >= 1024 && <SubMenus isWhite={isWhite} cls={subMenusCls} />}
             </div>
             <div className="flex items-center md:gap-x-3 gap-x-2 xl:px-10 lg:px-6">
                 <Link href={"/search"} className={`${linkStyle}`}>
                     <SearchBrokenIcon cls={"lg:w-6 w-5 lg:h-6 h-5 group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
                 </Link>
-                <Suspense fallback={<p>Hello</p>}>
-                    {WindowSize().width >= 1024 && <PopupIcons isWhite={isWhite} /> }
-                </Suspense>
+                {WindowSize().width >= 1024 && <PopupIcons isWhite={isWhite} /> }
             </div>
         </div>
     )

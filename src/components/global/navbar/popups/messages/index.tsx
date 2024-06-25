@@ -1,11 +1,12 @@
 
-import {FC, Suspense, lazy, useState} from "react";
+import {FC, useState} from "react";
+import dynamic from "next/dynamic";
 
 import PN from "persian-number";
 
 import { AlarmBrokenIcon } from "@/assets/icons";
 
-const MessagesPopup = lazy(() => import("./popup"))
+const MessagesPopup = dynamic(() => import("./popup"))
 
 interface MessagesProps {
     isWhite : boolean
@@ -25,9 +26,7 @@ const Messages : FC<MessagesProps> = ({
                 <span className={`absolute -bottom-1 -right-1 bg-baby-4 px-2 rounded-full`}> {PN.convertEnToPe(1)} </span>
             </div>
             {/* // ! POPUP */}
-            <Suspense>
-                { show && <MessagesPopup setShow={setShow} />}
-            </Suspense>
+            { show && <MessagesPopup setShow={setShow} />}
         </div>
     )
 }

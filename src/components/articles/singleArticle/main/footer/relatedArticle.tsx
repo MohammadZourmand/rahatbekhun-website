@@ -3,9 +3,7 @@ import Card2 from "@/components/global/elements/cards/card2";
 import Heading3 from "@/components/global/elements/headings/h3";
 import Paragraph from "@/components/global/elements/paragraph";
 
-const RelatedArticles = ({
-    cls
-}) => {
+const RelatedArticles = ({cls} : {cls ?: string}) => {
 
     return (
         <div className={`${cls} flex flex-col sm:gap-10 mt-12`}>

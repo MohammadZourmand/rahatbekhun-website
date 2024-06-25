@@ -1,11 +1,9 @@
 import { CartBrokenIcon, DeleteBrokenIcon, UserBrokenIcon } from "@/assets/icons";
 import PriceBox from "@/components/courses/singleCourse/floatSidebar/price";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
-import Heading3 from "@/components/global/elements/headings/h3";
 import Paragraph from "@/components/global/elements/paragraph";
-import EmptyCart from "@/components/global/navbar/popups/cart/emptyCart";
 import { RootState } from "@/store";
-import { cartItemsProps, deleteProduct } from "@/store/slices/cart";
+import { cartItemsProps } from "@/store/slices/cart";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";

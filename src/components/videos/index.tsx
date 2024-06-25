@@ -4,7 +4,7 @@ import Footer from "../global/footer";
 import IsMaking from "../global/elements/making";
 import Navbar from "../global/navbar";
 
-const Videos : = () => {
+const Videos = () => {
 
     return (
         <>

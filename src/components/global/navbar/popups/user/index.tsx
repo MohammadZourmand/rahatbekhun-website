@@ -1,9 +1,10 @@
 
-import {FC, Suspense, lazy, useState} from "react";
+import {FC, useState} from "react";
+import dynamic from "next/dynamic";
 
 import { UserBrokenIcon } from "@/assets/icons";
 
-const UserPanelPopupBox = lazy(() => import("./popup"))
+const UserPanelPopupBox = dynamic(() => import("./popup"))
 
 interface UserPanelPopupProps {
     isWhite : boolean
@@ -22,9 +23,7 @@ const UserPanelPopup : FC<UserPanelPopupProps> = ({
                 <UserBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
             </div>
             {/* // ! POPUP */}
-            <Suspense>
-                { show && <UserPanelPopupBox setShow={setShow} />}
-            </Suspense>
+            { show && <UserPanelPopupBox setShow={setShow} />}
         </div>
     )
 }

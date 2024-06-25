@@ -1,11 +1,12 @@
-import {lazy, Suspense, useState} from "react"
+import {useState} from "react"
 import Link from "next/link";
 
 
 // ? components ==================
 import { SubMenusValues } from "./subMenu/data";
+import dynamic from "next/dynamic";
 
-const SubMenu = lazy(() => import(/* webpackChunkName : "iran" */'./subMenu'))
+const SubMenu = dynamic(() => import(/* webpackChunkName : "iran" */'./subMenu'))
 
 interface SubMenuProps {
     isWhite : boolean
@@ -24,12 +25,10 @@ const SubMenus = ({isWhite, cls} : SubMenuProps) => {
                         return (
                             <div className={linkStyle} key={index} onMouseEnter={() => setShowSubMenus(true)}>
                                 <div className={`${isWhite && "text-white"} nozha`}> {item?.name} </div>
-                                <Suspense fallback={<p>Hello</p>} >
-                                    {showSubMenus && <SubMenu
-                                        item={item}
-                                        isWhite={isWhite}
-                                    />}
-                                </Suspense>
+                                {showSubMenus && <SubMenu
+                                    item={item}
+                                    isWhite={isWhite}
+                                />}
                             </div>
                         )
                     })

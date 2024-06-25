@@ -1,6 +1,6 @@
 
 import Lottie from "lottie-react";
-import making from "@/assets/animation/lottieFiles/making.json"
+import making from "@/animations/making.json"
 import BlueBtn from "./buttons/blue";
 import BlueLink from "./links/blueLink";
 

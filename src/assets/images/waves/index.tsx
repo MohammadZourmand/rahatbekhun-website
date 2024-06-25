@@ -10,5 +10,4 @@ const WhiteWave = () => {
 
 export {
     WhiteWave,
-    
 };

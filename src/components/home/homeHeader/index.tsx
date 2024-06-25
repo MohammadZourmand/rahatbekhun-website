@@ -5,7 +5,7 @@ import Navbar from "../../global/navbar";
 import Lottie from "lottie-react";
 
 // ? assets ===================
-import ReadingBoy from "@/assets/animation/lottieFiles/reading-boy.json"; 
+import ReadingBoy from "@/animations/reading-boy.json"; 
 import { Data } from "./boxesData";
 import SmallBox from "./smallbox";
 // import IconBtn from "@/components/global/elements/buttons/iconBtn";

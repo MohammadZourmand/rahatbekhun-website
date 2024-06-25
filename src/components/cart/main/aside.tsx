@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import ManShopping from "@/assets/animation/lottieFiles/nan-shopping-cart.json"
+import ManShopping from "@/animations/nan-shopping-cart.json"
 import Heading4 from "@/components/global/elements/headings/h4";
 import Paragraph from "@/components/global/elements/paragraph";
 import PriceBox from "@/components/courses/singleCourse/floatSidebar/price";

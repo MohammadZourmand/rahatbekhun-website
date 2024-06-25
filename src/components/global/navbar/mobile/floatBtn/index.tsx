@@ -1,5 +1,6 @@
 // ? react =======================
-import {useState, lazy, Suspense} from "react";
+import {useState} from "react";
+import dynamic from "next/dynamic";
 
 // ? components ==================
 
@@ -7,7 +8,7 @@ import {useState, lazy, Suspense} from "react";
 import { CategoryBroken } from "@/assets/icons";
 
 
-const MobileNavbar = lazy(() => import(/* webpackChunkName : "mobile-navbar" */".."))
+const MobileNavbar = dynamic(() => import(/* webpackChunkName : "mobile-navbar" */".."))
 
 interface FloatBtnProps {
     cls ?: string
@@ -27,14 +28,12 @@ const FloatBtn = ({cls} : FloatBtnProps) => {
             >
                 <CategoryBroken cls={"w-[1.8rem] h-[1.8rem] transition-all duration-500"} color={"white"} />
             </div>
-            <Suspense fallback={<p>Hello</p>}>
-                {
-                    showMobileNavbar && <MobileNavbar 
-                        setShowNavbar={setShowMobileNavbar}
-                        showNavbar={showMobileNavbar}
-                    />
-                }
-            </Suspense>
+            {
+                showMobileNavbar && <MobileNavbar 
+                    setShowNavbar={setShowMobileNavbar}
+                    showNavbar={showMobileNavbar}
+                />
+            }
         </>
     )
 }

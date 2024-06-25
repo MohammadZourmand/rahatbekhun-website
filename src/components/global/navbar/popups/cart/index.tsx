@@ -1,9 +1,10 @@
 
-import { Suspense, useState, lazy } from "react";
+import { useState } from "react";
+import dynamic from "next/dynamic";
 
 import { CartBrokenIcon } from "@/assets/icons";
 
-const CartProductsPopup = lazy(() => import("./popup"))
+const CartProductsPopup = dynamic(() => import("./popup"))
 
 interface CartProps {
     isWhite : boolean
@@ -20,9 +21,7 @@ const Cart = ({isWhite} : CartProps) => {
                 <CartBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
             </div>
             {/* // ! popup */}
-            <Suspense>
-                { show && <CartProductsPopup setShow={setShow} />}
-            </Suspense>
+            { show && <CartProductsPopup setShow={setShow} />}
         </div>
     )
 }

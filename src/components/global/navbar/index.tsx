@@ -1,12 +1,12 @@
 
 // ? React =======================
-import {lazy , Suspense} from "react"
+import dynamic from "next/dynamic";
 
 // ? components ==================
 import ComputerNavbar from "./computer";
 import WindowSize from "../functions/windowSize";
 
-const FloatBtn = lazy(() => import(/* webpackChunkName : "float-btn" */"./mobile/floatBtn"))
+const FloatBtn = dynamic(() => import(/* webpackChunkName : "float-btn" */"./mobile/floatBtn"))
 
 interface NavbarProps {
     isWhite : boolean
@@ -20,9 +20,7 @@ const Navbar = ({isWhite, cls} : NavbarProps) => {
             <nav className={`${cls} min-w-[320px] grid grid-cols-12 w-full px-4 items-center`}>
                 <ComputerNavbar isWhite={isWhite} cls="col-span-12"/>
             </nav>
-            <Suspense fallback={<p> Hello </p>}>
-                {WindowSize().width <= 1024 && <FloatBtn />}
-            </Suspense>
+            {WindowSize().width <= 1024 && <FloatBtn />}
         </>
     )
 }

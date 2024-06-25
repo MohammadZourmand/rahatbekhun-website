@@ -7,7 +7,7 @@ import Navbar from "@/components/global/navbar";
 import Paragraph from "@/components/global/elements/paragraph";
 import Heading4 from "@/components/global/elements/headings/h4";
 
-import error404 from "@/assets/animation/lottieFiles/error-404.json";
+import error404 from "@/animations/error-404.json";
 import Footer from "@/components/global/footer";
 
 const UndefinedPage : NextPage = () => {
