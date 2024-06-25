@@ -1,5 +1,4 @@
 // ? react =======================
-import Link from "next/link";
 import React from "react";
 
 // ? components ==================
@@ -9,9 +8,10 @@ import Navbar from "../../global/navbar";
 import Lottie from "lottie-react";
 
 // ? assets ===================
-import { ActivityBroken, EditSquareBroken, GameBroken, LeftIcon, UsersBroken } from "@/assets/icons";
 import ReadingBoy from "@/assets/animation/lottieFiles/reading-boy.json"; 
-import IconBtn from "@/components/global/elements/buttons/iconBtn";
+import { Data } from "./boxesData";
+import SmallBox from "./smallbox";
+// import IconBtn from "@/components/global/elements/buttons/iconBtn";
 
 const HomeHeader = () => {
   return (
@@ -22,43 +22,17 @@ const HomeHeader = () => {
           <div className="xl:col-span-6 mt-12 text-lg flex flex-col xl:items-start items-center">
             <h2 className="font-black lg:text-[3.2rem] text-4xl lg:text-right text-center text-gray-700 lg:leading-[1.7] leading-loose"> درس خوندن با راحت بخون خیلی راحت و لذت بخشه !</h2>
             <p className="mt-4 text-lg text-gray-400 leading-loose lg:text-right text-center" > اینجا با کلی دانش آموز باهوش دیگه که مثل خودت هستن بازی کن حرف بزن و کلی چیز جدید یاد بگیر و پیشرفت کن ! </p>
-            <IconBtn 
+            {/* <IconBtn
+              href="/courses"
               iconName="left"
               text="مشاهده دوره های صفر تا صد"
-            />
-            <div className="grid grid-cols-12 items-center w-4/5 mx-4 lg:mt-8 mt-4">
-              <div className="sm:col-span-6 col-span-12 flex items-center justify-center font-semibold text-gray-500">
-                <div className="relative w-6 h-6 rounded-full bg-baby-6/30">
-                  <ActivityBroken color="rgb(237 7 139)" cls="absolute -top-2 -right-2" />
-                </div>
-                <div className="mr-2">
-                  متناسب با روند شما
-                </div>
-              </div>
-              <div className="sm:col-span-6 col-span-12 flex items-center justify-center sm:mt-0 mt-8 font-semibold text-gray-500">
-                <div className="relative w-6 h-6 rounded-full bg-slate-700/30">
-                  <UsersBroken color="rgb(51 65 85)" cls="absolute -top-2 -right-2" />
-                </div>
-                <div className="mr-2">
-                  یادگیری گروهی در تیم
-                </div>
-              </div>
-              <div className="sm:col-span-6 col-span-12 flex items-center justify-center mt-8 font-semibold text-gray-500">
-                <div className="relative w-6 h-6 rounded-full bg-baby-4/30">
-                  <GameBroken color="rgb(244 231 0)" cls="absolute -top-2 -right-2" />
-                </div>
-                <div className="mr-2">
-                  یادگیری از طریق بازی
-                </div>
-              </div>
-              <div className="sm:col-span-6 col-span-12 flex items-center justify-center mt-8 font-semibold text-gray-500">
-                <div className="relative w-6 h-6 rounded-full bg-baby-7/30">
-                  <EditSquareBroken color="rgb(0 123 255)" cls="absolute -top-2 -right-2" />
-                </div>
-                <div className="mr-2">
-                  سنجش یادگیری با آزمون
-                </div>
-              </div>
+            /> */}
+            <div className="grid grid-cols-12 sm:gap-8 gap-y-8 pt-4 items-center w-4/5 mx-4 lg:mt-8 mt-4">
+              {
+                Data.map((item, index) => (
+                  <SmallBox key={index} item={item}/>
+                ))
+              }
             </div>
           </div>
           <Lottie className="xl:col-span-6" animationData={ReadingBoy} />
