@@ -1,34 +1,21 @@
 import { SearchBrokenIcon } from "@/assets/icons"
 import Link from "next/link"
 import SubMenuBox from "./subMenuBox"
+import Image from "next/image"
+import { SubMenusValuesProps } from "./data"
 
-interface SubMenuProps {
-    isWhite ?: boolean
-    name : string 
-    mainLink : string
-    searchLink : string
-    mainImg : string
-    mainInfo : string
-    mainHead : string
-    items : any[]
-    cls ?: string
-    subCls ?: string
-}
+const SubMenu = ({isWhite, item} : {isWhite : boolean, item : SubMenusValuesProps}) => {
 
-const SubMenu : React.FC<SubMenuProps> = ({isWhite, name, mainLink, searchLink, mainImg, mainInfo, mainHead, items, cls, subCls}) => {
-
-    const linkStyle = `${isWhite ? "after:border-b-white" : "after:border-b-baby-1"} z-40 group py-5 px-1 after:content-[''] after:absolute after:transition-all after:duration-500 after:w-0 hover:after:w-full after:bottom-0 after:left-0 after:h-full after:border-b-[3.5px] relative text-center nozha transition`
-
+    const {items,link,mainHead,mainImg,mainInfo,cls,subCls} = item
 
     return (
-        <div className={linkStyle}>
-            <div className={`${isWhite && "text-white"} nozha`}> {name} </div>
+        <>
             <div className={`${cls} ${isWhite ? "border border-gray-200" : "shadow-all-md border-transparent border-[1rem]"} group-hover:grid hidden animate-fade grid-cols-12 xl:w-[42vw] lg:w-[56vw] p-4 absolute top-[5.1rem] -right-28 text-base bg-white z-10 rounded-lg`}>
                 <div className="col-span-5 flex flex-col items-center justify-center">
-                    <img src={mainImg} alt="0-to-100-course-rahat-bekhun" />
-                    <Link className="text-xl font-black mt-4 text-center" href={`/${mainLink}`}> {mainHead} </Link>
+                    <Image width={100} height={100} src={mainImg} alt={mainHead} />
+                    <Link className="text-xl font-black mt-4 text-center" href={`/${link}`}> {mainHead} </Link>
                     <p className="text-center mt-1">{mainInfo}</p>
-                    <Link href={`/${searchLink}`} className="flex items-center hover:bg-indigo-900 transition-all bg-baby-1 rounded-lg px-2 py-1 mt-3">
+                    <Link href={`/${link}`} className="flex items-center hover:bg-indigo-900 transition-all bg-baby-1 rounded-lg px-2 py-1 mt-3">
                         <SearchBrokenIcon cls="w-5 h-5" color="white" />
                         <span className="text-white text-sm mr-2"> جستجوی پیشرفته </span>
                     </Link>
@@ -36,12 +23,12 @@ const SubMenu : React.FC<SubMenuProps> = ({isWhite, name, mainLink, searchLink, 
                 <div className="grid grid-cols-12 gap-2 col-span-7">
                     {
                         items.map((item : any, index : number) => (
-                            <SubMenuBox key={index} cls={subCls} name={item?.name} img={item?.img} />
+                            <SubMenuBox key={index} cls={subCls} name={item?.name} img={item?.img} href={item?.href} />
                         ))
                     }
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

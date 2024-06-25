@@ -1,9 +1,6 @@
 import { DataProps } from "./boxesData";
 
-
 const SmallBox = ({item} : {item : DataProps}) => {
-
-    console.log(item)
 
     return (
         <div className="sm:col-span-6 col-span-12 flex items-center justify-center font-semibold text-gray-500">

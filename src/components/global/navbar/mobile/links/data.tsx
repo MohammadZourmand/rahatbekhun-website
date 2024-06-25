@@ -1,5 +1,4 @@
 import { PaperBrokenIcon, PlayBrokenIcon, VideoBrokenIcon } from "@/assets/icons"
-import { Interface } from "readline"
 
 export interface MobileNavbarListProps {
     type : string,
