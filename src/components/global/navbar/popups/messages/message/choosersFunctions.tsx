@@ -3,7 +3,7 @@ interface IconChooserProps {
     type : string
 } 
 
-export const TypeMessageIconChooser : React.FC<IconChooserProps> = ({type}) => {
+export const TypeMessageIconChooser = ({type} : IconChooserProps) => {
     switch (type) {
         case "warning": return (<img className="" src="/images/icons/warning.png"/>)
         case "info": return (<img className="" src="/images/icons/info.png"/>)

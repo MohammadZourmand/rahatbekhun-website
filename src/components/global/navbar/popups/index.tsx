@@ -7,7 +7,7 @@ interface PopupIconsProps {
     isWhite : boolean
 }
 
-const PopupIcons : React.FC<PopupIconsProps> = ({isWhite}) => {
+const PopupIcons = ({isWhite} : PopupIconsProps) => {
     
     return (
         <>

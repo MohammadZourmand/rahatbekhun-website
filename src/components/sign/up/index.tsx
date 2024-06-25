@@ -4,7 +4,7 @@ import SignUpForm from "./form";
 import Footer from "@/components/global/footer";
 
 
-const SignUp : React.FC = () => {
+const SignUp : = () => {
 
 
 

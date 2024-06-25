@@ -4,7 +4,7 @@ import Heading3 from "@/components/global/elements/headings/h3"
 import Paragraph from "@/components/global/elements/paragraph"
 
 
-const TeachersClasses : React.FC = () => {
+const TeachersClasses = () => {
 
     return (
         <section className="relative grid grid-cols-12 xl:my-44 my-16 xl:mx-64 md:mx-40 sm:mx-[30px] xs:mx-[10px] mx-6">

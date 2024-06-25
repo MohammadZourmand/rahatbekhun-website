@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const NavImg : React.FC = () => {
+const NavImg = () => {
 
     return (
         <div>

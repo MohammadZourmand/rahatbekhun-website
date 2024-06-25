@@ -6,7 +6,7 @@ interface ProductsProps {
     product : cartItemsProps
 }
 
-const Products : React.FC<ProductsProps> = ({product}) => {
+const Products = ({product} : ProductsProps) => {
 
     return (
         <div className={`grid grid-cols-5 py-6`}>

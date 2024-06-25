@@ -1,8 +1,6 @@
-import WhiteWave from "@/components/global/waves/wave";
 import SentenceSlider from "./slider";
 
-
-const Sentences : React.FC = () => {
+const Sentences = () => {
 
     return (
         <section className="relative flex items-center bg-baby-9/80 xl:px-16 h-[35rem] overflow-hidden">

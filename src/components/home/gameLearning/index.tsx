@@ -5,7 +5,7 @@ import { ListInfo, ListInfoProps } from "../../data/home/gameLearningInfo";
 import Paragraph from "@/components/global/elements/paragraph";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
 
-const GameLearning : React.FC = () => {
+const GameLearning = () => {
 
     return (
         <section className="grid grid-cols-12 justify-center items-center text-center lg:mt-24 mt-12 xl:mx-48 lg:mx-28 md:mx-[40px] sm:mx-[30px] xs:mx-[10px] mx-8">

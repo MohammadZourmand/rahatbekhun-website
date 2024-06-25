@@ -7,7 +7,7 @@ interface WebsiteInfoProps {
     cls ?: string
 }
 
-const WebsiteInfo : React.FC<WebsiteInfoProps> = ({cls}) => {
+const WebsiteInfo = ({cls} : WebsiteInfoProps) => {
 
     return (
         <div className={`${cls} flex flex-col ${cls}`}>

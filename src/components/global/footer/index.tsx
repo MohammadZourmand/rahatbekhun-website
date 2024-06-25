@@ -11,7 +11,7 @@ interface FooterProps {
     cls ?: string
 }
 
-const Footer : React.FC<FooterProps> = ({cls}) => {
+const Footer = ({cls} : FooterProps) => {
     
     return (
         <footer className={`${cls} bg-gray-200/80 text-white flex flex-col`}>

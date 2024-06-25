@@ -11,7 +11,7 @@ interface FiltersProps {
     setShowFilters : Dispatch<SetStateAction<boolean>>
 }
 
-const Filters : React.FC<FiltersProps> = ({setShowFilters, showFilters}) => {
+const Filters = ({setShowFilters, showFilters} : FiltersProps) => {
     
     const [initialValues, setInitialValues] = useState(coursesFilteringTitles)
 

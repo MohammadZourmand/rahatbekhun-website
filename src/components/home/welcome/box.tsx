@@ -12,7 +12,7 @@ interface WelcomeBoxesProps {
     item : WelcomeBoxesInfoProps
 }
 
-const WelcomeBoxes : React.FC<WelcomeBoxesProps> = ({item}) => {
+const WelcomeBoxes = ({item} : WelcomeBoxesProps) => {
 
     return (
         <Link href={item?.link} className={`${item?.disable ? "bg-gray-600" : item?.bgColor} shadow-[0_35px_60px_-30px_rgba(0,0,0,0.3)] group hover:-translate-y-4 hover:scale-y-[1.01] transition duration-500 flex flex-col px-8 py-8 text-white lg:col-span-3 sm:col-span-6 col-span-12 rounded-lg`}>

@@ -12,10 +12,7 @@ interface SearchModalProps {
     setIsFocus : Dispatch<SetStateAction<boolean>>
 }
 
-const SearchModal : React.FC<SearchModalProps> = ({
-    isFocus,
-    setIsFocus
-}) => {
+const SearchModal = ({ isFocus, setIsFocus} : SearchModalProps) => {
 
     // ! user will select type of data he wants search
     const [selectedType, setSelectedType] = useState<number>(1)

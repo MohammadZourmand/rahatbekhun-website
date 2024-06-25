@@ -4,7 +4,7 @@ import Paragraph from "@/components/global/elements/paragraph";
 import WelcomeBoxes from "./box";
 import { WelcomeBoxesInfo, WelcomeBoxesInfoProps } from "./boxesInfo";
 
-const Welcome : React.FC = () => {
+const Welcome = () => {
 
     return (
         <section className="relative flex flex-col lg:mt-12 lg:mx-[80px] md:mx-[40px] sm:mx-[30px] xs:mx-[10px] mx-6 lg:text-5xl md:text-4xl sm:text-3xl xs:text-[2.45rem] text-[2.65rem]">

@@ -1,11 +1,9 @@
-import WhiteBtn from "@/components/global/elements/buttons/white";
 import Heading3 from "@/components/global/elements/headings/h3";
-import Heading5 from "@/components/global/elements/headings/h5";
 import Paragraph from "@/components/global/elements/paragraph";
 import OpaCart from "../../global/elements/cards/btnCart";
 
 
-const Inviting : React.FC = () => {
+const Inviting = () => {
 
     return (
         <section className="relative flex flex-col lg:my-32 my-16 lg:mx-[80px] md:mx-[40px] sm:mx-[30px] xs:mx-[10px] mx-6 lg:text-5xl md:text-4xl sm:text-3xl xs:text-[2.45rem] text-[2.65rem]">

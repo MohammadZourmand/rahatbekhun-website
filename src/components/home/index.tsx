@@ -8,7 +8,7 @@ import Inviting from "./inviting";
 // import TeachersClasses from "./teachersClasses";
 // import OfferedArticles from "./offeredArticles";
 
-const Home : React.FC = () => {
+const Home = () => {
 
     return (
         <>

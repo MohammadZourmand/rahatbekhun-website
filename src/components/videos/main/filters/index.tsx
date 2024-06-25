@@ -5,14 +5,13 @@ import { useState, Dispatch, SetStateAction } from "react";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
 import { WarningToast } from "@/components/lib/swal";
 import { filtersInfo } from "./filtersInfo";
-import { FilterBrokenIcon } from "@/assets/icons";
 
 interface FiltersProps {
     showFilters : boolean
     setShowFilters : Dispatch<SetStateAction<boolean>>
 }
 
-const Filters : React.FC<FiltersProps> = ({setShowFilters, showFilters}) => {
+const Filters = ({setShowFilters, showFilters} : FiltersProps) => {
     
     const [initialValues, setInitialValues] = useState(coursesFilteringTitles)
 

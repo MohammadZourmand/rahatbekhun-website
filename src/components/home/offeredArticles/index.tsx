@@ -4,7 +4,7 @@ import Heading3 from "@/components/global/elements/headings/h3";
 import Paragraph from "@/components/global/elements/paragraph";
 
 
-const OfferedArticles : React.FC = () => {
+const OfferedArticles = () => {
 
     return (
         <section className="relative flex flex-col sm:py-28 py-16 lg:mt-12 xl:px-32 lg:px-12 sm:px-[30px] xs:px-8 px-2">

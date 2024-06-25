@@ -5,7 +5,7 @@ import { EditBrokenIcon, HomeBrokenIcon, PhoneBroken } from "@/assets/icons";
 import { MobileNavbarList } from "./data";
 import NavList from "./list";
 
-const Links : React.FC = () => {
+const Links = () => {
 
     const iconStyle = "relative bottom-[2px] w-10 h-10 p-2 my-4 ml-2 transition duration-500 group-hover:scale-110 fill-gray-700 group-hover:fill-white group-hover:bg-gray-700 bg-slate-200 rounded-full"
     const linkStyle = "flex items-center font-semibold text-lg group cursor-pointer"

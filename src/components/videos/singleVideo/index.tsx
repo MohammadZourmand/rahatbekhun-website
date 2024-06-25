@@ -1,10 +1,5 @@
 
-
-interface SingleVideoProps {
-
-}
-
-const SingleVideo : React.FC<SingleVideoProps> = () => {
+const SingleVideo = () => {
 
     return (
         <div></div>

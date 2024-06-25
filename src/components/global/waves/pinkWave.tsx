@@ -5,7 +5,7 @@ interface PinkWaveProps {
 
 // color : #ED7AC7
 
-const PinkWave : React.FC<PinkWaveProps> = ({cls}) => {
+const PinkWave = ({cls} : PinkWaveProps) => {
 
     return (
         <svg className={cls} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

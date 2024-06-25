@@ -7,7 +7,7 @@ import { sentencesType } from "@/types/home";
 import { Autoplay } from 'swiper';
 import { scientists } from "../../../data/home/sentencesSliderData";
 
-const SentenceSlider : React.FC = () => {
+const SentenceSlider = () => {
 
     return (
         <Swiper

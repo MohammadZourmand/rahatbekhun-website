@@ -1,6 +1,6 @@
 import { BagIcon } from "@/assets/icons";
 
-const EmptyCart : React.FC = () => {
+const EmptyCart = () => {
     
     return (
         <div className="flex flex-col text-lg font-semibold text-gray-400 items-center justify-center border-[3px] border-dashed rounded-lg m-3 h-72">

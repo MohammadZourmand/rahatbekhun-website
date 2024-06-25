@@ -5,7 +5,7 @@ interface WaveProps {
 
 // color : #000b76
 
-const Wave : React.FC<WaveProps> = ({cls}) => {
+const Wave = ({cls} : WaveProps) => {
 
     return (
         <svg className={cls} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

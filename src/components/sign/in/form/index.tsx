@@ -7,12 +7,8 @@ import { IconBrandGoogle } from "@tabler/icons-react";
 import { Form, Formik } from "formik";
 import Link from "next/link";
 
-interface SignInFormProps {
 
-}
-
-
-const SignInForm : React.FC<SignInFormProps> = () => {
+const SignInForm = () => {
     
     const initialValues = {
         username : '',

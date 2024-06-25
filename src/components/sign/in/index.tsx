@@ -4,9 +4,7 @@ import SignInForm from "./form";
 import Footer from "@/components/global/footer";
 
 
-const SignIn : React.FC = () => {
-
-
+const SignIn = () => {
 
     return (
         <>
