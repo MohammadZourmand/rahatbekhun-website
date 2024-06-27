@@ -3,15 +3,10 @@ import { SearchBrokenIcon } from "@/assets/icons";
 import Heading6 from "../elements/headings/h6";
 import Paragraph from "../elements/paragraph";
 
-interface NewsLettersProps {
-    cls ?: string
-}
-
-
-const NewsLetters = ({cls} : NewsLettersProps) => {
+const NewsLetters = () => {
 
     return (
-        <form className={`${cls} flex flex-col lg:items-start items-center`}>
+        <form className={`flex flex-col lg:items-start items-center`}>
             <Heading6 text={"خبررسانی"} cls="text-gray-900 mt-4 lg:mt-0" />
             <div className="grid grid-cols-12 lg:pl-6 mt-6">
                 <input placeholder="ایمیل خود را وارد کنید." className="col-span-9 py-1 px-5 text-gray-900 outline-none" />

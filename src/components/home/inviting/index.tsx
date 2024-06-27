@@ -2,7 +2,6 @@ import Heading3 from "@/components/global/elements/headings/h3";
 import Paragraph from "@/components/global/elements/paragraph";
 import OpaCart from "../../global/elements/cards/btnCart";
 
-
 const Inviting = () => {
 
     return (

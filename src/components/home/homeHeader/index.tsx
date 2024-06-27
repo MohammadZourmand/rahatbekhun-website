@@ -8,6 +8,7 @@ import Lottie from "lottie-react";
 import ReadingBoy from "@/animations/reading-boy.json"; 
 import { Data } from "./boxesData";
 import SmallBox from "./smallbox";
+
 // import IconBtn from "@/components/global/elements/buttons/iconBtn";
 
 const HomeHeader = () => {

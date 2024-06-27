@@ -12,15 +12,15 @@ const Home = () => {
 
     return (
         <>
-            <Header />
-            <Welcome />
+            <Header /> {/* size = 62.5KB */}
+            <Welcome /> {/* size = 1.68KB */}
             {/* <GameLearning /> */}
-            <Courses />
-            <Inviting />
+            <Courses /> {/* size = 3.99KB */}
+            <Inviting /> {/* size = 1.65KB */}
             {/* <TeachersClasses /> */}
-            <Sentences />
+            <Sentences /> {/* size = 23.5KB */}
             {/* <OfferedArticles /> */}
-            <Footer />
+            <Footer /> {/* size = 399B */}
         </>
     )
 }
