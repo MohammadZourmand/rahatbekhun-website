@@ -5,6 +5,7 @@ import Header from "./head";
 import Breadcrumb from "@/components/global/elements/boxes/breadcrumb";
 import BgColorfulBadge from "@/components/global/elements/boxes/badges/bgColorful";
 import TabSwitcher from "@/components/global/elements/boxes/tabSwitcher";
+import Image from "next/image";
 
 interface SingleCourseMainProps {
     cls ?: string
@@ -28,7 +29,13 @@ const SingleCourseMain = ({cls} : SingleCourseMainProps) => {
             <BgColorfulBadge text={"ریاضی"} cls="mt-8"/>
             <Heading1 text="دوره آموزش محاسبات سریع" cls="!mt-6 sm:px-0 px-2" center={false}/>
             <Header />
-            <img className="mt-12" src="/images/courses/boy-answering-questions-fast.jpg" alt="math-tricks-answer-questions-fast" />
+            <div className="relative sm:h-96 xs:h-72 h-56 mt-12 rounded-md overflow-hidden">
+                <Image
+                    src="/images/courses/boy-answering-questions-fast.jpg"
+                    alt="math-tricks-answer-questions-fast"
+                    fill
+                />
+            </div>
             <TabSwitcher />
         </main>
     )

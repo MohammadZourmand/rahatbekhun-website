@@ -14,7 +14,7 @@ const SingleCoursePage : NextPage = () => {
 
     useEffect(() => {
         dispatch(addQuery(router.query))
-    }, [])
+    }, [dispatch, router.query])
 
     return (
         <SingleCourse />

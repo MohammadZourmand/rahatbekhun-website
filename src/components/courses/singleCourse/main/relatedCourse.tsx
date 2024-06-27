@@ -26,7 +26,7 @@ const RelatedCourses = ({cls} : RelatedCoursesProps) => {
                             {
                                 course.category === courseDetails.category && course.name !== courseDetails.name && (
                                     <Cart item={course} />
-                                ) 
+                                )
                             }
                         </div>
                     )

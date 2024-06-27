@@ -75,7 +75,13 @@ const SingleArticlesMainText = () => {
             </div>
             <div className="grid grid-cols-12 md:my-16 my-12 md:p-10 p-6 bg-gray-100">
                 <div className={`md:justify-self-end justify-self-center md:pl-6 md:col-span-2 col-span-12 rounded-full flex`}>
-                    <img className="rounded-full w-16 h-16" src={authorInfo.profileImg} alt={authorInfo.name} />
+                    <Image
+                        className="rounded-full"
+                        src={authorInfo.profileImg}
+                        alt={authorInfo.name}
+                        width={64}
+                        height={64}
+                    />
                 </div>
                 <div className={`md:col-span-10 col-span-12 flex flex-col`}>
                     <Heading3

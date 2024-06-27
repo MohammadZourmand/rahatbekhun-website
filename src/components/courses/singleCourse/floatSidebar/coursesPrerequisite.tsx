@@ -4,6 +4,7 @@ import Link from "next/link";
 import PriceBox from "./price";
 import { courseDetails } from "@/components/global/elements/boxes/tabSwitcher/courseInfo";
 import FiveStars from "@/components/global/elements/boxes/stars/fiveStars";
+import Image from "next/image";
 
 
 
@@ -16,7 +17,13 @@ const PrerequisiteCourses = () => {
                 return (
                     <div key={item} className="grid grid-cols-3 gap-x-3">
                         <div className="overflow-hidden rounded-lg col-span-1 flex items-center justify-center">
-                            <img className="h-[90%]" src={courseDetails?.imgLabel} alt="" />
+                            <div className="relative h-[90%]">
+                                <Image
+                                    src={courseDetails?.imgLabel}
+                                    alt={courseDetails.name}
+                                    fill
+                                />
+                            </div>
                         </div>
                         <div className="col-span-2">
                             <div className="mb-1">

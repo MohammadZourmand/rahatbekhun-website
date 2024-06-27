@@ -1,6 +1,7 @@
 import FaSpan from "@/components/global/elements/translators/faSpan"
 import Paragraph from "@/components/global/elements/paragraph"
 import FiveStars from "@/components/global/elements/boxes/stars/fiveStars"
+import Image from "next/image"
 
 const Header = () => {
 
@@ -8,7 +9,13 @@ const Header = () => {
         <div className="grid grid-cols-12 sm:mt-12 mt-6 items-center px-2">
             <div className="sm:col-span-3 xs:col-span-4 col-span-12 flex items-center">
                 <div>
-                    <img className="w-12 h-12 rounded-full border-2 border-white shadow-all-md" src="/images/home/teachers/mohammad-zourmand.jpg" alt="Mohammad-zourmand-creator-of-rahat-bekhun" />
+                    <Image
+                        className="rounded-full border-2 border-white shadow-all-md"
+                        src="/images/home/teachers/mohammad-zourmand.jpg"
+                        alt="Mohammad-zourmand-creator-of-rahat-bekhun"
+                        width={48}
+                        height={48}
+                    />
                 </div>
                 <div className="mr-4 py-1">
                     <Paragraph cls="text-xs text-gray-500" text="آموزگار" />

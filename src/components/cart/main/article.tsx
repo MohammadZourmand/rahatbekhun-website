@@ -4,6 +4,7 @@ import IconBtn from "@/components/global/elements/buttons/iconBtn";
 import Paragraph from "@/components/global/elements/paragraph";
 import { RootState } from "@/store";
 import { cartItemsProps } from "@/store/slices/cart";
+import Image from "next/image";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
@@ -44,7 +45,13 @@ const CartMainArticle = () => {
                                 return (
                                     <div key={index} className="relative md:p-7 p-5 shadow-all-md rounded-lg grid grid-cols-7 items-center">
                                         <div className="group md:col-span-2 col-span-3 overflow-hidden rounded-lg">
-                                            <img className="group-hover:rotate-12 group-hover:scale-125 transition duration-500 rounded-lg" src={item.img} alt={item.name} />
+                                            <Image
+                                                className="group-hover:rotate-12 group-hover:scale-125 transition duration-500 rounded-lg"
+                                                src={item.img}
+                                                alt={item.name}
+                                                width={25}
+                                                height={25}
+                                            />
                                         </div>
                                         <div className="md:col-span-3 sm:col-span-4 col-span-4 md:pr-8 pr-4 self-center xs:space-y-6 space-y-2">
                                             <Link

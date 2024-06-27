@@ -1,5 +1,6 @@
 import Heading1 from "@/components/global/elements/headings/h1";
 import Paragraph from "@/components/global/elements/paragraph";
+import Image from "next/image";
 import {convertEnToPe} from "persian-number"
 const Goal = () => {
 
@@ -20,7 +21,14 @@ const Goal = () => {
                     text="شروع راحت بخون"
                     cls="absolute md:block hidden  top-16 -right-32 rotate-90 font-medium"    
                 />
-                <img src="/images/about/girl-working-with-laptop-3.jpg" className="h-full rounded-lg shadow-all-lg" alt="girl-choosing-right-way-to-go" />
+                <div className="relative xs:h-[550px] h-[450px]">
+                    <Image 
+                        src="/images/about/girl-working-with-laptop-3.jpg" 
+                        className="rounded-lg shadow-all-lg" 
+                        alt="girl-choosing-right-way-to-go"
+                        fill
+                    />
+                </div>
             </div>
         </section>
     )

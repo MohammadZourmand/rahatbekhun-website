@@ -1,6 +1,6 @@
 import Heading1 from "@/components/global/elements/headings/h1";
 import Paragraph from "@/components/global/elements/paragraph";
-import {convertEnToPe} from "persian-number"
+import Image from "next/image";
 
 const Works = () => {
 
@@ -23,7 +23,14 @@ const Works = () => {
                     text="پیشرفت راحت بخون در کنار شما"
                     cls="absolute md:block hidden top-28 -right-36 rotate-90 font-medium"    
                 />
-                <img src="/images/about/children-with-their-hands-up.jpg" className="rounded-lg shadow-all-lg" alt="girl-choosing-right-way-to-go" />
+                <div className="relative sm:h-[550px] xs:h-[450px] h-[350px]">
+                    <Image 
+                        src="/images/about/children-with-their-hands-up.jpg"
+                        className="rounded-lg shadow-all-lg"
+                        alt="girl-choosing-right-way-to-go"
+                        fill
+                    />
+                </div>
             </div>
         </section>
     )

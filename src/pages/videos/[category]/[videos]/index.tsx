@@ -13,8 +13,8 @@ const SingleVideoPage : NextPage = () => {
     const dispatch = useDispatch<AppDispatch>()
 
     useEffect(() => {
-        dispatch(addQuery(router.query))
-    }, [])
+        dispatch(addQuery(router?.query))
+    }, [dispatch, router?.query])
 
     return (
         <SingleVideo />

@@ -4,7 +4,7 @@ import Heading1 from "@/components/global/elements/headings/h1";
 import Paragraph from "@/components/global/elements/paragraph";
 import { teamData } from "./teamDate";
 import { AddUserBrokenIcon, InstagramIcon, MessageIcon, SendIcon } from "@/assets/icons";
-import IconBtn from "@/components/global/elements/buttons/iconBtn";
+import Image from "next/image";
 
 const Team = () => {
 
@@ -27,8 +27,13 @@ const Team = () => {
                     teamData.map((item, index) => {
                         return (
                             <div key={index} className="transition duration-500 hover:scale-110 xs:p-6 md:col-span-4 sm:col-span-6 col-span-12 flex flex-col items-center">
-                                <div className="">
-                                    <img className="rounded-full hover:scale-105 transition duration-500" src={item.imgSrc} alt={item.name} />
+                                <div className="relative h-48 w-48">
+                                    <Image 
+                                        className="rounded-full hover:scale-105 transition duration-500"
+                                        src={item.imgSrc}
+                                        alt={item.name}
+                                        fill
+                                    />
                                 </div>
                                 <div className="my-3 font-semibold">
                                     <h1 className="text-center my-3">{item.name}</h1>
