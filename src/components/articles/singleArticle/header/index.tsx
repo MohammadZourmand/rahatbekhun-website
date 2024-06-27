@@ -3,6 +3,7 @@ import Breadcrumb, { BreadcrumbItemsProps } from "@/components/global/elements/b
 import Paragraph from "@/components/global/elements/paragraph"
 import { badgeBgColorChooser, badgeTextColorChooser, badgeTextTranslator, singleArticleBadgeBgColorChooser } from "@/components/global/elements/translators/badgeColorChooser"
 import Navbar from "@/components/global/navbar"
+import Image from "next/image"
 import { convertEnToPe } from "persian-number"
 interface SingleArticlePageHeaderProps {
     title : string,
@@ -30,7 +31,12 @@ const SingleArticlePageHeader = ({
         <header className={` lg:bg-[center_top_-8rem]
             ${cls} overflow-hidden sm:h-[30rem] h-[25rem] bg-cover relative w-full
         `}>
-            <img className={`${imgBgCls} absolute xl:-top-20 left-0 w-full -z-10`} src={imgBgSrc} alt={imgBgAlt} />
+            <Image
+                src={imgBgSrc}
+                className={`${imgBgCls} absolute xl:-top-20 left-0 w-full -z-10`}
+                alt={imgBgAlt}
+                fill
+            />
             <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
             <Navbar isWhite={true} />
             <div className={`text-white sm:px-[6.5rem] sm:py-16 px-[3rem] py-8 flex flex-col md:items-start items-center justify-center xl:my-24 my-20 xs:rounded-[5rem] rounded-[3rem]`}>
@@ -38,7 +44,13 @@ const SingleArticlePageHeader = ({
                 <h2 className="sm:text-[3.5rem] text-[1.9rem] tracking-tight !leading-tight font-black md:text-right text-center z-10">{title}</h2>
                 <div className="flex mt-3">
                     <div className="flex mt-4 mb-4 items-center">
-                        <img className="w-9 h-9 border-2 border-white shadow-xl rounded-full z-0" src="/images/home/teachers/mohammad-zourmand.jpg" alt="author" />
+                    <Image
+                        src={'/images/home/teachers/mohammad-zourmand.jpg'}
+                        className={`w-9 h-9 border-2 border-white shadow-xl rounded-full z-0`}
+                        alt={"author"}
+                        width={36}
+                        height={36}
+                    />
                         <Paragraph cls="z-0 text-sm mr-3 text-white" text={author} />
                     </div>
                     <div className="flex items-center mr-12">

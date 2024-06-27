@@ -5,6 +5,7 @@ import Heading5 from "@/components/global/elements/headings/h5";
 import BlueLink from "@/components/global/elements/links/blueLink";
 import Paragraph from "@/components/global/elements/paragraph";
 import Sentence from "@/components/global/elements/paragraph/sentence";
+import Image from "next/image";
 
 const SingleArticlesMainText = () => {
 
@@ -36,7 +37,14 @@ const SingleArticlesMainText = () => {
                     <BlueLink cls="mr-2" href="/courses" text="مشاهده دوره های آموزشی"/>
                 </p>
             </div>
-            <img className="my-8 rounded-lg" src="/images/blog/examplePicture.webp" alt="examplePic" />
+            <div className="lg:w-full md:w-11/12 w-full my-8 mx-auto md:h-[400px] xs:h-64 h-56 relative">
+                <Image
+                    src={"/images/blog/examplePicture.webp"}
+                    alt="examplePic"
+                    className="rounded-lg"
+                    fill
+                />
+            </div>
             <Heading5
                 text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم"
                 cls="text-gray-800 !leading-loose my-5 md:!text-right !text-center"

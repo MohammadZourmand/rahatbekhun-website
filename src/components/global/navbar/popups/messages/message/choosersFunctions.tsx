@@ -1,3 +1,4 @@
+import Image from "next/image"
 
 interface IconChooserProps {
     type : string
@@ -5,10 +6,38 @@ interface IconChooserProps {
 
 export const TypeMessageIconChooser = ({type} : IconChooserProps) => {
     switch (type) {
-        case "warning": return (<img className="" src="/images/icons/warning.png"/>)
-        case "info": return (<img className="" src="/images/icons/info.png"/>)
-        case "success": return (<img className="" src="/images/icons/checked.png"/>)
-        default: return (<img className="" src="/images/icons/cancel.png"/>)
+        case "warning": return (
+            <Image 
+                src={"/images/icons/warning.png"}
+                alt="علامت-اخطار"
+                width={56}
+                height={56}
+            />
+        )
+        case "info": return (
+            <Image 
+                src={"/images/icons/info.png"}
+                alt="علامت-اخطار"
+                width={56}
+                height={56}
+            />
+        )
+        case "success": return (
+            <Image 
+                src={"/images/icons/checked.png"}
+                alt="علامت-تیک-موفقیت"
+                width={56}
+                height={56}
+            />
+        )
+        default: return (
+            <Image 
+                src={"/images/icons/cancel.png"}
+                alt="علامت-ضربدر-ناموفق"
+                width={56}
+                height={56}
+            />
+        )
     }
 }
 

@@ -5,6 +5,7 @@ import CourseInfoSidebar from "./courseInfo";
 import CoursePriceSidebar from "./coursePrice";
 import CourseDemoSidebar from "./courseDemo";
 import PrerequisiteCourses from "./coursesPrerequisite";
+import Image from "next/image";
 
 interface FloatSidebarProps {
     cls ?: string
@@ -14,7 +15,13 @@ const FloatSidebar = ({cls} : FloatSidebarProps) => {
     
     return (
         <aside className={`${cls} relative flex flex-col gap-y-8 lg:mt-0 mt-12 lg:mx-0 mx-2`}>
-            <img className="absolute top-36 -left-8" src="/images/courses/course-dot.webp" alt="dot-image-for-background-course" />
+            <Image 
+                src={"/images/courses/course-dot.webp"}
+                alt="نقطه چین مستطیلی شکل"
+                width={70}
+                height={110}
+                className="absolute top-36 -left-8"
+            />
             <div className="z-10 p-6 bg-white rounded-lg shadow-all-lg shadow-gray-200">
                 <CourseDemoSidebar />
                 <CoursePriceSidebar />

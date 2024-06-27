@@ -2,11 +2,11 @@ import Footer from "../global/footer";
 import Header from "./homeHeader";
 import Sentences from "./BigSentences";
 import Welcome from "./welcome";
-// import GameLearning from "./gameLearning";
 import Courses from "./courses";
 import Inviting from "./inviting";
-// import TeachersClasses from "./teachersClasses";
-// import OfferedArticles from "./offeredArticles";
+import OfferedArticles from "./offeredArticles";
+import TeachersClasses from "./teachersClasses";
+import GameLearning from "./gameLearning";
 
 const Home = () => {
 
@@ -14,12 +14,12 @@ const Home = () => {
         <>
             <Header /> {/* size = 62.5KB */}
             <Welcome /> {/* size = 1.68KB */}
-            {/* <GameLearning /> */}
+            <GameLearning />
             <Courses /> {/* size = 3.99KB */}
             <Inviting /> {/* size = 1.65KB */}
-            {/* <TeachersClasses /> */}
+            <TeachersClasses />
             <Sentences /> {/* size = 23.5KB */}
-            {/* <OfferedArticles /> */}
+            <OfferedArticles />
             <Footer /> {/* size = 399B */}
         </>
     )

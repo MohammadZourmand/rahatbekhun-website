@@ -1,5 +1,6 @@
 import { AparatIcon, EyeBrokenIcon, GithubIcon, InstagramIcon, MessageBrokenIcon, SendBrokenIcon, SendIcon } from "@/assets/icons";
 import Heading6 from "@/components/global/elements/headings/h6";
+import Image from "next/image";
 import Link from "next/link";
 
 interface AsideProps {
@@ -100,9 +101,27 @@ const Aside = ({cls} : AsideProps) => {
                     </div>
                 </div>
             </div>
-            <img className="absolute -z-10 bottom-28 -right-8" src="/images/contact/contact-shape-1.webp" alt="dot-image-for-background-course" />
-            <img className="absolute -z-10 top-16 2xl:-left-8 xl:-left-4 lg:-left-8 -left-6" src="/images/contact/contact-shape-2.webp" alt="dot-image-for-background-course" />
-            <img className="absolute -z-10 top-64 -rotate-90 2xl:-left-20 lg:-left-16 sm:-left-24 -left-6" src="/images/contact/contact-shape-3.webp" alt="dot-image-for-background-course" />
+            <Image
+                src={"/images/contact/contact-shape-1.webp"}
+                alt="مستطیل نقطه چین"
+                width={84}
+                height={90}
+                className="absolute -z-10 bottom-28 -right-8"
+            />
+            <Image
+                src={"/images/contact/contact-shape-2.webp"}
+                alt="مستطیل نقطه چین"
+                width={70}
+                height={110}
+                className="absolute -z-10 top-16 2xl:-left-8 xl:-left-4 lg:-left-8 -left-6"
+            />
+            <Image
+                src={"/images/contact/contact-shape-3.webp"}
+                alt="دایره متحرک"
+                width={59}
+                height={56}
+                className="absolute -z-10 top-64 -rotate-90 2xl:-left-20 lg:-left-16 sm:-left-24 -left-6"
+            />
         </aside>
     )
 }

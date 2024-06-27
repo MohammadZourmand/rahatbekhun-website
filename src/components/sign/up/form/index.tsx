@@ -5,6 +5,7 @@ import Input from "@/components/global/elements/inputs/input";
 import MyLabel from "@/components/global/elements/inputs/label";
 import { IconBrandGoogle } from "@tabler/icons-react";
 import { Form, Formik } from "formik";
+import Image from "next/image";
 import Link from "next/link";
 
 const SignUpForm = () => {
@@ -28,17 +29,53 @@ const SignUpForm = () => {
                 </p>
             </header>
             <main className="relative">
-                <img className="absolute xs:w sm:block hidden xl:-top-40 xl:right-48 sm:-top-40 sm:-right-0 md:right-24 lg:right-0 z-[-1] opacity-10" src="/images/login/form-bg.webp" alt="" />
-                <img className="absolute -top-56 right-8 xs:-top-40 xl:-top-24 xl:right-48 sm:-top-24 sm:right-16 z-[-1] animate-slowSpin" src="/images/login/circle.webp" alt="" />
+                <Image 
+                    src={"/images/login/form-bg.webp"}
+                    className="absolute xs:w sm:block hidden xl:-top-40 xl:right-48 sm:-top-40 sm:-right-0 md:right-24 lg:right-0 z-[-1] opacity-10"
+                    alt="pink-background"
+                    width={620}
+                    height={680}
+                />
+                <Image 
+                    src={"/images/login/circle.webp"}
+                    className="absolute -top-56 right-8 xs:-top-40 xl:-top-24 xl:right-48 sm:-top-24 sm:right-16 z-[-1] animate-slowSpin"
+                    alt="pink-background"
+                    width={25}
+                    height={25}
+                />
                 <Formik
                     initialValues={initialValues}
                     onSubmit={submitHandler}
                 >
                     <Form className="relative z-[1] flex flex-col bg-white sm:max-w-3xl md:mx-auto xs:mx-6 mx-1 shadow-all-lg shadow-[#e5e7eb] rounded-lg xs:px-8 px-4 xs:py-12 py-6 mt-16">  
-                            <img className="absolute sm:block -top-16 -right-16 z-[-1] animate-goAndBack" src="/images/login/dot.webp" alt="" />
-                            <img className="absolute -top-48 left-4 xl:-left-40 sm:-left-0 lg:-left-28 z-[-1] animate-goAndBack" src="/images/login/zigzag.webp" alt="" />
-                            <img className="absolute lg:block hidden top-32 xl:-left-56 lg:-left-32" src="/images/login/man-1.webp" alt="" />
-                            <img className="absolute lg:block sm:hidden block z-[-1] -top-20 right-0 w-20 sm:w-24 sm:top-24 xl:-right-56 sm:-right-16 md:-right-32" src="/images/login/man-2.webp" alt="" />
+                            <Image 
+                                src={"/images/login/dot.webp"}
+                                className="absolute sm:block -top-16 -right-16 z-[-1] animate-goAndBack"
+                                alt="نقطه-چین"
+                                width={33}
+                                height={63}
+                            />
+                            <Image 
+                                src={"/images/login/zigzag.webp"}
+                                className="absolute -top-48 left-4 xl:-left-40 sm:-left-0 lg:-left-28 z-[-1] animate-goAndBack"
+                                alt="خط-خمیده"
+                                width={32}
+                                height={17}
+                            />
+                            <Image 
+                                src={"/images/login/man-1.webp"}
+                                className="absolute lg:block hidden top-32 xl:-left-56 lg:-left-32"
+                                alt="مرد-در-حال-اشاره-کردن"
+                                width={130}
+                                height={250}
+                            />
+                            <Image 
+                                src={"/images/login/man-2.webp"}
+                                className="absolute lg:block sm:hidden block z-[-1] -top-20 right-0 w-20 sm:w-24 sm:top-24 xl:-right-56 sm:-right-16 md:-right-32"
+                                alt="پسر-درحال-کار-با-لپتاپ"
+                                width={96}
+                                height={118}
+                            />
                             <Link href={"/sign-up"} className="self-center sm:w-1/2 w-11/12 xs:w-2/3 xs:mx-8 relative overflow-hidden hover:after:w-[110%] hover:text-white transition-all after:transition-all after:duration-500 duration-500 after:absolute after:-top-5 after:left-0 after:w-1/6 after:h-[200%] after:rounded-r-full after:bg-baby-5 bg-gray-100 pr-8 text-gray-500 text-sm after:z-[-1] z-[1] rounded-md py-3 mb-4">
                                 <IconBrandGoogle className="absolute left-0 top-0 ml-3 my-[.6rem]" stroke={3} color="white" />
                                 با حساب گوگل خودت وارد شو 

@@ -2,6 +2,7 @@ import DarkBlueBtn from "@/components/global/elements/buttons/darkBlue"
 import TransparentBtn from "@/components/global/elements/buttons/opacity"
 import Heading3 from "@/components/global/elements/headings/h3"
 import Paragraph from "@/components/global/elements/paragraph"
+import Image from "next/image"
 
 
 const TeachersClasses = () => {
@@ -17,8 +18,13 @@ const TeachersClasses = () => {
                     <TransparentBtn text={"مشاهده جزئیات"} href="/games" />
                 </div>
             </div>
-            <div className="xl:col-span-7 col-span-12">
-                <img className="translate-y-12" src="/images/home/teamwork.jpg" alt="raharbekhun-helps-teachers-with-assistants-class" />
+            <div className="xl:col-span-7 col-span-12 xl:w-[440px] xl:h-96 lg:w-[80%] w-full xs:h-96 h-64 mx-auto relative">
+                <Image 
+                    className=""
+                    src={"/images/home/teamwork.jpg"}
+                    alt="دستیار تدریس راحت بخون"
+                    fill
+                />
             </div>
         </section>
     )

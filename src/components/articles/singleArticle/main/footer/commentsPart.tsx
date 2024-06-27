@@ -7,6 +7,7 @@ import { courseDetails, episodeCommentsProps } from "@/components/global/element
 import Link from "next/link";
 import Heading5 from "@/components/global/elements/headings/h5";
 import Paragraph from "@/components/global/elements/paragraph";
+import Image from "next/image";
 
 
 interface CommentsPartProps {
@@ -36,7 +37,13 @@ const CommentsPart = ({cls} : CommentsPartProps) => {
                                 <Link href={comment.href} key={comment.id} className={`flex flex-col sm:px-8 sm:py-6 p-4 bg-gray-200/40`}>
                                     <header className={`flex xs:flex-row flex-col justify-between xs:items-center`}>
                                         <div className="flex items-center">
-                                            <img className="col-span-1 border-2 border-white w-16 h-16 rounded-full" src={comment.userPicture} alt="" />
+                                            <Image
+                                                className="col-span-1 border-2 border-white w-16 h-16 rounded-full"
+                                                width={64}
+                                                height={64}
+                                                alt={comment.username}
+                                                src={comment.userPicture}
+                                            />
                                             <div className="flex flex-col space-y-1 mr-4 text-sm">
                                                 <span className="text-gray-800 font-bold">{comment.username}</span>
                                                 <FaSpan cls="text-gray-600" value={comment.date} />

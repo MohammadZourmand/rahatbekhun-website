@@ -10,14 +10,20 @@ import Paragraph from "@/components/global/elements/paragraph";
 import Heading1 from "../../headings/h1";
 import Link from "next/link";
 import { badgeBgColorChooser, badgeTextColorChooser, badgeTextTranslator } from "../../translators/badgeColorChooser";
+import Image from "next/image";
 
 const Card2 = ({item, cls} : Card2Type) => {
 
     return (
         <section className={`${cls} group rounded-lg bg-white shadow-lg`}>
             {/* image part */}
-            <div className="overflow-hidden rounded-t-lg">
-                <img className="overflow-hidden group-hover:scale-105 transition duration-500" src={item.imgSrc} alt={item.imgAlt} />
+            <div className="overflow-hidden rounded-t-lg relative w-full md:h-64 sm:h-48 h-64">
+                <Image
+                    src={item.imgSrc}
+                    className="overflow-hidden group-hover:scale-105 transition duration-500"
+                    alt={item.imgAlt}
+                    fill
+                />
             </div>
             {/* text part */}
             <div className="flex flex-col xl:p-4 p-3">
@@ -31,7 +37,13 @@ const Card2 = ({item, cls} : Card2Type) => {
                 </main>
                 <footer className={`flex items-center justify-between gap-4 pt-4 pb-1`}>
                     <div className="flex mt-4 mb-4 items-center">
-                        <img className="w-9 h-9 border-2 border-gray-200 shadow-xl rounded-full" src="/images/home/teachers/mohammad-zourmand.jpg" alt="suthor" />
+                        <Image
+                            src={"/images/home/teachers/mohammad-zourmand.jpg"}
+                            className="w-9 h-9 border-2 border-gray-200 shadow-xl rounded-full"
+                            alt="author"
+                            width={36}
+                            height={36}
+                        />
                         <Paragraph cls="text-gray-600 text-xs mr-2" text={item.author} />
                     </div>
                     <div className="flex items-center">

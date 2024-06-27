@@ -9,6 +9,7 @@ import InfoBox from "./infoBox";
 import LinkBox from "./linkbox";
 import Heading6 from "@/components/global/elements/headings/h6";
 import CloseIcon from "../../../mobile/closeIcon";
+import Image from "next/image";
 
 interface UserPopupProps {
     setShow : Dispatch<SetStateAction<boolean>>
@@ -29,7 +30,7 @@ const UserPopup = ({setShow} : UserPopupProps) => {
                     className={`flex group justify-evenly w-full items-center relative top-1`}
                 >
                     <div className="bg-white rounded-full">
-                        <img
+                        <Image
                             className="group-hover:scale-105 transition"
                             src="/images/webLogo.png"
                             width={100}

@@ -8,6 +8,7 @@ import StaticProgressbar from "./staticProgress";
 import Heading5 from "../../headings/h5";
 import InsertCommentCoursePart from "./insertCommentPart";
 import FiveStars from "../stars/fiveStars";
+import Image from "next/image";
 
 const CommentsCourseParts = () => {
     return (
@@ -51,7 +52,13 @@ const CommentsCourseParts = () => {
                                     <Link href={comment.href} key={comment.id} className={`flex flex-col sm:px-8 sm:py-6 p-4 bg-gray-200/40`}>
                                         <header className={`flex xs:flex-row flex-col justify-between xs:items-center`}>
                                             <div className="flex items-center">
-                                                <img className="col-span-1 border-2 border-white w-16 h-16 rounded-full" src={comment.userPicture} alt="" />
+                                                <Image
+                                                    width={64}
+                                                    height={64}
+                                                    className="col-span-1 border-2 border-white rounded-full"
+                                                    src={comment.userPicture}
+                                                    alt={comment.username}
+                                                />
                                                 <div className="flex flex-col space-y-1 mr-4 text-sm">
                                                     <span className="text-gray-800 font-bold">{comment.username}</span>
                                                     <FaSpan cls="text-gray-600" value={comment.date} />

@@ -6,6 +6,7 @@ import { SearchTypesData, searchTypesDataProps } from "./searchTypesData";
 
 // ? assets ======================
 import { SearchBrokenIcon } from "@/assets/icons";
+import Image from "next/image";
 
 interface SearchModalProps {
     isFocus : boolean
@@ -35,7 +36,12 @@ const SearchModal = ({ isFocus, setIsFocus} : SearchModalProps) => {
                         {
                             SearchTypesData.map((item : searchTypesDataProps) => (
                                 <div onClick={() => setSelectedType(item.id)} key={item.id} className={`${selectedType === item.id && "!bg-baby-2"} cursor-pointer hover:bg-baby-2 bg-white rounded-xl xl:col-span-3 md:col-span-4 xs:col-span-6 col-span-12 px-6 py-4 flex flex-col items-center justify-center`}>
-                                    <img className="w-20 h-20" src={item.img} alt="" />
+                                    <Image
+                                        src={item?.img}
+                                        alt={item?.type}
+                                        width={80}
+                                        height={80}
+                                    />
                                     <p className="text-4xl nozha mt-4">{item.type}</p>
                                 </div>
                             ))

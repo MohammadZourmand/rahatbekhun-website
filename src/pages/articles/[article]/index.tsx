@@ -19,9 +19,9 @@ const SingleArticlePage : NextPage = (props : {query}) => {
 
     return (
         <>
-            <Head>
+            {/* <Head>
                 <title>{articleInfo.head}</title>
-            </Head>
+            </Head> */}
             <SingleArticle />
         </>
     )
