@@ -7,6 +7,7 @@ import Popover from "../../../../boxes/popover";
 import { setSheetsIcon } from "../setSheetsIcon";
 import { worksheetsDataProps } from "@/components/worksheets/data";
 import TickList from "./tickList";
+import Image from "next/image";
 
 interface WorksheetCardMainProps {
     item : worksheetsDataProps
@@ -19,7 +20,14 @@ const WorksheetCardMain : FC<WorksheetCardMainProps> = ({item}) => {
     return (
         <main className="w-full">
             <div onClick={() => setShowWorksheet(false)} className={`${showWorksheet ? "fixed" : "hidden" } flex items-center justify-center top-0 left-0 w-full h-full bg-gray-900/60 z-40`}>
-                <img src={item.worksheetImg} alt="worksheet" className="z-50" />
+                <div className="absolute xs:w-[30rem] w-[320px] h-[90%] rounded-lg overflow-hidden">
+                    <Image
+                        src={item.worksheetImg}
+                        alt="worksheet"
+                        className="z-50"
+                        fill
+                    />
+                </div>
             </div>
             <div className="flex flex-col items-center">
                 <div className="flex gap-2"> 

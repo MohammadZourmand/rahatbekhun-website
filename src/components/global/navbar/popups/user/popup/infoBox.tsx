@@ -1,5 +1,6 @@
 
 import FaSpan from "@/components/global/elements/translators/faSpan";
+import Image from "next/image";
 import {FC} from "react";
 
 interface InfoBoxProps {
@@ -17,7 +18,13 @@ const InfoBox : FC<InfoBoxProps> = ({
     return (
         <div className={`${cls} group flex flex-col col-span-4 items-center`}>
             <div className="bg-gray-200/50 shadow-all-lg rounded-full">
-                <img src={img} className={`${imgCls} group-hover:scale-110 duration-500`}/>
+                <Image
+                    alt={subject}
+                    src={img}
+                    className={`${imgCls} group-hover:scale-110 duration-500`}
+                    width={64}
+                    height={64}
+                />
             </div>
             <FaSpan 
                 value={value}

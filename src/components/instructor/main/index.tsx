@@ -7,15 +7,21 @@ import Heading3 from "@/components/global/elements/headings/h3";
 import Heading6 from "@/components/global/elements/headings/h6";
 import Paragraph from "@/components/global/elements/paragraph";
 import FloatedPictures from "./floated";
+import Image from "next/image";
 
 const InstructorMain = () => {
 
     return (
         <main className="grid grid-cols-3 lg:gap-x-16 px-3 sm:px-8 lg:px-0 max-w-7xl mx-auto mt-32">
             <FloatedPictures />
-            <div className="relative col-span-3 sm:col-span-2 lg:col-span-1 rounded-lg">
+            <div className="relative xl:h-96 lg:h-80 xs:h-96 lg:w-full xs:w-96 h-72 w-72 col-span-3 sm:col-span-2 lg:col-span-1 rounded-lg">
                 <div className="w-40 h-40 rounded-full -z-10 absolute top-40 -left-8 bg-sky-500/10"></div>
-                <img className="rounded-lg z-10" src="/images/home/teachers/mohammad-zourmand.jpg" alt="" />
+                <Image 
+                    className="rounded-lg z-10" 
+                    src="/images/home/teachers/mohammad-zourmand.jpg"
+                    alt=""
+                    fill
+                />
             </div> 
             <div className="col-span-3 lg:col-span-2 flex flex-col">
                 <div className="border-b pb-6 flex md:flex-row flex-col gap-y-7 md:items-end justify-between">

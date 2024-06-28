@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "../../navbar";
 import Breadcrumb, { BreadcrumbItemsProps } from "../boxes/breadcrumb";
 
@@ -7,6 +8,7 @@ interface PageHeaderProps {
     imgBgSrc : string
     imgBgCls ?: string
     cls ?: string
+    imgBoxCls ?: string
 }
 
 const PageHeader = ({
@@ -14,14 +16,22 @@ const PageHeader = ({
     breadcrumbItems,
     imgBgSrc,
     imgBgCls,
-    cls
+    cls,
+    imgBoxCls
 } : PageHeaderProps) => {
 
     return (
         <header className={` lg:bg-[center_top_-8rem]
             ${cls} overflow-hidden sm:h-[30rem] h-[25rem] bg-cover relative w-full
         `}>
-            <img className={`${imgBgCls} absolute xl:-top-20 left-0 w-full -z-10`} src={imgBgSrc} alt="" />
+            <div className={`${imgBoxCls} absolute w-full h-[130%] left-0`}>
+                <Image
+                    className={`${imgBgCls} -z-10`}
+                    src={imgBgSrc}
+                    alt={title}
+                    fill
+                />
+            </div>
             <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
             <Navbar isWhite={true} />
             <div className={`text-white sm:px-[6.5rem] sm:py-16 px-[3rem] py-8 flex flex-col md:items-start items-center justify-center xl:my-24 my-20 xs:rounded-[5rem] rounded-[3rem]`}>

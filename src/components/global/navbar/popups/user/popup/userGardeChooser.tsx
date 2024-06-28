@@ -1,4 +1,5 @@
 import { UserBrokenIcon } from "@/assets/icons";
+import Image from "next/image";
 
 interface UserGradeChooserProps {
     grade : string
@@ -9,7 +10,12 @@ const UserGradeChooser = ({grade} : UserGradeChooserProps) => {
     switch (grade) {
         case "خالق":
             return (
-                <img src="/images/userGrades/creator.png" />
+                <Image
+                    src="/images/userGrades/creator.png"
+                    alt="خالق"
+                    width={64}
+                    height={64}
+                />
             )
     
         default:

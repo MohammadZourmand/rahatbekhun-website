@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 interface SentenceProps {
     text : string
     cls ?: string
@@ -19,10 +21,11 @@ const Sentence = ({text, cls, teller, paraCls, tellerCls} : SentenceProps) => {
                     </div>
                 </div>
             }
-            <img
+            <Image
                 className="absolute -bottom-6 left-16"
                 src="/images/blog/quote.webp"
-                alt="quote-italics-lines"
+                alt={teller}
+                fill
             />
         </div>
     )
