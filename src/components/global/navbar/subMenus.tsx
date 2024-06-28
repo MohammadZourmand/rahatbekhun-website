@@ -25,10 +25,12 @@ const SubMenus = ({isWhite, cls} : SubMenuProps) => {
                         return (
                             <div className={linkStyle} key={index} onMouseEnter={() => setShowSubMenus(true)}>
                                 <div className={`${isWhite && "text-white"} nozha`}> {item?.name} </div>
-                                {showSubMenus && <SubMenu
-                                    item={item}
-                                    isWhite={isWhite}
-                                />}
+                                {
+                                    showSubMenus && <SubMenu
+                                        item={item}
+                                        isWhite={isWhite}
+                                    />
+                                }
                             </div>
                         )
                     })
