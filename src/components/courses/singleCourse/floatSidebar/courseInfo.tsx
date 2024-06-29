@@ -1,28 +1,15 @@
 import { CategoryBroken, ClockBroken, UserBrokenIcon, UsersBroken } from "@/assets/icons";
 
-import { addProduct } from "@/store/slices/cart";
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "@/store";
-
 import BlueBtn from "@/components/global/elements/buttons/blue";
 import SubjectBox from "./subjectBox";
 import { courseDetails } from "@/components/global/elements/boxes/tabSwitcher/courseInfo";
 
 const CourseInfoSidebar = () => {
 
-    const dispatch = useDispatch<AppDispatch>()
-
     const addToCartList = () => {
 
         let {price, offPercent, name, courseLink, imgLabel} = courseDetails
        
-        dispatch(addProduct({
-            price : price,
-            link : courseLink,
-            name : name,
-            img : imgLabel,
-            offPrecent : offPercent
-        }))
     }
 
     return (

@@ -1,10 +1,9 @@
 import PriceBox from "@/components/courses/singleCourse/floatSidebar/price"
-import { cartItemsProps } from "@/store/slices/cart"
 import Image from "next/image"
 import Link from "next/link"
 
 interface ProductsProps {
-    product : cartItemsProps
+    product : any
 }
 
 const Products = ({product} : ProductsProps) => {

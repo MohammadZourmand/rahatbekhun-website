@@ -1,6 +1,7 @@
+'use client'
+
 import {useState} from "react"
 import Link from "next/link";
-
 
 // ? components ==================
 import { SubMenusValues } from "./subMenu/data";

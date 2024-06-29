@@ -24,7 +24,7 @@ const Sentence = ({text, cls, teller, paraCls, tellerCls} : SentenceProps) => {
             <Image
                 className="absolute -bottom-6 left-16"
                 src="/images/blog/quote.webp"
-                alt={teller}
+                alt={teller ?? 'جمله'}
                 fill
             />
         </div>

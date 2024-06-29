@@ -3,7 +3,7 @@ import PN from "persian-number";
 
 interface FaSpanProps {
     hasSlicer ?: boolean
-    value ?: string | number
+    value ?: any
     cls ?: string
     suffix ?: string
 }

@@ -1,3 +1,5 @@
+'use client'
+
 import SheetsCard from "@/components/global/elements/cards/sheetsCard";
 import { worksheetsData, worksheetsDataProps } from "../data";
 import Filters from "./filters";

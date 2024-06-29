@@ -1,3 +1,5 @@
+'use client'
+
 import { CategoryBroken, FilterBroken } from "@/assets/icons";
 import { useState } from "react";
 

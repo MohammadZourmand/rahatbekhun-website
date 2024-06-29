@@ -1,13 +1,9 @@
 
-import {FC} from "react";
 import RelatedArticles from "./relatedArticle";
 import CommentsPart from "./commentsPart";
 
-interface SingleArticleMainFooterProps {
 
-} 
-
-const SingleArticleMainFooter : FC<SingleArticleMainFooterProps> = ({}) => {
+const SingleArticleMainFooter = ({}) => {
 
     return (
         <>

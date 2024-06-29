@@ -2,26 +2,17 @@ import { CartBrokenIcon, DeleteBrokenIcon, UserBrokenIcon } from "@/assets/icons
 import PriceBox from "@/components/courses/singleCourse/floatSidebar/price";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
 import Paragraph from "@/components/global/elements/paragraph";
-import { RootState } from "@/store";
-import { cartItemsProps } from "@/store/slices/cart";
 import Image from "next/image";
 import Link from "next/link";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
 
 
 const CartMainArticle = () => {
 
-    const cartProducts = useSelector(( state : RootState) => state.cartProducts)
-    const dispatch = useDispatch()
-
-    const productDeleter = (item : cartItemsProps) => {
-        
-    }
-
     return (
-        <article className={`${cartProducts.length === 0 ? "col-span-12 h-[65vh] mb-16" : "xl:col-span-9 order-1 lg:col-span-8 col-span-12 xl:mr-16 lg:mr-8 mb-8 lg:mb-0"}`}>
-            {
+        <article
+            // className={`${cartProducts.length === 0 ? "col-span-12 h-[65vh] mb-16" : "xl:col-span-9 order-1 lg:col-span-8 col-span-12 xl:mr-16 lg:mr-8 mb-8 lg:mb-0"}`}
+        >
+            {/* {
                 cartProducts.length === 0
                 ?
                     (
@@ -95,7 +86,7 @@ const CartMainArticle = () => {
                         }
                         </div>
                     )
-            }
+            } */}
         </article>
     )
 }

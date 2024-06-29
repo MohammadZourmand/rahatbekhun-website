@@ -1,5 +1,3 @@
-import { useSelector } from "react-redux";
-import { RootState } from "@/store";
 import Heading1 from "@/components/global/elements/headings/h1";
 import Header from "./head";
 import Breadcrumb from "@/components/global/elements/boxes/breadcrumb";
@@ -13,15 +11,13 @@ interface SingleCourseMainProps {
 
 const SingleCourseMain = ({cls} : SingleCourseMainProps) => {
 
-    const query = useSelector((state : RootState) => state.singleArticleSlice)
-
     return (
         <main className={`${cls} relative`}>
             <Breadcrumb
                 items={[
                     {href : "courses", value : "دوره های آموزشی"},
-                    {href : query.category , value : "دسته بندی دوره"},
-                    {href : query.course , value : "نام دوره آموزشی"},
+                    // {href : query.category , value : "دسته بندی دوره"},
+                    // {href : query.course , value : "نام دوره آموزشی"},
                 ]}
                 isWhite={false}
                 size={"sm"}

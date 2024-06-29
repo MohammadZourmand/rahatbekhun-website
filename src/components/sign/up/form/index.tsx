@@ -1,3 +1,5 @@
+'use client'
+
 import BlueBtn from "@/components/global/elements/buttons/blue";
 import Heading3 from "@/components/global/elements/headings/h3";
 import MyCheckBox from "@/components/global/elements/inputs/checkBox";

@@ -1,9 +1,9 @@
+'use client'
+
 import { useEffect, useState } from "react";
 
 import { Form, Formik } from "formik";
-import { useDispatch } from "react-redux";
 import { WarningToast } from "@/components/lib/swal";
-import { loadingsSetter } from "@/store/slices/loadings";
 
 import { searchFormInitialValues as initialState, searchFormSelectboxOptions, searchFormInitialValuesProps as valuesType} from "./initialvalues";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
@@ -12,11 +12,7 @@ import SelectBoxDiv from "./selectboxDiv";
 
 const AdvancedSearchFrom = () => {
 
-    const dispatch = useDispatch()
-
-
     const submitHandler = () => {
-        dispatch(loadingsSetter("pages"))
         WarningToast("جستجو ناقص انجام شد !")
     }
 

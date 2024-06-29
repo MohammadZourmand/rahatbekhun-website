@@ -1,11 +1,6 @@
 // ? react
 import { Dispatch, FC, SetStateAction } from "react";
 
-// ? libraries
-import { AppDispatch } from "@/store";
-import { emptyCart } from "@/store/slices/cart";
-import { useDispatch } from "react-redux";
-
 // ? components
 import BlueBtn from "@/components/global/elements/buttons/blue";
 import PriceBox from "@/components/courses/singleCourse/floatSidebar/price";
@@ -18,7 +13,6 @@ interface CartProductsFooterProps {
 
 const CartProductsFooter : FC<CartProductsFooterProps> = ({total, setTotal}) => {
     
-    const dispatch = useDispatch<AppDispatch>()
 
     return (
         <footer className="xs:mx-8 mx-2 border-t py-8">
@@ -33,9 +27,9 @@ const CartProductsFooter : FC<CartProductsFooterProps> = ({total, setTotal}) => 
                 />
             </div>
             <div className="mt-8">
-                <button onClick={() => dispatch(emptyCart())} className={`w-full mb-3 hover:shadow-md text-center border border-gray-300 text-gray-900 rounded-lg px-5 py-3 mx-auto transition duration-500`}>
+                {/* <button onClick={() => dispatch(emptyCart())} className={`w-full mb-3 hover:shadow-md text-center border border-gray-300 text-gray-900 rounded-lg px-5 py-3 mx-auto transition duration-500`}>
                     خالی کردن سبد خرید
-                </button>
+                </button> */}
                 <IconBtn href="/cart" iconName="left" cls="w-full my-0 py-3 mt-0" text="ادامه دادن فرایند خرید" />
             </div>
         </footer>

@@ -1,3 +1,5 @@
+'use client'
+
 import { DocumentBrokenIcon, FolderBroken, StarBroken, UsersBroken } from '@/assets/icons';
 import { ReactNode, useState } from 'react';
 import CourseInfo from './info';

@@ -1,3 +1,4 @@
+'use'
 
 // ? React =======================
 import dynamic from "next/dynamic";
@@ -21,10 +22,6 @@ interface NavbarProps {
 const Navbar = ({isWhite, cls} : NavbarProps) => {
 
     const linkStyle = `group flex items-center justify-center ${isWhite ? "bg-white" : "bg-baby-1"} rounded-full sm:w-12 sm:h-12 w-10 h-10 after:hidden after:content-[''] after:absolute after:transition-all after:duration-500 after:w-0 hover:after:w-full after:bottom-0 after:left-0 after:h-full after:border-b-[3.5px] after:border-b-baby-6 relative text-center nozha py-4 px-1 transition`  
-    
-    const [width, setWidth] = useState<number>(1024)
-    const screenWidth = WindowSize().width
-    useEffect(() => {setWidth(screenWidth)}, [screenWidth])
 
     return (
         <>
@@ -34,14 +31,14 @@ const Navbar = ({isWhite, cls} : NavbarProps) => {
                     <div className="flex items-center">
                         <WebsiteName isWhite={isWhite} cls="justify-center ml-8" />
                         {
-                            width >= 1024 && <SubMenus isWhite={isWhite} />
+                            1222 >= 1024 && <SubMenus isWhite={isWhite} />
                         }
                     </div>
 
                     <div className="flex items-center gap-x-3">
                         
                         {
-                            width >= 1024
+                            1222 >= 1024
                                 ? <PopupIcons isWhite={isWhite} />
                                 : <FloatBtn />
                         }

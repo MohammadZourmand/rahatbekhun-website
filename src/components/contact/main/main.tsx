@@ -1,3 +1,5 @@
+'use client'
+
 import BlueBtn from "@/components/global/elements/buttons/blue";
 import Heading5 from "@/components/global/elements/headings/h5";
 import Input from "@/components/global/elements/inputs/input";

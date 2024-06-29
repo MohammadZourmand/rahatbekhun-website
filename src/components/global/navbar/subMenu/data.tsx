@@ -18,37 +18,37 @@ export const SubMenusValues : SubMenusValuesProps[] = [
         name : "صفر تا صد" ,
         link : "courses" ,
         mainHead : "دوره های آموزشی",
-        mainImg : "/images/home/searchTypes/online-learning.png",
+        mainImg : "/images/navbar/online-learning.png",
         mainInfo : "بررسی کامل مطالب به همراه بازی، آزمون و کاربرگ" ,
         items : [
             {
                 name : "پایه اول",
-                img : "/images/digits/1.png",
+                img : "/images/navbar/digits/1.png",
                 href : "/grade-1"
             },
             {
                 name : "پایه دوم",
-                img : "/images/digits/2.png",
+                img : "/images/navbar/digits/2.png",
                 href : "/grade-2"
             },
             {
                 name : "پایه سوم",
-                img : "/images/digits/3.png",
+                img : "/images/navbar/digits/3.png",
                 href : "/grade-3"
             },
             {
                 name : "پایه چهارم",
-                img : "/images/digits/4.png",
+                img : "/images/navbar/digits/4.png",
                 href : "/grade-4"
             },
             {
                 name : "پایه پنجم",
-                img : "/images/digits/5.png",
+                img : "/images/navbar/digits/5.png",
                 href : "/grade-5"
             },
             {
                 name : "پایه ششم",
-                img : "/images/digits/6.png",
+                img : "/images/navbar/digits/6.png",
                 href : "/grade-6"
             }
         ],
@@ -57,7 +57,7 @@ export const SubMenusValues : SubMenusValuesProps[] = [
         name : "کاربرگ",
         link : "worksheets",
         mainHead : "مشاهده تمامی کاربرگ ها",
-        mainImg : "/images/home/searchTypes/worksheet.png",
+        mainImg : "/images/navbar/worksheet.png",
         mainInfo : "کاربرگ های مهارت محور و خلاقانه برای تکمیل یادگیری یا سنجش",
         items : [
             {
@@ -67,27 +67,27 @@ export const SubMenusValues : SubMenusValuesProps[] = [
             },
             {
                 name : "پایه دوم",
-                img : "/images/digits/2.png",
+                img : "/images/navbar/digits/2.png",
                 href : "/grade-2"
             },
             {
                 name : "پایه سوم",
-                img : "/images/digits/3.png",
+                img : "/images/navbar/digits/3.png",
                 href : "/grade-3"
             },
             {
                 name : "پایه چهارم",
-                img : "/images/digits/4.png",
+                img : "/images/navbar/digits/4.png",
                 href : "/grade-4"
             },
             {
                 name : "پایه پنجم",
-                img : "/images/digits/5.png",
+                img : "/images/navbar/digits/5.png",
                 href : "/grade-5"
             },
             {
                 name : "پایه ششم",
-                img : "/images/digits/6.png",
+                img : "/images/navbar/digits/6.png",
                 href : "/grade-6"
             }
         ],
@@ -96,28 +96,28 @@ export const SubMenusValues : SubMenusValuesProps[] = [
         name : "ویدیوها" ,
         link : "videos" ,
         mainHead : "مشاهده تمامی ویدیوها",
-        mainImg : "/images/home/searchTypes/video.png",
+        mainImg : "/images/navbar/video.png",
         mainInfo : "آموزش های آسان برای آموزگاران و دانش آموزان",
         subCls : "!col-span-6",
         items : [
             {
                 name : "برای دانش آموزان",
-                img : "/images/home/searchTypes/students.png",
+                img : "/images/navbar/videos/students.png",
                 href : "/for-students"
             },
             {
                 name : "برای آموزگاران",
-                img : "/images/home/searchTypes/teacher.png",
+                img : "/images/navbar/videos/teacher.png",
                 href : "/for-teachers"
             },
             {
                 name : "برای والدین",
-                img : "/images/home/searchTypes/parents.png",
+                img : "/images/navbar/videos/parents.png",
                 href : "/for-parents"
             },
             {
                 name : "#بدون_مخاطب_خاص",
-                img : "/images/home/searchTypes/people.png",
+                img : "/images/navbar/videos/people.png",
                 href : "/public"
             },
         ],
