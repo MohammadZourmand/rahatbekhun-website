@@ -1,4 +1,4 @@
-import { Dispatch, FC, SetStateAction, useEffect, useRef, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 
 import CloseIcon from "../../mobile/closeIcon";
 
@@ -11,9 +11,7 @@ interface CartProductsPopupProps {
     setShow : Dispatch<SetStateAction<boolean>>
 }
 
-const CartProductsPopup : FC<CartProductsPopupProps> = ({
-    setShow
-}) => {
+const CartProductsPopup = ({ setShow } : CartProductsPopupProps) => {
     const [total, setTotal] = useState<number>(0)
 
     // * dark background

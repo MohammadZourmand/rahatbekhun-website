@@ -1,4 +1,4 @@
-import { Dispatch, FC, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 import { messagesInfo, messagesInfoProps } from "./messagesInfo";
 import Heading6 from "@/components/global/elements/headings/h6";
@@ -11,9 +11,7 @@ interface MessagesPopupProps {
     setShow : Dispatch<SetStateAction<boolean>>
 }
 
-const MessagesPopup : FC<MessagesPopupProps> = ({
-    setShow
-}) => {
+const MessagesPopup = ({ setShow } : MessagesPopupProps) => {
 
     return (
         <section className={`

@@ -1,18 +1,16 @@
 import Head from "next/head";
-import { NextPage, NextPageContext } from "next";
-
 import SingleArticle from "@/components/articles/singleArticle";
 
-
-const SingleArticlePage : NextPage = (props : {query}) => {
+const SingleArticlePage = () => {
 
 
     return (
         <>
+            <h2>Hello</h2>
             {/* <Head>
                 <title>{articleInfo.head}</title>
             </Head> */}
-            <SingleArticle />
+            {/* <SingleArticle /> */}
         </>
     )
 }

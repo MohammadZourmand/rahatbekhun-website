@@ -1,5 +1,3 @@
-import {FC} from "react";
-
 import { setSelectBoxTitle } from "./setSelectboxTitle";
 import Selecter from "@/components/global/elements/inputs/selecter";
 
@@ -10,9 +8,7 @@ export interface SelectBoxDivProps {
     initialState : object
 }
 
-const SelectBoxDiv : FC<SelectBoxDivProps> = ({
-    itemsFinder, changeHandler, name, initialState
-}) => {
+const SelectBoxDiv = ({ itemsFinder, changeHandler, name, initialState } : SelectBoxDivProps) => {
 
     return (
         <div className="xl:col-span-4 md:col-span-6 col-span-12 my-2 flex xs:flex-row flex-col items-center justify-between">

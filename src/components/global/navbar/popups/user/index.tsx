@@ -1,6 +1,6 @@
 'use client'
 
-import {FC, useState} from "react";
+import { useState} from "react";
 import dynamic from "next/dynamic";
 
 import { UserBrokenIcon } from "@/assets/icons";
@@ -11,9 +11,7 @@ interface UserPanelPopupProps {
     isWhite : boolean
 }
 
-const UserPanelPopup : FC<UserPanelPopupProps> = ({
-    isWhite,
-}) => {
+const UserPanelPopup = ({ isWhite } : UserPanelPopupProps) => {
 
     const [show, setShow] = useState<boolean>(false)
 

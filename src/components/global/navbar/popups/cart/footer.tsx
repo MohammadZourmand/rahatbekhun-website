@@ -1,5 +1,5 @@
 // ? react
-import { Dispatch, FC, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 // ? components
 import BlueBtn from "@/components/global/elements/buttons/blue";
@@ -11,7 +11,7 @@ interface CartProductsFooterProps {
     setTotal : Dispatch<SetStateAction<number>>
 }
 
-const CartProductsFooter : FC<CartProductsFooterProps> = ({total, setTotal}) => {
+const CartProductsFooter = ({total, setTotal} : CartProductsFooterProps) => {
     
 
     return (

@@ -1,6 +1,6 @@
 'use client'
 
-import {FC, useState} from "react";
+import {useState} from "react";
 import dynamic from "next/dynamic";
 
 import PN from "persian-number";
@@ -13,9 +13,7 @@ interface MessagesProps {
     isWhite : boolean
 }
 
-const Messages : FC<MessagesProps> = ({
-    isWhite,
-}) => {
+const Messages = ({ isWhite } : MessagesProps) => {
 
     const [show, setShow] = useState<boolean>(false)
 

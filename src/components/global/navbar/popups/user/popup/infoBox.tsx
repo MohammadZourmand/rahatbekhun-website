@@ -1,7 +1,6 @@
 
 import FaSpan from "@/components/global/elements/translators/faSpan";
 import Image from "next/image";
-import {FC} from "react";
 
 interface InfoBoxProps {
     value : string | number
@@ -11,9 +10,7 @@ interface InfoBoxProps {
     cls ?: string
 }
 
-const InfoBox : FC<InfoBoxProps> = ({
-    subject, value, img, imgCls, cls
-}) => {
+const InfoBox = ({ subject, value, img, imgCls, cls } : InfoBoxProps) => {
 
     return (
         <div className={`${cls} group flex flex-col col-span-4 items-center`}>

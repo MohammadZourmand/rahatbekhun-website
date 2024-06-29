@@ -1,4 +1,6 @@
-import { useState, FC } from 'react'
+'use client'
+
+import { useState } from 'react'
 import { Switch } from '@headlessui/react'
 import Heading6 from '../headings/h6'
 
@@ -7,7 +9,7 @@ interface SwitchComponentProps {
     text : string
 }
 
-const SwitchComponent : FC<SwitchComponentProps> = ({cls, text}) => {
+const SwitchComponent = ({cls, text} : SwitchComponentProps) => {
   const [enabled, setEnabled] = useState(false)
 
   return (

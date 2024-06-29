@@ -3,13 +3,10 @@
 import SheetsCard from "@/components/global/elements/cards/sheetsCard";
 import { worksheetsData, worksheetsDataProps } from "../data";
 import Filters from "./filters";
-import {FC, useState} from "react";
+import {useState} from "react";
 import { FilterBrokenIcon } from "@/assets/icons";
-interface WorksheetsMainProps {
 
-}
-
-const WorksheetsMain : FC<WorksheetsMainProps> = () => {
+const WorksheetsMain = () => {
 
     const [showFilters, setShowFilters] = useState<boolean>(false)
 

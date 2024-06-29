@@ -1,5 +1,5 @@
 
-import {FC, useState} from "react"
+import {useState} from "react"
 
 import { EyeBrokenIcon, KeyBrokenIcon, PaperBrokenIcon, SwapBrokenIcon } from "@/assets/icons";
 
@@ -13,7 +13,7 @@ interface WorksheetCardMainProps {
     item : worksheetsDataProps
 }
 
-const WorksheetCardMain : FC<WorksheetCardMainProps> = ({item}) => {
+const WorksheetCardMain = ({item} : WorksheetCardMainProps) => {
 
     const [showWorksheet, setShowWorksheet] = useState<boolean>(false)
 

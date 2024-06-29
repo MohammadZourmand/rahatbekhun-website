@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-import {FC, useState} from "react";
+import {useState} from "react";
 import { MobileNavbarListProps } from "./data";
 import { PaperBrokenIcon, VideoBrokenIcon } from "@/assets/icons";
 
@@ -8,9 +8,7 @@ interface NavListProps {
     listInfo : MobileNavbarListProps
 }
 
-const NavList : FC<NavListProps> = ({
-    listInfo
-}) => {
+const NavList = ({ listInfo } : NavListProps) => {
 
     const [showList, setShowList] = useState<boolean>(false)
 
