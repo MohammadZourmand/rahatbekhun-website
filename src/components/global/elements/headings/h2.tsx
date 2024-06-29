@@ -22,7 +22,7 @@ const Heading2 = ({
             className={` 
                 ${cls}
                 ${color ?? "text-gray-700"}
-                ${isNozha && "nozha"}
+                ${isNozha && "font-nozha"}
                 ${!center ? "text-center" : "text-right"}
                 ${weight ?? "font-bold"}
                 mt-28 lg:text-6xl md:text-6xl sm:text-5xl xs:text-[2.45rem] text-[2.65rem]

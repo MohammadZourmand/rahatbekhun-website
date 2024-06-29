@@ -30,7 +30,7 @@ const SearchModal = ({ isFocus, setIsFocus} : SearchModalProps) => {
                             <SearchBrokenIcon cls={"group-hover:scale-[1.2] transition-all duration-500"} color="#4b5563" />
                         </button>
                     </form>
-                    <h2 className="col-span-12 text-center nozha xs:text-5xl text-[2.41rem] py-6 text-white"> دنبال چه موضوعی می گردی ؟ </h2>
+                    <h2 className="col-span-12 text-center font-nozha xs:text-5xl text-[2.41rem] py-6 text-white"> دنبال چه موضوعی می گردی ؟ </h2>
                     {/* user can select which data he wants .... */}
                     <section className="col-span-12 grid justify-center grid-cols-12 gap-x-6 gap-y-4">
                         {
@@ -42,7 +42,7 @@ const SearchModal = ({ isFocus, setIsFocus} : SearchModalProps) => {
                                         width={80}
                                         height={80}
                                     />
-                                    <p className="text-4xl nozha mt-4">{item.type}</p>
+                                    <p className="text-4xl font-nozha mt-4">{item.type}</p>
                                 </div>
                             ))
                         }

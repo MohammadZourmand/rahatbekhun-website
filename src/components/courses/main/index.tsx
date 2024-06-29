@@ -16,7 +16,7 @@ const CoursesPageMain = () => {
             <section className="relative flex flex-col 2xl:max-w-[1400px] xl:mx-auto mx-2 mt-8 xl:gap-x-2 lg:gap-x-6">
                 {
                     1244 <= 1024 && <div className={`hover:scale-[1.2] cursor-pointer bg-baby-9 fixed bottom-0 right-0 p-2
-                        rounded-full sm:w-12 sm:h-12 w-10 h-10 text-center nozha transition duration-500 z-[9999]
+                        rounded-full sm:w-12 sm:h-12 w-10 h-10 text-center font-nozha transition duration-500 z-[9999]
                         flex justify-center items-center m-8 animate-comeFromBottom shadow-all-lg shadow-sky-400`}
                         onClick={() => setShowFilters(true)}
                     >

@@ -18,7 +18,7 @@ const AdvancedSearchHeader = () => {
             {/* // * head of header :( navbar & text-headings  */}
             <Navbar isWhite={true} />
             <Heading2
-                cls="relative z-10 text-white text-center !mt-16 mx-auto nozha"
+                cls="relative z-10 text-white text-center !mt-16 mx-auto font-nozha"
                 text="بگرد و بیاب و بخون با راحت بخون !" 
             />
             {/* // * searching Form  */}

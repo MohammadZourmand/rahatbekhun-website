@@ -14,7 +14,7 @@ const Heading6 = ({
         <h6
             className={` 
                 ${color ?? "text-gray-700"}
-                ${isNozha && "nozha"}
+                ${isNozha && "font-nozha"}
                 ${center ? "text-center" : "text-right"}
                 ${weight ?? "font-bold"}
                 md:text-xl sm:text-lg text-base

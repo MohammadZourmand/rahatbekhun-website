@@ -108,6 +108,9 @@ module.exports = {
         'all-sm' : '0 0 10px #e2e8f0',
         'all-md' : '0 0 20px #e2e8f0',
         'all-lg' : '0 0 30px #e2e8f0',
+      },
+      fontFamily : {
+        nozha : ['var(--font-nozha)']
       }
     },
   },

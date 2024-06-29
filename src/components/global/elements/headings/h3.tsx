@@ -16,7 +16,7 @@ const Heading3 = ({
                 lg:text-4xl md:text-3xl text-2xl
                 ${cls}
                 ${color ?? "text-gray-700"}
-                ${isNozha && "nozha"}
+                ${isNozha && "font-nozha"}
                 ${center ? "text-center" : "text-right"}
                 ${weight ?? "font-bold"}
             `}>

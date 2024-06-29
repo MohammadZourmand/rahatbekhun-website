@@ -21,7 +21,7 @@ const Paragraph = ({
     return (
         <p className={`
             ${color ?? "text-gray-400"}
-            ${isNozha && "nozha"}
+            ${isNozha && "font-nozha"}
             ${center ? "text-center" : "text-right"}
             ${weight ?? "font-bold"}
             text-base

@@ -24,7 +24,7 @@ const FloatBtn = ({cls} : FloatBtnProps) => {
     return (
         <>
             <div className={`${cls} hover:scale-[1.2] cursor-pointer bg-baby-9 fixed bottom-0 left-0 p-2
-                rounded-full sm:w-12 sm:h-12 w-10 h-10 text-center nozha transition duration-500 z-[9999]
+                rounded-full sm:w-12 sm:h-12 w-10 h-10 text-center font-nozha transition duration-500 z-[9999]
                 flex justify-center items-center m-8 animate-comeFromBottom shadow-all-lg shadow-sky-400`}
                 onClick={() => setShowMobileNavbar(true)}
             >
