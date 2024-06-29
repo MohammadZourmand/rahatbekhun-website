@@ -75,7 +75,7 @@ const ErrorToast = (title : string) => {
       })
       
       Toast.fire({
-        icon: 'success',
+        icon: 'error',
         title
       })
 }
@@ -95,7 +95,7 @@ const WarningToast = (title : string) => {
       
       Toast.fire({
         icon: 'warning',
-        title
+        title,
       })
 }
 

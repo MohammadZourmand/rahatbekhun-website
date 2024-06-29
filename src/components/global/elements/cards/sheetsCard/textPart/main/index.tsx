@@ -1,13 +1,12 @@
 
-import {useState} from "react"
-
-import { EyeBrokenIcon, KeyBrokenIcon, PaperBrokenIcon, SwapBrokenIcon } from "@/assets/icons";
+import { EditBrokenIcon, KeyBrokenIcon, PaperBrokenIcon, SwapBrokenIcon } from "@/assets/icons";
 
 import Popover from "../../../../boxes/popover";
-import { setSheetsIcon } from "../setSheetsIcon";
 import { worksheetsDataProps } from "@/components/worksheets/data";
-import TickList from "./tickList";
+import TickList from "../../../../lists/tickList";
 import Image from "next/image";
+import FaSpan from "@/components/global/elements/translators/faSpan";
+
 
 interface WorksheetCardMainProps {
     item : worksheetsDataProps
@@ -15,40 +14,40 @@ interface WorksheetCardMainProps {
 
 const WorksheetCardMain = ({item} : WorksheetCardMainProps) => {
 
-    const [showWorksheet, setShowWorksheet] = useState<boolean>(false)
+    const showAuthorLevel = () => {
+        switch(item?._author) {
+            case "راحت بخون":
+                return <>
+                    {item?._author}
+                    <Image className="mr-1" src={"/images/verify.png"} alt="تاییدشده" width={16} height={16} />
+                </>
+                        
+            case 'سازندگان تاییدشده':
+                return <>
+                    {item?._author}
+                    <Image className="mr-1 invert" src={"/images/verify.png"} alt="تاییدشده" width={16} height={16} />
+                </>
+
+            default :
+                return item?._author
+        }
+    }
 
     return (
         <main className="w-full">
-            <div onClick={() => setShowWorksheet(false)} className={`${showWorksheet ? "fixed" : "hidden" } flex items-center justify-center top-0 left-0 w-full h-full bg-gray-900/60 z-40`}>
-                <div className="absolute xs:w-[30rem] w-[320px] h-[90%] rounded-lg overflow-hidden">
-                    <Image
-                        src={item.worksheetImg}
-                        alt="worksheet"
-                        className="z-50"
-                        fill
-                    />
-                </div>
-            </div>
             <div className="flex flex-col items-center">
                 <div className="flex gap-2"> 
-                    <div onClick={() => setShowWorksheet(true)} className="transition border group relative cursor-pointer rounded-lg border-sky-500 hover:bg-sky-500 p-1">
-                        <EyeBrokenIcon cls="group-hover:scale-110 transition fill-sky-500 w-5 h-5 group-hover:fill-white" />
+                    <div className={`transition ${item.key ? "border-green-500 hover:bg-green-500" : "border-rose-500 hover:bg-rose-500"} border group relative cursor-pointer rounded-lg p-1`}>
+                        <KeyBrokenIcon cls={`group-hover:scale-110 transition ${item.key ? "fill-green-500" : "fill-rose-500"} w-5 h-5 group-hover:fill-white`} />
                         <Popover 
-                            value={"نیم نگاه"}
-                            distanceCls="-right-3"
-                        />
-                    </div>
-                    <div className={`transition ${item.worksheetKey==="با پاسخ" ? "border-green-500 hover:bg-green-500" : "border-rose-500 hover:bg-rose-500"} border group relative cursor-pointer rounded-lg p-1`}>
-                        <KeyBrokenIcon cls={`group-hover:scale-110 transition ${item.worksheetKey==="با پاسخ" ? "fill-green-500" : "fill-rose-500"} w-5 h-5 group-hover:fill-white`} />
-                        <Popover 
-                            value={`پاسخنامه ${item.worksheetKey==="با پاسخ" ? "دارد" : "ندارد"}`}
+                            value={`پاسخنامه ${item.key ? "دارد" : "ندارد"}`}
                             distanceCls="-right-7"
                         />
                     </div>
                     <div className={`transition border-purple-500 hover:bg-purple-500 border group relative cursor-pointer rounded-lg p-1`}>
-                        <SwapBrokenIcon cls={`group-hover:scale-110 transition ${item.worksheetRotation === "افقی"  && "rotate-90"} fill-purple-500 w-5 h-5 group-hover:fill-white`}/>
+                        <SwapBrokenIcon cls={`group-hover:scale-110 transition ${item.rotation === "افقی"  && "rotate-90"} fill-purple-500 w-5 h-5 group-hover:fill-white`}/>
                         <Popover 
-                            value={`جهت کاربرگ : ${item.worksheetRotation==="افقی" ? "افقی" : "عمودی"}`}
+                            value={`جهت کاربرگ : ${item.rotation==="افقی" ? "افقی" : "عمودی"}`}
                             distanceCls="-right-12"
                         />
                     </div>
@@ -59,18 +58,26 @@ const WorksheetCardMain = ({item} : WorksheetCardMainProps) => {
                             distanceCls="-right-8"
                         />
                         <span className="absolute -top-1.5 -right-1.5 bg-yellow-500 text-white text-xs p-0.5 rounded-full w-4 h-4 text-center">
-                            {setSheetsIcon(item.worksheetPaper)}
+                            <FaSpan value={item?.pictures.length} />
                         </span>
+                    </div>
+                    <div className={`transition border-yellow-500 hover:bg-yellow-500 border group relative cursor-pointer rounded-lg p-1`}>
+                        <EditBrokenIcon cls={`group-hover:scale-110 transition fill-yellow-500 w-5 h-5 group-hover:fill-white`} />
+                        <Popover 
+                            value={item?.info}
+                            distanceCls="xs:-right-24 -right-36 -top-44"
+                            cls="w-64 h-40 z-50 !whitespace-normal text-center leading-loose"
+                        />
                     </div>
                 </div>
             </div>
             <div className="mt-3 w-full">
                 <TickList 
                     options={[
-                        `${item.worksheetType}`,
-                        `${item.worksheetUsability}`,
-                        `${item.worksheetColor}`,
-                        `توسط : ${item._author}`,
+                        `${item?.level}`,
+                        `${item?.usableFor}`,
+                        `${item?.author}`,
+                        showAuthorLevel(),
                     ]}
                     cls="grid grid-cols-12 text-[.85rem] leading-loose tracking-tight mt-1 font-semibold"
                     liCls="xs:col-span-6 col-span-12"

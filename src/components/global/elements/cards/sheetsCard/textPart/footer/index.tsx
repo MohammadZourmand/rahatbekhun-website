@@ -2,9 +2,7 @@ import PN from "persian-number";
 
 import { worksheetsDataProps } from "@/components/worksheets/data";
 
-import BlueBtn from "@/components/global/elements/buttons/blue";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
-
 
 interface WorksheetCardFooterProps {
     item : worksheetsDataProps
@@ -15,14 +13,18 @@ const WorksheetCardFooter = ({item} : WorksheetCardFooterProps) => {
     return (
         <footer>
             {
-                item.worksheetPrice === 0
-                ? <BlueBtn
+                item?.price === 0
+                ? <IconBtn
                     text="دانلود کاربرگ"
-                    cls="text-sm mt-3 mb-0 w-full !py-2"
+                    cls="text-sm mt-3 mb-0 w-full !py-2 bg-baby-9"
+                    iconName="download"
+                    href={item?.pdf}
+                    target="_blank"
+                    download={item?.name}
                 />
                 : <IconBtn 
                     iconName="cart"
-                    text={`خرید کاربرگ (${PN.convertEnToPe(item.worksheetPrice)} تومان)`}
+                    text={`خرید کاربرگ (${PN.convertEnToPe(item?.price)} تومان)`}
                     cls="text-sm mt-3 mb-0 w-full px-5 py-2 bg-baby-9"
                     // onClick={() => addProductToCart(item)}
                 />

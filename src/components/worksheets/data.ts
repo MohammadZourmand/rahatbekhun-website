@@ -6,17 +6,22 @@ export interface worksheetsDataProps {
     _author : "راحت بخون"  | "سازندگان تاییدشده"  | "سازندگان معمولی"
     _grade : "اول" | "دوم"  | "سوم"  | "چهارم"  | "پنجم"  | "ششم" 
     _rating :  number
-    authorName : string
-    worksheetName : string
-    worksheetType : "کاربرگ تمرینی"  | "کاربرگ خلاقانه"  | "کاربرگ پلاس"  | "کاربرگ تستی"
-    worksheetLesson : string
-    worksheetKey :  "با پاسخ"  | "بی پاسخ"
-    worksheetColor :  "رنگی"  | "سیاه و سفید"  | "بدون عکس"
-    worksheetPaper :  "1 برگی"  | "2 برگی"  | "3 برگی"  | "4 برگی"  | "بیش از 4 برگ" 
-    worksheetUsability : "برای تمرین و آزمون" | "مخصوص آزمون"  | "مخصوص تمرین"  | "با قابلیت تغییر برای آزمون یا تمرین"
-    worksheetRotation : "عمودی"  | "افقی"
-    worksheetPrice : number
-    worksheetImg : string
+    
+    name : string
+    season : string
+    info : string
+    author : string
+
+    level : "کاربرگ تمرینی"  | "کاربرگ خلاقانه"  | "کاربرگ پلاس"  | "کاربرگ تستی"
+    price : number
+    sheets : number
+    key : boolean
+    rotation : "عمودی"  | "افقی"
+    usableFor : "برای تمرین و آزمون" | "مخصوص آزمون"  | "مخصوص تمرین"  | "با قابلیت تغییر برای آزمون یا تمرین"
+    
+    hashtags : string[],
+    pdf : string,
+    pictures : string[] | string
 }
 
 export const worksheetsData : worksheetsDataProps[] = [
@@ -25,38 +30,48 @@ export const worksheetsData : worksheetsDataProps[] = [
         _type : "کاربرگ",
         _subject : "ریاضی",
         _grade : "دوم",
-        _author : "راحت بخون",
+        _author : "سازندگان تاییدشده",
         _rating : 4.2,
-        worksheetName : "کاربرگ فصل پنجم ریاضی دوم ابتدایی",
-        worksheetType : "کاربرگ تمرینی",
-        worksheetLesson : "فصل 5 : اندازه گیری",
-        worksheetKey : "بی پاسخ",
-        worksheetColor : "سیاه و سفید",
-        worksheetPaper : "2 برگی",
-        worksheetUsability : "برای تمرین و آزمون",
-        worksheetRotation : "عمودی",
-        authorName : "محمد زورمند",
-        worksheetPrice : 1200,
-        worksheetImg : "/images/worksheets/worksheetPictures/slide1.png"
+        name : "کاربرگ فصل پنجم ریاضی دوم ابتدایی",
+        season : "فصل اول : اندازه گیری و محاسبات",
+        info : "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
+        author : "محمد زورمند",
+        level : "کاربرگ تمرینی",
+        key : false,
+        sheets : 2,
+        usableFor : "برای تمرین و آزمون",
+        rotation : "عمودی",
+        price : 1200,
+        hashtags : ["کاربرگ", "فصل دوم", "محمد زورمند"],
+        pdf : '/files/worksheets/index.pdf',
+        pictures : [
+            "/images/worksheets/worksheetPictures/1.jpg",
+            "/images/worksheets/worksheetPictures/2.jpg",
+        ]
     },
     {
         id : 2,
         _type : "کاربرگ",
         _subject : "فارسی",
         _grade : "دوم",
-        _author : "راحت بخون",
+        _author : "سازندگان معمولی",
         _rating : 4.3,
-        worksheetName : "کاربرگ فصل 3 فارسی دوم",
-        worksheetType : "کاربرگ تمرینی",
-        worksheetLesson : "فصل 3 : فصل سوم",
-        worksheetKey : "بی پاسخ",
-        worksheetColor : "سیاه و سفید",
-        worksheetPaper : "2 برگی",
-        worksheetUsability : "برای تمرین و آزمون",
-        worksheetRotation : "عمودی",
-        authorName : "محمد زورمند",
-        worksheetPrice : 1200,
-        worksheetImg : "/images/worksheets/worksheetPictures/slide1.png"
+        name : "کاربرگ فصل 3 فارسی دوم",
+        season : "فصل اول : اندازه گیری و محاسبات",
+        info : "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
+        author : "محمد زورمند",
+        level : "کاربرگ تمرینی",
+        key : false,
+        sheets : 2,
+        usableFor : "برای تمرین و آزمون",
+        rotation : "عمودی",
+        price : 1200,
+        hashtags : ["کاربرگ", "فصل دوم", "محمد زورمند"],
+        pdf : '/files/worksheets/index.pdf',
+        pictures : [
+            "/images/worksheets/worksheetPictures/1.jpg",
+            "/images/worksheets/worksheetPictures/2.jpg",
+        ]
     },
     {
         id : 3,
@@ -65,17 +80,22 @@ export const worksheetsData : worksheetsDataProps[] = [
         _grade : "دوم",
         _author : "راحت بخون",
         _rating : 4.8,
-        worksheetName : "کاربرگ فصل هفتم ریاضی دوم ابتدایی",
-        worksheetType : "کاربرگ پلاس",
-        worksheetLesson : "فصل 7 : احتمال",
-        worksheetKey : "با پاسخ",
-        worksheetColor : "سیاه و سفید",
-        worksheetPaper : "4 برگی",
-        worksheetUsability : "برای تمرین و آزمون",
-        worksheetRotation : "افقی",
-        authorName : "محمد زورمند",
-        worksheetPrice : 2000,
-        worksheetImg : "/images/worksheets/worksheetPictures/slide1.png"
+        name : "کاربرگ فصل هفتم ریاضی دوم ابتدایی",
+        season : "فصل اول : اندازه گیری و محاسبات",
+        info : "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
+        author : "محمد زورمند",
+        level : "کاربرگ پلاس",
+        key : true,
+        sheets : 4,
+        usableFor : "برای تمرین و آزمون",
+        rotation : "افقی",
+        price : 2000,
+        hashtags : ["کاربرگ", "فصل دوم", "محمد زورمند"],
+        pdf : '/files/worksheets/index.pdf',
+        pictures : [
+            "/images/worksheets/worksheetPictures/1.jpg",
+            "/images/worksheets/worksheetPictures/2.jpg",
+        ]
     },
     {
         id : 4,
@@ -84,17 +104,22 @@ export const worksheetsData : worksheetsDataProps[] = [
         _grade : "دوم",
         _author : "راحت بخون",
         _rating : 4.2,
-        worksheetName : "کاربرگ فصل پنجم ریاضی دوم ابتدایی",
-        worksheetType : "کاربرگ تمرینی",
-        worksheetLesson : "فصل 5 : اندازه گیری",
-        worksheetKey : "بی پاسخ",
-        worksheetColor : "سیاه و سفید",
-        worksheetPaper : "2 برگی",
-        worksheetUsability : "برای تمرین و آزمون",
-        worksheetRotation : "عمودی",
-        authorName : "محمد زورمند",
-        worksheetPrice : 0,
-        worksheetImg : "/images/worksheets/worksheetPictures/slide1.png"
+        name : "کاربرگ فصل پنجم ریاضی دوم ابتدایی",
+        season : "فصل اول : اندازه گیری و محاسبات",
+        info : "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
+        author : "محمد زورمند",
+        level : "کاربرگ تمرینی",
+        key : false,
+        sheets : 2,
+        usableFor : "برای تمرین و آزمون",
+        rotation : "عمودی",
+        price : 0,
+        hashtags : ["کاربرگ", "فصل دوم", "محمد زورمند"],
+        pdf : '/files/worksheets/index.pdf',
+        pictures : [
+            "/images/worksheets/worksheetPictures/3.jpg",
+            "/images/worksheets/worksheetPictures/4.jpg",
+        ]
     },
     {
         id : 5,
@@ -103,17 +128,22 @@ export const worksheetsData : worksheetsDataProps[] = [
         _grade : "دوم",
         _author : "راحت بخون",
         _rating : 4.2,
-        worksheetName : "کاربرگ فصل پنجم ریاضی دوم ابتدایی",
-        worksheetType : "کاربرگ تمرینی",
-        worksheetLesson : "فصل 5 : اندازه گیری",
-        worksheetKey : "بی پاسخ",
-        worksheetColor : "سیاه و سفید",
-        worksheetPaper : "2 برگی",
-        worksheetUsability : "برای تمرین و آزمون",
-        worksheetRotation : "عمودی",
-        authorName : "محمد زورمند",
-        worksheetPrice : 0,
-        worksheetImg : "/images/worksheets/worksheetPictures/slide1.png"
+        name : "کاربرگ فصل پنجم ریاضی دوم ابتدایی",
+        season : "فصل اول : اندازه گیری و محاسبات",
+        info : "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
+        author : "محمد زورمند",
+        level : "کاربرگ تمرینی",
+        key : false,
+        sheets : 2,
+        usableFor : "برای تمرین و آزمون",
+        rotation : "عمودی",
+        price : 0,
+        hashtags : ["کاربرگ", "فصل دوم", "محمد زورمند"],
+        pdf : '/files/worksheets/index.pdf',
+        pictures : [
+            "/images/worksheets/worksheetPictures/3.jpg",
+            "/images/worksheets/worksheetPictures/4.jpg",
+        ]
     },
     {
         id : 6,
@@ -122,16 +152,21 @@ export const worksheetsData : worksheetsDataProps[] = [
         _grade : "دوم",
         _author : "راحت بخون",
         _rating : 4.2,
-        worksheetName : "کاربرگ فصل پنجم ریاضی دوم ابتدایی",
-        worksheetType : "کاربرگ تمرینی",
-        worksheetLesson : "فصل 5 : اندازه گیری",
-        worksheetKey : "بی پاسخ",
-        worksheetColor : "سیاه و سفید",
-        worksheetPaper : "2 برگی",
-        worksheetUsability : "برای تمرین و آزمون",
-        worksheetRotation : "عمودی",
-        authorName : "محمد زورمند",
-        worksheetPrice : 500,
-        worksheetImg : "/images/worksheets/worksheetPictures/slide1.png"
+        name : "کاربرگ فصل پنجم ریاضی دوم ابتدایی",
+        season : "فصل اول : اندازه گیری و محاسبات",
+        info : "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
+        author : "محمد زورمند",
+        level : "کاربرگ تمرینی",
+        key : false,
+        sheets : 2,
+        usableFor : "برای تمرین و آزمون",
+        rotation : "عمودی",
+        price : 500,
+        hashtags : ["کاربرگ", "فصل دوم", "محمد زورمند"],
+        pdf : '/files/worksheets/index.pdf',
+        pictures : [
+            "/images/worksheets/worksheetPictures/3.jpg",
+            "/images/worksheets/worksheetPictures/4.jpg",
+        ]
     },
 ]

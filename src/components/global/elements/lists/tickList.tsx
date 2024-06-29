@@ -1,7 +1,7 @@
 import LiTickIcon from "@/components/global/elements/lists/liTickIcon";
 
 interface TickListProps {
-    options : string[]
+    options : any
     iconCls ?: string
     cls ?: string
     liCls ?: string

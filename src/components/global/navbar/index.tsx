@@ -10,7 +10,6 @@ import SubMenus from "./subMenus";
 import { SearchBrokenIcon } from "@/assets/icons";
 import PopupIcons from "./popups";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 const FloatBtn = dynamic(() => import(/* webpackChunkName : "float-btn" */"./mobile/floatBtn"))
 

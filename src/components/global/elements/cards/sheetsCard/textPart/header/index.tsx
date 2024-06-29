@@ -7,14 +7,16 @@ interface WorksheetCardHeaderProps {
 }
 
 const WorksheetCardHeader = ({item} : WorksheetCardHeaderProps) => {
+
+
     return (
         <header className="flex flex-col items-center mb-2">
             <Heading1
-                text={item.worksheetName}
+                text={item?.name}
                 cls="!text-base !font-black !mt-0"
             />
             <Paragraph 
-                text={item.worksheetLesson} 
+                text={item?.season} 
                 cls="!font-medium text-[.75rem] mt-1" 
             />
         </header>
