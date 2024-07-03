@@ -51,16 +51,16 @@ const WorksheetCardMain = ({item} : WorksheetCardMainProps) => {
                             distanceCls="-right-12"
                         />
                     </div>
-                    <div className={`transition border-green-500 hover:bg-green-500 border group relative cursor-pointer rounded-lg p-1`}>
+                    {/* <div className={`transition border-green-500 hover:bg-green-500 border group relative cursor-pointer rounded-lg p-1`}>
                         <PaperBrokenIcon cls={`group-hover:scale-110 transition fill-green-500 w-5 h-5 group-hover:fill-white`} />
                         <Popover 
                             value={`تعداد صفحات`}
                             distanceCls="-right-8"
                         />
                         <span className="absolute -top-1.5 -right-1.5 bg-yellow-500 text-white text-xs p-0.5 rounded-full w-4 h-4 text-center">
-                            <FaSpan value={item?.pictures.length} />
+                            <FaSpan value={1} />
                         </span>
-                    </div>
+                    </div> */}
                     <div className={`transition border-yellow-500 hover:bg-yellow-500 border group relative cursor-pointer rounded-lg p-1`}>
                         <EditBrokenIcon cls={`group-hover:scale-110 transition fill-yellow-500 w-5 h-5 group-hover:fill-white`} />
                         <Popover 

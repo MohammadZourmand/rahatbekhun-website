@@ -13,14 +13,13 @@ const WorksheetCardFooter = ({item} : WorksheetCardFooterProps) => {
     return (
         <footer>
             {
-                item?.price === 0
+                Number(item?.price) === 0
                 ? <IconBtn
                     text="دانلود کاربرگ"
                     cls="text-sm mt-3 mb-0 w-full !py-2 bg-baby-9"
                     iconName="download"
                     href={item?.pdf}
                     target="_blank"
-                    download={item?.name}
                 />
                 : <IconBtn 
                     iconName="cart"

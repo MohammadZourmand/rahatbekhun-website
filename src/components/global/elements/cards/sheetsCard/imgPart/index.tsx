@@ -22,15 +22,17 @@ const SheetsCardImgPart = ({item, cls} : SheetsCardImgPartProps) => {
     return (
         <div className={`${cls} overflow-hidden group absolute -top-12 shadow-all-lg sm:h-1/2 h-[38%] w-11/12 mx-auto rounded-md`}>
             <Image
+                loader={({ src, width }) => { return src + "?w=" + width }}
                 width={500}
                 height={50}
                 className="group-hover:scale-110 transition duration-500 rounded-md mx-auto"
-                src={item?.pictures[0]}
+                src={item?.image}
                 alt="worksheet"
-                objectFit="cover"
+                style={{objectFit:"cover"}}
                 onClick={showHandler}
+                priority
             />
-            <Gallery items={item?.pictures} setShow={setShowWorksheet} show={showWorksheet }/>
+            {/* <Gallery items={item?.images} setShow={setShowWorksheet} show={showWorksheet }/> */}
         </div>
     )
 }

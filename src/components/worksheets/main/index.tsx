@@ -1,14 +1,30 @@
 'use client'
 
 import SheetsCard from "@/components/global/elements/cards/sheetsCard";
-import { worksheetsData, worksheetsDataProps } from "../data";
+import { worksheetsDataProps } from "../data";
 import Filters from "./filters";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import { FilterBrokenIcon } from "@/assets/icons";
+import useSWR from 'swr';
+import { getWorksheets } from "./handler";
+import Pagination from "@/utils/pagination";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const WorksheetsMain = () => {
 
     const [showFilters, setShowFilters] = useState<boolean>(false)
+    const [page, setPage] = useState<number>(1)
+    const queryPage = useSearchParams().get('page')
+    const router = useRouter()
+
+    useEffect(() => {
+        queryPage && setPage(parseInt(queryPage))
+    }, [queryPage])
+
+    const {data, error, isLoading} = useSWR(
+        `http://localhost:5000/admin/worksheets/list?per_page=${16}&page=${page}`,
+        getWorksheets
+    )
 
     return (
         <div className={`relative grid grid-cols-12 gap-y-16 xl:gap-x-8 lg:gap-x-4 md:gap-x-4 bg-gray-200/70 xl:px-8 px-4 py-20`}>
@@ -24,13 +40,28 @@ const WorksheetsMain = () => {
                 <Filters setShowFilters={setShowFilters} showFilters={showFilters} />
             </div>
             {
-                worksheetsData.map((item : worksheetsDataProps, index : number) => {
-                    return <SheetsCard
-                        key={index}
-                        item={item}
-                        cls={"lg:col-span-4 md:col-span-6 col-span-12"}
+                error
+                ? <div>Error</div>
+                : isLoading
+                    ? <div>Loading...</div>
+                    : data?.data.length === 0
+                        ? <div>Nothing Found ...</div>
+                        : data?.data.map((item : worksheetsDataProps, index : number) => {
+                            return <SheetsCard
+                                key={index}
+                                item={item}
+                                cls={"lg:col-span-4 md:col-span-6 col-span-12"}
+                            />
+                    })
+            }
+            {
+                Number(data?.totalPage) > 1 && <div className="col-span-12">
+                    <Pagination
+                        totalPages={data?.totalPages} 
+                        onClick={({selected}) => router.push(`/worksheets/?page=${selected+1}`)} 
+                        initialPage={queryPage}
                     />
-                })
+                </div>
             }
         </div>
     )
