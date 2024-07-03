@@ -5,7 +5,7 @@ import Popover from "../../../../boxes/popover";
 import { worksheetsDataProps } from "@/components/worksheets/data";
 import TickList from "../../../../lists/tickList";
 import Image from "next/image";
-import FaSpan from "@/components/global/elements/translators/faSpan";
+import FaSpan from "@/utils/faSpan";
 
 
 interface WorksheetCardMainProps {

@@ -2,7 +2,7 @@
 // ? Components =====================
 import WebsiteInfo from "./websiteInfo";
 import Heading6 from "../elements/headings/h6";
-import LiFooter from "../elements/links/liFooter";
+import LiFooter from "../elements/lists/liFooter";
 import NewsLetters from "./newsletters";
 import Rights from "./rights";
 import { FooterLinksData1, FooterLinksData2 } from "./footerLinksData";

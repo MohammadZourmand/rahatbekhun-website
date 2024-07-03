@@ -3,23 +3,17 @@
 import SheetsCard from "@/components/global/elements/cards/sheetsCard";
 import { worksheetsDataProps } from "../data";
 import Filters from "./filters";
-import {useEffect, useState} from "react";
+import {Suspense, useState} from "react";
 import { FilterBrokenIcon } from "@/assets/icons";
 import useSWR from 'swr';
 import { getWorksheets } from "./handler";
-import Pagination from "@/utils/pagination";
-import { useRouter, useSearchParams } from "next/navigation";
+import ListPagination from "./pagination";
 
 const WorksheetsMain = () => {
 
     const [showFilters, setShowFilters] = useState<boolean>(false)
     const [page, setPage] = useState<number>(1)
-    const queryPage = useSearchParams().get('page')
-    const router = useRouter()
 
-    useEffect(() => {
-        queryPage && setPage(parseInt(queryPage))
-    }, [queryPage])
 
     const {data, error, isLoading} = useSWR(
         `http://localhost:5000/admin/worksheets/list?per_page=${16}&page=${page}`,
@@ -54,15 +48,9 @@ const WorksheetsMain = () => {
                             />
                     })
             }
-            {
-                Number(data?.totalPage) > 1 && <div className="col-span-12">
-                    <Pagination
-                        totalPages={data?.totalPages} 
-                        onClick={({selected}) => router.push(`/worksheets/?page=${selected+1}`)} 
-                        initialPage={queryPage}
-                    />
-                </div>
-            }
+            <Suspense>
+                <ListPagination setPage={setPage} data={data} />
+            </Suspense>
         </div>
     )
 }

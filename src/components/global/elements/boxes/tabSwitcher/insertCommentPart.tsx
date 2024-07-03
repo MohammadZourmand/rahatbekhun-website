@@ -2,7 +2,7 @@ import { Form, Formik } from "formik";
 import Input from "../../inputs/input";
 import BlueBtn from "../../buttons/blue";
 import FiveStars from "../stars/fiveStars";
-import FaSpan from "../../translators/faSpan";
+import FaSpan from "../../../../../utils/faSpan";
 
 const InsertCommentCoursePart = () => {
 

@@ -3,8 +3,8 @@ import { Dispatch, SetStateAction } from "react";
 
 // ? components
 import BlueBtn from "@/components/global/elements/buttons/blue";
-import PriceBox from "@/components/courses/singleCourse/floatSidebar/price";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
+import PriceBox from "@/components/global/price";
 
 interface CartProductsFooterProps {
     total : number

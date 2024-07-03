@@ -9,7 +9,7 @@ import { ClockBroken } from "@/assets/icons";
 import Paragraph from "@/components/global/elements/paragraph";
 import Heading1 from "../../headings/h1";
 import Link from "next/link";
-import { badgeBgColorChooser, badgeTextColorChooser, badgeTextTranslator } from "../../translators/badgeColorChooser";
+import { badgeBgColorChooser, badgeTextColorChooser, badgeTextTranslator } from "../../boxes/badges/badgeColorChooser";
 import Image from "next/image";
 
 const Card2 = ({item, cls} : Card2Type) => {

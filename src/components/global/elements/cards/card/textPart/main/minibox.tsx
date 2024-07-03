@@ -1,5 +1,5 @@
 import { CategoryBroken, FilterBroken, FolderBroken, UsersBroken } from "@/assets/icons"
-import FaSpan from "../../../../translators/faSpan"
+import FaSpan from "../../../../../../../utils/faSpan"
 
 interface MiniIconTextBoxProps {
     icon : string

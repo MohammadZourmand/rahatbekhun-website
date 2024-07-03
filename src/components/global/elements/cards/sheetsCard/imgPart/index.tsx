@@ -2,7 +2,7 @@ import { worksheetsDataProps } from "@/components/worksheets/data";
 import Image from "next/image";
 import { useState } from "react";
 import Gallery from "../textPart/header/gallery";
-import { ErrorToast, WarningToast } from "@/components/lib/swal";
+import { ErrorToast } from "@/utils/swal";
 
 interface SheetsCardImgPartProps {
     item : worksheetsDataProps

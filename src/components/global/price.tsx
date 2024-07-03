@@ -1,4 +1,4 @@
-import FaSpan from "@/components/global/elements/translators/faSpan"
+import FaSpan from "@/utils/faSpan"
 
 interface PriceBoxProps {
     withoutOff ?: boolean

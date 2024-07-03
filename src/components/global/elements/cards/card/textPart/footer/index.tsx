@@ -3,8 +3,8 @@ import { courseInfoType } from "@/types/home";
 
 // ? assets ======================
 import { ChevronLeft } from "@/assets/icons";
-import PriceBox from "@/components/courses/singleCourse/floatSidebar/price";
 import Link from "next/link";
+import PriceBox from "@/components/global/price";
 
 interface CartTextFooterProps {
     item : courseInfoType

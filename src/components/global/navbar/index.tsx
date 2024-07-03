@@ -4,7 +4,7 @@
 import dynamic from "next/dynamic";
 
 // ? components ==================
-import WindowSize from "../functions/windowSize";
+import WindowSize from "../../../utils/windowSize";
 import WebsiteName from "../elements/boxes/websiteName";
 import SubMenus from "./subMenus";
 import { SearchBrokenIcon } from "@/assets/icons";

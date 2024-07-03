@@ -4,7 +4,7 @@ import { Dispatch, SetStateAction } from "react";
 
 import { userInfo } from "./user";
 import UserGradeChooser from "./userGardeChooser";
-import FaSpan from "@/components/global/elements/translators/faSpan";
+import FaSpan from "@/utils/faSpan";
 import InfoBox from "./infoBox";
 import LinkBox from "./linkbox";
 import Heading6 from "@/components/global/elements/headings/h6";

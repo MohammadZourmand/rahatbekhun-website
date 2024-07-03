@@ -5,7 +5,7 @@ import { courseInfoType } from "@/types/home";
 // ? assets ======================
 import Paragraph from "@/components/global/elements/paragraph";
 import MiniIconTextBox from "./minibox";
-import FaSpan from "../../../../translators/faSpan";
+import FaSpan from "../../../../../../../utils/faSpan";
 import Image from "next/image";
 
 interface CartTextMainProps {

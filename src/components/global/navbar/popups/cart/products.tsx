@@ -1,4 +1,4 @@
-import PriceBox from "@/components/courses/singleCourse/floatSidebar/price"
+import PriceBox from "@/components/global/price"
 import Image from "next/image"
 import Link from "next/link"
 

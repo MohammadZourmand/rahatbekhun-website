@@ -4,7 +4,7 @@ import { filtersInfo } from "./filtersInfo";
 import FilterBox from "./filterBox";
 import { useState, Dispatch, SetStateAction } from "react";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
-import { WarningToast } from "@/components/lib/swal";
+import { WarningToast } from "@/utils/swal";
 
 interface FiltersProps {
     showFilters : boolean

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Heading6 from "../../headings/h6";
 import Paragraph from "../../paragraph";
-import FaSpan from "@/components/global/elements/translators/faSpan";
+import FaSpan from "@/utils/faSpan";
 import { courseDetails, episodeCommentsProps } from "./courseInfo";
 import StaticProgressbar from "./staticProgress";
 import Heading5 from "../../headings/h5";

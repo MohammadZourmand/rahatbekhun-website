@@ -1,5 +1,5 @@
+import Selecter from "@/components/global/elements/inputs/selector";
 import { setSelectBoxTitle } from "./setSelectboxTitle";
-import Selecter from "@/components/global/elements/inputs/selecter";
 
 export interface SelectBoxDivProps {
     itemsFinder : () => string[]

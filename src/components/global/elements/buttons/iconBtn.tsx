@@ -1,4 +1,4 @@
-import { CartBrokenIcon, DownloadPaperBrokenIcon, EyeBrokenIcon, FilterBrokenIcon, LeftIcon, PlusIcon, SearchBrokenIcon } from "@/assets/icons";
+import { CartBrokenIcon, DownloadPaperBrokenIcon, EyeBrokenIcon, FilterBrokenIcon, HomeBrokenIcon, LeftIcon, PlusIcon, SearchBrokenIcon } from "@/assets/icons";
 import Link from "next/link";
 
 interface IconBtnProps {
@@ -29,6 +29,8 @@ const iconChooser : (key : string) => any = (key : string) => {
             return (<PlusIcon cls="group-hover:scale-[1.05] transition fill-white w-6 h-6 mr-3"/>)
         case "download":
             return (<DownloadPaperBrokenIcon cls="group-hover:scale-[1.05] transition fill-white w-6 h-6 mr-3"/>)
+        case "home":
+            return (<HomeBrokenIcon cls="group-hover:scale-[1.05] transition fill-white w-6 h-6 mr-3"/>)    
         default:
             return null
     }
