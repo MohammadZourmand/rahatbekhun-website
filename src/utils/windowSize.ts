@@ -10,8 +10,8 @@ export default function WindowSize() {
 function useWindowSize() {
 
   const [windowSize, setWindowSize] = useState({
-    width: 0,
-    height: 0,
+    width: NaN,
+    height: NaN,
   });
 
   useEffect(() => {

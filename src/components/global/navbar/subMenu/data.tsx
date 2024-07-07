@@ -62,7 +62,7 @@ export const SubMenusValues : SubMenusValuesProps[] = [
         items : [
             {
                 name : "پایه اول",
-                img : "/images/digits/1.png",
+                img : "/images/navbar/digits/1.png",
                 href : "/grade-1"
             },
             {

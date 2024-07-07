@@ -7,11 +7,11 @@ import IconBtn from "@/components/global/elements/buttons/iconBtn";
 import { WarningToast } from "@/utils/swal";
 
 interface FiltersProps {
-    showFilters : boolean
-    setShowFilters : Dispatch<SetStateAction<boolean>>
+    filters : boolean
+    setfilters : Dispatch<SetStateAction<boolean>>
 }
 
-const Filters = ({setShowFilters, showFilters} : FiltersProps) => {
+const Filters = ({setfilters, filters} : FiltersProps) => {
     
     const [initialValues, setInitialValues] = useState(coursesFilteringTitles)
 
@@ -29,7 +29,7 @@ const Filters = ({setShowFilters, showFilters} : FiltersProps) => {
             initialValues={initialValues}
             onSubmit={() => {WarningToast("اطلاعات دریافت شد !")}}
         >
-            <Form className={`${showFilters && "!block "} p-8 lg:p-0 lg:w-full xs:w-[96vw] w-[90vw] lg:block hidden fixed -bottom-16 !z-40 mx-auto lg:backdrop-blur-0 backdrop-blur-md bg-gray-100/90 lg:z-0 lg:bg-transparent lg:absolute xl:-top-48 lg:-top-40 rounded-lg`}>
+            <Form className={`p-8 lg:p-0 lg:w-full xs:w-[96vw] w-[90vw] lg:block hidden fixed -bottom-16 !z-40 mx-auto lg:backdrop-blur-0 backdrop-blur-md bg-gray-100/90 lg:z-0 lg:bg-transparent lg:absolute xl:-top-48 lg:-top-40 rounded-lg`}>
                 <fieldset className="grid grid-cols-10 xs:gap-8 gap-y-8 w-full">
                     {
                         Object.entries(filtersInfo).map((item, index) => {

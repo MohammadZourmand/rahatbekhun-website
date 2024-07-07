@@ -1,45 +1,42 @@
 'use client'
 
-import SheetsCard from "@/components/global/elements/cards/sheetsCard";
-import { worksheetsDataProps } from "../data";
-import Filters from "./filters";
+import dynamic from "next/dynamic";
 import {Suspense, useState} from "react";
-import { FilterBrokenIcon } from "@/assets/icons";
 import useSWR from 'swr';
+
+import SheetsCard from "@/components/global/elements/cards/sheetsCard";
 import { getWorksheets } from "./handler";
-import ListPagination from "./pagination";
+import CircleLoading from "@/components/global/elements/loadings";
+import ErrorShower from "@/components/global/elements/loadings/error";
+import { worksheetsDataProps } from "../data";
+
+const Filtering = dynamic(() => import('./filters/filter'))
+const ListPagination = dynamic(() => import('./pagination'))
 
 const WorksheetsMain = () => {
 
-    const [showFilters, setShowFilters] = useState<boolean>(false)
     const [page, setPage] = useState<number>(1)
-
+    const [filters , setFilters] = useState<{grade : string, book : string, price : string|number}>({
+        grade : '',
+        book : '',
+        price : ''
+    })
 
     const {data, error, isLoading} = useSWR(
-        `http://localhost:5000/admin/worksheets/list?per_page=${16}&page=${page}`,
+        `http://localhost:5000/admin/worksheets/list?per_page=${16}&page=${page}&grade=${filters?.grade}&book=${filters?.book}&price=${filters?.price}`,
         getWorksheets
     )
 
     return (
         <div className={`relative grid grid-cols-12 gap-y-16 xl:gap-x-8 lg:gap-x-4 md:gap-x-4 bg-gray-200/70 xl:px-8 px-4 py-20`}>
-            <div className={`hover:scale-[1.2] cursor-pointer bg-baby-9 fixed bottom-0 right-0 p-2
-                rounded-full sm:w-12 sm:h-12 w-10 h-10 text-center font-nozha transition duration-500 z-50
-                flex justify-center items-center m-8 animate-comeFromBottom shadow-all-lg shadow-sky-400`}
-                onClick={() => setShowFilters(true)}
-            >
-                <FilterBrokenIcon cls={"w-[1.8rem] h-[1.8rem] transition-all duration-500"} color={"white"} />
-            </div>
-            <div onClick={() => setShowFilters(false)} className={`${showFilters ? "fixed" : "hidden" } lg:!hidden top-0 left-0 w-full h-full bg-gray-900/60 z-40`}></div>
-            <div className="relative col-span-12 w-full 2xl:max-w-[1400px] xl:mx-auto">
-                <Filters setShowFilters={setShowFilters} showFilters={showFilters} />
-            </div>
+            <Filtering filters={filters} setFilters={setFilters} />
             {
                 error
-                ? <div>Error</div>
+                ? <ErrorShower cls="col-span-12" text2="احتمال دارد مشکلی در سمت سرور به وجود آمده باشد !" text="نتوانستیم کاربرگ ها را از سرور بگیریم صفحه را مجدد بارگذاری کنید !"/>
                 : isLoading
-                    ? <div>Loading...</div>
+                    ? <CircleLoading cls={'col-span-12'} text="در حال دریافت کاربرگ ها ..."/>
                     : data?.data.length === 0
-                        ? <div>Nothing Found ...</div>
+                        ? <ErrorShower cls="col-span-12" text2="اتصال اینترنت خود را بررسی کنید !" text={'مشکلی پیش آمده است ! لطفا دوباره سعی کنید !'}/>
                         : data?.data.map((item : worksheetsDataProps, index : number) => {
                             return <SheetsCard
                                 key={index}
@@ -49,7 +46,9 @@ const WorksheetsMain = () => {
                     })
             }
             <Suspense>
-                <ListPagination setPage={setPage} data={data} />
+                {
+                    Number(data?.totalPage) > 1 && <ListPagination setPage={setPage} data={data} /> 
+                }
             </Suspense>
         </div>
     )

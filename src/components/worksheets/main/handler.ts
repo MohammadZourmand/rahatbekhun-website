@@ -1,15 +1,14 @@
 import apiHelper from "@/utils/axios"
+import { ErrorToast } from "@/utils/swal"
 
 export const getWorksheets = async (url) => {
 
     try {
         const res = await apiHelper().get(url)
-        // SuccessToast({ message : res?.data?.message})
-        console.log(res)
         return res?.data
 
     } catch (err) {
-        // WrongToast({ message : 'مشکلی در دریافت اطلاعات به وجود آمده است !'})
+        ErrorToast('مشکلی در دریافت اطلاعات به وجود آمده است !')
         return {data : []}
     }
 }
