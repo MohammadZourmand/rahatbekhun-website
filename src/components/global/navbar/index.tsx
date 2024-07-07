@@ -1,4 +1,4 @@
-'use'
+'use client'
 
 // ? React =======================
 import dynamic from "next/dynamic";
@@ -30,14 +30,14 @@ const Navbar = ({isWhite, cls} : NavbarProps) => {
                     <div className="flex items-center">
                         <WebsiteName isWhite={isWhite} cls="justify-center ml-8" />
                         {
-                            1222 >= 1024 && <SubMenus isWhite={isWhite} />
+                            WindowSize().width >= 1024 && <SubMenus isWhite={isWhite} />
                         }
                     </div>
 
                     <div className="flex items-center gap-x-3">
                         
                         {
-                            1222 >= 1024
+                            WindowSize().width >= 1024
                                 ? <PopupIcons isWhite={isWhite} />
                                 : <FloatBtn />
                         }

@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import { worksheetsDataProps } from "../../data";
-import Heading2 from "@/components/global/elements/headings/h2";
-import BgColorfulBadge from "@/components/global/elements/boxes/badges/bgColorful";
 import PN from 'persian-number'
 import { CartBrokenIcon, DownloadPaperBrokenIcon, MessageBrokenIcon, StarBroken } from "@/assets/icons";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
@@ -23,54 +21,74 @@ const SingleWorksheetMain = ({data} : {data : worksheetsDataProps}) => {
     }
 
     return (
-        <main className="grid grid-cols-5 max-w-7xl mx-auto gap-x-4 mb-80">
-            <div className="col-span-1">
+        <main className="realtive xl:mx-auto mx-2 grid grid-cols-5 max-w-7xl gap-4 lg:mt-0 mt-16">
+            <Image 
+                src={"/images/courses/page-title-shape-6.webp"}
+                alt="circle-pink-with-dashed-div-to-it"
+                width={59}
+                height={56}
+                className="absolute xl:top-72 top-12 xl:right-6 xl:block hidden rotate-90"
+            />
+            <Image 
+                src={"/images/courses/page-title-shape-4.webp"}
+                alt="دایره صورتی"
+                width={47}
+                height={170}
+                className="absolute xl:top-48 xl:block lg:hidden block top-48 left-0 rotate-180"
+            />
+            <Image 
+                src={"/images/courses/page-title-shape-1.webp"}
+                alt="دایره آبی آسمانی"
+                width={55}
+                height={191}
+                className="absolute 2xl:top-[36rem] lg:top-[40rem] lg:block hidden right-0 rotate-180"
+            />
+            <div className="lg:col-span-1 sm:col-span-2 col-span-5 z-50">
                 <img
                     src={data?.image}
                     alt={data?.name}
                     className="h-80 rounded-lg"
                 />
             </div>
-            <div className="col-span-3">
+            <div className="lg:col-span-3 col-span-5 lg:-order-none order-first">
                 <div className="flex items-center text-gray-400 gap-x-1">
-                    <span> کاربرگ {data._subject} پایه {data?._grade} </span>
-                    <span> / </span>
+                    <span className="hidden xs:inline"> کاربرگ {data._subject} پایه {data?._grade} / </span>
                     <span> {data?.season} </span>
                     <span className={`px-2 py-0.5 rounded text-sm block ${badgeBgColorChooser(data?.level)} text-white`}>{data?.level}</span>
                 </div>
-                <h1 className="text-4xl font-bold text-gray-700 mt-7">
-                        نام کاربرگ : {data?.name}
+                <h1 className="sm:text-4xl text-3xl font-bold text-gray-700 mt-7">
+                        {data?.name}
                 </h1>
                 <div className="grid grid-cols-4 gap-2 mt-7">
-                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm col-span-1 gap-y-2 flex flex-col p-2">
+                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm sm:col-span-1 col-span-2 gap-y-2 flex flex-col p-2">
                         <span className="text-gray-400 text-sm transition group-hover:text-gray-200">نویسنده :</span>
                         <span className="group-hover:text-gray-50 transition font-semibold text-gray-700">{data?.author}</span>
                     </div>
-                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm col-span-1 gap-y-2 flex flex-col p-2">
+                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm sm:col-span-1 col-span-2 gap-y-2 flex flex-col p-2">
                         <span className="text-gray-400 text-sm transition group-hover:text-gray-200">سطح :</span>
                         <span className="group-hover:text-gray-50 transition font-semibold text-gray-700">{data?.level}</span>
                     </div>
-                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm col-span-1 gap-y-2 flex flex-col p-2">
+                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm sm:col-span-1 col-span-2 gap-y-2 flex flex-col p-2">
                         <span className="text-gray-400 text-sm transition group-hover:text-gray-200">صفحات :</span>
                         <span className="group-hover:text-gray-50 transition font-semibold text-gray-700">{PN.convertEnToPe(data?.pages)}</span>
                     </div>
-                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm col-span-1 gap-y-2 flex flex-col p-2">
+                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm sm:col-span-1 col-span-2 gap-y-2 flex flex-col p-2">
                         <span className="text-gray-400 text-sm transition group-hover:text-gray-200">جهت :</span>
                         <span className="group-hover:text-gray-50 transition font-semibold text-gray-700">{data?.rotation}</span>
                     </div>
-                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm col-span-1 gap-y-2 flex flex-col p-2">
+                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm sm:col-span-1 col-span-2 gap-y-2 flex flex-col p-2">
                         <span className="text-gray-400 text-sm transition group-hover:text-gray-200">نوع :</span>
                         <span className="group-hover:text-gray-50 transition font-semibold text-gray-700">{data?.type}</span>
                     </div>
-                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm col-span-1 gap-y-2 flex flex-col p-2">
+                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm sm:col-span-1 col-span-2 gap-y-2 flex flex-col p-2">
                         <span className="text-gray-400 text-sm transition group-hover:text-gray-200">مناسب برای :</span>
                         <span className="group-hover:text-gray-50 transition font-semibold text-gray-700">{data?.usableFor}</span>
                     </div>
-                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm col-span-1 gap-y-2 flex flex-col p-2">
+                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm sm:col-span-1 col-span-2 gap-y-2 flex flex-col p-2">
                         <span className="text-gray-400 text-sm transition group-hover:text-gray-200">پاسخنامه :</span>
                         <span className="group-hover:text-gray-50 transition font-semibold text-gray-700">{data?.key}</span>
                     </div>
-                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm col-span-1 gap-y-2 flex flex-col p-2">
+                    <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm sm:col-span-1 col-span-2 gap-y-2 flex flex-col p-2">
                         <span className="text-gray-400 text-sm transition group-hover:text-gray-200">سطح نویسنده :</span>
                         <span className="group-hover:text-gray-50 transition font-semibold text-gray-700">{data?._author}</span>
                     </div>
@@ -80,7 +98,7 @@ const SingleWorksheetMain = ({data} : {data : worksheetsDataProps}) => {
                     </div>
                     <div className="flex">
                         {
-                            data?.hashtags.map((value, index) => (
+                            data?.hashtags?.map((value, index) => (
                                 <h2 className="bg-gray-100 hover:bg-gray-600 hover:text-white transition rounded-lg text-sm py-1 px-3" key={index}>
                                     {value}
                                 </h2>
@@ -89,7 +107,7 @@ const SingleWorksheetMain = ({data} : {data : worksheetsDataProps}) => {
                     </div>
                 </div>
             </div>
-            <div className="col-span-1 p-3">
+            <div className="lg:col-span-1 sm:col-span-3 col-span-5 p-3">
                 <div className="flex items-center">
                     <img
                         src="/images/home/teachers/mohammad-zourmand.jpg"
