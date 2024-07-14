@@ -4,6 +4,7 @@ import { gradesBoxProps } from "./grades"
 export interface SubMenusValuesProps {
     name : string
     link : string
+    searchlink : string
     items : gradesBoxProps[]
     mainHead : string
     mainImg : string
@@ -16,7 +17,8 @@ export interface SubMenusValuesProps {
 export const SubMenusValues : SubMenusValuesProps[] = [
     {
         name : "صفر تا صد" ,
-        link : "courses" ,
+        link : 'courses',
+        searchlink : "search?page=1&_type=دوره های آموزشی" ,
         mainHead : "دوره های آموزشی",
         mainImg : "/images/navbar/online-learning.png",
         mainInfo : "بررسی کامل مطالب به همراه بازی، آزمون و کاربرگ" ,
@@ -55,7 +57,8 @@ export const SubMenusValues : SubMenusValuesProps[] = [
     },
     {
         name : "کاربرگ",
-        link : "worksheets",
+        link : 'worksheets',
+        searchlink : "search?page=1&_type=کاربرگ",
         mainHead : "مشاهده تمامی کاربرگ ها",
         mainImg : "/images/navbar/worksheet.png",
         mainInfo : "کاربرگ های مهارت محور و خلاقانه برای تکمیل یادگیری یا سنجش",
@@ -94,7 +97,8 @@ export const SubMenusValues : SubMenusValuesProps[] = [
     },
     {
         name : "ویدیوها" ,
-        link : "videos" ,
+        link : 'videos',
+        searchlink : "search?page=1&_type=ویدیوها" ,
         mainHead : "مشاهده تمامی ویدیوها",
         mainImg : "/images/navbar/video.png",
         mainInfo : "آموزش های آسان برای آموزگاران و دانش آموزان",

@@ -6,7 +6,7 @@ import { SubMenusValuesProps } from "./data"
 
 const SubMenu = ({isWhite, item} : {isWhite : boolean, item : SubMenusValuesProps}) => {
 
-    const {items,link,mainHead,mainImg,mainInfo,cls,subCls} = item
+    const {items,link,mainHead,mainImg,mainInfo,cls,subCls,searchlink} = item
 
     return (
         <>
@@ -15,7 +15,7 @@ const SubMenu = ({isWhite, item} : {isWhite : boolean, item : SubMenusValuesProp
                     <Image width={100} height={100} src={mainImg} alt={mainHead} />
                     <Link className="text-lg font-black mt-4 text-center" href={`/${link}`}> {mainHead} </Link>
                     <p className="text-center mt-1">{mainInfo}</p>
-                    <Link href={`/${link}`} className="flex items-center hover:bg-indigo-900 transition-all bg-baby-1 rounded-lg px-2 py-1 mt-3">
+                    <Link href={`/${searchlink}`} className="flex items-center hover:bg-indigo-900 transition-all bg-baby-1 rounded-lg px-2 py-1 mt-3">
                         <SearchBrokenIcon cls="w-5 h-5" color="white" />
                         <span className="text-white text-sm mr-2"> جستجوی پیشرفته </span>
                     </Link>

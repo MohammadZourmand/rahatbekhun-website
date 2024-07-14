@@ -22,7 +22,7 @@ const AdvancedSearch = () => {
     }, [queryPage])
 
     const {data, error, isLoading} = useSWR(
-        `http://localhost:5000/admin/search?${searchData}per_page=${3}&page=${page}`,
+        `http://localhost:5000/admin/search?${searchData}per_page=${20}&page=${page}`,
         getSearchResult
     )
 

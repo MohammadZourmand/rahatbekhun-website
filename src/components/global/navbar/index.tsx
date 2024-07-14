@@ -42,10 +42,9 @@ const Navbar = ({isWhite, cls} : NavbarProps) => {
                                 : <FloatBtn />
                         }
                         
-                        <Link href={"/search"} className={`${linkStyle}`}>
+                        <Link href={"/search?page=1"} className={`${linkStyle}`}>
                             <SearchBrokenIcon cls={"lg:w-6 w-5 lg:h-6 h-5 group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
                         </Link>
-
                     </div>
                 </div>
             </nav>

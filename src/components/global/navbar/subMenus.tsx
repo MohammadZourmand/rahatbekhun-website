@@ -7,7 +7,7 @@ import Link from "next/link";
 import { SubMenusValues } from "./subMenu/data";
 import dynamic from "next/dynamic";
 
-const SubMenu = dynamic(() => import(/* webpackChunkName : "iran" */'./subMenu'))
+const SubMenu = dynamic(() => import('./subMenu'))
 
 interface SubMenuProps {
     isWhite : boolean

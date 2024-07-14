@@ -31,9 +31,9 @@ const MatchedSearchResults = () => {
             }
             <div className="col-span-12">
             {
-                !isLoading && data?.data.length > 1 && <Pagination
+                data?.totalPages > 1 && <Pagination
                             totalPages={data?.totalPages ?? 1} 
-                            onClick={({selected}) => router.push(`/search?page=${selected+1}&per_page=${15}`)} 
+                            onClick={({selected}) => router.push(`/search?page=${selected+1}`)} 
                             initialPage={queryPage}
                         />
             }
