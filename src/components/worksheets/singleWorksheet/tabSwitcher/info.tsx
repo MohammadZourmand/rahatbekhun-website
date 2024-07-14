@@ -24,7 +24,7 @@ const SimilarSheets = ({sheet} : {sheet : worksheetsDataProps})  => {
     )
 
     return (
-        <div className="grid grid-cols-12 pt-6">
+        <div className="grid grid-cols-12 xs:gap-x-2 gap-y-16 pt-6">
             {
                 isLoading
                 ? <CircleLoading cls='col-span-12' text='در حال دریافت کاربرگ های مشابه ...'/>

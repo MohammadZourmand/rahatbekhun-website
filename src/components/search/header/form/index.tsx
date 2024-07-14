@@ -1,75 +1,92 @@
 'use client'
 
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 
-import { Form, Formik } from "formik";
-
-import { searchFormInitialValues as initialState, searchFormSelectboxOptions, searchFormInitialValuesProps as valuesType} from "./initialvalues";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
-import { typeChecker } from "./typeChecker";
-import SelectBoxDiv from "./selectboxDiv";
+import { courseOptions, testOptions, values, videosOptions, worksheetOptions } from "./initialvalues";
+import ContectType from "./contentType";
+import { SearchContext } from "@/context/search";
+import apiHelper from "@/utils/axios";
 import { WarningToast } from "@/utils/swal";
+import Selecters from "./selecters";
 
 const AdvancedSearchFrom = () => {
+    
+    const [typeData, setTypeData] = useState<any>(worksheetOptions)
+    const [initialvalues, setInitialValues] = useState(values)
 
-    const submitHandler = () => {
-        WarningToast("جستجو ناقص انجام شد !")
+    const {setData, data} = useContext(SearchContext)
+    
+    const contentTypeHandler = (item : string) => {
+        setInitialValues(prev => {
+            return {...prev, _type : item}
+        })
+
+        switch (item) {
+            case 'ویدیوها': 
+                setTypeData(videosOptions)
+                break;
+            case 'آزمون': 
+                setTypeData(testOptions)
+                break;
+            case 'دوره های آموزشی': 
+                setTypeData(courseOptions)
+                break;
+            default : 
+                setTypeData(worksheetOptions)
+        }
     }
 
-    // * get queries and send to server and get&set data
-    useEffect(() => {
-
-    }, [])
-
-    const [initialValues , setInitialValues] = useState<valuesType>(initialState)
-
-    const selectboxesChangeHandler : (key : string, value: string) => void = (key, value) => {
-        
-        setInitialValues((prevState) => {
+    const changeHandler = (key : string, value : string) => {
+        setInitialValues(prev => {
             return {
-                ...prevState,
+                ...prev,
                 [key] : value
             }
         })
     }
 
+    const SearchHandler = async () => {
+
+        let searchData = '';
+
+        Object.entries(initialvalues).forEach((item) => {
+            if(item[1] !== 'همه') {
+                searchData += `${item[0]}=${item[1]}&`
+            }
+        })
+
+        try {
+            setData(prev => {return {...prev, isLoading : true}})
+            
+            const res = await apiHelper().get(`http://localhost:5000/admin/search?${searchData}per_page=${3}&page=${data?.page}`)
+            
+            setData(prev => { return {...prev, data : res?.data?.data, isLoading : false, totalPages : res?.data?.totalPages} })
+        
+        } catch (err) {
+            setData(prev => {return {...prev, isLoading : false, error : err}})
+            WarningToast('مشکلی نامشخص به وجود آمده است !')
+        }
+    }
+
     return (
-        <Formik
-            initialValues={initialValues}
-            onSubmit={submitHandler}
-        >
-            <Form className="2xl:mx-20 mt-16 self-center grid grid-cols-12 justify-between md:gap-x-6">
-                {
-                    Object.entries(initialValues).map((values, index) => {
-
-                        const selectboxItemsFinder : () => string[] = () => {
-                            let selectBoxOptions : string[] = []
-
-                            Object.entries(searchFormSelectboxOptions)?.forEach(options => {
-                                if (options[0] === values[0]) selectBoxOptions = options[1]
-                            })
-
-                            return selectBoxOptions;
-                        }
-
-                        return (
-                            typeChecker(values[0] , initialValues._type) && <SelectBoxDiv
-                                key={index}
-                                itemsFinder={selectboxItemsFinder}
-                                changeHandler={selectboxesChangeHandler}
-                                name={values[0]}
-                                initialState={initialValues}
-                            />
-                        )
-                    })
-                }
-                <IconBtn
-                    text="آغاز جست و جو"
-                    cls="self-center col-span-12 mx-auto hover:px-12 z-0"
-                    iconName={"search"}
-                />
-            </Form>
-        </Formik>
+        <div className="max-w-7xl w-full mx-auto z-20">
+            <ContectType
+                initialvalues={initialvalues}
+                handler={contentTypeHandler}
+            />
+            <Selecters 
+                changeHandler={changeHandler}
+                initialvalues={initialvalues}
+                typeData={typeData}
+            />
+            <IconBtn
+                onClick={SearchHandler}
+                iconName="search"
+                cls="w-64 mx-auto"
+                text="جست و جو رو آغاز کن"
+            />
+        </div>
     )
 }
 

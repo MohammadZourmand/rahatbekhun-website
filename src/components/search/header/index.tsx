@@ -12,7 +12,8 @@ const AdvancedSearchHeader = () => {
             style={{
                 backgroundImage : `url(${bg.src})`
             }}
-            className={`flex flex-col relative pb-56 overflow-hidden`}>
+            className={`flex flex-col relative pb-56 overflow-hidden`}
+        >
             {/* // * background shadow */}
             <div className="absolute bottom-0 left-0 w-full h-full bg-gray-900/60"></div>
             {/* // * head of header :( navbar & text-headings  */}

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Link from "next/link";
 
 import Lottie from "lottie-react";
@@ -8,13 +8,15 @@ import Lottie from "lottie-react";
 import orangeAlert from "@/animations/orange-alert.json";
 import Paragraph from "@/components/global/elements/paragraph";
 import CloseIcon from "@/components/global/navbar/mobile/closeIcon";
+import { SearchContext } from "@/context/search";
 
 const MassageBox = () => {
 
     const [isShow, setIsShow] = useState<boolean>(true)
+    const {data} = useContext(SearchContext)
 
     return (
-        <div className={`${isShow ? "flex" : "hidden"} animate-fade relative mt-28 sm:flex-row flex-col mx-2 xs:mx-6 sm:mx-2 md:mx-6 bg-amber-400/40 rounded-md`}>
+        <div className={`${isShow ? "flex" : "hidden"} animate-fade relative mt-16 sm:flex-row flex-col mx-2 xs:mx-6 sm:mx-2 md:mx-6 bg-amber-400/40 rounded-md`}>
             <CloseIcon 
                 setState={setIsShow}
                 cls="absolute left-4 top-4 fill-amber-700"
@@ -24,12 +26,10 @@ const MassageBox = () => {
             <div className="flex flex-col sm:p-8 px-4 pb-8">
                 <Paragraph
                     cls="!text-amber-700 text-lg font-medium sm:!text-right !text-center"
-                    text={`${17} مورد شبیه اون چیزی که خواستی پیدا کردم !`}
+                    text={`${data?.data?.length} مورد شبیه اون چیزی که خواستی پیدا کردم !`}
                 />
                 <p className="text-amber-600 mt-4 text-sm font-medium sm:!text-right !text-center">
-                    اگه جستجوی دقیق تری میخوای رو
-                    <Link className="font-extrabold mx-1" href={"/"}> اینجا </Link>
-                    کلیک کن.
+                    اگه جستجوی دقیق تری میخوای برگرد بالا و موارد بیشتری رو انتخاب کن !
                 </p>
             </div>
         </div>

@@ -43,7 +43,7 @@ const SingleWorksheetMain = ({data} : {data : worksheetsDataProps}) => {
                 height={191}
                 className="absolute 2xl:top-[36rem] lg:top-[40rem] lg:block hidden right-0 rotate-180"
             />
-            <div className="lg:col-span-1 sm:col-span-2 col-span-5 z-50">
+            <div className="lg:col-span-1 sm:col-span-2 col-span-5 z-10 mx-auto">
                 <img
                     src={data?.image}
                     alt={data?.name}
