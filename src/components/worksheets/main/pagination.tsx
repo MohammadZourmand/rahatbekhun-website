@@ -19,8 +19,9 @@ const ListPagination = ({data, setPage} : Props) => {
     }, [queryPage, setPage])
 
     return (
-        <div className="col-span-12">
+        <div className="col-span-12 bg-white/30 max-w-xs mx-auto p-6 rounded-full">
             <Pagination
+                cls="!mt-0"
                 totalPages={data?.totalPages} 
                 onClick={({selected}) => router.push(`/worksheets/?page=${selected+1}`)} 
                 initialPage={queryPage}

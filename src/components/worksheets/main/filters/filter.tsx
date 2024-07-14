@@ -1,9 +1,9 @@
 import { FilterBrokenIcon } from "@/assets/icons";
 import Filters from ".";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import WindowSize from "@/utils/windowSize";
 
-const Filtering = ({filters, setFilters} : {filters : any, setFilters : any}) => {
+const Filtering = ({setFilters} : {setFilters : Dispatch<SetStateAction<string>>}) => {
 
     const [showFilters, setShowFilters] = useState<boolean>(false)
 
@@ -22,7 +22,7 @@ const Filtering = ({filters, setFilters} : {filters : any, setFilters : any}) =>
                 </>
             }
             <div className="relative col-span-12 w-full 2xl:max-w-[1400px] xl:mx-auto">
-                <Filters filters={filters} setfilters={setFilters} />
+                <Filters setFilters={setFilters} />
             </div>
         </>
     )

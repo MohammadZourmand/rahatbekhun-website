@@ -14,11 +14,11 @@ const FilterBox = ({
 
     const titleTranslator = (value) => {
         switch (value) {
-            case "book":
+            case "_subject":
             return "کتاب :"
             case "sort":
             return "نحوه نمایش :"
-            case "grade":
+            case "_grade":
             return "پایه تحصیلی :"
             case "price":
             return "قیمت کاربرگ :"

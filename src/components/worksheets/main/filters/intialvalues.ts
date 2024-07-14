@@ -1,17 +1,15 @@
 
 
 interface courseFiltersInitialValuesProps {
-    grade : string
-    book : string
+    _grade : string
+    _subject : string
     sort : string
-    search : string
     price : string
 }
 
 export const coursesFilteringTitles : courseFiltersInitialValuesProps = {
-    grade : "تمامی پایه ها",
-    book : "تمامی دروس",
-    sort : "پیش فرض",
-    search : "",
-    price : "تمامی کاربرگ ها"
-} 
+    _grade :"همه",
+    _subject : "همه",
+    sort : "همه",
+    price : "همه",
+}
