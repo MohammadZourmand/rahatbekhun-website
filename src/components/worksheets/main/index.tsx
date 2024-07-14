@@ -23,7 +23,7 @@ const WorksheetsMain = () => {
     })
 
     const {data, error, isLoading} = useSWR(
-        `http://localhost:5000/admin/worksheets/list?per_page=${16}&page=${page}&grade=${filters?.grade}&book=${filters?.book}&price=${filters?.price}`,
+        `http://localhost:5000/admin/worksheets/list?per_page=${2}&page=${page}`,
         getWorksheets
     )
 

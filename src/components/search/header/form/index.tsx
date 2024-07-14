@@ -15,7 +15,7 @@ const AdvancedSearchFrom = () => {
     const [typeData, setTypeData] = useState<any>(worksheetOptions)
     const [initialvalues, setInitialValues] = useState(values)
 
-    const {setData, data} = useContext(SearchContext)
+    const {searchData, setSearchData} = useContext(SearchContext)
     
     const contentTypeHandler = (item : string) => {
         setInitialValues(prev => {
@@ -48,25 +48,15 @@ const AdvancedSearchFrom = () => {
 
     const SearchHandler = async () => {
 
-        let searchData = '';
+        let data = ''
 
         Object.entries(initialvalues).forEach((item) => {
             if(item[1] !== 'همه') {
-                searchData += `${item[0]}=${item[1]}&`
+                data += `${item[0]}=${item[1]}&`
             }
         })
 
-        try {
-            setData(prev => {return {...prev, isLoading : true}})
-            
-            const res = await apiHelper().get(`http://localhost:5000/admin/search?${searchData}per_page=${3}&page=${data?.page}`)
-            
-            setData(prev => { return {...prev, data : res?.data?.data, isLoading : false, totalPages : res?.data?.totalPages} })
-        
-        } catch (err) {
-            setData(prev => {return {...prev, isLoading : false, error : err}})
-            WarningToast('مشکلی نامشخص به وجود آمده است !')
-        }
+        setSearchData(data)
     }
 
     return (

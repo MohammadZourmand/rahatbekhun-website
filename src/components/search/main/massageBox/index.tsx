@@ -17,7 +17,7 @@ const MassageBox = () => {
 
     return (
         <div className={`${isShow ? "flex" : "hidden"} animate-fade relative mt-16 sm:flex-row flex-col mx-2 xs:mx-6 sm:mx-2 md:mx-6 bg-amber-400/40 rounded-md`}>
-            <CloseIcon 
+            <CloseIcon
                 setState={setIsShow}
                 cls="absolute left-4 top-4 fill-amber-700"
                 color="rgb(217 119 6)"
@@ -26,7 +26,7 @@ const MassageBox = () => {
             <div className="flex flex-col sm:p-8 px-4 pb-8">
                 <Paragraph
                     cls="!text-amber-700 text-lg font-medium sm:!text-right !text-center"
-                    text={`${data?.data?.length} مورد شبیه اون چیزی که خواستی پیدا کردم !`}
+                    text={`${data?.documents} مورد شبیه اون چیزی که خواستی پیدا کردم !`}
                 />
                 <p className="text-amber-600 mt-4 text-sm font-medium sm:!text-right !text-center">
                     اگه جستجوی دقیق تری میخوای برگرد بالا و موارد بیشتری رو انتخاب کن !
