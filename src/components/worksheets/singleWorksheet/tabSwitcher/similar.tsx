@@ -11,7 +11,7 @@ import ErrorShower from '@/components/global/elements/loadings/error';
 const SimilarSheets = ({sheet} : {sheet : worksheetsDataProps})  => {
 
     const {data, error, isLoading} = useSWR(
-        `http://localhost:5000/admin/worksheets/list?grade=${sheet?._grade}&num=6`,
+        `http://localhost:5000/admin/worksheets/list?_grade=${sheet?._grade}&per_page=6&page=1`,
         async (url) => {
             try {
                 const res = await apiHelper().get(url)

@@ -6,7 +6,7 @@ import { worksheetsDataProps } from '../../data';
 import dynamic from 'next/dynamic';
 
 const Paragraph = dynamic(() => import('@/components/global/elements/paragraph'))
-const Similarsheets = dynamic(() => import('./info'))
+const Similarsheets = dynamic(() => import('./similar'))
 interface TabSwitcherCategoriesProps {
   id : number,
   text : string,

@@ -1,14 +1,24 @@
 import Worksheets from "@/components/worksheets";
-import { NextPage } from "next";
-import Head from "next/head";
+import { worksheetsbreadCrumbsJson } from "@/meta/worksheets";
+import { Metadata, NextPage } from "next";
+
+export const metadata: Metadata = {
+    title: 'کاربرگ های آموزشی',
+    description: 'کاربرگ های درس های ریاضی و فارسی و علوم و ... پایه های اول تا ششم ابتدایی با سطح های مختلف از آسان تا سخت',
+    keywords : [''],
+    alternates : {
+        canonical : 'https://rahatbekhun.com/worksheets'
+    }
+}
 
 const WorksheetsPage : NextPage = () => {
 
     return (
         <>
-            <Head>
-                <title>کاربرگ های آموزشی</title>
-            </Head>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(worksheetsbreadCrumbsJson) }}
+            />
             <Worksheets />
         </>
     )

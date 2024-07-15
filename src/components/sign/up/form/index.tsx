@@ -5,6 +5,7 @@ import Heading3 from "@/components/global/elements/headings/h3";
 import MyCheckBox from "@/components/global/elements/inputs/checkBox";
 import Input from "@/components/global/elements/inputs/input";
 import MyLabel from "@/components/global/elements/inputs/label";
+import { WarningToast } from "@/utils/swal";
 import { IconBrandGoogle } from "@tabler/icons-react";
 import { Form, Formik } from "formik";
 import Image from "next/image";
@@ -18,7 +19,9 @@ const SignUpForm = () => {
         keepSigned : false
     }
 
-    const submitHandler = () => {}
+    const submitHandler = () => {
+        WarningToast('هنوز قابلیت ثبت نام به سایت اضافه نشده است !')
+    }
 
     return (
         <section className="z-[1]  relative bg-gray-50 pt-4 pb-32 mx-auto lg:px-48">
