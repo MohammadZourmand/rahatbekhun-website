@@ -1,7 +1,7 @@
-import FaSpan from "@/components/global/elements/translators/faSpan"
 import Paragraph from "@/components/global/elements/paragraph"
 import FiveStars from "@/components/global/elements/boxes/stars/fiveStars"
 import Image from "next/image"
+import FaSpan from "@/utils/faSpan"
 
 const Header = () => {
 
@@ -11,7 +11,7 @@ const Header = () => {
                 <div>
                     <Image
                         className="rounded-full border-2 border-white shadow-all-md"
-                        src="/images/home/teachers/mohammad-zourmand.jpg"
+                        src="/images/home/teachers/mohammad-zourmand.webp"
                         alt="Mohammad-zourmand-creator-of-rahat-bekhun"
                         width={48}
                         height={48}

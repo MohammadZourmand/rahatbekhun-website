@@ -18,7 +18,7 @@ const WebsiteName = ({
             {
                 isWhite
                 ?   <Image width={64} height={64} src={"/images/white-webLogo.svg"} alt={"نماد راحت بخون سفید"} />
-                :   <Image width={64} height={64} src={"/images/webLogo.png"} alt={"نماد راحت بخون"} />
+                :   <Image width={64} height={64} src={"/images/webLogo.webp"} alt={"نماد راحت بخون"} />
             }
             <div className={`xl:flex lg:hidden ${textCls} flex mr-1 space-x-1 space-x-reverse`}>
                 <div className={`font-nozha ${isWhite ? "text-white" : "text-baby-1"} z-10`}> راحت </div>

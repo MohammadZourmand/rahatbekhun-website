@@ -13,7 +13,7 @@ const Creation = () => {
                 />
                 <div className="relative xs:h-[550px] h-[450px]">
                     <Image 
-                        src="/images/about/question-mark-icon-thinking-solution.jpg" 
+                        src="/images/about/question-mark-icon-thinking-solution.webp" 
                         className="rounded-lg shadow-all-lg" 
                         alt="girl-choosing-right-way-to-go"
                         fill

@@ -21,7 +21,7 @@ const TeachersClasses = () => {
             <div className="xl:col-span-7 col-span-12 xl:w-[440px] xl:h-96 lg:w-[80%] w-full xs:h-96 h-64 mx-auto relative">
                 <Image 
                     className=""
-                    src={"/images/home/teamwork.jpg"}
+                    src={"/images/home/teamwork.webp"}
                     alt="دستیار تدریس راحت بخون"
                     fill
                 />

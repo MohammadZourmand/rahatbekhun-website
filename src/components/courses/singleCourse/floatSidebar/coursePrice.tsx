@@ -1,7 +1,6 @@
 import { courseDetails } from "@/components/global/elements/boxes/tabSwitcher/courseInfo";
-import PriceBox from "./price";
-import FaSpan from "@/components/global/elements/translators/faSpan";
-
+import PriceBox from "@/components/global/price";
+import FaSpan from "@/utils/faSpan";
 
 const CoursePriceSidebar = () => {
 

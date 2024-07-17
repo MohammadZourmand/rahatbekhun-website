@@ -25,7 +25,7 @@ const CartTextMain = ({item} : CartTextMainProps) => {
             <Paragraph cls="tracking-tight font-normal text-[.9rem] leading-[1.8]" text={details} />
             <div className="flex mt-4 mb-4 items-center">
                 <Image
-                    src={"/images/home/teachers/mohammad-zourmand.jpg"}
+                    src={"/images/home/teachers/mohammad-zourmand.webp"}
                     className="outline outline-1 outline-gray-300 outline-offset-2 rounded-full"
                     alt={author}
                     width={40}

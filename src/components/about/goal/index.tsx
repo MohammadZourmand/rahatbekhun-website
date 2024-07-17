@@ -23,7 +23,7 @@ const Goal = () => {
                 />
                 <div className="relative xs:h-[550px] h-[450px]">
                     <Image 
-                        src="/images/about/girl-working-with-laptop-3.jpg" 
+                        src="/images/about/girl-working-with-laptop-3.webp" 
                         className="rounded-lg shadow-all-lg" 
                         alt="girl-choosing-right-way-to-go"
                         fill

@@ -36,7 +36,7 @@ export const personJson = {
         "name": "آموزگار",
         "educationRequirements": "لیسانس آموزش ابتدایی ( علوم تربیتی )"
     },
-    "image": "https://rahatbekhun.ir/mohammad-zourmand.jpg",
+    "image": "https://rahatbekhun.ir/mohammad-zourmand.webp",
     "jobTitle": "teacher",
     "url": "https://rahatbekhun.ir/instructor"
 }

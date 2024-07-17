@@ -18,7 +18,7 @@ const WebsiteInfo = ({cls} : WebsiteInfoProps) => {
                 <Link href="#" className="group bg-baby-6 transition-all duration-500 rounded-md p-2 ml-2">
                     <Image 
                         className="group-hover:scale-110 transition"
-                        src={"/images/aparat-logo.png"}
+                        src={"/images/aparat-logo.webp"}
                         width={24}
                         height={24}
                         alt="صفحه-آپارات-راحت-بخون"

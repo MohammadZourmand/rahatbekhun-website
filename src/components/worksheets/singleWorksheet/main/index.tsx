@@ -110,7 +110,7 @@ const SingleWorksheetMain = ({data} : {data : worksheetsDataProps}) => {
             <div className="lg:col-span-1 sm:col-span-3 col-span-5 p-3">
                 <div className="flex items-center">
                     <img
-                        src="/images/home/teachers/mohammad-zourmand.jpg"
+                        src="/images/home/teachers/mohammad-zourmand.webp"
                         alt="Mohammad Zourmand"
                         className="rounded-full w-12 h-12"  
                     />

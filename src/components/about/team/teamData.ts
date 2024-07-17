@@ -15,7 +15,7 @@ export const teamData : teamDataProps[] = [
         name : "محمد زورمند",
         username : "mohammad-zourmand",
         gmail : "zourmandrhbcontact@gmail.com",
-        imgSrc : "/images/home/teachers/mohammad-zourmand.jpg",
+        imgSrc : "/images/home/teachers/mohammad-zourmand.webp",
         telegram : "tel.me/rahatbekhun_contact",
         instagram : "instagram.com/rahatbekhun"
     }

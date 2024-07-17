@@ -38,7 +38,7 @@ const Card2 = ({item, cls} : Card2Type) => {
                 <footer className={`flex items-center justify-between gap-4 pt-4 pb-1`}>
                     <div className="flex mt-4 mb-4 items-center">
                         <Image
-                            src={"/images/home/teachers/mohammad-zourmand.jpg"}
+                            src={"/images/home/teachers/mohammad-zourmand.webp"}
                             className="w-9 h-9 border-2 border-gray-200 shadow-xl rounded-full"
                             alt="author"
                             width={36}

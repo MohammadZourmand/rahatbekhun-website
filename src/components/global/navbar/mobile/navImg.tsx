@@ -6,7 +6,7 @@ const NavImg = () => {
         <div>
             <Image 
                 className="!self-center"
-                src="/images/home/reading-kids.jpg"
+                src="/images/home/reading-kids.webp"
                 alt="درس خواندن با راحت بخون"
                 width={256}
                 height={256}

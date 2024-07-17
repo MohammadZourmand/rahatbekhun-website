@@ -1,5 +1,5 @@
 
-import FaSpan from "@/components/global/elements/translators/faSpan"
+import FaSpan from "@/utils/faSpan"
 import {ReactNode} from "react"
 
 interface SubjectBoxProps {

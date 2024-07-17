@@ -1,4 +1,4 @@
-import Selecter from "@/components/global/elements/inputs/selecter";
+import Selecter from "@/components/global/elements/inputs/selector"
 
 interface FilterBoxProps {
     options : string[]
@@ -28,7 +28,7 @@ const FilterBox = ({
     return (
         <div className={`${cls} flex flex-col items-start`}>
             <span className="lg:text-white text-gray-800 mr-1">{titleTranslator(name)}</span>
-            <Selecter 
+            <Selecter
                 options={options}
                 name={name}
                 setter={handler}

@@ -24,7 +24,7 @@ const Contact = () => {
                     btnText="همین الان ثبت نام کن"
                     cls="sm:col-span-1 col-span-2"
                     href="/contact"
-                    src="/images/home/teacher-man-with-book.jpg"
+                    src="/images/home/teacher-man-with-book.webp"
                     textCls="!text-lg"
                     btnCls="!text-xs"
                 />
@@ -33,7 +33,7 @@ const Contact = () => {
                     btnText="همین الان شروع کن"
                     cls="sm:col-span-1 col-span-2"
                     href="/contact"
-                    src="/images/home/woman-making-beauty-vlog-with-her-professional-camera.jpg"
+                    src="/images/home/woman-making-beauty-vlog-with-her-professional-camera.webp"
                     textCls="!text-lg"
                     btnCls="!text-xs"
                 />

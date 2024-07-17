@@ -12,7 +12,7 @@ const ShareBox = ({cls} : ShareBoxProps) => {
             <Link href="#" className="relative group overflow-hidden w-10 h-10 transition-all duration-500 rounded-md">
                 <Image 
                     className="group-hover:scale-125 scale-110 h-full w-full transition"
-                    src={"/images/icons/eitaa-logo.jpg"}
+                    src={"/images/icons/eitaa-logo.webp"}
                     alt="کانال راحت بخون در ایتا"
                     fill
                 />
@@ -20,7 +20,7 @@ const ShareBox = ({cls} : ShareBoxProps) => {
             <Link href="#" className="relative group overflow-hidden w-10 h-10 transition-all duration-500 rounded-md">
                 <Image 
                     className="group-hover:scale-125 scale-110 h-full w-full transition"
-                    src={"/images/icons/rubika-logo.png"}
+                    src={"/images/icons/rubika-logo.webp"}
                     alt="کانال راحت بخون در روبیکا"
                     fill
                 />
@@ -28,7 +28,7 @@ const ShareBox = ({cls} : ShareBoxProps) => {
             <Link href="#" className="relative group overflow-hidden w-10 h-10 transition-all duration-500 rounded-md">
                 <Image 
                     className="group-hover:scale-95 scale-[.85] h-full w-full transition"
-                    src={"/images/icons/telegram-logo.png"}
+                    src={"/images/icons/telegram-logo.webp"}
                     alt="کانال راحت بخون در تلگرام"
                     fill
                 />
@@ -36,7 +36,7 @@ const ShareBox = ({cls} : ShareBoxProps) => {
             <Link href="#" className="relative group overflow-hidden w-10 h-10 transition-all duration-500 rounded-md">
                 <Image 
                     className="group-hover:scale-95 scale-[.85] h-full w-full transition"
-                    src={"/images/icons/whatsapp-logo.png"}
+                    src={"/images/icons/whatsapp-logo.webp"}
                     alt="کانال راحت بخون در واتساپ"
                     fill
                 />

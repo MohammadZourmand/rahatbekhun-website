@@ -14,7 +14,7 @@ const Worksheets = () => {
                 breadcrumbItems={[
                     {href : "worksheets", value : "کاربرگ ها"}
                 ]} 
-                imgBgSrc={"/images/worksheets/girl-s-hand-writing-her-notebook.jpg"}
+                imgBgSrc={"/images/worksheets/girl-s-hand-writing-her-notebook.webp"}
             />
             <WorksheetsMain />
             <Footer cls="bg-gray-200 shadow-all-md"/>

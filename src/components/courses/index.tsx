@@ -17,7 +17,7 @@ const Courses = () => {
                 breadcrumbItems={[
                     {href : "courses", value : "دوره های آموزشی"}
                 ]}
-                imgBgSrc={'/images/courses/portrait-pretty-young-girl-smiling.jpg'}
+                imgBgSrc={'/images/courses/portrait-pretty-young-girl-smiling.webp'}
             />
             <CoursesPageMain /> */}
             <Navbar isWhite={false} />

@@ -17,7 +17,7 @@ const About = () => {
                 breadcrumbItems={[
                     {href : "/about", value : "درباره ما"}
                 ]} 
-                imgBgSrc={"/images/about/group-children-doing-hand-shake.jpg"}                
+                imgBgSrc={"/images/about/group-children-doing-hand-shake.webp"}                
             />
             <Creation />
             <Goal />

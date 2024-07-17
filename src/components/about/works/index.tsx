@@ -25,7 +25,7 @@ const Works = () => {
                 />
                 <div className="relative sm:h-[550px] xs:h-[450px] h-[350px]">
                     <Image 
-                        src="/images/about/children-with-their-hands-up.jpg"
+                        src="/images/about/children-with-their-hands-up.webp"
                         className="rounded-lg shadow-all-lg"
                         alt="girl-choosing-right-way-to-go"
                         fill

@@ -27,7 +27,7 @@ const SingleCourseMain = ({cls} : SingleCourseMainProps) => {
             <Header />
             <div className="relative sm:h-96 xs:h-72 h-56 mt-12 rounded-md overflow-hidden">
                 <Image
-                    src="/images/courses/boy-answering-questions-fast.jpg"
+                    src="/images/courses/boy-answering-questions-fast.webp"
                     alt="math-tricks-answer-questions-fast"
                     fill
                 />

@@ -16,14 +16,14 @@ const Inviting = () => {
                     btnText="همین الان ثبت نام کن"
                     cls="sm:col-span-1 col-span-2"
                     href="/contact"
-                    src="/images/home/teacher-man-with-book.jpg"
+                    src="/images/home/teacher-man-with-book.webp"
                 />
                 <OpaCart
                     text="میتونم محتوا تولید کنم"
                     btnText="همین الان شروع کن"
                     cls="sm:col-span-1 col-span-2"
                     href="/contact"
-                    src="/images/home/woman-making-beauty-vlog-with-her-professional-camera.jpg"
+                    src="/images/home/woman-making-beauty-vlog-with-her-professional-camera.webp"
                 />
             </main>
         </section>

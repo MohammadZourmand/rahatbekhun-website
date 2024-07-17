@@ -18,7 +18,7 @@ export const addSiteJsonLd = {
             "logo": {
                 "@type": "ImageObject",
                 "@id": "https://rahatbekhun.ir/#logo",
-                "url": "https://rahatbekhun.ir/logo.png",
+                "url": "https://rahatbekhun.ir/logo.webp",
                 "width": 350,
                 "height": 350,
                 "caption": "راحت بخون"

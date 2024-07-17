@@ -18,7 +18,7 @@ const InstructorMain = () => {
                 <div className="w-40 h-40 rounded-full -z-10 absolute top-40 -left-8 bg-sky-500/10"></div>
                 <Image 
                     className="rounded-lg z-10" 
-                    src="/images/home/teachers/mohammad-zourmand.jpg"
+                    src="/images/home/teachers/mohammad-zourmand.webp"
                     alt=""
                     fill
                 />

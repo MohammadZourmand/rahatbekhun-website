@@ -8,7 +8,7 @@ export const TypeMessageIconChooser = ({type} : IconChooserProps) => {
     switch (type) {
         case "warning": return (
             <Image 
-                src={"/images/icons/warning.png"}
+                src={"/images/icons/warning.webp"}
                 alt="علامت-اخطار"
                 width={56}
                 height={56}
@@ -16,7 +16,7 @@ export const TypeMessageIconChooser = ({type} : IconChooserProps) => {
         )
         case "info": return (
             <Image 
-                src={"/images/icons/info.png"}
+                src={"/images/icons/info.webp"}
                 alt="علامت-اخطار"
                 width={56}
                 height={56}
@@ -24,7 +24,7 @@ export const TypeMessageIconChooser = ({type} : IconChooserProps) => {
         )
         case "success": return (
             <Image 
-                src={"/images/icons/checked.png"}
+                src={"/images/icons/checked.webp"}
                 alt="علامت-تیک-موفقیت"
                 width={56}
                 height={56}
@@ -32,7 +32,7 @@ export const TypeMessageIconChooser = ({type} : IconChooserProps) => {
         )
         default: return (
             <Image 
-                src={"/images/icons/cancel.png"}
+                src={"/images/icons/cancel.webp"}
                 alt="علامت-ضربدر-ناموفق"
                 width={56}
                 height={56}

@@ -11,7 +11,7 @@ const UserGradeChooser = ({grade} : UserGradeChooserProps) => {
         case "خالق":
             return (
                 <Image
-                    src="/images/userGrades/creator.png"
+                    src="/images/userGrades/creator.webp"
                     alt="خالق"
                     width={64}
                     height={64}

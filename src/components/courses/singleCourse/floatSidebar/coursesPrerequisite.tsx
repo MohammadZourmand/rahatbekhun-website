@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 
-import PriceBox from "./price";
 import { courseDetails } from "@/components/global/elements/boxes/tabSwitcher/courseInfo";
 import FiveStars from "@/components/global/elements/boxes/stars/fiveStars";
 import Image from "next/image";
+import PriceBox from "@/components/global/price";
 
 
 

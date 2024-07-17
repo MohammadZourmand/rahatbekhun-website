@@ -19,13 +19,13 @@ const WorksheetCardMain = ({item} : WorksheetCardMainProps) => {
             case "راحت بخون":
                 return <>
                     {item?._author}
-                    <Image className="mr-1" src={"/images/verify.png"} alt="تاییدشده" width={16} height={16} />
+                    <Image className="mr-1" src={"/images/verify.webp"} alt="تاییدشده" width={16} height={16} />
                 </>
                         
             case 'سازندگان تاییدشده':
                 return <>
                     {item?._author}
-                    <Image className="mr-1 invert" src={"/images/verify.png"} alt="تاییدشده" width={16} height={16} />
+                    <Image className="mr-1 invert" src={"/images/verify.webp"} alt="تاییدشده" width={16} height={16} />
                 </>
 
             default :

@@ -14,7 +14,7 @@ const Contact = () => {
                 breadcrumbItems={[
                     {href : "/contact", value : "ارتباط با ما"}
                 ]} 
-                imgBgSrc={"/images/contact/smiling-little-boy-making-selfie-thinking-about-something.jpg"}                
+                imgBgSrc={"/images/contact/smiling-little-boy-making-selfie-thinking-about-something.webp"}                
             />
             <ContactMain />
             <Footer />
