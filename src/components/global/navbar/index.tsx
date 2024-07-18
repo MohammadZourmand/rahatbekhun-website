@@ -1,17 +1,14 @@
-'use client'
-
 // ? React =======================
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 // ? components ==================
-import WindowSize from "../../../utils/windowSize";
 import WebsiteName from "../elements/boxes/websiteName";
 import SubMenus from "./subMenus";
 import { SearchBrokenIcon } from "@/assets/icons";
 import PopupIcons from "./popups";
-import Link from "next/link";
 
-const FloatBtn = dynamic(() => import(/* webpackChunkName : "float-btn" */"./mobile/floatBtn"))
+const FloatBtn = dynamic(() => import("./mobile/floatBtn"))
 
 interface NavbarProps {
     isWhite : boolean
@@ -26,22 +23,13 @@ const Navbar = ({isWhite, cls} : NavbarProps) => {
         <>
             <nav className={`${cls} min-w-[320px] grid grid-cols-12 w-full px-4 items-center`}>
                 <div className={`col-span-12 flex justify-between items-center rounded-lg pt-1`}>
-                    
                     <div className="flex items-center">
                         <WebsiteName isWhite={isWhite} cls="justify-center ml-8" />
-                        {
-                            WindowSize().width >= 1024 && <SubMenus isWhite={isWhite} />
-                        }
+                        <SubMenus isWhite={isWhite} />
                     </div>
-
                     <div className="flex items-center gap-x-3">
-                        
-                        {
-                            WindowSize().width >= 1024
-                                ? <PopupIcons isWhite={isWhite} />
-                                : <FloatBtn />
-                        }
-                        
+                        <PopupIcons isWhite={isWhite} />
+                        <FloatBtn />
                         <Link href={"/search?page=1"} className={`${linkStyle}`}>
                             <SearchBrokenIcon cls={"lg:w-6 w-5 lg:h-6 h-5 group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
                         </Link>

@@ -10,7 +10,11 @@ export const metadata: Metadata = {
   alternates : {
       canonical : 'https://rahatbekhun.com',
   },
-  robots : 'index',
+  robots : {
+    follow : true,
+    index : true,
+    
+  },
 }
 
 export default function HomePage() {

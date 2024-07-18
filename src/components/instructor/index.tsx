@@ -2,7 +2,6 @@ import Navbar from "../global/navbar";
 import InstructorMain from "./main";
 import Footer from "../global/footer";
 
-
 const Instructor = () => {
 
     return (

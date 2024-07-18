@@ -2,6 +2,7 @@ import Heading1 from "@/components/global/elements/headings/h1";
 import Paragraph from "@/components/global/elements/paragraph";
 import Image from "next/image";
 import {convertEnToPe} from "persian-number"
+
 const Goal = () => {
 
     return (

@@ -4,7 +4,7 @@ import { singleWorksheetbreadCrumbsJson, worksheetJsonLd } from "@/meta/workshee
 import apiHelper from "@/utils/axios";
 import { ErrorToast } from "@/utils/swal";
 
-import type { Metadata, ResolvingMetadata } from 'next';
+import type { Metadata } from 'next';
 
 type Props = {
     params: { worksheet: string }

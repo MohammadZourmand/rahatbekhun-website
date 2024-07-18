@@ -1,3 +1,4 @@
+
 import Footer from "../global/footer";
 import Header from "./homeHeader";
 import Sentences from "./BigSentences";

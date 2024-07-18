@@ -1,3 +1,5 @@
+'use client'
+
 import { worksheetsDataProps } from "@/components/worksheets/data";
 import SheetsCardImgPart from "./imgPart";
 import SheetsCardTextPart from "./textPart";

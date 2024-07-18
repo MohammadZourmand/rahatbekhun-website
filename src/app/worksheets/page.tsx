@@ -1,5 +1,6 @@
 import Worksheets from "@/components/worksheets";
 import { worksheetsbreadCrumbsJson } from "@/meta/worksheets";
+import apiHelper from "@/utils/axios";
 import { Metadata, NextPage } from "next";
 
 export const metadata: Metadata = {
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     }
 }
 
-const WorksheetsPage : NextPage = () => {
+const WorksheetsPage = async () => {
 
     return (
         <>
