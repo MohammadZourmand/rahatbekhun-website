@@ -5,6 +5,7 @@ import AllGrades from "./pageMain/allGrades";
 import Description from "./pageMain/description";
 import AllTypes from "./pageMain/allTypes";
 import Info from "./pageMain/info";
+import FAQ from "./pageMain/faq";
 
 const Worksheets = () => {
 
@@ -25,6 +26,7 @@ const Worksheets = () => {
                 <Description />
                 <AllTypes />
                 <Info />
+                <FAQ />
             </section>
             <Footer cls="bg-gray-200 shadow-all-md"/>
         </>

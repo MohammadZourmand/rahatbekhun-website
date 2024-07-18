@@ -45,7 +45,7 @@ export default function GradeSort() {
 
     return (
         <section className="max-w-5xl mx-auto">
-            <h2 className="pt-16 pb-12 text-center font-extrabold text-5xl text-gray-700">
+            <h2 className="pt-16 pb-12 text-center font-extrabold sm:text-5xl xs:text-4xl text-3xl text-gray-700">
                 انتخاب بر اساس پایه تحصیلی
             </h2>
             <div className="grid grid-cols-6 gap-6">
@@ -54,7 +54,8 @@ export default function GradeSort() {
                         return (
                             <Link
                                 key={index}
-                                className="group rounded py-8 relative items-center flex flex-col col-span-1"
+                                className="group rounded py-8 relative items-center flex flex-col
+                                md:col-span-1 xs:col-span-2 col-span-3"
                                 href={item?.href}
                             >
                                 <div>

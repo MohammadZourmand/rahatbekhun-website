@@ -186,33 +186,33 @@ export default function Info() {
                     <h1 className="pt-16 text-center font-extrabold text-5xl text-gray-600 pb-8">
                         انواع کاربرگ ها
                     </h1>
-                    <p className="leading-loose text-gray-400">
+                    <p className="leading-loose text-gray-400 px-1 xs:text-right text-center">
                         کاربرگ ها را می توان با توجه به معیارهای مخنلفی دسته بندی کرد مثلا بر حسب کاربرد ، سطح و ... ما اینجا در راحت بخون
                         مفتخریم که کاربرگ ها را در تمامی حالت های مختلف برای آموزگاران و دانش آموزان یا حتی والدینی که پیگیر
                         بهبود وضعیت فرزند دلبندشان هستند دسته بندی کنیم تا راحت تر به چیزی که می خواهید دسترسی پیدا کنید !
                     </p>
                 </article>
                 <article className="max-w-5xl mx-auto">
-                    <h2 className="my-4 text-gray-500 font-bold text-lg">
+                    <h2 className="my-4 text-gray-500 font-bold text-lg xs:text-right text-center">
                         انواع کاربرگ از نظر محتوا
                     </h2>
-                    <p className="leading-loose text-gray-400">
+                    <p className="leading-loose text-gray-400 xs:text-right text-center">
                         کاربرگ ها از نظر محتوا به چهار دسته تقسیم می شوند که عبارتند از : تمرینی، آماده سازی، بسطی و امتدادی و خلاقانه.
                         در واقع این تقسیم بندی همان تقسیم بندی <strong> انواع تکالیف بر اساس محتوا </strong> است !
                         آموزگاران گرامی می توانند از این کاربرگ ها متناسب با مبحث تدریس خود استفاده کنند !
                     </p>
-                    <h3 className="text-gray-500 pr-4 my-3 font-bold">
+                    <h3 className="text-gray-500 xs:pr-4 xs:pl-0 px-2 my-3 font-bold xs:text-right text-center">
                         کاربرگ تمرینی
                     </h3>
-                    <p className="leading-loose text-gray-400 pr-4">
+                    <p className="leading-loose text-gray-400 xs:pr-4 xs:pl-0 px-2 xs:text-right text-center">
                         کاربرگ تمرینی متداول ترین نوع کاربرگ است ! این نوع کاربرگ ها با هدف تکرار و در نتیجه تقویت مباحثی است که
                         آموزگار تدریس کرده است ! این نوع تکالیف قدیمی ترین نوع تکالیف هستند که املای شب یکی از مهم ترین نوع آن است.
                         علی رقم مفید بودن این نوع تکالیف، باتوجه به تکراری بودن آنها، این تکالیف برای دانش آموزان خسته کننده است.
                     </p>
-                    <ul className="grid grid-cols-6 gap-4 mb-6 mt-4 pr-4">
+                    <ul className="grid grid-cols-6 gap-4 mb-6 mt-4 xs:pr-4 xs:pl-0 px-2">
                     {
                         practiceWorksheetsLinks.map((item, index) => (
-                            <li className="col-span-2" key={index}>
+                            <li className="md:col-span-2 xs:col-span-3 col-span-6 xs:text-right text-center" key={index}>
                                 <Link
                                     href={item?.link}
                                     className="text-sky-500"
@@ -223,20 +223,20 @@ export default function Info() {
                         ))
                     }
                     </ul>
-                    <h3 className="text-gray-500 pr-4 my-3 font-bold">
+                    <h3 className="text-gray-500 xs:pr-4 xs:pl-0 px-2 my-3 font-bold xs:text-right text-center">
                         کاربرگ آماده سازی
                     </h3>
-                    <p className="leading-loose text-gray-400 pr-4">
+                    <p className="leading-loose text-gray-400 xs:pr-4 xs:pl-0 px-2 xs:text-right text-center">
                         این نوع کاربرگ ها همان طور که از اسمشان مشخص است برای آماده کردن دانش آموزان برای تدریس روزهای آینده است.
                         مثلا فرض کنید که شما می خواهید در روز سه شنبه مفهوم متر را آموزش دهید! حال اگر از دانش آموزان بخواهید به وسیله وجب 
                         وسایلی مشابه، را اندازه گیری کنند و آن را با دوستان یا اعضای خانواده خود مقایسه کنند. این تکلیف باعث آمادگی دانش آموزان
                         و هم چنین ایجاد احساس نیاز در آنها جهت وجود یک معیار ثابت و هم اندازه برای آنها خواهد شد!
                         در نتیجه هم مطالب را بهتر یاد می گیرند هم برای یادگیری دست به جمع آوری اطلاعات می زنند !
                     </p>
-                    <ul className="grid grid-cols-6 gap-4 mb-6 mt-4 pr-4">
+                    <ul className="grid grid-cols-6 gap-4 mb-6 mt-4 xs:pr-4 xs:pl-0 px-2">
                     {
                         makeReadyWorksheetsLinks.map((item, index) => (
-                            <li className="col-span-2" key={index}>
+                            <li className="md:col-span-2 xs:col-span-3 col-span-6 xs:text-right text-center" key={index}>
                                 <Link
                                     href={item?.link}
                                     className="text-sky-500"
@@ -247,19 +247,19 @@ export default function Info() {
                         ))
                     }
                     </ul>
-                    <h3 className="text-gray-500 pr-4 my-3 font-bold">
+                    <h3 className="text-gray-500 xs:pr-4 xs:pl-0 px-2 my-3 font-bold xs:text-right text-center">
                         کاربرگ بسطی و امتدادی
                     </h3>
-                    <p className="leading-loose text-gray-400 pr-4">
+                    <p className="leading-loose text-gray-400 xs:pr-4 xs:pl-0 px-2 xs:text-right text-center">
                         این نوع کاربرگ ها به دنبال آن هستند که میزان یادگیری و دانش دانش آموزان را از حد و مرز کتاب خارج کنند و به چیزی بالاتر از آن ببرند!
                         مثلاً فرض کنید در کلاس درس ریاضی و بحث اسکال هندسی این موضوع پیش می آید که آیا اشکال هندسی در دایره ، مستطیل ، مربع و مثلث
                         خلاصه می شوند؟ قاعدتاً جواب خیر است اما چیزی در کتاب گفته نشده است ! پس دانش آموزان به دنبال یافتن موارد بیشتر می روند!
                         تحقیقات و پژوهش ها یا حتی مقالات نیز در این دسته قرار می گیرند.
                     </p>
-                    <ul className="grid grid-cols-6 gap-4 mb-6 mt-4 pr-4">
+                    <ul className="grid grid-cols-6 gap-4 mb-6 mt-4 xs:pr-4 xs:pl-0 px-2">
                     {
                         moreInfoWorksheetsLinks.map((item, index) => (
-                            <li className="col-span-2" key={index}>
+                            <li className="md:col-span-2 xs:col-span-3 col-span-6 xs:text-right text-center" key={index}>
                                 <Link
                                     href={item?.link}
                                     className="text-sky-500"
@@ -270,19 +270,19 @@ export default function Info() {
                         ))
                     }
                     </ul>
-                    <h3 className="text-gray-500 pr-4 my-3 font-bold">
+                    <h3 className="text-gray-500 xs:pr-4 xs:pl-0 px-2 my-3 font-bold xs:text-right text-center">
                         کاربرگ خلاقانه
                     </h3>
-                    <p className="leading-loose text-gray-400 pr-4">
+                    <p className="leading-loose text-gray-400 xs:pr-4 xs:pl-0 px-2 xs:text-right text-center">
                         این نوع کاربرگ ها پس از یادگیری درس برای ایجاد ذوق و پیشرفت دانش آموزان در تمامی زمینه ها اتفاق می افتد! 
                         مثلاً فرض کنید که دانش آموزان موضوع آموزش متر و تخمین را با یک بازی ترکیب کنند و پرتاب نیزه انجام دهند!
                         یا برای یک درس علوم یک مدل بسازند! این موارد که در بسیاری از حالت ها حاصل تلفیق دروس و مباحث مختلف است
                         نوعی تکلیف خلاقیتی یا خلاقانه محسوب می شود !
                     </p>
-                    <ul className="grid grid-cols-6 gap-4 mb-6 mt-4 pr-4">
+                    <ul className="grid grid-cols-6 gap-4 mb-6 mt-4 xs:pr-4 xs:pl-0 px-2">
                     {
                         creativeWorksheetsLinks.map((item, index) => (
-                            <li className="col-span-2" key={index}>
+                            <li className="md:col-span-2 xs:col-span-3 col-span-6 xs:text-right text-center" key={index}>
                                 <Link
                                     href={item?.link}
                                     className="text-sky-500"
@@ -295,10 +295,10 @@ export default function Info() {
                     </ul>
                 </article>
                 <article className="max-w-5xl mx-auto mt-12">
-                    <h2 className="my-4 text-gray-500 font-bold text-lg">
+                    <h2 className="my-4 text-gray-500 font-bold text-lg xs:text-right text-center">
                         انواع کاربرگ ها بر اساس سطح و سختی 
                     </h2>
-                    <p className="leading-loose text-gray-400">
+                    <p className="leading-loose text-gray-400 xs:text-right text-center">
                         کاربرگ های راحت بخون برای تمامی سطح ها مناسب است. دانش آموزانی که در مدارس تیزهوشان درس می خوانند یا
                         دانش آموزانی که به دنبال حل سوالات بیشتر و سخت تری نسبت به دیگر دانش آموزان هستند می توانند در راحت بخون کاربرگ مناسب برای خود را پیدا کنند !
                         برای همین در راحت بخون کاربرگ هایی تحت عنوان کاربرگ تسلا وجود دارد که برای دانش آموزانی است که می خواهند بالاتر از سطح کتاب 
@@ -307,7 +307,7 @@ export default function Info() {
                     <ul className="grid grid-cols-6 gap-4 mt-5">
                         {
                             telsaWorksheetsLinks.map((item, index) => (
-                                <li className="col-span-2" key={index}>
+                                <li className="md:col-span-2 xs:col-span-3 col-span-6 xs:text-right text-center" key={index}>
                                     <Link
                                         href={item?.href}
                                         className="text-sky-500"
@@ -320,17 +320,17 @@ export default function Info() {
                     </ul>
                 </article>
                 <article className="max-w-5xl mx-auto mt-12">
-                    <h2 className="my-4 text-gray-500 font-bold text-lg">
+                    <h2 className="my-4 text-gray-500 font-bold text-lg xs:text-right text-center">
                         انواع کاربرگ ها بر اساس پایه تحصیلی
                     </h2>
-                    <p className="leading-loose text-gray-400">
+                    <p className="leading-loose text-gray-400 xs:text-right text-center">
                         تکالیف با توجه به پایه های تحصیلی به شش گروه تقسیم می شوند که از پایه های اول تا ششم را شامل می شود.
                         اما در راحت بخون ما برای پیش دبستانی ها و کلاس ششمی هایی که می خواهند هم کاربرگ هایی آماده شده است.
                     </p>
                     <ul className="grid grid-cols-6 gap-4 mt-5">
                     {
                         gradeWorksheetsLinks.map((item, index) => (
-                            <li className="col-span-2" key={index}>
+                            <li className="md:col-span-2 xs:col-span-3 col-span-6 xs:text-right text-center" key={index}>
                                 <Link
                                     href={item?.href}
                                     className="text-sky-500"

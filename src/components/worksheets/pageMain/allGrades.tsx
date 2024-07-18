@@ -33,7 +33,7 @@ export default function AllGrades() {
 
     return (
         <section className="mt-16 max-w-5xl mx-auto">
-            <h2 className="pt-16 pb-12 text-center font-extrabold text-5xl text-gray-700">
+            <h2 className="pt-16 pb-12 text-center font-extrabold sm:text-5xl xs:text-4xl text-3xl text-gray-700">
                 برای مشکلات دانش آموزان
             </h2>
             <div className="grid grid-cols-4 gap-6">
@@ -42,7 +42,7 @@ export default function AllGrades() {
                         return (
                             <Link
                                 key={index}
-                                className="group rounded py-8 relative items-center flex flex-col col-span-1"
+                                className="group rounded py-8 relative items-center flex flex-col md:col-span-1 xs:col-span-2 col-span-4"
                                 href={item?.href}
                             >
                                 <div>
