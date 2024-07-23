@@ -1,7 +1,6 @@
 'use client'
 
 import Link from "next/link";
-import { worksheetsDataProps } from "../data";
 import { EyeBrokenIcon } from "@/assets/icons";
 import { useState } from "react";
 

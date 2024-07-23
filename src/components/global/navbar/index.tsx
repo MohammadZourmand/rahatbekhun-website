@@ -7,8 +7,7 @@ import WebsiteName from "../elements/boxes/websiteName";
 import SubMenus from "./subMenus";
 import { SearchBrokenIcon } from "@/assets/icons";
 import PopupIcons from "./popups";
-
-const FloatBtn = dynamic(() => import("./mobile/floatBtn"))
+import ResponsiveMenu from "./mobile";
 
 interface NavbarProps {
     isWhite : boolean
@@ -28,8 +27,8 @@ const Navbar = ({isWhite, cls} : NavbarProps) => {
                         <SubMenus isWhite={isWhite} />
                     </div>
                     <div className="flex items-center gap-x-3">
-                        <PopupIcons isWhite={isWhite} />
-                        <FloatBtn />
+                        {/* <PopupIcons isWhite={isWhite} /> */}
+                        <ResponsiveMenu />
                         <Link href={"/search?page=1"} className={`${linkStyle}`}>
                             <SearchBrokenIcon cls={"lg:w-6 w-5 lg:h-6 h-5 group-hover:scale-[1.2] transition-all duration-500"} color={isWhite ? "black" : "white"} />
                         </Link>
