@@ -5,11 +5,12 @@ import { useRouter } from "next/navigation";
 import { Dispatch, SetStateAction, useEffect } from "react";
 
 interface Props {
-    data : any
+    totalPages : number
     setPage : Dispatch<SetStateAction<number>>
+    params : any
 }
 
-const ListPagination = ({data, setPage} : Props) => {
+const ListPagination = ({totalPages, setPage, params} : Props) => {
 
     const queryPage = useSearchParams().get('page')
     const router = useRouter()
@@ -22,8 +23,8 @@ const ListPagination = ({data, setPage} : Props) => {
         <div className="col-span-12 bg-white/30 max-w-xs mx-auto p-6 rounded-full">
             <Pagination
                 cls="!mt-0"
-                totalPages={data?.totalPages} 
-                onClick={({selected}) => router.push(`/worksheets/?page=${selected+1}`)} 
+                totalPages={totalPages} 
+                onClick={({selected}) => router.push(`/worksheets/${params?.grade}?page=${selected+1}`)} 
                 initialPage={queryPage}
             />
         </div>

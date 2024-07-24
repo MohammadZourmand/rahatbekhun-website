@@ -1,18 +1,22 @@
 import Navbar from "@/components/global/navbar";
-import { worksheetsDataProps } from "../data";
 import BooksBox from "./booksBox";
+import Filtering from "./filtering";
+import WorksheetsList from "./list";
+import Footer from "@/components/global/footer";
 
 interface Props {
     grade : string
-    data : worksheetsDataProps[]
     params : any
 }
 
-export default function GradePage({data, grade, params} : Props) {
+export default function GradePage({params, grade} : Props) {
     return (
         <>
             <Navbar isWhite={false}/>
             <BooksBox grade={grade} />
+            <Filtering />
+            <WorksheetsList grade={grade} params={params} />
+            <Footer />
         </>
     )
 }

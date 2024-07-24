@@ -80,7 +80,7 @@ const WorksheetCardMain = ({item} : WorksheetCardMainProps) => {
                         showAuthorLevel(),
                     ]}
                     cls="grid grid-cols-12 text-[.85rem] leading-loose tracking-tight mt-1 font-semibold"
-                    liCls="xs:col-span-6 col-span-12"
+                    liCls="col-span-6"
                 />
             </div>
         </main>

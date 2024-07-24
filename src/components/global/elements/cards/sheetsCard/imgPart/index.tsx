@@ -14,13 +14,13 @@ const SheetsCardImgPart = ({item, cls} : SheetsCardImgPartProps) => {
     const [showWorksheet, setShowWorksheet] = useState<boolean>(false)
 
     const showHandler = () => {
-        item?.price === 0
+        Number(item?.price) === 0
             ? setShowWorksheet(true)
             : ErrorToast("ابتدا باید کاربرگ را خریداری کنید !")
     }
 
     return (
-        <div className={`${cls} overflow-hidden group absolute -top-12 shadow-all-lg sm:h-1/2 h-[38%] w-11/12 mx-auto rounded-md`}>
+        <div className={`${cls} border border-baby-7 overflow-hidden group absolute -top-12 shadow-all-sm sm:h-1/2 h-[38%] w-11/12 mx-auto rounded-md`}>
             <Image
                 loader={({ src, width }) => { return src + "?w=" + width }}
                 width={500}
@@ -32,7 +32,7 @@ const SheetsCardImgPart = ({item, cls} : SheetsCardImgPartProps) => {
                 onClick={showHandler}
                 priority
             />
-            {/* <Gallery items={item?.images} setShow={setShowWorksheet} show={showWorksheet }/> */}
+            <Gallery item={item?.image} setShow={setShowWorksheet} show={showWorksheet} />
         </div>
     )
 }

@@ -1,7 +1,4 @@
 import GradePage from "@/components/worksheets/gradePage";
-import apiHelper from "@/utils/axios";
-import { WarningToast } from "@/utils/swal";
-
 
 const gradeFixer = (grade) => {
     switch (grade) {
@@ -18,20 +15,9 @@ const gradeFixer = (grade) => {
         case "grade-6":
             return 'ششم'
         case "grade-7":
-            return 'آمادگی برای هفتم'
+            return 'هفتم'
         default:
             return 'پیش دبستانی'
-    }
-}
-
-const getData = async (grade) => {
-    try {
-        const res =  await apiHelper().get(`http://localhost:5000/admin/worksheets/list?_grade=${grade}`)
-        return res?.data?.data
-    } catch (err) {
-        WarningToast('مشکلی در دریافت اطلاعات وجود دارد !')
-        console.log("err")
-        return []
     }
 }
 
@@ -39,11 +25,9 @@ export default async function WorksheetsGrades({params}) {
 
     const grade = gradeFixer(params?.grade) || "دوم"
 
-    const data = await getData(grade) || []
-
     return (
         <>
-            <GradePage data={data} params={params} grade={grade} />
+            <GradePage params={params} grade={grade} />
         </>
     )
 }

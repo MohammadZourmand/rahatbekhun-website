@@ -14,7 +14,7 @@ interface FooterProps {
 const Footer = ({cls} : FooterProps) => {
     
     return (
-        <footer className={`${cls} bg-gray-200/80 text-white flex flex-col`}>
+        <footer className={`${cls} bg-gray-200/80 text-white flex flex-col lg:pb-0 pb-24`}>
             <div className="grid grid-cols-12 lg:gap-x-8 xl:px-12 lg:px-6 sm:px-12 sm:pt-12 sm:pb-6 pb-6">
                 <WebsiteInfo  cls="lg:col-span-4 col-span-12" />
                 <div className="lg:col-span-5 col-span-12 grid grid-cols-12 sm:p-6 p-2">

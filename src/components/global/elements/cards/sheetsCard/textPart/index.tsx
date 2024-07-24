@@ -6,13 +6,14 @@ import WorksheetCardFooter from "./footer";
 interface SheetsCardTextPartProps {
     item : worksheetsDataProps
     cls ?: string
+    grade : string
 }
 
-const SheetsCardTextPart = ({item, cls} : SheetsCardTextPartProps) => {
+const SheetsCardTextPart = ({item, cls, grade} : SheetsCardTextPartProps) => {
 
     return (
-        <div className={`${cls} py-10 px-5`}>
-            <WorksheetCardHeader item={item} />
+        <div className={`${cls ?? ''} sm:py-10 sm:px-5 mt:pt-0 pb-5`}>
+            <WorksheetCardHeader item={item} grade={grade}/>
             <WorksheetCardMain item={item}/>
             <WorksheetCardFooter item={item}/>
         </div>

@@ -1,28 +1,19 @@
-import Heading1 from "@/components/global/elements/headings/h1"
-import Paragraph from "@/components/global/elements/paragraph"
 import { worksheetsDataProps } from "@/components/worksheets/data"
 import Link from "next/link"
 
 interface WorksheetCardHeaderProps {
     item : worksheetsDataProps
+    grade : string
 }
 
-const WorksheetCardHeader = ({item} : WorksheetCardHeaderProps) => {
-
+const WorksheetCardHeader = ({item, grade} : WorksheetCardHeaderProps) => {
 
     return (
         <header className="flex flex-col items-center mb-2">
-            <Link href={`/worksheets/${item._id}`}>
-                <Heading1
-                    text={item?.name}
-                    cls="!text-base !font-black !mt-0"
-                />
+            <Link href={`/worksheets/${grade}/${item._id}`}>
+                <h1 className="font-black text-gray-700 text-lg">{item?.name}</h1>
             </Link>
-            
-            <Paragraph 
-                text={item?.season} 
-                cls="!font-medium text-[.75rem] mt-1" 
-            />
+            <p className="text-[.8rem] mt-0.5 text-gray-400 font-semibold">{item?.season}</p>
         </header>
     )
 }

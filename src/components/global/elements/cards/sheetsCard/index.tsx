@@ -7,14 +7,15 @@ import SheetsCardTextPart from "./textPart";
 interface SheetsCardProps {
     item : worksheetsDataProps
     cls ?: string
+    grade : string
 }
 
-const SheetsCard  = ({item, cls} : SheetsCardProps) => {
+const SheetsCard  = ({item, cls, grade} : SheetsCardProps) => {
 
     return (
-        <div className={`bg-white relative h-[27rem] ${cls} rounded-md flex justify-center items-end`}>
+        <div className={`relative sm:h-[27rem] h-[20rem] ${cls} shadow-gray-400 bg-baby-7/5 border border-baby-7 rounded-md flex justify-center items-end shadow-all-md `}>
             <SheetsCardImgPart item={item} />
-            <SheetsCardTextPart item={item} />
+            <SheetsCardTextPart grade={grade} item={item} />
         </div>
     )
 }
