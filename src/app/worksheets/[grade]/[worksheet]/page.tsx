@@ -5,6 +5,7 @@ import apiHelper from "@/utils/axios";
 import { ErrorToast } from "@/utils/swal";
 
 import type { Metadata } from 'next';
+import { redirect } from "next/navigation";
 
 type Props = {
     params: { worksheet: string }
@@ -14,7 +15,14 @@ export async function generateMetadata(
     { params }: Props,
 ): Promise<Metadata> {
 
-    const res = await apiHelper().post(`http://localhost:5000/admin/worksheets/single?id=${params?.worksheet}`)
+    let res;
+
+    try {
+        res = await apiHelper().post(`http://localhost:5000/admin/worksheets/single?id=${params?.worksheet}`)
+    } catch (error) {
+        console.log(error)
+        return {}
+    }
 
     const {name, info, hashtags} = res?.data?.data
 
@@ -38,6 +46,7 @@ const WorksheetsPage = async (props) => {
 
     } catch (err) {
         ErrorToast('مشکلی در دریافت اطلاعات به وجود آمده است !')
+        // redirect('/not-found')
         data = { data : []}
     }
 
