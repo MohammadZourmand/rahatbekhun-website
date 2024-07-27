@@ -1,5 +1,5 @@
 import FilterBox from "../filterBox";
-import { gradeOneFilters } from "./grade1";
+import { forTeachers, gradeOneFilters, preSchool } from "./grade1";
 import { gradeTwoFilters } from "./grade2";
 import { gradeThreeFilters } from "./grade3";
 import { gradeFourFilters } from "./grade4";
@@ -12,6 +12,9 @@ export default function SeasonSetter({grade, initialValues, handler} : {grade : 
     let data;
 
     switch (grade) {
+        case 'پیش دبستانی':
+            data = preSchool
+            break;
         case 'اول':
             data = gradeOneFilters
             break;
@@ -34,7 +37,8 @@ export default function SeasonSetter({grade, initialValues, handler} : {grade : 
             data = gradeSixFilters
             break;
         default:
-            {};
+            data = forTeachers
+            break;
     }
 
     const options = () => {

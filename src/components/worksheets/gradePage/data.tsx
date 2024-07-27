@@ -48,7 +48,7 @@ export const gradesData = [
 
 export const subjectsData = (grade) => {
 
-    const data = [
+    let data = [
         {
             name : "همه",
             img : "/images/home/searchTypes/all.webp",
@@ -91,6 +91,23 @@ export const subjectsData = (grade) => {
             name : "کاروفناوری",
             img : "/images/navbar/books/groupGames.webp",
         })
+    }
+
+    if(grade === 'برای آموزگاران') {
+        data = [
+            {
+                name : "همه",
+                img : "/images/home/searchTypes/all.webp",
+            },
+            {
+                name : "اختلالات",
+                img : "/images/icons/ekhtelalat/read.webp",
+            },
+            {
+                name : "هنر",
+                img : "/images/icons/ekhtelalat/color-palette.webp",
+            },
+        ]
     }
 
     return data

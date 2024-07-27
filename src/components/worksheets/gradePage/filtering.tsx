@@ -37,7 +37,6 @@ export default function Filtering({grade , setFilters} : { grade : string , setF
                 <p className="mt-2 mb-2 text-sm text-sky-600 leading-relaxed">با زدن روی دکمه زیر ما بهت کمک می کنیم کاربرگ مناسب رو پیدا کنی !</p>
                 <IconBtn onClick={() => setShow(true)} cls="!my-0 py-3 px-3 !rounded " text="کاربرگ رو پیدا کن !" iconName="search"/>
             </div>
-            
         </section>
     )
 }
