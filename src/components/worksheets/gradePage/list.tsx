@@ -21,7 +21,7 @@ export default function WorksheetsList({grade, params} : Props) {
     const [filters, setFilters] = useState<string | undefined>(undefined)
 
     const {data, error, isLoading} = useSWR(
-        `http://localhost:5000/admin/worksheets/list?_grade=${grade}&per_page=16&page=${page}`,
+        `http://localhost:5000/admin/worksheets/list?$_grade=${grade}&per_page=16&page=${page}&${filters}`,
         async (url) => {
             try {
                 const res =  await apiHelper().get(url)
@@ -33,6 +33,9 @@ export default function WorksheetsList({grade, params} : Props) {
             }
         }
     )
+
+
+    console.log(filters)
 
     return (
         <>

@@ -61,7 +61,7 @@ export const SubMenusValues : SubMenusValuesProps[] = [
                 href : "courses/students?grade=6"
             },
             {
-                name : "برای هفتم",
+                name : "برای آموزگاران",
                 img : "/images/navbar/digits/7.webp",
                 href : "courses/students?grade=7"
             },
@@ -113,9 +113,9 @@ export const SubMenusValues : SubMenusValuesProps[] = [
                 href : "worksheets/grade-6"
             },
             {
-                name : "برای هفتم",
-                img : "/images/navbar/digits/7.webp",
-                href : "worksheets/grade-7"
+                name : "برای آموزگاران",
+                img : "/images/navbar/videos/teacher.webp",
+                href : "worksheets/for-teachers"
             },
         ],
     },

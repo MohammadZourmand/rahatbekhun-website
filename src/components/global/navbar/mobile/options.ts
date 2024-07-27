@@ -53,6 +53,10 @@ export const menuOptions : menuOptionsProps[] = [
                 href : "/worksheets/pre-school"
             },
             {
+                title : "برای آموزگاران",
+                href : "/worksheets/for-teachers"
+            },
+            {
                 title : "صفحه اصلی",
                 href : "/worksheets"
             }

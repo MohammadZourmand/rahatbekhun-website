@@ -1,11 +1,10 @@
 'use client'
 
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState } from "react";
-import Filters from "./filters";
-
-
+const Filters = dynamic(() => import("./filters"))
 
 export default function Filtering({grade , setFilters} : { grade : string , setFilters : any}) {
 

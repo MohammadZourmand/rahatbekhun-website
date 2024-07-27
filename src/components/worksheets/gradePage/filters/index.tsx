@@ -1,4 +1,4 @@
-import { initialValuesFunc } from "./intialvalues"
+import { values } from "./intialvalues"
 import { filtersInfo } from "./filtersInfo";
 import FilterBox from "./filterBox";
 import { useState, Dispatch, SetStateAction } from "react";
@@ -16,7 +16,7 @@ interface FiltersProps {
 
 const Filters = ({setFilters, grade, setShow} : FiltersProps) => {
     
-    const [initialValues, setInitialValues] = useState(initialValuesFunc(grade))
+    const [initialValues, setInitialValues] = useState(values)
 
     const changeHandler : (type : string, value: string) => void = (type, value) => {
         setInitialValues((prevState) => {
@@ -66,7 +66,7 @@ const Filters = ({setFilters, grade, setShow} : FiltersProps) => {
                             key={index}
                             item={item}
                             handler={changeHandler}
-                            cls="sm:col-span-6 col-span-12"
+                            cls={`sm:col-span-6 col-span-12 ${item[0] === 'type' && '!col-span-12'}`}
                             values={initialValues}
                         />
                     )

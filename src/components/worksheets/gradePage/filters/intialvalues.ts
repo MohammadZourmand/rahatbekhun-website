@@ -1,14 +1,13 @@
 
 
 
-export const initialValuesFunc = (grade) => {
-    return {
-        _subject : 'همه',
-        _season : 'همه',
-        price : 'همه',
-        level : 'همه',
-        key : 'همه',
-        rotation : 'همه',
-        usableFor : 'همه',
-    }
+export const values = {
+    _subject : 'همه',
+    _season : 'همه',
+    price : 'همه',
+    level : 'همه',
+    key : 'همه',
+    rotation : 'همه',
+    usableFor : 'همه',
+    type : 'همه'
 }
