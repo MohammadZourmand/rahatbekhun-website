@@ -1,24 +1,34 @@
-import { coursesFilteringTitles } from "./intialvalues"
+import { initialValuesFunc } from "./intialvalues"
 import { filtersInfo } from "./filtersInfo";
 import FilterBox from "./filterBox";
 import { useState, Dispatch, SetStateAction } from "react";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
 import { WarningToast } from "@/utils/swal";
+import StoryLineBox from "../storyLineBox";
+import { subjectsData } from "../data";
+import SeasonSetter from "./seasonSetter";
 
 interface FiltersProps {
     setFilters : Dispatch<SetStateAction<string>>
+    grade : string
+    setShow : Dispatch<SetStateAction<boolean>>
 }
 
-const Filters = ({setFilters} : FiltersProps) => {
+const Filters = ({setFilters, grade, setShow} : FiltersProps) => {
     
-    const [initialValues, setInitialValues] = useState(coursesFilteringTitles)
+    const [initialValues, setInitialValues] = useState(initialValuesFunc(grade))
 
     const changeHandler : (type : string, value: string) => void = (type, value) => {
         setInitialValues((prevState) => {
-            return {
-                ...prevState,
-                [type] : value
+            if(type === '_subject') {
+                return {
+                    ...prevState,
+                    [type] : value,
+                    _season : 'همه'
+                }
             }
+
+            return {...prevState, [type] : value,}
         })
     }
 
@@ -37,26 +47,32 @@ const Filters = ({setFilters} : FiltersProps) => {
         }
 
         setFilters(filters)
+        setShow(false)
     } 
 
     return (
-        <div className="grid grid-cols-10 xs:gap-8 gap-y-8 w-full">
-            
+        <div className="grid grid-cols-12 items-start justify-start xs:gap-8 gap-y-8 w-full">
+            <StoryLineBox
+                clickHandler={(item) => changeHandler('_subject', item)}
+                cls="col-span-12 !justify-start pr-2"
+                defaultValue={initialValues?._subject}
+                data={subjectsData(grade)}
+            />
+            <SeasonSetter grade={grade} initialValues={initialValues} handler={changeHandler} />
             {
                 Object.entries(filtersInfo).map((item, index) => {
                     return (
                         <FilterBox
                             key={index}
-                            name={item[0]}
-                            options={item[1]}
+                            item={item}
                             handler={changeHandler}
-                            cls="lg:col-span-2 xs:col-span-5 col-span-10"
+                            cls="sm:col-span-6 col-span-12"
                             values={initialValues}
                         />
                     )
                 })
             }
-            <IconBtn onClick={searchHandler} type="submit" cls="!my-0 py-[8px] px-8 self-end lg:col-span-2 col-span-10" iconName="filter" text="اعمال فیلتر"/>
+            <IconBtn onClick={searchHandler} cls="!my-0 py-[8px] px-8 self-end col-span-12" iconName="filter" text="اعمال فیلتر"/>
         </div>
     )
 }

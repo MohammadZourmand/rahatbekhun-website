@@ -2,6 +2,8 @@ import GradePage from "@/components/worksheets/gradePage";
 
 const gradeFixer = (grade) => {
     switch (grade) {
+        case "pre-school":
+            return 'پیش دبستانی'
         case "grade-1":
             return 'اول'
         case "grade-2":
@@ -17,7 +19,7 @@ const gradeFixer = (grade) => {
         case "grade-7":
             return 'هفتم'
         default:
-            return 'پیش دبستانی'
+            return 'برای آموزگاران'
     }
 }
 

@@ -2,16 +2,14 @@
 
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
 import Image from "next/image";
-import { MouseEventHandler, useRef, useState } from "react";
+import { useState } from "react";
 import Filters from "./filters";
 
 
 
-export default function Filtering({}) {
+export default function Filtering({grade , setFilters} : { grade : string , setFilters : any}) {
 
-    const [show, setShow] = useState<boolean>(true)
-    const [filters, setFilters] = useState<string>('')
-
+    const [show, setShow] = useState<boolean>(false)
 
     return (
         <section className="sm:flex grid grid-cols-6 justify-center py-2 bg-sky-300/40 rounded-lg xl:mx-32 xl:mt-0 mx-2 mt-1">
@@ -22,12 +20,11 @@ export default function Filtering({}) {
                     }}
                     className="background animate-fade flex items-center justify-center fixed top-0 left-0 w-full h-full z-[9999] bg-purple-200 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0"
                     >
-                        <div className="w-[1024px] h-[500px] bg-white/70 lg:mx-0 mx-8 p-4">
-                            <Filters setFilters={setFilters} />
+                        <div className="w-[1024px] max-h-[600px] overflow-auto bg-white/70 lg:mx-0 mx-8 p-4">
+                            <Filters grade={grade} setFilters={setFilters} setShow={setShow} />
                         </div>
                 </div>
             }
-            
             <div className="relative w-36 h-36 col-span-2 sm:col-span-1">
                 <Image
                     fill

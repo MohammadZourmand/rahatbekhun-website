@@ -41,7 +41,7 @@ const Selecter = ({
             </div>
             {/* // ! list */}
             {
-                isOpen && <ul className={`absolute animate-scaleX z-20 bg-white top-12 p-2 rounded-lg w-full ${optionsListCls}`}>
+                isOpen && <ul className={`absolute max-h-64 overflow-y-auto animate-scaleX z-20 bg-white top-12 p-2 rounded-lg w-full ${optionsListCls}`}>
                     {options.map((option : string, index : number) => {
                         return (
                             <li

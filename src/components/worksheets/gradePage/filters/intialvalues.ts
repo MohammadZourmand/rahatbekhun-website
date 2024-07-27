@@ -1,15 +1,14 @@
 
 
-interface courseFiltersInitialValuesProps {
-    _grade : string
-    _subject : string
-    sort : string
-    price : string
-}
 
-export const coursesFilteringTitles : courseFiltersInitialValuesProps = {
-    _grade :"همه",
-    _subject : "همه",
-    sort : "همه",
-    price : "همه",
+export const initialValuesFunc = (grade) => {
+    return {
+        _subject : 'همه',
+        _season : 'همه',
+        price : 'همه',
+        level : 'همه',
+        key : 'همه',
+        rotation : 'همه',
+        usableFor : 'همه',
+    }
 }

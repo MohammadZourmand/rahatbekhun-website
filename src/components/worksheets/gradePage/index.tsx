@@ -1,8 +1,8 @@
 import Navbar from "@/components/global/navbar";
-import BooksBox from "./booksBox";
-import Filtering from "./filtering";
+import StoryLineBox from "./storyLineBox";
 import WorksheetsList from "./list";
 import Footer from "@/components/global/footer";
+import { gradesData } from "./data";
 
 interface Props {
     grade : string
@@ -13,8 +13,7 @@ export default function GradePage({params, grade} : Props) {
     return (
         <>
             <Navbar isWhite={false}/>
-            <BooksBox grade={grade} />
-            <Filtering />
+            <StoryLineBox defaultValue={grade} data={gradesData} />
             <WorksheetsList grade={grade} params={params} />
             <Footer />
         </>
