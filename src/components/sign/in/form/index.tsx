@@ -1,11 +1,11 @@
 'use client'
 
+import { GoogleIcon } from "@/assets/icons";
 import BlueBtn from "@/components/global/elements/buttons/blue";
 import Heading3 from "@/components/global/elements/headings/h3";
 import MyCheckBox from "@/components/global/elements/inputs/checkBox";
 import Input from "@/components/global/elements/inputs/input";
 import MyLabel from "@/components/global/elements/inputs/label";
-import { IconBrandGoogle } from "@tabler/icons-react";
 import { Form, Formik } from "formik";
 import Image from "next/image";
 import Link from "next/link";
@@ -80,7 +80,7 @@ const SignInForm = () => {
                                 height={118}
                             />
                             <Link href={"/sign-up"} className="xs:mx-8 relative overflow-hidden hover:after:w-[110%] hover:text-white transition-all after:transition-all after:duration-500 duration-500 after:absolute after:-top-5 after:left-0 after:w-1/6 after:h-[200%] after:rounded-r-full after:bg-baby-5 bg-gray-100 pr-8 text-gray-500 text-sm after:z-[-1] z-[1] rounded-md py-3 mb-4">
-                                <IconBrandGoogle className="absolute left-0 top-0 ml-3 my-[.6rem]" stroke={3} color="white" />
+                                <GoogleIcon cls="absolute w-7 h-7 left-0 top-0 ml-3 my-[.5rem]" stroke={"3"} color="white" />
                                 با حساب گوگل خودت وارد شو 
                             </Link>
                             <div className="text-sm xs:mx-6 flex xs:justify-between justify-center text-gray-500 mb-7 text-center">

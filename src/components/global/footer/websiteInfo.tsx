@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Paragraph from "../elements/paragraph";
-import { IconBrandGithub, IconBrandTelegram } from "@tabler/icons-react";
 import WebsiteName from "../elements/boxes/websiteName";
 import Image from "next/image";
+import { GithubIcon, TelegramIcon } from "@/assets/icons";
 
 interface WebsiteInfoProps {
     cls ?: string
@@ -24,11 +24,11 @@ const WebsiteInfo = ({cls} : WebsiteInfoProps) => {
                         alt="صفحه-آپارات-راحت-بخون"
                     />
                 </Link>
-                <Link href="#" className="group bg-baby-2  transition-all duration-500 rounded-md p-2 mx-2">
-                    <IconBrandTelegram className="group-hover:scale-110 transition" color="white" width={"24px"} height={"24px"} stroke={1.5} />
+                <Link href="#" className="group bg-baby-2 transition-all duration-500 rounded-md p-2 mx-2">
+                    <TelegramIcon cls="w-6 g-6" color="white"/>
                 </Link>
                 <Link href="#" className="group bg-black transition-all duration-500 rounded-md p-2 mx-2">
-                    <IconBrandGithub className="group-hover:scale-110 transition" color="white" width={"24px"} height={"24px"} stroke={1.5} />
+                    <GithubIcon cls="w-6 g-6" color="white"/>
                 </Link>
             </div>
         </div>

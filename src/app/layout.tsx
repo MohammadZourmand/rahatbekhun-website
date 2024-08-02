@@ -1,13 +1,11 @@
 
 // CSS STYLES
 import '@/styles/globals.css';
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 import localFont from 'next/font/local'
 import { Metadata } from 'next';
 import { addSiteJsonLd } from '@/meta/home';
+import { Toaster } from 'react-hot-toast';
 
 const iransans = localFont({
   src: [
@@ -85,6 +83,7 @@ export default function RootLayout({
     <html lang="en" className={`${iransans.className} ${nozha.variable}`}>
       <body>
         {children}
+        <Toaster position="bottom-center"/>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(addSiteJsonLd) }}

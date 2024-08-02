@@ -3,6 +3,7 @@ interface BlueBtnProps {
     text : string,
     cls ?: string,
     onClick ?: any
+    type ?: 'submit' | 'button' | 'reset'
 }
 
 const BlueBtn = ({text,cls,...props} : BlueBtnProps) => {

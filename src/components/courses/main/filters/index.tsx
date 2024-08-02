@@ -4,8 +4,7 @@ import { filtersInfo } from "./filtersInfo";
 import FilterBox from "./filterBox";
 import { useState, Dispatch, SetStateAction } from "react";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
-import Heading5 from "@/components/global/elements/headings/h5";
-import { WarningToast } from "@/utils/swal";
+import { SuccessToast } from "@/utils/swal";
 
 interface FiltersProps {
     showFilters : boolean
@@ -28,7 +27,7 @@ const Filters = ({setShowFilters, showFilters} : FiltersProps) => {
     return (
         <Formik
             initialValues={initialValues}
-            onSubmit={() => {WarningToast("اطلاعات دریافت شد !")}}
+            onSubmit={() => {SuccessToast("اطلاعات دریافت شد !")}}
         >
             <Form className={`${showFilters && "!block "} p-8 lg:p-0 lg:w-full w-[96vw] lg:block hidden fixed top-16 mx-auto lg:backdrop-blur-0 backdrop-blur-md bg-gray-100/90 z-50 lg:z-0 lg:bg-transparent lg:absolute xl:-top-48 lg:-top-40 xs:p-8 rounded-lg`}>
                 <fieldset className="grid grid-cols-10 gap-8 w-full">

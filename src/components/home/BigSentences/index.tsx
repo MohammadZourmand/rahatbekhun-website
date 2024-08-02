@@ -1,5 +1,4 @@
 import Image from "next/image";
-import SentenceSlider from "./slider";
 
 const Sentences = () => {
 
@@ -11,7 +10,6 @@ const Sentences = () => {
                 alt="read-book-table-education"
                 fill
             />
-            <SentenceSlider />
         </section>
     )
 }

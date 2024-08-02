@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 const Filters = dynamic(() => import("./filters"))
 
-export default function Filtering({grade , setFilters} : { grade : string , setFilters : any}) {
+export default function Filtering({grade, params} : { grade : string, params : any}) {
 
     const [show, setShow] = useState<boolean>(false)
 
@@ -20,7 +20,7 @@ export default function Filtering({grade , setFilters} : { grade : string , setF
                     className="background animate-fade flex items-center justify-center fixed top-0 left-0 w-full h-full z-[9999] bg-purple-200 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0"
                     >
                         <div className="w-[1024px] max-h-[600px] overflow-auto bg-white/70 lg:mx-0 mx-8 p-4">
-                            <Filters grade={grade} setFilters={setFilters} setShow={setShow} />
+                            <Filters params={params} grade={grade} setShow={setShow} />
                         </div>
                 </div>
             }

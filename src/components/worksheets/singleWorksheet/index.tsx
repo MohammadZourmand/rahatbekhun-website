@@ -6,7 +6,9 @@ import Breadcrumb from "@/components/global/elements/boxes/breadcrumb";
 import TabSwitcher from "./tabSwitcher";
 
 
-const SingleWorksheet = ({data} : {data : worksheetsDataProps}) => {
+const SingleWorksheet = ({data, params} : {data : worksheetsDataProps, params : any}) => {
+
+    console.log(params)
 
     return (
         <>
@@ -17,7 +19,7 @@ const SingleWorksheet = ({data} : {data : worksheetsDataProps}) => {
                 itemCls="!text-gray-400 font-semibold"
                 items={[
                     {href : "/worksheets", value : "کاربرگ ها"},
-                    {href : `/worksheets?grade=${data?._grade}`, value : `پایه ${data?._grade}`},
+                    {href : `/worksheets/${params.grade}`, value : `پایه ${data?._grade}`},
                 ]}
             />
             <Main data={data} />

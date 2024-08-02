@@ -21,7 +21,7 @@ const MatchedSearchResults = () => {
                         ?   <ErrorShower cls="col-span-12" text="هیچ موردی مشابه آنچه می خواهید پیدا نکردم !"/>
                         :   data?.data.map((item, index) => {
                             return (
-                                <SheetsCard 
+                                <SheetsCard
                                     key={index}
                                     item={item}
                                     cls="col-span-4 !bg-gray-100"

@@ -3,20 +3,21 @@ import { filtersInfo } from "./filtersInfo";
 import FilterBox from "./filterBox";
 import { useState, Dispatch, SetStateAction } from "react";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
-import { WarningToast } from "@/utils/swal";
 import StoryLineBox from "../storyLineBox";
 import { subjectsData } from "../data";
 import SeasonSetter from "./seasonSetter";
+import { useRouter } from "next/navigation";
 
 interface FiltersProps {
-    setFilters : Dispatch<SetStateAction<string>>
     grade : string
     setShow : Dispatch<SetStateAction<boolean>>
+    params : any
 }
 
-const Filters = ({setFilters, grade, setShow} : FiltersProps) => {
+const Filters = ({grade, params, setShow} : FiltersProps) => {
     
     const [initialValues, setInitialValues] = useState(values)
+    const router = useRouter()
 
     const changeHandler : (type : string, value: string) => void = (type, value) => {
         setInitialValues((prevState) => {
@@ -41,13 +42,8 @@ const Filters = ({setFilters, grade, setShow} : FiltersProps) => {
             }
         })
 
-        if(filters === '') {
-            WarningToast('حداقل یک مورد را تغییر دهید !')
-            return false
-        }
-
-        setFilters(filters)
         setShow(false)
+        router.push(`http://localhost:3000/worksheets/${params?.grade}?per_page=16&page=1&${filters ?? ''}`)
     } 
 
     return (

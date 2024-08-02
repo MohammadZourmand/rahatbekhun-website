@@ -3,7 +3,7 @@ import Link from "next/link"
 
 interface WorksheetCardHeaderProps {
     item : worksheetsDataProps
-    grade : string
+    grade ?: string
 }
 
 const WorksheetCardHeader = ({item, grade} : WorksheetCardHeaderProps) => {

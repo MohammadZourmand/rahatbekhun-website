@@ -7,7 +7,7 @@ import SheetsCardTextPart from "./textPart";
 interface SheetsCardProps {
     item : worksheetsDataProps
     cls ?: string
-    grade : string
+    grade ?: string
 }
 
 const SheetsCard  = ({item, cls, grade} : SheetsCardProps) => {

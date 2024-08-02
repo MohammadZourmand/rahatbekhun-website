@@ -6,8 +6,6 @@ import IconBtn from "@/components/global/elements/buttons/iconBtn";
 import { courseOptions, testOptions, values, videosOptions, worksheetOptions } from "./initialvalues";
 import ContectType from "./contentType";
 import { SearchContext } from "@/context/search";
-import apiHelper from "@/utils/axios";
-import { WarningToast } from "@/utils/swal";
 import Selecters from "./selecters";
 
 const AdvancedSearchFrom = () => {

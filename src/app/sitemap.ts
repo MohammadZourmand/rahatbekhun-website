@@ -1,8 +1,16 @@
 
 export default async function sitemap() {
     
-    const res = await fetch('http://localhost:5000/admin/worksheets/list?page=1&per_page=10')
-    const { data } = await res.json()
+    let data;
+
+    try {
+        const res = await fetch('http://api.rahatbekhun.ir/admin/worksheets/list?page=1&per_page=10')
+        const worksheetsData = await res.json()
+        data = worksheetsData?.data
+    } catch (error) {
+        data = []
+        console.log(error)
+    }
 
     const worksheetsUrl = data.map((item) => {
         return {

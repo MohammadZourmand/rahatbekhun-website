@@ -44,7 +44,7 @@ const WorksheetsPage = async (props) => {
         data = res?.data
 
     } catch (err) {
-        ErrorToast('مشکلی در دریافت اطلاعات به وجود آمده است !')
+        ErrorToast('در دریافت اطلاعات مشکل داریم !')
         // redirect('/not-found')
         data = { data : []}
     }
@@ -63,7 +63,7 @@ const WorksheetsPage = async (props) => {
                     __html: JSON.stringify(worksheetJsonLd(data?.data))
                 }}
             />
-            <SingleWorksheet data={data?.data} />
+            <SingleWorksheet data={data?.data} params={props?.params}/>
         </>
     )
 }

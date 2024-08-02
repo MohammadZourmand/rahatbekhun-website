@@ -1,4 +1,4 @@
-import { IconCheck } from "@tabler/icons-react";
+import { TickIcon } from "@/assets/icons";
 import { ReactElement } from "react";
 
 interface LiTickIconProps {
@@ -11,7 +11,7 @@ const LiTickIcon = ({text, cls, iconCls} : LiTickIconProps) => {
 
     return (
         <li className={`${cls} flex items-center`}>
-            <IconCheck className={`w-5 h-5 ${iconCls}`} color="green"/>
+            <TickIcon cls="w-5 h-5" color="green"/>
             <p className="mr-2 flex items-center">{text}</p>
         </li>
     )

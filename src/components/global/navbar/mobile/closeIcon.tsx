@@ -1,4 +1,4 @@
-import { IconX } from "@tabler/icons-react";
+import { XIcon } from "@/assets/icons";
 import { Dispatch, SetStateAction } from "react";
 
 interface CloseIconProps {
@@ -6,7 +6,7 @@ interface CloseIconProps {
     setState : Dispatch<SetStateAction<boolean>>,
     cls ?: string,
     color ?: string,
-    stroke ?: number
+    stroke ?: any
 }
 
 const CloseIcon = ({
@@ -18,7 +18,12 @@ const CloseIcon = ({
 } : CloseIconProps) => {
 
     return (
-        <IconX color={color ?? "#2c3e50"} className={`${cls} z-50 cursor-pointer`} stroke={stroke ?? 4} onClick={() => setState(false)} />
+        <XIcon
+            color={color ?? "#2c3e50"}
+            cls={`${cls} z-50 cursor-pointer`}
+            stroke={stroke ?? "4"}
+            onClick={() => setState(false)} 
+        />
     )
 }
 

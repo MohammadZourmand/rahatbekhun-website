@@ -6,7 +6,7 @@ import WorksheetCardFooter from "./footer";
 interface SheetsCardTextPartProps {
     item : worksheetsDataProps
     cls ?: string
-    grade : string
+    grade ?: string
 }
 
 const SheetsCardTextPart = ({item, cls, grade} : SheetsCardTextPartProps) => {
