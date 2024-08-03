@@ -121,7 +121,7 @@ export const SubMenusValues : SubMenusValuesProps[] = [
     },
     {
         name : "دوره ها" ,
-        link : 'videos',
+        link : 'courses',
         searchlink : "search?page=1&_type=ویدیوها" ,
         mainHead : "مشاهده تمامی دوره ها",
         mainImg : "/images/navbar/video.webp",

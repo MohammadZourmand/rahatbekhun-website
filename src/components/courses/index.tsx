@@ -1,28 +1,34 @@
-
-// ? components & types ==========
-// import PageHeader from "../global/elements/header/pageHeader";
-// import CoursesPageMain from "./main";
-import IsMaking from "../global/elements/making";
+import PageHeader from "../global/elements/header/pageHeader";
 import Footer from "../global/footer";
-import Navbar from "../global/navbar";
+import GradeSort from "./pageMain/gradeSort";
+import AllGrades from "./pageMain/allGrades";
+import Description from "./pageMain/description";
+import Teachers from "./pageMain/teachers";
+import Info from "./pageMain/info";
+import FAQ from "./pageMain/faq";
 
 const Courses = () => {
 
     return (
-        <>
-            {/* <PageHeader
-                imgBgCls="sm:scale-100 md:h-auto h-full"
-                cls="xl:h-[80vh]"
-                title="دوره های آموزشی"
+        <>  
+            <PageHeader
+                cls="xl:h-[70vh]"
+                imgBgCls="md:h-auto scale-y-[1.2] scale-x-[-1] xl:-top-36"
+                title={"دوره های آموزشی"} 
                 breadcrumbItems={[
                     {href : "courses", value : "دوره های آموزشی"}
-                ]}
-                imgBgSrc={'/images/courses/portrait-pretty-young-girl-smiling.webp'}
+                ]} 
+                imgBgSrc={"/images/courses/person-holding-clapperboard-front-girl-rehearsing-backstage.webp"}
             />
-            <CoursesPageMain /> */}
-            <Navbar isWhite={false} />
-            <IsMaking />
-            <Footer cls="mt-8" />
+            <section className="bg-gray-100 w-full">
+                <Teachers />
+                <GradeSort />
+                <Description />
+                <AllGrades />
+                <Info />
+                <FAQ />
+            </section>
+            <Footer cls="bg-gray-200 shadow-all-md"/>
         </>
     )
 }
