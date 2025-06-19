@@ -32,7 +32,7 @@ export default function WorksheetsList({grade, params} : Props) {
     }, [parameters])
 
     const {data, error, isLoading} = useSWR(
-        `http://localhost:5000/admin/worksheets/list?_grade=${grade}&per_page=16&page=${page}&${filters ?? ''}`,
+        `http://localhost:5000/admin/worksheets/list`,
         async (url) => {
             try {
                 const res =  await apiHelper().get(url)

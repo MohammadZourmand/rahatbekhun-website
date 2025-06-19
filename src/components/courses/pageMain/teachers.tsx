@@ -37,7 +37,7 @@ const links = [
         name : "مباحث دانشگاهی و اختلالات",
         src : "/images/courses/graduation-hat.webp",
         alt : 'مباحث دانشگاهی',
-        href : '/courses/for-teachers?type=all'
+        href : '/courses/for-teachers?type=اختلالات'
     }
 ]
 

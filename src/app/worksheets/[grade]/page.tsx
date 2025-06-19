@@ -25,6 +25,8 @@ const gradeFixer = (grade) => {
 
 export default async function WorksheetsGrades({params}) {
 
+    console.log(params?.grade)
+
     const grade = gradeFixer(params?.grade) || "دوم"
 
     return (

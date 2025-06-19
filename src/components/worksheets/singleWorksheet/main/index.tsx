@@ -20,6 +20,8 @@ const SingleWorksheetMain = ({data} : {data : worksheetsDataProps}) => {
         }
     }
 
+    console.log('http://localhost:5000'+ data.pdf.split('https://rahatbekhun.ir')[1])
+
     return (
         <main className="realtive xl:mx-auto mx-2 grid grid-cols-5 max-w-7xl gap-4 lg:mt-0 mt-16">
             <Image 
@@ -45,7 +47,7 @@ const SingleWorksheetMain = ({data} : {data : worksheetsDataProps}) => {
             />
             <div className="lg:col-span-1 sm:col-span-2 col-span-5 z-10 mx-auto">
                 <img
-                    src={data?.image}
+                    src={'http://localhost:5000'+data?.image.split('http://rahatbekhun.ir')[1]}
                     alt={data?.name}
                     className="h-80 rounded-lg"
                 />
@@ -167,8 +169,8 @@ const SingleWorksheetMain = ({data} : {data : worksheetsDataProps}) => {
                         text="دانلود کاربرگ"
                         cls="text-sm mt-3 mb-0 w-full !py-2 bg-baby-9 !rounded-lg"
                         iconName="download"
-                        href={data?.pdf}
-                        target="_blank"
+                        href={'http://localhost:5000'+data?.pdf.split('https://rahatbekhun.ir')[1]}
+                        target={'_blank'}
                     />
                     : <IconBtn 
                         iconName="cart"

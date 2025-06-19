@@ -4,7 +4,7 @@ import Image from "next/image";
 const links = [
     {
         name : "خلاقانه",
-        src : "/images/navbar/games/knowledge.webp",
+        src : "/images/navbar/books/groupGames.webp",
         alt : 'کاربرگ خلاقانه',
     },
     {
@@ -29,7 +29,7 @@ const links = [
     },
     {
         name : "مهارت محور",
-        src : "/images/navbar/games/knowledge.webp",
+        src : "/images/navbar/books/knowledge.webp",
         alt : "کاربرگ حل مشکلات خواندن",
     }
 ]
