@@ -10,7 +10,7 @@ export const cardsInfo : Card2TypeProps[] = [
         author : "محمد زورمند",
         category : "others",
         comments : 3,
-        linkName : "how-to-forget-our-readings-later-3"
+        linkName : "math/how-to-forget-our-readings-later-3"
     },
     {
         imgSrc : "/images/blog/front-view-desk-with-stacked-books-copy-space.webp",
@@ -21,7 +21,7 @@ export const cardsInfo : Card2TypeProps[] = [
         author : "محمد زورمند",
         category : "math",
         comments : 3,
-        linkName : "how-to-forget-our-readings-later-1"
+        linkName : "math/how-to-forget-our-readings-later-1"
     },
     {
         imgSrc : "/images/blog/front-view-desk-with-stacked-books-copy-space.webp",
@@ -32,6 +32,6 @@ export const cardsInfo : Card2TypeProps[] = [
         author : "محمد زورمند",
         category : "sport",
         comments : 3,
-        linkName : "how-to-forget-our-readings-later-2"
+        linkName : "math/how-to-forget-our-readings-later-2"
     }
 ]

@@ -36,7 +36,7 @@ const SubMenus = ({isWhite, cls} : SubMenuProps) => {
                         )
                     })
                 }
-            <Link href={"/blog"} className={linkStyle}>
+            <Link href={"/articles"} className={linkStyle}>
                 <div className={`${isWhite && "text-white"} font-nozha`}>وبلاگ</div>
             </Link>
             <Link href={"/about"} className={linkStyle}>

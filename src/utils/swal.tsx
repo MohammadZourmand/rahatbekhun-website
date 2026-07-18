@@ -1,5 +1,4 @@
-
 import toast from 'react-hot-toast';
 
-export const ErrorToast = (title : string) => toast.error(title)
-export const SuccessToast = (title : string) => toast.success(title)
+export const ErrorToast = (title) => toast.error(title)
+export const SuccessToast = (title) => toast.success(title)
