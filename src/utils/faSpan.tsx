@@ -1,5 +1,5 @@
 
-import PN from "persian-number";
+// import PN from "persian-number";
 
 interface FaSpanProps {
     hasSlicer ?: boolean
@@ -14,9 +14,11 @@ const FaSpan = ({cls, hasSlicer, value, suffix} : FaSpanProps) => {
             {
                 hasSlicer
                 ?
-                    PN.convertEnToPe(PN.sliceNumber(value))
+                ''
+                    // PN.convertEnToPe(PN.sliceNumber(value))
                 :
-                    PN.convertEnToPe(value)
+                ''
+                    // PN.convertEnToPe(value)
             }
             { suffix && ` ${suffix}`}
         </span>

@@ -6,7 +6,6 @@ import Heading3 from "@/components/global/elements/headings/h3";
 import MyCheckBox from "@/components/global/elements/inputs/checkBox";
 import Input from "@/components/global/elements/inputs/input";
 import MyLabel from "@/components/global/elements/inputs/label";
-import { Form, Formik } from "formik";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -46,7 +45,8 @@ const SignInForm = () => {
                     width={25}
                     height={25}
                 />
-                <Formik
+                {/* the blew code is Formik & Form */}
+                {/* <Formik
                     initialValues={initialValues}
                     onSubmit={submitHandler}
                 >
@@ -114,7 +114,7 @@ const SignInForm = () => {
                                 رمز عبورم رو فراموش کردم !
                             </Link>
                     </Form>
-                </Formik>
+                </Formik> */}
             </main>
 
     </section>

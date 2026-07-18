@@ -1,9 +1,8 @@
 'use client'
+import dynamic from "next/dynamic";
 
 import { NextPage } from "next";
 import Link from "next/link";
-
-import Lottie from "lottie-react";
 
 import Navbar from "@/components/global/navbar";
 import Paragraph from "@/components/global/elements/paragraph";
@@ -11,6 +10,12 @@ import Heading4 from "@/components/global/elements/headings/h4";
 
 import error404 from "@/animations/error-404.json";
 import Footer from "@/components/global/footer";
+
+// ? libraries ===================
+const Lottie = dynamic(() => import("lottie-react"), {
+  ssr: false,
+});
+
 
 const UndefinedPage : NextPage = () => {
 

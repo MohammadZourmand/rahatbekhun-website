@@ -1,6 +1,6 @@
-import { Card2TypeProps } from "@/types/home";
+import { NewCart } from "@/types/home";
 
-export const cardsInfo : Card2TypeProps[] = [
+export const cardsInfo : NewCart[] = [
     {
         imgSrc : "/images/blog/front-view-desk-with-stacked-books-copy-space.webp",
         imgAlt : "lorem",

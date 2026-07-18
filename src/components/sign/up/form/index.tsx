@@ -7,7 +7,6 @@ import MyCheckBox from "@/components/global/elements/inputs/checkBox";
 import Input from "@/components/global/elements/inputs/input";
 import MyLabel from "@/components/global/elements/inputs/label";
 import { ErrorToast } from "@/utils/swal";
-import { Form, Formik } from "formik";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -48,11 +47,11 @@ const SignUpForm = () => {
                     width={25}
                     height={25}
                 />
-                <Formik
-                    initialValues={initialValues}
+                <div
+                    // initialValues={initialValues}
                     onSubmit={submitHandler}
                 >
-                    <Form className="relative z-[1] flex flex-col bg-white sm:max-w-3xl md:mx-auto xs:mx-6 mx-1 shadow-all-lg shadow-[#e5e7eb] rounded-lg xs:px-8 px-4 xs:py-12 py-6 mt-16">  
+                    <div className="relative z-[1] flex flex-col bg-white sm:max-w-3xl md:mx-auto xs:mx-6 mx-1 shadow-all-lg shadow-[#e5e7eb] rounded-lg xs:px-8 px-4 xs:py-12 py-6 mt-16">  
                             <Image 
                                 src={"/images/login/dot.webp"}
                                 className="absolute sm:block -top-16 -right-16 z-[-1] animate-goAndBack"
@@ -157,8 +156,8 @@ const SignUpForm = () => {
                                 </Link>
                                 <BlueBtn type="submit" cls="col-span-12 mt-8 w-full" text={"ثبت نام در سایت"} />
                             </div>
-                    </Form>
-                </Formik>
+                    </div>
+                </div>
             </main>
 
     </section>

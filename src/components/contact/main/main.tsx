@@ -4,7 +4,6 @@ import BlueBtn from "@/components/global/elements/buttons/blue";
 import Heading5 from "@/components/global/elements/headings/h5";
 import Input from "@/components/global/elements/inputs/input";
 import Paragraph from "@/components/global/elements/paragraph";
-import { Form, Formik } from "formik";
 
 interface MainProps {
     cls ?: string
@@ -31,7 +30,7 @@ const Main = ({cls} : MainProps) => {
                     cls="font-medium mt-8 lg:!text-right !text-center"
                 />
             </div>
-            <Formik
+            {/* <Formik
                 initialValues = {initialValues}
                 onSubmit={FormHandler}
             >
@@ -42,7 +41,7 @@ const Main = ({cls} : MainProps) => {
                     <Input as={"textarea"} name="comment" fieldCls="" cls="col-span-12 h-36" placeholder="متن پیام" />
                     <BlueBtn cls="lg:mr-0 md:justify-self-start w-full md:w-[unset] text-center mt-4 md:col-span-4 col-span-12 px-8" text="ارسال پیام"/>
                 </Form>
-            </Formik>
+            </Formik> */}
         </div>
     )
 }

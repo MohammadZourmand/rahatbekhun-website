@@ -1,17 +1,21 @@
 'use client'
 
+import dynamic from "next/dynamic";
+
 // ? components ==================
 import Navbar from "../../global/navbar";
-
-// ? libraries ===================
-import Lottie from "lottie-react";
 
 // ? assets ===================
 import ReadingBoy from "@/animations/reading-boy.json"; 
 import { Data } from "./boxesData";
 import SmallBox from "./smallbox";
-
 // import IconBtn from "@/components/global/elements/buttons/iconBtn";
+
+// ? libraries ===================
+const Lottie = dynamic(() => import("lottie-react"), {
+  ssr: false,
+});
+
 
 const HomeHeader = () => {
   return (

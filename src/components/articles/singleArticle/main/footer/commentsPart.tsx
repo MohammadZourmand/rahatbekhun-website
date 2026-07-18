@@ -1,4 +1,3 @@
-import { Form, Formik } from "formik";
 import Input from "@/components/global/elements/inputs/input";
 import FiveStars from "@/components/global/elements/boxes/stars/fiveStars";
 import BlueBtn from "@/components/global/elements/buttons/blue";
@@ -61,7 +60,7 @@ const CommentsPart = ({cls} : CommentsPartProps) => {
                 </div>
             </div>
             <Heading5 cls="text-gray-900 my-16" text="دیدگاه خود را به اشتراک بگذارید" />
-            <Formik
+            {/* <Formik
                 initialValues = {initialValues}
                 onSubmit={FormHandler}
             >
@@ -75,7 +74,7 @@ const CommentsPart = ({cls} : CommentsPartProps) => {
                     </div>
                     <BlueBtn cls="mx-0 md:justify-self-start w-full md:w-[unset] text-center mt-4 md:col-span-3 col-span-12 px-8" text="ارسال دیدگاه"/>
                 </Form>
-            </Formik>
+            </Formik> */}
         </div>
     )
 }

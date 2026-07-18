@@ -1,5 +1,4 @@
 // ? libraries ===================
-import { ErrorMessage, Field } from "formik"
 
 interface ErrorProps {
     errorText ?: string
@@ -29,7 +28,7 @@ const Input = ({
 
     return (
         <div className={`${cls} relative flex flex-col`}>
-            <Field
+            {/* <Field
                 {...props}
                 name={name}
                 className={` ${fieldCls} text-gray-900  focus:bg-white focus:outline-baby-9 outline-transparent transition duration-500 bg-gray-200/60 h-full w-full px-6 py-5 text-[.9rem] rounded-lg`} 
@@ -38,7 +37,7 @@ const Input = ({
                 component={component ?? "div"}
                 className={`${errorCls} lg:absolute lg:-bottom-8 lg:right-12 right-6 lg:mt-0 mt-3 relative  text-slate-700 font-bold`}
                 name={name}
-            />
+            /> */}
         </div>
     )
 }

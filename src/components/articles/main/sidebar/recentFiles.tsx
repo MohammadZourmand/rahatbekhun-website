@@ -19,7 +19,7 @@ const RecentFiles = ({cls} : RecentFilesProps) => {
             <main className="flex flex-col my-8 gap-y-2">
                 {
                     cardsInfo.map((item, index) => (
-                        <MiniCard key={index} item={item}/>
+                        <MiniCard key={index} item={item} />
                     ))
                 }
             </main>

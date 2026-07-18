@@ -1,10 +1,10 @@
 import { ClockBroken } from "@/assets/icons"
 import Breadcrumb, { BreadcrumbItemsProps } from "@/components/global/elements/boxes/breadcrumb"
 import Paragraph from "@/components/global/elements/paragraph"
-import { badgeBgColorChooser, badgeTextColorChooser, badgeTextTranslator, singleArticleBadgeBgColorChooser } from "@/components/global/elements/translators/badgeColorChooser"
+// import { badgeBgColorChooser, badgeTextColorChooser, badgeTextTranslator, singleArticleBadgeBgColorChooser } from "@/components/global/elements/translators/badgeColorChooser"
 import Navbar from "@/components/global/navbar"
 import Image from "next/image"
-import { convertEnToPe } from "persian-number"
+// import { convertEnToPe } from "persian-number"
 interface SingleArticlePageHeaderProps {
     title : string,
     imgBgSrc : string
@@ -40,7 +40,13 @@ const SingleArticlePageHeader = ({
             <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
             <Navbar isWhite={true} />
             <div className={`text-white sm:px-[6.5rem] sm:py-16 px-[3rem] py-8 flex flex-col md:items-start items-center justify-center xl:my-24 my-20 xs:rounded-[5rem] rounded-[3rem]`}>
-                <div className={`${singleArticleBadgeBgColorChooser(category)} z-0 mb-6 text-white justify-self-start text-sm font-semibold  px-3 py-[3px] rounded`}>{badgeTextTranslator(category)}</div>
+                {/* <div
+                 className={`
+                    ${singleArticleBadgeBgColorChooser(category)} 
+                 z-0 mb-6 text-white justify-self-start text-sm font-semibold  px-3 py-[3px] rounded`}> */}
+                <div>
+                    {/* {badgeTextTranslator(category)} */}
+                </div>
                 <h2 className="sm:text-[3.5rem] text-[1.9rem] tracking-tight !leading-tight font-black md:text-right text-center z-10">{title}</h2>
                 <div className="flex mt-3">
                     <div className="flex mt-4 mb-4 items-center">
@@ -55,7 +61,10 @@ const SingleArticlePageHeader = ({
                     </div>
                     <div className="flex items-center mr-12">
                         <ClockBroken cls="ml-2 w-5 h-5 fill-white z-0" />
-                        <Paragraph cls="font-medium text-sm mt-0.5 z-0 text-white" text={convertEnToPe(date)} />
+                        <Paragraph cls="font-medium text-sm mt-0.5 z-0 text-white"
+                        text=""
+                        //  text={convertEnToPe(date)}
+                          />
                     </div>
                 </div>
             </div>

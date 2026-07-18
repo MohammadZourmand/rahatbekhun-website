@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import { worksheetsDataProps } from "../../data";
-import PN from 'persian-number'
+// import PN from 'persian-number'
 import { CartBrokenIcon, DownloadPaperBrokenIcon, MessageBrokenIcon, StarBroken } from "@/assets/icons";
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
 
@@ -72,7 +72,9 @@ const SingleWorksheetMain = ({data} : {data : worksheetsDataProps}) => {
                     </div>
                     <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm sm:col-span-1 col-span-2 gap-y-2 flex flex-col p-2">
                         <span className="text-gray-400 text-sm transition group-hover:text-gray-200">صفحات :</span>
-                        <span className="group-hover:text-gray-50 transition font-semibold text-gray-700">{PN.convertEnToPe(data?.pages)}</span>
+                        <span className="group-hover:text-gray-50 transition font-semibold text-gray-700">
+                            {/* {PN.convertEnToPe(data?.pages)} */}
+                        </span>
                     </div>
                     <div className="bg-gray-100/90 hover:bg-gray-600 transition group rounded-lg text-sm sm:col-span-1 col-span-2 gap-y-2 flex flex-col p-2">
                         <span className="text-gray-400 text-sm transition group-hover:text-gray-200">جهت :</span>
@@ -127,7 +129,9 @@ const SingleWorksheetMain = ({data} : {data : worksheetsDataProps}) => {
                             <StarBroken cls="fill-gray-400 w-6 h-6 ml-1"/>
                             <span className="text-gray-400">امتیاز کاربرگ</span>
                         </div>
-                        <span className="font-semibold text-gray-700">{PN.convertEnToPe(data?._rating)}</span>
+                        <span className="font-semibold text-gray-700">
+                            {/* {PN.convertEnToPe(data?._rating)} */}
+                        </span>
                     </div>
                 </div>
                 <div className="border-t">
@@ -136,7 +140,9 @@ const SingleWorksheetMain = ({data} : {data : worksheetsDataProps}) => {
                             <DownloadPaperBrokenIcon cls="fill-gray-400 w-6 h-6 ml-1"/>
                             <span className="text-gray-400">تعداد دانلود</span>
                         </div>
-                        <span className="font-semibold text-gray-700">{PN.convertEnToPe(135)}</span>
+                        <span className="font-semibold text-gray-700">
+                            {/* {PN.convertEnToPe(135)} */}
+                        </span>
                     </div>
                 </div>
                 <div className="border-t">
@@ -145,7 +151,9 @@ const SingleWorksheetMain = ({data} : {data : worksheetsDataProps}) => {
                             <MessageBrokenIcon cls="fill-gray-400 w-6 h-6 ml-1"/>
                             <span className="text-gray-400">تعداد نظرات</span>
                         </div>
-                        <span className="font-semibold text-gray-700">{PN.convertEnToPe(12)}</span>
+                        <span className="font-semibold text-gray-700">
+                            {/* {PN.convertEnToPe(12)} */}
+                        </span>
                     </div>
                 </div>
                 <div className="border-t">
@@ -158,7 +166,8 @@ const SingleWorksheetMain = ({data} : {data : worksheetsDataProps}) => {
                             {
                                 Number(data?.price) === 0
                                 ? 'رایگان'
-                                : PN.convertEnToPe(data?.price)
+                                : ''
+                                // : PN.convertEnToPe(data?.price)
                             }
                         </span>
                     </div>
@@ -174,7 +183,8 @@ const SingleWorksheetMain = ({data} : {data : worksheetsDataProps}) => {
                     />
                     : <IconBtn 
                         iconName="cart"
-                        text={`خرید کاربرگ (${PN.convertEnToPe(data?.price)} تومان)`}
+                        text=""
+                        // text={`خرید کاربرگ (${PN.convertEnToPe(data?.price)} تومان)`}
                         cls="text-sm mt-3 mb-0 w-full px-5 py-2 bg-baby-9 !rounded-lg"
                         // onClick={() => addProductToCart(item)}
                     />

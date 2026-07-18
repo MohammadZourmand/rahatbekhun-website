@@ -20,9 +20,23 @@ export interface courseInfoType {
 }
 
 export interface Card2Type {
-    article : Card2TypeProps
+    article ?: Card2TypeProps
     cls ?: string
+    item ?: any
 }
+
+export interface NewCart {
+    imgSrc : string
+    imgAlt : string
+    head : string
+    para : string
+    date : string
+    author : string
+    category : string
+    comments : number
+    linkName : string
+}
+
 
 export interface Card2TypeProps {
     cover : string,

@@ -1,6 +1,3 @@
-// ? libraries ===================
-import PN from "persian-number"
-
 // ? types  ======================
 import { Card2Type } from "@/types/home";
 

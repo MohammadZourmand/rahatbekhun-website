@@ -1,7 +1,7 @@
 
 export interface HeadingsProps {
     cls ?: string,
-    text : string,
+    text ?: string,
     color ?: string,
     isNozha ?: boolean,
     center ?: boolean,

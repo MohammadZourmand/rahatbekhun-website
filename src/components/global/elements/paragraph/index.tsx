@@ -1,7 +1,7 @@
-import PN from "persian-number";
+// import PN from "persian-number";
 
 interface ParagraphProps {
-    text : string,
+    text ?: string,
     cls ?: string,
     color ?: string,
     isNozha ?: boolean,
@@ -27,7 +27,7 @@ const Paragraph = ({
             text-base
             ${cls}
         `}>
-           {PN.convertEnToPe(text)}
+           {/* {PN.convertEnToPe(text)} */}
         </p>
     )
 }
