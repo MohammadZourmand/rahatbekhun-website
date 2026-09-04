@@ -1,5 +1,3 @@
-'use client'
-
 import PageHeader from "../global/elements/header/pageHeader";
 import IsMaking from "../global/elements/making";
 import Footer from "../global/footer";
