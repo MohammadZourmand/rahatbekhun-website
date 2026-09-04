@@ -1,26 +1,28 @@
-import SingleArticle from "@/components/articles/singleArticle"
-import apiHelper from "@/utils/axios";
+import SingleArticle from "@/components/articles/singleArticle";
+import apiHelper from "@/utils/apiHelper";
 
 const SingleArticlePage = async (props) => {
+  let data;
 
-    let data;
+  try {
+    const res = await apiHelper(
+      `/admin/posts/single?id=${props?.params.article}`,
+      {
+        method: "POST",
+      },
+    );
 
-    try {
-        const res = await apiHelper()
-            .post(`http://localhost:5000/admin/posts/single?id=${props?.params.article}`)
-        
-        data = res?.data?.post
-
-    } catch (err) {
-        // ErrorToast('در دریافت اطلاعات مشکل داریم !')
-        // redirect('/not-found')
-        data = { data : []}
-        console.log(err)
-        console.log('Lost !')
-    }
-    return (
-        <>
-            {/* <script
+    await res.json()
+  } catch (err) {
+    // ErrorToast('در دریافت اطلاعات مشکل داریم !')
+    // redirect('/not-found')
+    data = { data: [] };
+    console.log(err);
+    console.log("Lost !");
+  }
+  return (
+    <>
+      {/* <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify(singleWorksheetbreadCrumbsJson(data?.data?.name,props?.params?.worksheet))
@@ -32,9 +34,9 @@ const SingleArticlePage = async (props) => {
                     __html: JSON.stringify(worksheetJsonLd(data?.data))
                 }}
             /> */}
-            <SingleArticle data={data} />
-        </>
-    )
-}
+      <SingleArticle data={data} />
+    </>
+  );
+};
 
 export default SingleArticlePage;

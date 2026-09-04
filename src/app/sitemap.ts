@@ -1,69 +1,81 @@
+import type { MetadataRoute } from "next";
 
-export default async function sitemap() {
-    
-    let data;
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const apiUrl = process.env.API_URL ?? "http://localhost:5000";
+  const siteUrl = process.env.SITE_WEB_URL ?? "http://localhost:3000";
 
-    try {
-        const res = await fetch('http://api.rahatbekhun.ir/admin/worksheets/list?page=1&per_page=10')
-        const worksheetsData = await res.json()
-        data = worksheetsData?.data
-    } catch (error) {
-        data = []
-        console.log(error)
+  let data: Array<{ _id?: string }> = [];
+
+  try {
+    const res = await fetch(
+      `${apiUrl}/admin/worksheets/list?page=1&per_page=10`,
+    );
+
+    if (!res.ok) {
+      throw new Error(
+        `Failed to fetch worksheets: ${res.status} ${res.statusText}`,
+      );
     }
 
-    const worksheetsUrl = data.map((item) => {
-        return {
-            url : `${process.env.SITE_WEB_URL}/worksheets/${item?._id}`,
-            lastModified : new Date(),
-            changeFrequency : 'monthly',
-            priority : 1
-        }
-    })
+    const worksheetsData = await res.json();
 
-    return [
-        {
-            url : `${process.env.SITE_WEB_URL}/about`,
-            lastModified : new Date(),
-            changeFrequency : 'monthly',
-            priority : 1
-        },
-        {
-            url : `${process.env.SITE_WEB_URL}/contact`,
-            lastModified : new Date(),
-            changeFrequency : 'monthly',
-            priority : 1
-        },
-        {
-            url : `${process.env.SITE_WEB_URL}/instructor`,
-            lastModified : new Date(),
-            changeFrequency : 'monthly',
-            priority : 1
-        },
-        {
-            url : `${process.env.SITE_WEB_URL}/search`,
-            lastModified : new Date(),
-            changeFrequency : 'monthly',
-            priority : 1
-        },
-        {
-            url : `${process.env.SITE_WEB_URL}/sign-in`,
-            lastModified : new Date(),
-            changeFrequency : 'monthly',
-            priority : 1
-        },
-        {
-            url : `${process.env.SITE_WEB_URL}/sign-up`,
-            lastModified : new Date(),
-            changeFrequency : 'monthly',
-            priority : 1
-        },
-        {
-            url : `${process.env.SITE_WEB_URL}/worksheets`,
-            lastModified : new Date(),
-            changeFrequency : 'monthly',
-            priority : 1
-        },
-        ...worksheetsUrl
-    ]
+    data = Array.isArray(worksheetsData?.data) ? worksheetsData.data : [];
+  } catch (error) {
+    console.error("Failed to fetch worksheets for sitemap:", error);
+  }
+
+  const worksheetsUrl: MetadataRoute.Sitemap = data
+    .filter((item) => item?._id)
+    .map((item) => ({
+      url: `${siteUrl}/worksheets/${item._id}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    }));
+
+  return [
+    {
+      url: `${siteUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    {
+      url: `${siteUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    {
+      url: `${siteUrl}/instructor`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    {
+      url: `${siteUrl}/search`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    {
+      url: `${siteUrl}/sign-in`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    {
+      url: `${siteUrl}/sign-up`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    {
+      url: `${siteUrl}/worksheets`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    ...worksheetsUrl,
+  ];
 }
