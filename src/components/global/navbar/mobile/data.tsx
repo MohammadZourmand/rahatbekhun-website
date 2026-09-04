@@ -1,9 +1,10 @@
 import { PaperBrokenIcon, PlayBrokenIcon, VideoBrokenIcon } from "@/assets/icons"
+import { ReactElement } from "react"
 
 export interface MobileNavbarListProps {
     type : string,
     name : string,
-    icon : JSX.Element
+    icon : ReactElement
     items : {
         name : string
         href : string

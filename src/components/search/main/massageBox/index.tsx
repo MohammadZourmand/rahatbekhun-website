@@ -3,7 +3,7 @@
 import { useContext, useState } from "react";
 import Link from "next/link";
 
-import Lottie from "lottie-react";
+import { Lottie } from "lottie-react";
 
 import orangeAlert from "@/animations/orange-alert.json";
 import Paragraph from "@/components/global/elements/paragraph";
@@ -22,7 +22,7 @@ const MassageBox = () => {
                 cls="absolute left-4 top-4 fill-amber-700"
                 color="rgb(217 119 6)"
             />
-            <Lottie className="w-32 h-32 self-center" animationData={orangeAlert} />
+            <Lottie className="w-32 h-32 self-center" src={orangeAlert} />
             <div className="flex flex-col sm:p-8 px-4 pb-8">
                 <Paragraph
                     cls="!text-amber-700 text-lg font-medium sm:!text-right !text-center"

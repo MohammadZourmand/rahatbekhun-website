@@ -12,10 +12,7 @@ import SmallBox from "./smallbox";
 // import IconBtn from "@/components/global/elements/buttons/iconBtn";
 
 // ? libraries ===================
-const Lottie = dynamic(() => import("lottie-react"), {
-  ssr: false,
-});
-
+import { Lottie } from "lottie-react";
 
 const HomeHeader = () => {
   return (
@@ -39,7 +36,7 @@ const HomeHeader = () => {
               }
             </div>
           </div>
-          <Lottie className="xl:col-span-6" animationData={ReadingBoy} />
+          <Lottie className="xl:col-span-6" src={ReadingBoy} />
         </div>
       </div>
     </header>
