@@ -2,7 +2,7 @@
 
 import SheetsCard from "@/components/global/elements/cards/sheetsCard";
 import ListPagination from "./pagination";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useSWR from "swr";
 import apiHelper from "@/utils/apiHelper";
 import CircleLoading from "@/components/global/elements/loadings";
@@ -18,18 +18,13 @@ interface Props {
 
 export default function WorksheetsList({ grade, params }: Props) {
   const [page, setPage] = useState<number>(1);
-  const [filters, setFilters] = useState<string | undefined>(undefined);
   const parameters = useSearchParams();
 
-  useEffect(() => {
-    setFilters(
-      parameters
-        .toString()
-        .split("&")
-        .filter((item) => !item.includes("page"))
-        .toString(),
-    );
-  }, [parameters]);
+  const filters = parameters
+    .toString()
+    .split("&")
+    .filter((item) => !item.includes("page"))
+    .toString();
 
   const { data, error, isLoading } = useSWR(
     `/admin/worksheets/list?_grade=${grade}&per_page=16&page=${page}&${filters ?? ""}`,

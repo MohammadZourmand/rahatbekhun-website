@@ -1,42 +1,52 @@
-'use client'
+"use client";
 
 import AdvancedSearchHeader from "./header";
 import AdvancedSearchMain from "./main";
 import Footer from "../global/footer";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { SearchContext } from "@/context/search";
 import { useSearchParams } from "next/navigation";
-import useSWR from 'swr'; 
+import useSWR from "swr";
 import { getSearchResult } from "./header/form/getResult";
 import CircleLoading from "../global/elements/loadings";
 
 const AdvancedSearch = () => {
+  const queryPage = useSearchParams().get("page");
 
-    const [page, setPage] = useState(1)
-    const [searchData, setSearchData] = useState(`_type=کاربرگ&`)
-    
-    const queryPage = useSearchParams().get('page')
+  const [page, setPage] = useState(() => {
+    const parsedPage = Number.parseInt(queryPage ?? "", 10);
 
-    useEffect(() => {
-        queryPage && setPage(parseInt(queryPage))
-    }, [queryPage])
+    return Number.isNaN(parsedPage) ? 1 : parsedPage;
+  });
 
-    const {data, error, isLoading} = useSWR(
-        `http://localhost:5000/admin/search?${searchData}per_page=${20}&page=${page}`,
-        getSearchResult
-    )
+  const [searchData, setSearchData] = useState("_type=کاربرگ&");
 
-    return (
-        <SearchContext.Provider value={{data,error,isLoading,page,setPage, setSearchData, searchData}}>
-            <AdvancedSearchHeader />
-            {
-                isLoading
-                    ? <CircleLoading cls="mb-16" text="درحال جست و جو برای درخواست شما ..."/>
-                    : <AdvancedSearchMain />
-            }
-            <Footer />
-        </SearchContext.Provider>
-    )
-}
+  const { data, error, isLoading } = useSWR(
+    `http://localhost:5000/admin/search?${searchData}per_page=${20}&page=${page}`,
+    getSearchResult,
+  );
 
-export default AdvancedSearch
+  return (
+    <SearchContext.Provider
+      value={{
+        data,
+        error,
+        isLoading,
+        page,
+        setPage,
+        setSearchData,
+        searchData,
+      }}
+    >
+      <AdvancedSearchHeader />
+      {isLoading ? (
+        <CircleLoading cls="mb-16" text="درحال جست و جو برای درخواست شما ..." />
+      ) : (
+        <AdvancedSearchMain />
+      )}
+      <Footer />
+    </SearchContext.Provider>
+  );
+};
+
+export default AdvancedSearch;

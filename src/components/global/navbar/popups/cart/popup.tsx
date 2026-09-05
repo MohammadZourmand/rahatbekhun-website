@@ -1,11 +1,9 @@
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import { Dispatch, SetStateAction, useRef, useState } from "react";
 
 import CloseIcon from "../../mobile/closeIcon";
 
 import Heading6 from "@/components/global/elements/headings/h6";
-import Products from "./products";
 import CartProductsFooter from "./footer";
-import EmptyCart from "./emptyCart";
 
 interface CartProductsPopupProps {
     setShow : Dispatch<SetStateAction<boolean>>
@@ -20,26 +18,6 @@ const CartProductsPopup = ({ setShow } : CartProductsPopupProps) => {
     const popupHider = (e : MouseEvent) => {
         e.target === darkBg.current && setShow(false)
     }
-
-    // * calc total in first time
-    useEffect(() => {
-        sumProductsPrice()
-    })
-
-    const sumProductsPrice = () => {
-        const prices : number[] = []
-
-        // cartProducts?.forEach(item => {
-        //     prices.push(item.price)
-        // })
-
-        const totalPrices = prices.reduce((prev, current) => {
-            return prev+current
-        },0)
-
-        setTotal(totalPrices)
-    }
-
 
     return (
         <div ref={darkBg} onClick={(e : any) => popupHider(e)} className={`bg-black/50 animate-fade fixed z-[98] top-0 left-0 flex items-center justify-center w-full h-full`}>
