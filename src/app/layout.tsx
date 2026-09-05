@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import { Metadata } from "next";
 import { addSiteJsonLd } from "@/meta/home";
 import { Toaster } from "react-hot-toast";
-import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { GoogleAnalytics } from "@/features/analytics/GoogleAnalytics";
 
 const iransans = localFont({
   src: [

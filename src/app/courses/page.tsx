@@ -1,4 +1,4 @@
-import Courses from "@/components/courses";
+import Courses from "@/features/courses/components";
 import { worksheetsbreadCrumbsJson } from "@/meta/courses";
 import { Metadata } from "next";
 

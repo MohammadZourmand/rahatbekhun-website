@@ -1,5 +1,5 @@
 
-import Home from '@/components/home'
+import Home from '@/features/home'
 
 import type { Metadata } from 'next'
 

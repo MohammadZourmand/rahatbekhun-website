@@ -1,4 +1,4 @@
-import Contact from "@/components/contact";
+import Contact from "@/features/contact/components";
 import { contactBreadCrumbsJson } from "@/meta/contact";
 import { Metadata } from "next";
 

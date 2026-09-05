@@ -1,4 +1,4 @@
-import Worksheets from "@/components/worksheets";
+import Worksheets from "@/features/worksheets/components";
 import { worksheetsbreadCrumbsJson } from "@/meta/worksheets";
 import type { Metadata } from "next";
 

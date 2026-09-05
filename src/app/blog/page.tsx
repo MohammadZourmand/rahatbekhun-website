@@ -1,4 +1,4 @@
-import Blog from "@/components/blog";
+// import Blog from "@/features/blog";
 import apiHelper from "@/utils/apiHelper";
 import { Metadata } from "next";
 
@@ -29,7 +29,7 @@ const BlogPage = async (props) => {
 
   console.log(data);
 
-  return <Blog />;
+  return <div>Blog Page</div>;
 };
 
 export default BlogPage;

@@ -1,0 +1,39 @@
+import Heading1 from "@/components/elements/headings/h1";
+import Paragraph from "@/components/global/elements/paragraph";
+import Image from "next/image";
+
+const Works = () => {
+
+    return (
+        <section className="grid grid-cols-12 md:p-0 p-2 gap-4 max-w-5xl mx-auto my-40">
+            <div className="mb-12 col-span-12 self-end relative">
+                <Heading1 
+                    text="در راحت بخون چه چیزهایی وجود دارند ؟"
+                    cls="!text-xl mb-6 !mt-0"
+                    center={true}
+                />
+                <Paragraph
+                    text={"راحت بخون تلاش میکنه تا بهترین نوع آموزش رو با استفاده از روش های خلاق و کودکانه به دانش آموزا یاد بده و بعد اونا رو وارد یک چرخه کنه طوری که سوال حل کنند آزمون بدن و مهم تر از همه از خوندن لذت ببرن ولی اینکار با کمک شما امکان پذیره اما چطور ؟ راحت بخون همیشه دنبال یه راه بهتر هست پس اگه اشتباهی دیدید یا جا برای پیشرفت دید حتما حتما حتمـــــــــــا به ما بگید ! چون ما که بهتر بشیم بچه ها بهتر میشن و بچه های بهتر یعنی ایـــــــــــــــــــران بهتر!"}
+                    center={true}
+                    cls="font-medium text-gray-500/80 text-[.84rem] !leading-loose mb-2 pl-2"
+                />
+            </div>
+            <div className="col-span-12 relative md:mx-16">
+                <Paragraph
+                    text="پیشرفت راحت بخون در کنار شما"
+                    cls="absolute md:block hidden top-28 -right-36 rotate-90 font-medium"    
+                />
+                <div className="relative sm:h-137.5 xs:h-112.5 h-87.5">
+                    <Image 
+                        src="/images/about/children-with-their-hands-up.webp"
+                        className="rounded-lg shadow-all-lg"
+                        alt="girl-choosing-right-way-to-go"
+                        fill
+                    />
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default Works;

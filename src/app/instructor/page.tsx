@@ -1,4 +1,4 @@
-import Instructor from "@/components/instructor";
+import Instructor from "@/features/instructor";
 import { instructorBreadCrumbsJson, personJson } from "@/meta/instructor";
 import { Metadata, NextPage } from "next";
 

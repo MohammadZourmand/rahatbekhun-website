@@ -1,4 +1,4 @@
-import CircleLoading from "@/components/global/elements/loadings";
+import CircleLoading from "@/components/feedback/loadings";
 
 
 

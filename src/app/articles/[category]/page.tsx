@@ -1,5 +1,5 @@
-import Articles from "@/components/articles";
-import SingleArticle from "@/components/articles/singleArticle";
+import Articles from "@/features/blog/components";
+import SingleArticle from "@/features/blog/components/singleArticle";
 import apiHelper from "@/utils/apiHelper";
 import { ErrorToast } from "@/utils/swal";
 

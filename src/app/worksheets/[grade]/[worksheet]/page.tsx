@@ -1,4 +1,4 @@
-import SingleWorksheet from "@/components/worksheets/singleWorksheet";
+import SingleWorksheet from "@/features/worksheets/components/singleWorksheet";
 import {
   singleWorksheetbreadCrumbsJson,
   worksheetJsonLd,

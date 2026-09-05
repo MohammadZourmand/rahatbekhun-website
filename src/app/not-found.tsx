@@ -4,12 +4,12 @@ import dynamic from "next/dynamic";
 import { NextPage } from "next";
 import Link from "next/link";
 
-import Navbar from "@/components/global/navbar";
+import Navbar from "@/components/navigation/navbar";
 import Paragraph from "@/components/global/elements/paragraph";
-import Heading4 from "@/components/global/elements/headings/h4";
+import Heading4 from "@/components/elements/headings/h4";
 
 import error404 from "@/animations/error-404.json";
-import Footer from "@/components/global/footer";
+import Footer from "@/components/navigation/footer";
 
 // ? libraries ===================
 import { Lottie } from "lottie-react";

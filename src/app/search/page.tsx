@@ -1,6 +1,6 @@
 
 import { Metadata, NextPage } from "next";
-import AdvancedSearch from "@/components/search";
+import AdvancedSearch from "@/components/navigation/search";
 import { searchBreadCrumbsJson } from "@/meta/search";
 
 export const metadata: Metadata = {

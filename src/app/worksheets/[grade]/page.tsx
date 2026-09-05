@@ -1,4 +1,4 @@
-import GradePage from "@/components/worksheets/gradePage";
+import GradePage from "@/features/worksheets/components/gradePage";
 
 const gradeFixer = (grade) => {
     switch (grade) {

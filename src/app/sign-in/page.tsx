@@ -1,4 +1,4 @@
-import SignIn from "@/components/sign/in";
+import SignIn from "@/features/auth/components/in";
 import { signInBreadCrumbsJson } from "@/meta/sign";
 import { Metadata, NextPage } from "next";
 

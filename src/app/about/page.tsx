@@ -1,4 +1,4 @@
-import About from "@/components/about";
+import About from "@/features/about/components";
 import { aboutBreadCrumbsJson } from "@/meta/about";
 import { Metadata } from "next";
 

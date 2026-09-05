@@ -1,4 +1,4 @@
-import SignUp from "@/components/sign/up";
+import SignUp from "@/features/auth/components/up";
 import { signUpBreadCrumbsJson } from "@/meta/sign";
 import { Metadata, NextPage } from "next";
 

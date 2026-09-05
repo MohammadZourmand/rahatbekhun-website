@@ -1,4 +1,4 @@
-import SingleArticle from "@/components/articles/singleArticle";
+import SingleArticle from "@/features/blog/components/singleArticle";
 import apiHelper from "@/utils/apiHelper";
 
 const SingleArticlePage = async (props) => {
