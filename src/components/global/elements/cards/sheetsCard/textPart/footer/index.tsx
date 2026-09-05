@@ -1,6 +1,7 @@
 import { worksheetsDataProps } from "@/components/worksheets/data";
 
 import IconBtn from "@/components/global/elements/buttons/iconBtn";
+import convertEnToPe from "@/utils/convertEnToPe";
 
 interface WorksheetCardFooterProps {
     item : worksheetsDataProps
@@ -21,8 +22,7 @@ const WorksheetCardFooter = ({item} : WorksheetCardFooterProps) => {
                 />
                 : <IconBtn 
                     iconName="cart"
-                    text="EDIT NEED"
-                    // text={`خرید کاربرگ (${PN.convertEnToPe(item?.price)} تومان)`}
+                    text={`خرید کاربرگ (${convertEnToPe(item?.price)} تومان)`}
                     cls="text-sm mt-3 mb-0 w-full px-5 py-2 bg-baby-9"
                     // onClick={() => addProductToCart(item)}
                 />

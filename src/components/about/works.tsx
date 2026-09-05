@@ -23,7 +23,7 @@ const Works = () => {
                     text="پیشرفت راحت بخون در کنار شما"
                     cls="absolute md:block hidden top-28 -right-36 rotate-90 font-medium"    
                 />
-                <div className="relative sm:h-[550px] xs:h-[450px] h-[350px]">
+                <div className="relative sm:h-137.5 xs:h-112.5 h-87.5">
                     <Image 
                         src="/images/about/children-with-their-hands-up.webp"
                         className="rounded-lg shadow-all-lg"

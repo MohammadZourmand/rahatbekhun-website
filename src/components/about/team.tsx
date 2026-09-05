@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Heading1 from "@/components/global/elements/headings/h1";
 import Paragraph from "@/components/global/elements/paragraph";
-import { teamData } from "./teamData";
+import { teamData } from "./constants/teamData";
 import { AddUserBrokenIcon, InstagramIcon, MessageIcon, SendIcon } from "@/assets/icons";
 import Image from "next/image";
 

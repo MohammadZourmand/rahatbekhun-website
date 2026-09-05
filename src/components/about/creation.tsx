@@ -11,7 +11,7 @@ const Creation = () => {
                     text="داستان راحت بخون"
                     cls="md:block hidden absolute top-16 -left-32 -rotate-90 font-medium"    
                 />
-                <div className="relative xs:h-[550px] h-[450px]">
+                <div className="relative xs:h-137.5-[450px]">
                     <Image 
                         src="/images/about/question-mark-icon-thinking-solution.webp" 
                         className="rounded-lg shadow-all-lg" 

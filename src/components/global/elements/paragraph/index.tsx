@@ -1,35 +1,42 @@
-// import PN from "persian-number";
+import convertEnToPe from "@/utils/convertEnToPe";
 
 interface ParagraphProps {
-    text ?: string,
-    cls ?: string,
-    color ?: string,
-    isNozha ?: boolean,
-    center ?: boolean,
-    weight ?: string
+  text?: string;
+  cls?: string;
+  color?: string;
+  isNozha?: boolean;
+  center?: boolean;
+  weight?: string;
+  convertNumbers?: boolean;
 }
 
 const Paragraph = ({
-    cls,
-    text,
-    color,
-    isNozha,
-    center,
-    weight
-} : ParagraphProps) => {
+  cls,
+  text,
+  color,
+  isNozha,
+  center,
+  weight,
+  convertNumbers = true,
+}: ParagraphProps) => {
+  const paragraphText = convertNumbers
+    ? convertEnToPe(text ?? "")
+    : (text ?? "");
 
-    return (
-        <p className={`
+  return (
+    <p
+      className={`
             ${color ?? "text-gray-400"}
-            ${isNozha && "font-nozha"}
+            ${isNozha ? "font-nozha" : ""}
             ${center ? "text-center" : "text-right"}
             ${weight ?? "font-bold"}
             text-base
-            ${cls}
-        `}>
-           {/* {PN.convertEnToPe(text)} */}
-        </p>
-    )
-}
+            ${cls ?? ""}
+        `}
+    >
+      {paragraphText}
+    </p>
+  );
+};
 
 export default Paragraph;

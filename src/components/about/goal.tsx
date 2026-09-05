@@ -1,7 +1,6 @@
 import Heading1 from "@/components/global/elements/headings/h1";
 import Paragraph from "@/components/global/elements/paragraph";
 import Image from "next/image";
-// import {convertEnToPe} from "persian-number"
 
 const Goal = () => {
 
@@ -13,8 +12,7 @@ const Goal = () => {
                     cls="!text-xl mb-6 !mt-0 md:!text-right !text-center"
                 />
                 <Paragraph
-                    text=""
-                    // text={convertEnToPe("سوال 1401 که آموزگار ابتدایی شدم. زمستون که شد بیماری ها و آلودگی ها باعث تعطیلی شدن و رمق کلاس هام رو گرفتن ! اونجا بود که سمت فضای مجازی آمدم و شروع به تدریس کردم و همون جا فهمیدم که این مدل آموزش ارزش اینکه واسش زمان بزاری رو داره ! چون خیلی از بچه ها راحتتر می خوندن و راحتتر درک میکردن پس با خودم گفتم چرا یه راحت بخون برا این بچه ها نسازم ؟")}
+                    text={"سوال 1401 که آموزگار ابتدایی شدم. زمستون که شد بیماری ها و آلودگی ها باعث تعطیلی شدن و رمق کلاس هام رو گرفتن ! اونجا بود که سمت فضای مجازی آمدم و شروع به تدریس کردم و همون جا فهمیدم که این مدل آموزش ارزش اینکه واسش زمان بزاری رو داره ! چون خیلی از بچه ها راحتتر می خوندن و راحتتر درک میکردن پس با خودم گفتم چرا یه راحت بخون برا این بچه ها نسازم ؟"}
                     cls="md:!text-right !text-center font-medium text-gray-500/80 text-[.84rem] !leading-loose mb-2 pl-2"
                 />
             </div>
@@ -23,7 +21,7 @@ const Goal = () => {
                     text="شروع راحت بخون"
                     cls="absolute md:block hidden  top-16 -right-32 rotate-90 font-medium"    
                 />
-                <div className="relative xs:h-[550px] h-[450px]">
+                <div className="relative xs:h-137.5 h-112.5">
                     <Image 
                         src="/images/about/girl-working-with-laptop-3.webp" 
                         className="rounded-lg shadow-all-lg" 

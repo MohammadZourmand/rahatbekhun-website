@@ -25,7 +25,7 @@ const Card2 = ({article, cls} : Card2Type) => {
             {/* text part */}
             <div className="flex flex-col xl:p-4 p-3">
                 <header className="flex">
-                    <div className={`${badgeTextColorChooser(article?.category)} ${badgeBgColorChooser(article?.category)} justify-self-start text-sm font-semibold  px-2.5 py-[3px] rounded`}>{badgeTextTranslator(article?.category)}</div>
+                    <div className={`${badgeTextColorChooser(article?.category)} ${badgeBgColorChooser(article?.category)} justify-self-start text-sm font-semibold  px-2.5 py-0.75 rounded`}>{badgeTextTranslator(article?.category)}</div>
                 </header>
                 <main className="mt-5">
                     <Link href={`/articles/${article?.category}/${article?._id}`}>
@@ -44,7 +44,7 @@ const Card2 = ({article, cls} : Card2Type) => {
                         <Paragraph cls="text-gray-600 text-xs mr-2" text={article?.author} />
                     </div>
                     <div className="flex articles-center">
-                        {/* <Paragraph cls="font-medium text-sm mt-0.5" text={PN.convertEnToPe(article?.date)} /> */}
+                        {/* <Paragraph cls="font-medium text-sm mt-0.5" text={article?.date} /> */}
                         <ClockBroken cls="mr-1 w-5 h-5" color={"#94a3b8"} />
                     </div>
                 </footer>
