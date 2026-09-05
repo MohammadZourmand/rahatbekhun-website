@@ -20,8 +20,8 @@ const CartProductsPopup = ({ setShow } : CartProductsPopupProps) => {
     }
 
     return (
-        <div ref={darkBg} onClick={(e : any) => popupHider(e)} className={`bg-black/50 animate-fade fixed z-[98] top-0 left-0 flex items-center justify-center w-full h-full`}>
-            <div className={`lg:w-2/3 md:w-4/5 xs:w-11/12 m-1 max-h-[90vh] animate-comeFromRight py-6 overflow-y-auto fixed z-[99] bg-white rounded-md`}>
+        <div ref={darkBg} onClick={(e : any) => popupHider(e)} className={`bg-black/50 animate-fade fixed z-98 top-0 left-0 flex items-center justify-center w-full h-full`}>
+            <div className={`lg:w-2/3 md:w-4/5 xs:w-11/12 m-1 max-h-[90vh] animate-comeFromRight py-6 overflow-y-auto fixed z-99 bg-white rounded-md`}>
                 <header className="py-3 px-4 sm:mx-6 mx-1 flex justify-between">
                     <Heading6 text="سبد خرید شما"/>
                     <CloseIcon setState={setShow} />
